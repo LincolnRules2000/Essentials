@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: scene_1_4.ma
-//Last modified: Wed, Jun 11, 2025 07:05:58 PM
+//Last modified: Wed, Jun 11, 2025 07:07:03 PM
 //Codeset: 1252
 file -rdi 1 -ns "Unit5_LabScene" -rfn "Unit5_LabSceneRN" -op "v=0;" -typ "mayaAscii"
 		 "C:/GitHub/Essentials/DAGV1100and1200/Maya//scenes/Unit5_LabScene.ma";
@@ -16,12 +16,12 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
 fileInfo "osv" "Windows 11 Pro v2009 (Build: 26100)";
-fileInfo "UUID" "15579956-470D-9B38-5A97-1D838A9A2050";
+fileInfo "UUID" "B1032259-43D9-9541-3B25-6387643A59FE";
 createNode transform -s -n "persp";
 	rename -uid "970F5D04-4490-6334-C79C-39AB4DC3DB66";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -0.086180827077013911 4.5743325516135833 13.37356154935059 ;
-	setAttr ".r" -type "double3" -20.738352730362678 -357.40000000037946 9.9494756703921507e-17 ;
+	setAttr ".t" -type "double3" 11.076175950576438 7.3402304769988715 4.1347835387001863 ;
+	setAttr ".r" -type "double3" -30.33835273036301 -289.80000000037688 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "F693882C-4452-79AB-787C-23966A4C9222";
 	setAttr -k off ".v" no;
