@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: scene_1_4.ma
-//Last modified: Fri, Jun 27, 2025 11:29:46 PM
+//Last modified: Sat, Jun 28, 2025 05:29:20 PM
 //Codeset: 1252
 file -rdi 1 -ns "Unit5_LabScene" -rfn "Unit5_LabSceneRN" -op "v=0;" -typ "mayaAscii"
 		 "C:/GitHub/Essentials/DAGV1100and1200/Maya//scenes/Unit5_LabScene.ma";
@@ -20,12 +20,12 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
 fileInfo "osv" "Windows 11 Pro v2009 (Build: 26100)";
-fileInfo "UUID" "CA8D5842-4B6D-9F1A-AC24-FCA321D7CAF8";
+fileInfo "UUID" "CC1E8149-4BF3-1DED-3F13-4E9F2AB49E44";
 createNode transform -s -n "persp";
 	rename -uid "970F5D04-4490-6334-C79C-39AB4DC3DB66";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 4.5671695459739148 2.9787504132847813 0.76673476275037888 ;
-	setAttr ".r" -type "double3" -18.938352730368699 -284.60000000034989 6.3088879655126541e-15 ;
+	setAttr ".t" -type "double3" -0.1910897600364308 4.4580980371970789 -2.3981504875023276 ;
+	setAttr ".r" -type "double3" -36.938352730367555 -181.80000000034747 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "F693882C-4452-79AB-787C-23966A4C9222";
 	setAttr -k off ".v" no;
@@ -3843,20 +3843,20 @@ createNode mesh -n "legShape3" -p "|stool|leg3";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "7EA15F4A-4FC4-4C15-3163-B0BA6CBDEAD3";
+	rename -uid "8BECB9F7-47BF-0CD3-454B-70AEBABEA8AA";
 	setAttr -s 2 ".lnk";
 	setAttr -s 2 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "440F9EB9-485F-061B-2606-0F878CAA3A08";
+	rename -uid "C52D32B5-4C94-5851-47D2-A08F39719F3B";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "E93CAECA-4E51-7EE2-B834-5EB68CC3B7F5";
+	rename -uid "FB381CCD-4616-A140-967E-8C9BAB879F56";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "3BCC8366-47D1-FC82-2B44-9394D9978A91";
+	rename -uid "0E67C13F-45EB-58C7-F01B-8FBA52820991";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "F0260111-4D08-5492-7649-9AB8E1F472FB";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "2F97D6CF-4C7C-C58C-B8BB-E991D433ED7D";
+	rename -uid "7AC360FF-47E3-6371-E355-B6BD21792C84";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "BEBA3D32-4A8F-67B8-884A-8C97179A0829";
 	setAttr ".g" yes;
@@ -3931,7 +3931,7 @@ createNode reference -n "Unit5_LabSceneRN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"Unit5_LabSceneRN"
 		"Unit5_LabSceneRN" 0
-		"Unit5_LabSceneRN" 7
+		"Unit5_LabSceneRN" 9
 		2 "|Unit5_LabScene:couch" "translate" " -type \"double3\" 0 0.04428167755172896 2.31217430375816946"
 		
 		2 "|Unit5_LabScene:couch" "rotate" " -type \"double3\" 0 180 0"
@@ -3943,7 +3943,11 @@ createNode reference -n "Unit5_LabSceneRN";
 		
 		2 "|Unit5_LabScene:couch" "scalePivotTranslate" " -type \"double3\" 0 -0.0026865165905764769 0"
 		
-		2 "|Unit5_LabScene:couch|Unit5_LabScene:arm_left" "translate" " -type \"double3\" 0 0 0";
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:arm_left" "translate" " -type \"double3\" 0 0 0"
+		
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:cushion1" "translate" " -type \"double3\" -0.041664236177974018 0 0"
+		
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:cushion2" "translate" " -type \"double3\" -0.036628669108946806 0 0";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "unit6_vasePropRN";
