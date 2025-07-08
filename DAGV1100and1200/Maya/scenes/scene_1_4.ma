@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: scene_1_4.ma
-//Last modified: Fri, Jul 04, 2025 06:38:12 PM
+//Last modified: Mon, Jul 07, 2025 04:57:19 PM
 //Codeset: 1252
 file -rdi 1 -ns "Unit5_LabScene" -dr 1 -rfn "Unit5_LabSceneRN" -op "v=0;" -typ
 		 "mayaAscii" "C:/GitHub/Essentials/DAGV1100and1200/Maya//scenes/Unit5_LabScene.ma";
@@ -34,17 +34,17 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
 fileInfo "osv" "Windows 11 Pro v2009 (Build: 26100)";
-fileInfo "UUID" "8C6D3AF9-4E03-40AB-7F27-23A10530EF82";
+fileInfo "UUID" "7F0E5C3F-440C-4AE5-7C07-95A5BB7D9BDD";
 createNode transform -s -n "persp";
 	rename -uid "970F5D04-4490-6334-C79C-39AB4DC3DB66";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 9.855825968850807 4.6979906339237587 9.0986577772226713 ;
-	setAttr ".r" -type "double3" -8.7383527299881525 761.7999999997088 -5.333093692489982e-16 ;
+	setAttr ".t" -type "double3" 10.243888363235481 4.4355891273308288 -1.0873889520343849 ;
+	setAttr ".r" -type "double3" -18.938352729773886 839.39999999967222 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "F693882C-4452-79AB-787C-23966A4C9222";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 15.605488998990516;
+	setAttr ".coi" 13.005734362822281;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -3221,12 +3221,1089 @@ createNode reference -n "unti7_chairRN";
 lockNode -l 1 ;
 createNode reference -n "unit7_cushionRN";
 	rename -uid "26186891-49D0-0703-F569-7AAFFE526878";
+	setAttr -s 12 ".phl";
+	setAttr ".phl[1]" 0;
+	setAttr ".phl[2]" 0;
+	setAttr ".phl[3]" 0;
+	setAttr ".phl[4]" 0;
+	setAttr ".phl[5]" 0;
+	setAttr ".phl[6]" 0;
+	setAttr ".phl[7]" 0;
+	setAttr ".phl[8]" 0;
+	setAttr ".phl[9]" 0;
+	setAttr ".phl[10]" 0;
+	setAttr ".phl[11]" 0;
+	setAttr ".phl[12]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"unit7_cushionRN"
 		"unit7_cushion:Unit5_LabSceneRN" 0
 		"unit7_cushionRN" 0
-		"unit7_cushion:Unit5_LabSceneRN" 1
-		2 "|unit7_cushion:Unit5_LabScene:couch" "translate" " -type \"double3\" 0 0.04428167755172896 2.26377435487600076";
+		"unit7_cushion:Unit5_LabSceneRN" 166
+		2 "|unit7_cushion:Unit5_LabScene:couch" "translate" " -type \"double3\" 0 0 4.63614122057210487"
+		
+		2 "|unit7_cushion:Unit5_LabScene:couch" "rotate" " -type \"double3\" 0 0 0"
+		
+		2 "|unit7_cushion:Unit5_LabScene:couch" "scale" " -type \"double3\" 1 1 1"
+		
+		2 "|unit7_cushion:Unit5_LabScene:couch" "rotatePivot" " -type \"double3\" 0 0.06511497497558752 2.26377435487600076"
+		
+		2 "|unit7_cushion:Unit5_LabScene:couch" "scalePivot" " -type \"double3\" 0 0.06511497497558752 2.26377435487600076"
+		
+		2 "|unit7_cushion:Unit5_LabScene:couch" "scalePivotTranslate" " -type \"double3\" 0 0 0"
+		
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:base" 
+		"rotatePivot" " -type \"double3\" 0 0.25709803239831736 2.26377435487600076"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:base" 
+		"scalePivot" " -type \"double3\" 0 0.25709803239831736 2.26377435487600076"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:base|unit7_cushion:Unit5_LabScene:baseShape" 
+		"uvPivot" " -type \"double2\" 0.4999999925494194 0.49999998509883881"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:base|unit7_cushion:Unit5_LabScene:baseShape" 
+		"uvSet[0].uvSetName" " -type \"string\" \"map1\""
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:base|unit7_cushion:Unit5_LabScene:baseShape" 
+		"pnts" " -s 8"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:base|unit7_cushion:Unit5_LabScene:baseShape" 
+		"pnts[0]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:base|unit7_cushion:Unit5_LabScene:baseShape" 
+		"pnts[1]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:base|unit7_cushion:Unit5_LabScene:baseShape" 
+		"pnts[2]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:base|unit7_cushion:Unit5_LabScene:baseShape" 
+		"pnts[3]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:base|unit7_cushion:Unit5_LabScene:baseShape" 
+		"pnts[4]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:base|unit7_cushion:Unit5_LabScene:baseShape" 
+		"pnts[5]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:base|unit7_cushion:Unit5_LabScene:baseShape" 
+		"pnts[6]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:base|unit7_cushion:Unit5_LabScene:baseShape" 
+		"pnts[7]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:arm_left" 
+		"rotatePivot" " -type \"double3\" 1.38877421459944905 0.46478238955013607 2.26377435487600076"
+		
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:arm_left" 
+		"scalePivot" " -type \"double3\" 1.38877421459944905 0.46478238955013607 2.26377435487600076"
+		
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:arm_left|unit7_cushion:Unit5_LabScene:arm_leftShape" 
+		"uvSet[0].uvSetName" " -type \"string\" \"map1\""
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:arm_left|unit7_cushion:Unit5_LabScene:arm_leftShape" 
+		"pnts" " -s 20"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:arm_left|unit7_cushion:Unit5_LabScene:arm_leftShape" 
+		"pnts[0]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:arm_left|unit7_cushion:Unit5_LabScene:arm_leftShape" 
+		"pnts[1]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:arm_left|unit7_cushion:Unit5_LabScene:arm_leftShape" 
+		"pnts[2]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:arm_left|unit7_cushion:Unit5_LabScene:arm_leftShape" 
+		"pnts[3]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:arm_left|unit7_cushion:Unit5_LabScene:arm_leftShape" 
+		"pnts[4]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:arm_left|unit7_cushion:Unit5_LabScene:arm_leftShape" 
+		"pnts[5]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:arm_left|unit7_cushion:Unit5_LabScene:arm_leftShape" 
+		"pnts[6]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:arm_left|unit7_cushion:Unit5_LabScene:arm_leftShape" 
+		"pnts[7]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:arm_left|unit7_cushion:Unit5_LabScene:arm_leftShape" 
+		"pnts[8]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:arm_left|unit7_cushion:Unit5_LabScene:arm_leftShape" 
+		"pnts[9]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:arm_left|unit7_cushion:Unit5_LabScene:arm_leftShape" 
+		"pnts[10]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:arm_left|unit7_cushion:Unit5_LabScene:arm_leftShape" 
+		"pnts[11]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:arm_left|unit7_cushion:Unit5_LabScene:arm_leftShape" 
+		"pnts[12]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:arm_left|unit7_cushion:Unit5_LabScene:arm_leftShape" 
+		"pnts[13]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:arm_left|unit7_cushion:Unit5_LabScene:arm_leftShape" 
+		"pnts[14]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:arm_left|unit7_cushion:Unit5_LabScene:arm_leftShape" 
+		"pnts[15]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:arm_left|unit7_cushion:Unit5_LabScene:arm_leftShape" 
+		"pnts[16]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:arm_left|unit7_cushion:Unit5_LabScene:arm_leftShape" 
+		"pnts[17]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:arm_left|unit7_cushion:Unit5_LabScene:arm_leftShape" 
+		"pnts[18]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:arm_left|unit7_cushion:Unit5_LabScene:arm_leftShape" 
+		"pnts[19]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:back" 
+		"rotatePivot" " -type \"double3\" 0.0077328658965071916 0.72261842133136112 3.1364933503217256"
+		
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:back" 
+		"scalePivot" " -type \"double3\" 0.0077328658965071916 0.72261842133136112 3.1364933503217256"
+		
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:back|unit7_cushion:Unit5_LabScene:backShape" 
+		"uvSet[0].uvSetName" " -type \"string\" \"map1\""
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:back|unit7_cushion:Unit5_LabScene:backShape" 
+		"pnts" " -s 28"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:back|unit7_cushion:Unit5_LabScene:backShape" 
+		"pnts[0]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:back|unit7_cushion:Unit5_LabScene:backShape" 
+		"pnts[1]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:back|unit7_cushion:Unit5_LabScene:backShape" 
+		"pnts[2]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:back|unit7_cushion:Unit5_LabScene:backShape" 
+		"pnts[3]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:back|unit7_cushion:Unit5_LabScene:backShape" 
+		"pnts[4]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:back|unit7_cushion:Unit5_LabScene:backShape" 
+		"pnts[5]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:back|unit7_cushion:Unit5_LabScene:backShape" 
+		"pnts[6]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:back|unit7_cushion:Unit5_LabScene:backShape" 
+		"pnts[7]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:back|unit7_cushion:Unit5_LabScene:backShape" 
+		"pnts[8]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:back|unit7_cushion:Unit5_LabScene:backShape" 
+		"pnts[9]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:back|unit7_cushion:Unit5_LabScene:backShape" 
+		"pnts[10]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:back|unit7_cushion:Unit5_LabScene:backShape" 
+		"pnts[11]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:back|unit7_cushion:Unit5_LabScene:backShape" 
+		"pnts[12]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:back|unit7_cushion:Unit5_LabScene:backShape" 
+		"pnts[13]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:back|unit7_cushion:Unit5_LabScene:backShape" 
+		"pnts[14]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:back|unit7_cushion:Unit5_LabScene:backShape" 
+		"pnts[15]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:back|unit7_cushion:Unit5_LabScene:backShape" 
+		"pnts[16]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:back|unit7_cushion:Unit5_LabScene:backShape" 
+		"pnts[17]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:back|unit7_cushion:Unit5_LabScene:backShape" 
+		"pnts[18]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:back|unit7_cushion:Unit5_LabScene:backShape" 
+		"pnts[19]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:back|unit7_cushion:Unit5_LabScene:backShape" 
+		"pnts[20]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:back|unit7_cushion:Unit5_LabScene:backShape" 
+		"pnts[21]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:back|unit7_cushion:Unit5_LabScene:backShape" 
+		"pnts[22]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:back|unit7_cushion:Unit5_LabScene:backShape" 
+		"pnts[23]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:back|unit7_cushion:Unit5_LabScene:backShape" 
+		"pnts[24]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:back|unit7_cushion:Unit5_LabScene:backShape" 
+		"pnts[25]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:back|unit7_cushion:Unit5_LabScene:backShape" 
+		"pnts[26]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:back|unit7_cushion:Unit5_LabScene:backShape" 
+		"pnts[27]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:arm_right" 
+		"rotatePivot" " -type \"double3\" -1.36078325767729247 0.46478238955013612 2.26377435487600076"
+		
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:arm_right" 
+		"scalePivot" " -type \"double3\" -1.36078325767729247 0.46478238955013612 2.26377435487600076"
+		
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:arm_right|unit7_cushion:Unit5_LabScene:arm_rightShape" 
+		"uvSet[0].uvSetName" " -type \"string\" \"map1\""
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:arm_right|unit7_cushion:Unit5_LabScene:arm_rightShape" 
+		"pnts" " -s 20"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:arm_right|unit7_cushion:Unit5_LabScene:arm_rightShape" 
+		"pnts[0]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:arm_right|unit7_cushion:Unit5_LabScene:arm_rightShape" 
+		"pnts[1]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:arm_right|unit7_cushion:Unit5_LabScene:arm_rightShape" 
+		"pnts[2]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:arm_right|unit7_cushion:Unit5_LabScene:arm_rightShape" 
+		"pnts[3]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:arm_right|unit7_cushion:Unit5_LabScene:arm_rightShape" 
+		"pnts[4]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:arm_right|unit7_cushion:Unit5_LabScene:arm_rightShape" 
+		"pnts[5]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:arm_right|unit7_cushion:Unit5_LabScene:arm_rightShape" 
+		"pnts[6]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:arm_right|unit7_cushion:Unit5_LabScene:arm_rightShape" 
+		"pnts[7]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:arm_right|unit7_cushion:Unit5_LabScene:arm_rightShape" 
+		"pnts[8]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:arm_right|unit7_cushion:Unit5_LabScene:arm_rightShape" 
+		"pnts[9]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:arm_right|unit7_cushion:Unit5_LabScene:arm_rightShape" 
+		"pnts[10]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:arm_right|unit7_cushion:Unit5_LabScene:arm_rightShape" 
+		"pnts[11]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:arm_right|unit7_cushion:Unit5_LabScene:arm_rightShape" 
+		"pnts[12]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:arm_right|unit7_cushion:Unit5_LabScene:arm_rightShape" 
+		"pnts[13]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:arm_right|unit7_cushion:Unit5_LabScene:arm_rightShape" 
+		"pnts[14]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:arm_right|unit7_cushion:Unit5_LabScene:arm_rightShape" 
+		"pnts[15]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:arm_right|unit7_cushion:Unit5_LabScene:arm_rightShape" 
+		"pnts[16]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:arm_right|unit7_cushion:Unit5_LabScene:arm_rightShape" 
+		"pnts[17]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:arm_right|unit7_cushion:Unit5_LabScene:arm_rightShape" 
+		"pnts[18]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:arm_right|unit7_cushion:Unit5_LabScene:arm_rightShape" 
+		"pnts[19]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:cushion1" 
+		"rotatePivot" " -type \"double3\" 0.70282409088419107 0.51440082544817001 2.28998232488416376"
+		
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:cushion1" 
+		"scalePivot" " -type \"double3\" 0.70282409088419107 0.51440082544817001 2.28998232488416376"
+		
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:cushion1|unit7_cushion:Unit5_LabScene:cushionShape1" 
+		"uvSet[0].uvSetName" " -type \"string\" \"map1\""
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:cushion2" 
+		"rotatePivot" " -type \"double3\" -0.67082370357421617 0.44908110923078276 2.27610687324298278"
+		
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:cushion2" 
+		"scalePivot" " -type \"double3\" -0.67082370357421617 0.44908110923078276 2.27610687324298278"
+		
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:cushion2|unit7_cushion:Unit5_LabScene:cushionShape2" 
+		"uvSet[0].uvSetName" " -type \"string\" \"map1\""
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:cushion2|unit7_cushion:Unit5_LabScene:cushionShape2" 
+		"pnts" " -s 48"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:cushion2|unit7_cushion:Unit5_LabScene:cushionShape2" 
+		"pnts[0]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:cushion2|unit7_cushion:Unit5_LabScene:cushionShape2" 
+		"pnts[1]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:cushion2|unit7_cushion:Unit5_LabScene:cushionShape2" 
+		"pnts[2]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:cushion2|unit7_cushion:Unit5_LabScene:cushionShape2" 
+		"pnts[3]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:cushion2|unit7_cushion:Unit5_LabScene:cushionShape2" 
+		"pnts[4]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:cushion2|unit7_cushion:Unit5_LabScene:cushionShape2" 
+		"pnts[5]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:cushion2|unit7_cushion:Unit5_LabScene:cushionShape2" 
+		"pnts[6]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:cushion2|unit7_cushion:Unit5_LabScene:cushionShape2" 
+		"pnts[7]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:cushion2|unit7_cushion:Unit5_LabScene:cushionShape2" 
+		"pnts[8]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:cushion2|unit7_cushion:Unit5_LabScene:cushionShape2" 
+		"pnts[9]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:cushion2|unit7_cushion:Unit5_LabScene:cushionShape2" 
+		"pnts[10]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:cushion2|unit7_cushion:Unit5_LabScene:cushionShape2" 
+		"pnts[11]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:cushion2|unit7_cushion:Unit5_LabScene:cushionShape2" 
+		"pnts[12]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:cushion2|unit7_cushion:Unit5_LabScene:cushionShape2" 
+		"pnts[13]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:cushion2|unit7_cushion:Unit5_LabScene:cushionShape2" 
+		"pnts[14]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:cushion2|unit7_cushion:Unit5_LabScene:cushionShape2" 
+		"pnts[15]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:cushion2|unit7_cushion:Unit5_LabScene:cushionShape2" 
+		"pnts[16]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:cushion2|unit7_cushion:Unit5_LabScene:cushionShape2" 
+		"pnts[17]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:cushion2|unit7_cushion:Unit5_LabScene:cushionShape2" 
+		"pnts[18]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:cushion2|unit7_cushion:Unit5_LabScene:cushionShape2" 
+		"pnts[19]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:cushion2|unit7_cushion:Unit5_LabScene:cushionShape2" 
+		"pnts[20]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:cushion2|unit7_cushion:Unit5_LabScene:cushionShape2" 
+		"pnts[21]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:cushion2|unit7_cushion:Unit5_LabScene:cushionShape2" 
+		"pnts[22]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:cushion2|unit7_cushion:Unit5_LabScene:cushionShape2" 
+		"pnts[23]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:cushion2|unit7_cushion:Unit5_LabScene:cushionShape2" 
+		"pnts[24]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:cushion2|unit7_cushion:Unit5_LabScene:cushionShape2" 
+		"pnts[25]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:cushion2|unit7_cushion:Unit5_LabScene:cushionShape2" 
+		"pnts[26]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:cushion2|unit7_cushion:Unit5_LabScene:cushionShape2" 
+		"pnts[27]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:cushion2|unit7_cushion:Unit5_LabScene:cushionShape2" 
+		"pnts[28]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:cushion2|unit7_cushion:Unit5_LabScene:cushionShape2" 
+		"pnts[29]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:cushion2|unit7_cushion:Unit5_LabScene:cushionShape2" 
+		"pnts[30]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:cushion2|unit7_cushion:Unit5_LabScene:cushionShape2" 
+		"pnts[31]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:cushion2|unit7_cushion:Unit5_LabScene:cushionShape2" 
+		"pnts[32]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:cushion2|unit7_cushion:Unit5_LabScene:cushionShape2" 
+		"pnts[33]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:cushion2|unit7_cushion:Unit5_LabScene:cushionShape2" 
+		"pnts[34]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:cushion2|unit7_cushion:Unit5_LabScene:cushionShape2" 
+		"pnts[35]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:cushion2|unit7_cushion:Unit5_LabScene:cushionShape2" 
+		"pnts[36]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:cushion2|unit7_cushion:Unit5_LabScene:cushionShape2" 
+		"pnts[37]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:cushion2|unit7_cushion:Unit5_LabScene:cushionShape2" 
+		"pnts[38]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:cushion2|unit7_cushion:Unit5_LabScene:cushionShape2" 
+		"pnts[39]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:cushion2|unit7_cushion:Unit5_LabScene:cushionShape2" 
+		"pnts[40]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:cushion2|unit7_cushion:Unit5_LabScene:cushionShape2" 
+		"pnts[41]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:cushion2|unit7_cushion:Unit5_LabScene:cushionShape2" 
+		"pnts[42]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:cushion2|unit7_cushion:Unit5_LabScene:cushionShape2" 
+		"pnts[43]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:cushion2|unit7_cushion:Unit5_LabScene:cushionShape2" 
+		"pnts[44]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:cushion2|unit7_cushion:Unit5_LabScene:cushionShape2" 
+		"pnts[45]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:cushion2|unit7_cushion:Unit5_LabScene:cushionShape2" 
+		"pnts[46]" " -type \"float3\" 0 0 0"
+		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:cushion2|unit7_cushion:Unit5_LabScene:cushionShape2" 
+		"pnts[47]" " -type \"float3\" 0 0 0"
+		3 "unit7_cushion:Unit5_LabScene:polyTweakUV5.output" "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:arm_left|unit7_cushion:Unit5_LabScene:arm_leftShape.inMesh" 
+		""
+		3 "unit7_cushion:Unit5_LabScene:polyTweakUV4.output" "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:arm_right|unit7_cushion:Unit5_LabScene:arm_rightShape.inMesh" 
+		""
+		3 "unit7_cushion:Unit5_LabScene:polyTweakUV3.output" "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:back|unit7_cushion:Unit5_LabScene:backShape.inMesh" 
+		""
+		3 "unit7_cushion:Unit5_LabScene:polyTweakUV6.output" "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:base|unit7_cushion:Unit5_LabScene:baseShape.inMesh" 
+		""
+		3 "unit7_cushion:Unit5_LabScene:polyTweakUV2.output" "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:cushion2|unit7_cushion:Unit5_LabScene:cushionShape2.inMesh" 
+		""
+		3 "unit7_cushion:Unit5_LabScene:transformGeometry3.outputGeometry" "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:cushion1|unit7_cushion:Unit5_LabScene:cushionShape1.inMesh" 
+		""
+		5 4 "unit7_cushionRN" "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:base|unit7_cushion:Unit5_LabScene:baseShape.inMesh" 
+		"unit7_cushionRN.placeHolderList[1]" ""
+		5 4 "unit7_cushionRN" "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:arm_left|unit7_cushion:Unit5_LabScene:arm_leftShape.inMesh" 
+		"unit7_cushionRN.placeHolderList[2]" ""
+		5 4 "unit7_cushionRN" "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:back|unit7_cushion:Unit5_LabScene:backShape.inMesh" 
+		"unit7_cushionRN.placeHolderList[3]" ""
+		5 4 "unit7_cushionRN" "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:arm_right|unit7_cushion:Unit5_LabScene:arm_rightShape.inMesh" 
+		"unit7_cushionRN.placeHolderList[4]" ""
+		5 4 "unit7_cushionRN" "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:cushion1|unit7_cushion:Unit5_LabScene:cushionShape1.inMesh" 
+		"unit7_cushionRN.placeHolderList[5]" ""
+		5 4 "unit7_cushionRN" "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:cushion2|unit7_cushion:Unit5_LabScene:cushionShape2.inMesh" 
+		"unit7_cushionRN.placeHolderList[6]" ""
+		"unit7_cushionRN" 362
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV1" "uvTweak" " -s 96"
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV1" "uvTweak[0]" " -type \"float2\" 0.022078812 -0.013078451"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV1" "uvTweak[1]" " -type \"float2\" 0.10603577 0.23576527999999999"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV1" "uvTweak[2]" " -type \"float2\" -0.14632618 0.40035655999999997"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV1" "uvTweak[3]" " -type \"float2\" -0.2996915 0.10634708"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV1" "uvTweak[4]" " -type \"float2\" 0.51001017999999998 0.28479527999999998"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV1" "uvTweak[5]" " -type \"float2\" 0.52531075000000005 -0.29444705999999998"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV1" "uvTweak[6]" " -type \"float2\" 0.12098005000000001 -0.099364430000000004"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV1" "uvTweak[7]" " -type \"float2\" 0.20789426999999999 0.19054579999999999"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV1" "uvTweak[8]" " -type \"float2\" -0.32738846999999999 -0.068103701000000003"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV1" "uvTweak[9]" " -type \"float2\" -0.31252104000000003 0.19339454"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV1" "uvTweak[10]" " -type \"float2\" 0.014950335 0.17519376"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV1" "uvTweak[11]" " -type \"float2\" -0.027610183 0.067580192999999997"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV1" "uvTweak[12]" " -type \"float2\" 0.46530968 -0.092350081000000001"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV1" "uvTweak[13]" " -type \"float2\" 0.64397901000000002 -0.092121117000000002"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV1" "uvTweak[14]" " -type \"float2\" 0.52344822999999996 0.52391487000000003"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV1" "uvTweak[15]" " -type \"float2\" 0.40731359 0.025232254999999999"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV1" "uvTweak[16]" " -type \"float2\" 0.49340630000000002 0.54138649000000005"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV1" "uvTweak[17]" " -type \"float2\" 0.36700746000000001 0.051403447999999997"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV1" "uvTweak[18]" " -type \"float2\" 0.44336914999999999 0.55148101000000005"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV1" "uvTweak[19]" " -type \"float2\" 0.30767359999999999 0.073624029999999993"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV1" "uvTweak[20]" " -type \"float2\" 0.37864986 0.55260878999999996"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV1" "uvTweak[21]" " -type \"float2\" 0.23546218999999999 0.090125382000000004"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV1" "uvTweak[22]" " -type \"float2\" 0.30712402 0.54425025000000005"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV1" "uvTweak[23]" " -type \"float2\" 0.15892655 0.099863276000000001"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV1" "uvTweak[24]" " -type \"float2\" -0.19493257999999999 0.37880598999999998"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV1" "uvTweak[25]" " -type \"float2\" -0.34717905999999998 0.10525969"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV1" "uvTweak[26]" " -type \"float2\" -0.22648466 0.35419445999999999"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV1" "uvTweak[27]" " -type \"float2\" -0.37471168999999999 0.10061431"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV1" "uvTweak[28]" " -type \"float2\" -0.23878729000000001 0.32936104999999999"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV1" "uvTweak[29]" " -type \"float2\" -0.38057988999999998 0.094157009999999999"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV1" "uvTweak[30]" " -type \"float2\" -0.23209846000000001 0.30695581"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV1" "uvTweak[31]" " -type \"float2\" -0.36576897000000003 0.087630421"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV1" "uvTweak[32]" " -type \"float2\" 0.47129645999999997 -0.095780491999999995"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV1" "uvTweak[33]" " -type \"float2\" 0.65429121000000001 -0.11589924"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV1" "uvTweak[34]" " -type \"float2\" 0.46219843999999999 -0.098563254000000003"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV1" "uvTweak[35]" " -type \"float2\" 0.64673150000000001 -0.13970134000000001"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV1" "uvTweak[36]" " -type \"float2\" 0.44000787000000002 -0.10046586"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV1" "uvTweak[37]" " -type \"float2\" 0.62320774999999995 -0.16216689000000001"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV1" "uvTweak[38]" " -type \"float2\" 0.40761465000000002 -0.10146871"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV1" "uvTweak[39]" " -type \"float2\" 0.58681159999999999 -0.18221451"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV1" "uvTweak[40]" " -type \"float2\" 0.082761376999999997 -0.098654538"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV1" "uvTweak[41]" " -type \"float2\" 0.16191712 0.17778251"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV1" "uvTweak[42]" " -type \"float2\" 0.042541443999999998 -0.097864120999999998"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV1" "uvTweak[43]" " -type \"float2\" 0.11328822 0.16851076000000001"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV1" "uvTweak[44]" " -type \"float2\" 0.0033719539999999999 -0.097065806000000004"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV1" "uvTweak[45]" " -type \"float2\" 0.065968691999999995 0.16272089000000001"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV1" "uvTweak[46]" " -type \"float2\" -0.031669438000000001 -0.096232146000000005"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV1" "uvTweak[47]" " -type \"float2\" 0.023919224999999999 0.1601803"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV1" "uvTweak[48]" " -type \"float2\" 0.0055279732000000003 0.068797439000000002"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV1" "uvTweak[49]" " -type \"float2\" -0.059522510000000001 -0.095270902000000005"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV1" "uvTweak[50]" " -type \"float2\" 0.047797263 0.072375983000000005"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV1" "uvTweak[51]" " -type \"float2\" 0.095351993999999995 0.07871446"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV1" "uvTweak[52]" " -type \"float2\" 0.14421603 0.088009803999999997"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV1" "uvTweak[53]" " -type \"float2\" 0.23119935 -0.38353932000000002"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV1" "uvTweak[54]" " -type \"float2\" 0.57107061000000003 -0.27870977000000002"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV1" "uvTweak[55]" " -type \"float2\" 0.36830967999999997 -0.10169783"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV1" "uvTweak[56]" " -type \"float2\" 0.60768520999999998 -0.26025593000000002"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV1" "uvTweak[57]" " -type \"float2\" 0.63137244999999997 -0.23974492999999999"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV1" "uvTweak[58]" " -type \"float2\" 0.63901817999999999 -0.21809497"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV1" "uvTweak[59]" " -type \"float2\" 0.62869452999999997 -0.19646247"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV1" "uvTweak[60]" " -type \"float2\" -0.33323562000000001 0.082550287"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV1" "uvTweak[61]" " -type \"float2\" -0.35717452 -0.062369003999999999"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV1" "uvTweak[62]" " -type \"float2\" -0.37212282000000002 -0.055852964999999997"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV1" "uvTweak[63]" " -type \"float2\" -0.36934102000000002 -0.049147456999999999"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV1" "uvTweak[64]" " -type \"float2\" -0.34761930000000002 -0.043096438000000001"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV1" "uvTweak[65]" " -type \"float2\" -0.30817633999999999 -0.038660674999999999"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV1" "uvTweak[66]" " -type \"float2\" 0.087509095999999995 0.10279077"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV1" "uvTweak[67]" " -type \"float2\" 0.083927690999999999 -0.010119705999999999"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV1" "uvTweak[68]" " -type \"float2\" 0.15022963 -0.011086695000000001"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV1" "uvTweak[69]" " -type \"float2\" 0.21246609 -0.015868276000000001"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV1" "uvTweak[70]" " -type \"float2\" 0.26298252 -0.023644358000000001"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV1" "uvTweak[71]" " -type \"float2\" 0.29641395999999998 -0.0331375"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV1" "uvTweak[72]" " -type \"float2\" -0.0090320109999999995 0.16041859999999999"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV1" "uvTweak[73]" " -type \"float2\" 0.039483905 0.16768475999999999"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV1" "uvTweak[74]" " -type \"float2\" 0.074233353000000002 0.16569576"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV1" "uvTweak[75]" " -type \"float2\" 0.11616284 0.16921781999999999"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV1" "uvTweak[76]" " -type \"float2\" 0.54130321999999997 -0.1990671"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV1" "uvTweak[77]" " -type \"float2\" 0.55847089999999999 0.30143207"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV1" "uvTweak[78]" " -type \"float2\" 0.60056067000000002 0.32014619999999999"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV1" "uvTweak[79]" " -type \"float2\" 0.63203967000000005 0.33936828000000002"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV1" "uvTweak[80]" " -type \"float2\" 0.64911549999999996 0.35741149999999999"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV1" "uvTweak[81]" " -type \"float2\" 0.64902645000000003 0.37255614999999997"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV1" "uvTweak[82]" " -type \"float2\" -0.34476762999999999 0.20100856"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV1" "uvTweak[83]" " -type \"float2\" -0.20848536000000001 0.28911868000000002"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV1" "uvTweak[84]" " -type \"float2\" -0.35938287000000002 0.21031602999999999"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV1" "uvTweak[85]" " -type \"float2\" -0.35344583000000002 0.21953627000000001"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV1" "uvTweak[86]" " -type \"float2\" -0.32599777000000002 0.22662463999999999"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV1" "uvTweak[87]" " -type \"float2\" -0.27875411999999999 0.22953448000000001"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV1" "uvTweak[88]" " -type \"float2\" 0.17695670999999999 0.23395462"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV1" "uvTweak[89]" " -type \"float2\" 0.23779273000000001 0.52720433"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV1" "uvTweak[90]" " -type \"float2\" 0.25294682000000002 0.22416354999999999"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV1" "uvTweak[91]" " -type \"float2\" 0.32464581999999997 0.20644696000000001"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV1" "uvTweak[92]" " -type \"float2\" 0.38357258 0.18202539000000001"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV1" "uvTweak[93]" " -type \"float2\" 0.42362186000000002 0.15296794"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV1" "uvTweak[94]" " -type \"float2\" 0.19041362000000001 0.10027026999999999"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV1" "uvTweak[95]" " -type \"float2\" 0.24868006000000001 -0.29326379000000002"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak" " -s 100"
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[0]" " -type \"float2\" 0.02004388 0.096461802999999999"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[1]" " -type \"float2\" 0.0097108482999999999 0.39507079000000001"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[2]" " -type \"float2\" -0.79859716000000003 0.32106300999999998"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[3]" " -type \"float2\" -0.38905534000000003 0.18494347"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[4]" " -type \"float2\" -0.095783970999999996 -0.14459664"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[5]" " -type \"float2\" 0.083099781999999997 -0.047815829999999997"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[6]" " -type \"float2\" -0.055397093000000001 -0.14264252999999999"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[7]" " -type \"float2\" 0.46160674000000002 -0.39301216999999999"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[8]" " -type \"float2\" -0.46314876999999999 -0.046515821999999998"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[9]" " -type \"float2\" -0.052514613000000002 -0.044747755"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[10]" " -type \"float2\" -0.56388115999999999 -0.098177254000000005"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[11]" " -type \"float2\" 0.24440175 -0.40501869000000001"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[12]" " -type \"float2\" 0.36094069000000001 -0.088199644999999993"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[13]" " -type \"float2\" 0.27377293000000003 0.10530573"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[14]" " -type \"float2\" -0.10828073000000001 0.28781760000000001"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[15]" " -type \"float2\" 0.28504583 0.2282382"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[16]" " -type \"float2\" -0.13614230999999999 0.32945733999999999"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[17]" " -type \"float2\" 0.26851555999999999 0.25605375000000002"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[18]" " -type \"float2\" -0.18501307 0.36474427999999998"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[19]" " -type \"float2\" 0.22720957 0.27800792000000002"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[20]" " -type \"float2\" -0.25032976000000001 0.38910306"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[21]" " -type \"float2\" 0.16588268 0.29073521000000002"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[22]" " -type \"float2\" -0.324305 0.39927304000000002"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[23]" " -type \"float2\" 0.092962205000000006 0.29200113"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[24]" " -type \"float2\" -0.84797031 0.30474970000000001"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[25]" " -type \"float2\" -0.43934583999999999 0.16675367999999999"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[26]" " -type \"float2\" -0.87817078999999998 0.27828637000000001"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[27]" " -type \"float2\" -0.46997344000000002 0.14205014999999999"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[28]" " -type \"float2\" -0.88694012 0.24509373000000001"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[29]" " -type \"float2\" -0.080941616999999993 -0.080422878000000003"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[30]" " -type \"float2\" -0.87504296999999998 0.20889922999999999"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[31]" " -type \"float2\" -0.072370230999999993 -0.11650512"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[32]" " -type \"float2\" 0.35721317000000002 -0.098126560000000002"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[33]" " -type \"float2\" 0.26247343000000001 0.085630028999999996"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[34]" " -type \"float2\" 0.33804840000000003 -0.10745581999999999"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[35]" " -type \"float2\" 0.23311213 0.066452472999999998"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[36]" " -type \"float2\" 0.30651113000000002 -0.11540309"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[37]" " -type \"float2\" 0.18874730000000001 0.049676269000000002"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[38]" " -type \"float2\" 0.26626264999999999 -0.12151662000000001"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[39]" " -type \"float2\" 0.13331925999999999 0.036753743999999998"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[40]" " -type \"float2\" -0.097151548000000004 -0.14419778999999999"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[41]" " -type \"float2\" 0.40817881 -0.38773969000000003"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[42]" " -type \"float2\" -0.13922166999999999 -0.14415269999999999"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[43]" " -type \"float2\" 0.35429841000000001 -0.37736346999999998"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[44]" " -type \"float2\" -0.17850852 -0.14246692999999999"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[45]" " -type \"float2\" 0.30393748999999998 -0.36195672000000001"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[46]" " -type \"float2\" -0.21191894999999999 -0.13909334000000001"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[47]" " -type \"float2\" 0.26098125999999999 -0.34190217000000001"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[48]" " -type \"float2\" 0.27682804999999999 -0.42746919"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[49]" " -type \"float2\" -0.23640834999999999 -0.13404711999999999"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[50]" " -type \"float2\" 0.32050477999999999 -0.44639421000000001"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[51]" " -type \"float2\" 0.37170093999999998 -0.46114941999999998"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[52]" " -type \"float2\" 0.42647582000000001 -0.47139561000000002"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[53]" " -type \"float2\" 0.48080528 -0.47706779999999999"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[54]" " -type \"float2\" 0.14639714000000001 -0.040739446999999998"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[55]" " -type \"float2\" 0.22106761999999999 -0.12559149"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[56]" " -type \"float2\" 0.20289508000000001 -0.029294878"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[57]" " -type \"float2\" 0.24819975999999999 -0.01437366"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[58]" " -type \"float2\" 0.27826369000000001 0.0027250648"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[59]" " -type \"float2\" 0.28991675 0.020291626"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[60]" " -type \"float2\" -0.043328701999999997 -0.15041766000000001"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[61]" " -type \"float2\" -0.48704146999999998 -0.031049937"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[62]" " -type \"float2\" -0.47772144999999999 0.11385897"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[63]" " -type \"float2\" -0.49343770999999997 -0.013544053"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[64]" " -type \"float2\" -0.47981316000000002 0.0043072103999999998"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[65]" " -type \"float2\" -0.44579098 0.020313709999999999"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[66]" " -type \"float2\" -0.39395880999999999 0.032135962999999997"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[67]" " -type \"float2\" 0.019124001000000002 0.28133093999999997"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[68]" " -type \"float2\" 0.094381422000000006 0.10355251"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[69]" " -type \"float2\" 0.16767144 0.10168082000000001"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[70]" " -type \"float2\" 0.23016343 0.091215923000000004"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[71]" " -type \"float2\" 0.27427739000000001 0.074006185000000002"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[72]" " -type \"float2\" 0.29594504999999999 0.052787974000000001"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[73]" " -type \"float2\" 0.22909909000000001 -0.31792461999999999"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[74]" " -type \"float2\" -0.53344077000000001 -0.12236178"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[75]" " -type \"float2\" -0.49489825999999998 -0.14272612000000001"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[76]" " -type \"float2\" -0.45180953000000001 -0.15762203999999999"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[77]" " -type \"float2\" -0.40766608999999998 -0.16582367000000001"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[78]" " -type \"float2\" -0.36580515000000002 -0.16657754999999999"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[79]" " -type \"float2\" 0.80953651999999998 -0.40860071999999997"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[80]" " -type \"float2\" -0.052748237000000003 -0.13665599"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[81]" " -type \"float2\" -0.016575891999999998 -0.12088907"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[82]" " -type \"float2\" 0.0093537718000000006 -0.098410070000000002"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[83]" " -type \"float2\" 0.021943692000000001 -0.071064829999999996"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[84]" " -type \"float2\" 0.018815793000000001 -0.041391373000000002"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[85]" " -type \"float2\" -0.080749988999999994 -0.0082681774999999996"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[86]" " -type \"float2\" -0.84545451000000005 0.17322889"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[87]" " -type \"float2\" -0.47219533000000002 0.21289754"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[88]" " -type \"float2\" -0.088950157000000002 0.03056559"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[89]" " -type \"float2\" -0.46463483999999999 0.24375346000000001"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[90]" " -type \"float2\" -0.43482259000000001 0.27073829999999999"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[91]" " -type \"float2\" -0.38594052000000001 0.2905452"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[92]" " -type \"float2\" 0.081159174000000001 0.40657091000000001"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[93]" " -type \"float2\" -0.39726057999999997 0.3940613"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[94]" " -type \"float2\" 0.15179706000000001 0.40503328999999999"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[95]" " -type \"float2\" 0.21131154999999999 0.39097061999999999"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[96]" " -type \"float2\" 0.25152176999999998 0.36680043000000001"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[97]" " -type \"float2\" 0.26775073999999999 0.33617460999999998"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[98]" " -type \"float2\" 0.071130574000000002 0.028685539999999999"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV2" "uvTweak[99]" " -type \"float2\" 0.83504038999999997 -0.49705191999999998"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV3" "uvTweak" " -s 52"
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV3" "uvTweak[0]" " -type \"float2\" -0.28814548000000001 -0.090981007000000003"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV3" "uvTweak[1]" " -type \"float2\" -0.37940305000000002 -0.09242475"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV3" "uvTweak[2]" " -type \"float2\" 0.20582262000000001 -0.12395555"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV3" "uvTweak[3]" " -type \"float2\" 0.28337984999999999 -0.12381059"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV3" "uvTweak[4]" " -type \"float2\" -0.28684865999999998 0.52149760999999994"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV3" "uvTweak[5]" " -type \"float2\" 0.14444254000000001 -0.092792719999999995"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV3" "uvTweak[6]" " -type \"float2\" 0.48731618999999998 -0.28483375999999999"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV3" "uvTweak[7]" " -type \"float2\" -0.37909186 0.48035452000000001"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV3" "uvTweak[8]" " -type \"float2\" 0.15513882000000001 -0.36904627000000001"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV3" "uvTweak[9]" " -type \"float2\" 0.2297738 -0.010470033"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV3" "uvTweak[10]" " -type \"float2\" -0.31956755999999997 0.23656356000000001"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV3" "uvTweak[11]" " -type \"float2\" -0.35535902000000003 0.086203635000000001"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV3" "uvTweak[12]" " -type \"float2\" -0.32165843 0.18363756000000001"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV3" "uvTweak[13]" " -type \"float2\" -0.35567573000000002 0.045017480999999998"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV3" "uvTweak[14]" " -type \"float2\" -0.31496935999999998 0.131998"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV3" "uvTweak[15]" " -type \"float2\" -0.34568027000000001 0.0033680797000000002"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV3" "uvTweak[16]" " -type \"float2\" -0.30032164 0.087444723000000002"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV3" "uvTweak[17]" " -type \"float2\" -0.32685289000000001 -0.033169328999999997"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV3" "uvTweak[18]" " -type \"float2\" -0.27958387000000001 0.054881214999999997"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV3" "uvTweak[19]" " -type \"float2\" -0.3017976 -0.059745193000000002"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV3" "uvTweak[20]" " -type \"float2\" 0.21367206999999999 -0.12041747999999999"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV3" "uvTweak[21]" " -type \"float2\" 0.29357481000000002 -0.11725526999999999"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV3" "uvTweak[22]" " -type \"float2\" 0.22074969 -0.10509998"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV3" "uvTweak[23]" " -type \"float2\" 0.30120479999999999 -0.1001128"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV3" "uvTweak[24]" " -type \"float2\" 0.22723936 -0.080279595999999995"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV3" "uvTweak[25]" " -type \"float2\" 0.30590551999999999 -0.073696733"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV3" "uvTweak[26]" " -type \"float2\" 0.22911 -0.047402561000000003"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV3" "uvTweak[27]" " -type \"float2\" 0.30726793000000002 -0.040324390000000002"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV3" "uvTweak[28]" " -type \"float2\" 0.30490327 -0.0028701425000000002"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV3" "uvTweak[29]" " -type \"float2\" 0.15526234999999999 -0.39141737999999998"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV3" "uvTweak[30]" " -type \"float2\" 0.15348001 -0.40947938"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV3" "uvTweak[31]" " -type \"float2\" 0.14982629 -0.42144590999999998"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV3" "uvTweak[32]" " -type \"float2\" 0.14451161000000001 -0.42593151000000001"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV3" "uvTweak[33]" " -type \"float2\" 0.13795818000000001 -0.42215931000000001"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV3" "uvTweak[34]" " -type \"float2\" -0.27379140000000002 -0.072957813999999996"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV3" "uvTweak[35]" " -type \"float2\" -0.31168148000000001 -0.069853901999999995"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV3" "uvTweak[36]" " -type \"float2\" -0.33237934000000002 -0.037760794"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV3" "uvTweak[37]" " -type \"float2\" -0.3476938 0.0020251869999999999"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV3" "uvTweak[38]" " -type \"float2\" 0.55649291999999995 -0.27327907000000001"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV3" "uvTweak[39]" " -type \"float2\" -0.30143392000000002 0.516204"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV3" "uvTweak[40]" " -type \"float2\" 0.22617353000000001 -0.079923928000000005"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV3" "uvTweak[41]" " -type \"float2\" 0.20219519999999999 -0.12691462000000001"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV3" "uvTweak[42]" " -type \"float2\" -0.40799700999999999 -0.080385744999999995"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV3" "uvTweak[43]" " -type \"float2\" -0.25529998999999998 0.037608801999999997"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV3" "uvTweak[44]" " -type \"float2\" -0.43322471000000001 -0.055382669000000002"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV3" "uvTweak[45]" " -type \"float2\" -0.45179768999999997 -0.020646811000000001"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV3" "uvTweak[46]" " -type \"float2\" -0.46115229000000002 0.019197226000000001"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV3" "uvTweak[47]" " -type \"float2\" -0.45988922999999998 0.058809698000000001"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV3" "uvTweak[48]" " -type \"float2\" 0.23826981 0.44142746999999999"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV3" "uvTweak[49]" " -type \"float2\" -0.24192208000000001 0.83538376999999997"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV3" "uvTweak[50]" " -type \"float2\" 0.24094719000000001 0.45947969"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV3" "uvTweak[51]" " -type \"float2\" 0.17309632999999999 0.44446743"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV4" "uvTweak" " -s 42"
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV4" "uvTweak[0]" " -type \"float2\" -0.91883968999999999 -0.90753620999999995"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV4" "uvTweak[1]" " -type \"float2\" 0.26170799 -0.90115708000000005"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV4" "uvTweak[2]" " -type \"float2\" 0.16757551000000001 -0.83553487000000004"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV4" "uvTweak[3]" " -type \"float2\" -0.50855315000000001 -0.79924994999999999"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV4" "uvTweak[4]" " -type \"float2\" -0.49050327999999999 -0.18310434"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV4" "uvTweak[5]" " -type \"float2\" -0.94879639000000005 -0.27173817"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV4" "uvTweak[6]" " -type \"float2\" 0.10430008 0.092174634000000005"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV4" "uvTweak[7]" " -type \"float2\" 0.26210904000000002 0.021589502999999999"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV4" "uvTweak[8]" " -type \"float2\" -0.98140620999999995 -0.84822260999999999"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV4" "uvTweak[9]" " -type \"float2\" 0.18306449 -0.82162911000000005"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV4" "uvTweak[10]" " -type \"float2\" 0.23978253999999999 -0.75499147"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV4" "uvTweak[11]" " -type \"float2\" -0.44470757 -0.73100913000000001"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV4" "uvTweak[12]" " -type \"float2\" 0.23395182 -0.79448896999999996"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV4" "uvTweak[13]" " -type \"float2\" -0.44855064 -0.76188367999999995"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV4" "uvTweak[14]" " -type \"float2\" 0.21688954999999999 -0.82378351999999999"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV4" "uvTweak[15]" " -type \"float2\" -0.46379837000000002 -0.78540778"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV4" "uvTweak[16]" " -type \"float2\" 0.14164468999999999 -0.82485998000000005"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV4" "uvTweak[17]" " -type \"float2\" -0.53147137 -0.79480404000000004"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV4" "uvTweak[18]" " -type \"float2\" 0.12194338 -0.79423993999999998"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV4" "uvTweak[19]" " -type \"float2\" -0.54777050000000005 -0.77688323999999997"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV4" "uvTweak[20]" " -type \"float2\" 0.18866462000000001 -0.86482912000000001"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV4" "uvTweak[21]" " -type \"float2\" 0.1143139 -0.751881"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV4" "uvTweak[22]" " -type \"float2\" 0.20825784999999999 -0.89542049000000001"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV4" "uvTweak[23]" " -type \"float2\" 0.23530947999999999 -0.90435277999999997"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV4" "uvTweak[24]" " -type \"float2\" 0.28726867 -0.88607508000000001"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV4" "uvTweak[25]" " -type \"float2\" 0.19265704 -0.83502418"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV4" "uvTweak[26]" " -type \"float2\" 0.30478938999999999 -0.85101795000000002"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV4" "uvTweak[27]" " -type \"float2\" 0.30936470999999999 -0.80452895000000002"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV4" "uvTweak[28]" " -type \"float2\" 0.10670456 2.9551527e-05"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV4" "uvTweak[29]" " -type \"float2\" 0.23192852999999999 -0.053266215999999998"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV4" "uvTweak[30]" " -type \"float2\" -0.67639243999999998 -0.60430669999999997"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV4" "uvTweak[31]" " -type \"float2\" -0.97717171999999997 -0.88021141000000003"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV4" "uvTweak[32]" " -type \"float2\" -0.96209239999999996 -0.90259707"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV4" "uvTweak[33]" " -type \"float2\" -0.94051289999999999 -0.90937977999999997"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV4" "uvTweak[34]" " -type \"float2\" -0.48592949000000002 -0.79612844999999999"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV4" "uvTweak[35]" " -type \"float2\" -0.89708626000000002 -0.89724994000000002"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV4" "uvTweak[36]" " -type \"float2\" -0.88043271999999995 -0.87299316999999999"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV4" "uvTweak[37]" " -type \"float2\" -0.87305582000000004 -0.84126705000000002"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV4" "uvTweak[38]" " -type \"float2\" -0.62941968000000004 -0.1456933"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV4" "uvTweak[39]" " -type \"float2\" -0.84063308999999997 -0.28482729000000001"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV4" "uvTweak[40]" " -type \"float2\" -0.55205768 -0.7511428"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV4" "uvTweak[41]" " -type \"float2\" 0.058729722999999998 -0.674793"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV5" "uvTweak" " -s 42"
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV5" "uvTweak[0]" " -type \"float2\" 0.40159801000000001 -0.92458439000000003"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV5" "uvTweak[1]" " -type \"float2\" -0.030491649999999999 -0.60427332"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV5" "uvTweak[2]" " -type \"float2\" -0.49985080999999998 -0.86997837"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV5" "uvTweak[3]" " -type \"float2\" 0.65713465000000004 -0.57625627999999995"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV5" "uvTweak[4]" " -type \"float2\" 0.68028772000000004 -0.090879917000000005"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV5" "uvTweak[5]" " -type \"float2\" 0.32869187 -0.45677521999999998"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV5" "uvTweak[6]" " -type \"float2\" -0.15046810999999999 0.18963251"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV5" "uvTweak[7]" " -type \"float2\" 0.020134628000000002 0.26873883999999998"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV5" "uvTweak[8]" " -type \"float2\" 0.33459698999999998 -0.87730425999999995"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV5" "uvTweak[9]" " -type \"float2\" -0.11709744 -0.50051509999999999"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV5" "uvTweak[10]" " -type \"float2\" -0.40630409000000001 -0.77312093999999998"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV5" "uvTweak[11]" " -type \"float2\" 0.72647351000000004 -0.53080285000000005"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV5" "uvTweak[12]" " -type \"float2\" -0.41595155 -0.81960385999999996"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV5" "uvTweak[13]" " -type \"float2\" 0.72199135999999997 -0.55644035000000003"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV5" "uvTweak[14]" " -type \"float2\" -0.43962090999999998 -0.85456180999999998"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV5" "uvTweak[15]" " -type \"float2\" 0.70504677000000004 -0.57454890000000003"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV5" "uvTweak[16]" " -type \"float2\" -0.52813958999999999 -0.85977822999999998"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV5" "uvTweak[17]" " -type \"float2\" 0.63359052000000005 -0.56555652999999995"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV5" "uvTweak[18]" " -type \"float2\" -0.54749261999999999 -0.82931774999999996"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV5" "uvTweak[19]" " -type \"float2\" 0.61693823000000003 -0.54172814000000002"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV5" "uvTweak[20]" " -type \"float2\" -0.11229217 -0.55045575000000002"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV5" "uvTweak[21]" " -type \"float2\" -0.55331068999999999 -0.78695773999999996"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV5" "uvTweak[22]" " -type \"float2\" -0.092122376000000006 -0.58744048999999998"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV5" "uvTweak[23]" " -type \"float2\" -0.061960756999999998 -0.60233539000000003"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV5" "uvTweak[24]" " -type \"float2\" 0.0020861030000000002 -0.59301722000000001"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV5" "uvTweak[25]" " -type \"float2\" -0.47032594999999999 -0.86840010000000001"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV5" "uvTweak[26]" " -type \"float2\" 0.026571810000000001 -0.55881201999999996"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV5" "uvTweak[27]" " -type \"float2\" 0.035206079000000001 -0.51202570999999997"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV5" "uvTweak[28]" " -type \"float2\" -0.52668285000000004 -0.061494361999999997"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV5" "uvTweak[29]" " -type \"float2\" -0.38578670999999998 3.5674100000000005e-05"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV5" "uvTweak[30]" " -type \"float2\" 0.51634681000000004 -0.67832183999999995"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV5" "uvTweak[31]" " -type \"float2\" 0.34073478000000001 -0.90143614999999999"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV5" "uvTweak[32]" " -type \"float2\" 0.35696225999999998 -0.91893625000000001"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV5" "uvTweak[33]" " -type \"float2\" 0.37916347 -0.92505669999999995"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV5" "uvTweak[34]" " -type \"float2\" 0.68101739999999999 -0.57922781000000001"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV5" "uvTweak[35]" " -type \"float2\" 0.42421978999999999 -0.91737484999999996"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV5" "uvTweak[36]" " -type \"float2\" 0.44070065000000003 -0.89852469999999995"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV5" "uvTweak[37]" " -type \"float2\" 0.44637926999999999 -0.87314862000000004"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV5" "uvTweak[38]" " -type \"float2\" 0.54511905000000005 -0.13058618"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV5" "uvTweak[39]" " -type \"float2\" 0.43719056000000001 -0.43759241999999998"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV5" "uvTweak[40]" " -type \"float2\" 0.61192632000000002 -0.51024866000000002"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV5" "uvTweak[41]" " -type \"float2\" -0.21267688000000001 -0.66858834"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV6" "uvTweak" " -s 18"
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV6" "uvTweak[0]" " -type \"float2\" -0.10130842 0.44928274000000001"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV6" "uvTweak[1]" " -type \"float2\" -0.75468652999999997 -0.084194465999999996"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV6" "uvTweak[2]" " -type \"float2\" -0.67048991000000002 0.045409410999999997"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV6" "uvTweak[3]" " -type \"float2\" 0.48476060999999998 -0.16360269"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV6" "uvTweak[4]" " -type \"float2\" -0.18140653000000001 -0.11829196"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV6" "uvTweak[5]" " -type \"float2\" 0.63529723999999999 -0.24314638999999999"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV6" "uvTweak[6]" " -type \"float2\" -0.201868 -0.057369380999999997"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV6" "uvTweak[7]" " -type \"float2\" -0.0033018428 0.072946355000000004"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV6" "uvTweak[8]" " -type \"float2\" -0.060644745999999999 -0.18265097999999999"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV6" "uvTweak[9]" " -type \"float2\" 0.26483810000000002 -0.093461260000000004"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV6" "uvTweak[10]" " -type \"float2\" -0.076518446000000004 0.31177503000000001"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV6" "uvTweak[11]" " -type \"float2\" 0.65501301999999995 -0.12241775000000001"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV6" "uvTweak[12]" " -type \"float2\" -0.53111803999999996 -0.22894906000000001"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV6" "uvTweak[13]" " -type \"float2\" -0.68515956 0.13575915"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV6" "uvTweak[14]" " -type \"float2\" 0.60827249000000005 -0.15830886"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV6" "uvTweak[15]" " -type \"float2\" -0.075196996000000002 0.28894877000000002"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV6" "uvTweak[16]" " -type \"float2\" 0.023722904 0.31220376"
+		
+		2 "unit7_cushion:Unit5_LabScene:polyTweakUV6" "uvTweak[17]" " -type \"float2\" -0.0033018428 0.39704131999999998"
+		
+		5 3 "unit7_cushionRN" "unit7_cushion:Unit5_LabScene:polyTweakUV2.output" 
+		"unit7_cushionRN.placeHolderList[7]" "unit7_cushion:Unit5_LabScene:cushionShape2.i"
+		
+		5 3 "unit7_cushionRN" "unit7_cushion:Unit5_LabScene:transformGeometry3.outputGeometry" 
+		"unit7_cushionRN.placeHolderList[8]" "unit7_cushion:Unit5_LabScene:cushionShape1.i"
+		
+		5 3 "unit7_cushionRN" "unit7_cushion:Unit5_LabScene:polyTweakUV3.output" 
+		"unit7_cushionRN.placeHolderList[9]" "unit7_cushion:Unit5_LabScene:backShape.i"
+		5 3 "unit7_cushionRN" "unit7_cushion:Unit5_LabScene:polyTweakUV4.output" 
+		"unit7_cushionRN.placeHolderList[10]" "unit7_cushion:Unit5_LabScene:arm_rightShape.i"
+		
+		5 3 "unit7_cushionRN" "unit7_cushion:Unit5_LabScene:polyTweakUV5.output" 
+		"unit7_cushionRN.placeHolderList[11]" "unit7_cushion:Unit5_LabScene:arm_leftShape.i"
+		
+		5 3 "unit7_cushionRN" "unit7_cushion:Unit5_LabScene:polyTweakUV6.output" 
+		"unit7_cushionRN.placeHolderList[12]" "unit7_cushion:Unit5_LabScene:baseShape.i";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "sharedReferenceNode";
@@ -3654,6 +4731,86 @@ createNode polyTweakUV -n "polyTweakUV5";
 		 -0.13230038 0.26649478 -0.19438815 0.59650069 0.15174973 0.76409262 0.087415218 -0.12182631
 		 -0.85292596 0.17464657 -0.22191739 -0.065003961 -0.83119792 0.24581733 -0.35744458
 		 0.27802658 -0.040160142 0.41193303 0.20793486;
+createNode polyTweak -n "polyTweak1";
+	rename -uid "5ACF6039-4296-6DB3-DF03-0C866312C4C0";
+	setAttr ".uopa" yes;
+	setAttr -s 8 ".tk[1:7]" -type "float3"  0 -0.084406614 0 0 0 0 0 -0.084406614
+		 0 0 0 0 0 -0.084406614 0 0 -0.084406614 0 0 -0.084406614 0;
+createNode transformGeometry -n "transformGeometry2";
+	rename -uid "A4AABB9A-4A23-7470-707B-D49520797243";
+	setAttr ".txf" -type "matrix" -0.88577645261448534 0 -1.0847632974544267e-16 0 0 0.88577645261448534 0 0
+		 1.0847632974544267e-16 0 -0.88577645261448534 0 0 0.044281677551728793 2.2637743548760008 1;
+createNode polyTweak -n "polyTweak2";
+	rename -uid "2F21583A-4C4C-71DF-77E8-B29FAAF4398E";
+	setAttr ".uopa" yes;
+	setAttr -s 20 ".tk[1:19]" -type "float3"  -0.050411105 -0.084406614
+		 0 0 0 0 -0.050411105 -0.084406614 0 -0.050411105 -0.084406614 0 -0.050411105 -0.084406614
+		 0 -0.050411105 -0.084406614 0 -0.050411105 -0.084406614 0 0 0 0 -0.050411105 -0.084406614
+		 0 0 0 0 -0.050411105 -0.084406614 0 -0.050411105 -0.084406614 0 -0.050411105 -0.084406614
+		 0 -0.050411105 -0.084406614 0 0 0 0 -0.050411105 -0.084406614 0 -0.050411105 -0.084406614
+		 0 -0.050411105 -0.084406614 0 -0.050411105 -0.084406614 0;
+createNode transformGeometry -n "transformGeometry3";
+	rename -uid "7731F8EE-401D-03F5-0447-15A336C355EE";
+	setAttr ".txf" -type "matrix" -0.88577645261448534 0 -1.0847632974544267e-16 0 0 0.88577645261448534 0 0
+		 1.0847632974544267e-16 0 -0.88577645261448534 0 0 0.044281677551728793 2.2637743548760008 1;
+createNode polyTweak -n "polyTweak3";
+	rename -uid "C9E1BA71-4342-9588-6DB4-4BA2630866E2";
+	setAttr ".uopa" yes;
+	setAttr -s 28 ".tk[3:27]" -type "float3"  0.019908534 -0.084406614 -0.011058734
+		 -0.054534242 -0.084406614 -0.011058734 -0.056427881 -0.084406614 -0.011058734 -0.057930678
+		 -0.084406614 -0.011058734 -0.058895536 -0.084406614 -0.011058734 -0.059228003 -0.084406614
+		 -0.011058734 -0.05243513 -0.084406614 -0.011058734 -0.059228003 -0.084406614 -0.011058734
+		 -0.058895536 -0.084406614 -0.011058734 -0.057930678 -0.084406614 -0.011058734 -0.056427881
+		 -0.084406614 -0.011058734 -0.054534242 -0.084406614 -0.011058734 -0.05243513 -0.084406614
+		 -0.011058734 0.019576067 -0.084406614 -0.011058734 0.018611213 -0.084406614 -0.011058734
+		 0.017108412 -0.084406614 -0.011058734 0.015214777 -0.084406614 -0.011058734 0.013115661
+		 -0.084406614 -0.011058734 0.019908534 -0.084406614 -0.011058734 0.019908534 -0.084406614
+		 -0.011058734 0.013115661 -0.084406614 -0.011058734 0.015214777 -0.084406614 -0.011058734
+		 0.017108412 -0.084406614 -0.011058734 0.018611213 -0.084406614 -0.011058734 0.019576067
+		 -0.084406614 -0.011058734;
+createNode transformGeometry -n "transformGeometry4";
+	rename -uid "150C43E1-42A4-7020-8502-E5ADD408C7A1";
+	setAttr ".txf" -type "matrix" -0.88577645261448534 0 -1.0847632974544267e-16 0 0 0.88577645261448534 0 0
+		 1.0847632974544267e-16 0 -0.88577645261448534 0 0 0.044281677551728793 2.2637743548760008 1;
+createNode polyTweak -n "polyTweak4";
+	rename -uid "CC3C54CC-4B1F-9678-7770-5DACAAB4A52F";
+	setAttr ".uopa" yes;
+	setAttr -s 20 ".tk[1:19]" -type "float3"  -0.018648505 -0.084406614
+		 0 0 0 0 0 0 0 -0.018648505 -0.084406614 0 -0.018648505 -0.084406614 0 -0.018648505
+		 -0.084406614 0 -0.018648505 -0.084406614 0 -0.018648505 -0.084406614 0 -0.018648505
+		 -0.084406614 0 0 0 0 0 0 0 -0.018648505 -0.084406614 0 -0.018648505 -0.084406614
+		 0 -0.018648505 -0.084406614 0 0 0 0 0 0 0 -0.018648505 -0.084406614 0 -0.018648505
+		 -0.084406614 0 -0.018648505 -0.084406614 0;
+createNode transformGeometry -n "transformGeometry5";
+	rename -uid "A85D0D8C-4C89-F240-EFCE-BE8F4886E024";
+	setAttr ".txf" -type "matrix" -0.88577645261448534 0 -1.0847632974544267e-16 0 0 0.88577645261448534 0 0
+		 1.0847632974544267e-16 0 -0.88577645261448534 0 0 0.044281677551728793 2.2637743548760008 1;
+createNode transformGeometry -n "transformGeometry6";
+	rename -uid "C86090A3-464B-9D06-9D6E-8EADD27CCB85";
+	setAttr ".txf" -type "matrix" -0.88577645261448534 0 -1.0847632974544267e-16 0 0 0.88577645261448534 0 0
+		 1.0847632974544267e-16 0 -0.88577645261448534 0 0 0.044281677551728793 2.2637743548760008 1;
+createNode polyTweak -n "polyTweak5";
+	rename -uid "20A6FD0F-4432-CB9F-D1B9-169A2B3AB919";
+	setAttr ".uopa" yes;
+	setAttr -s 48 ".tk[1:47]" -type "float3"  -2.220446e-16 -0.073690772
+		 0 -2.220446e-16 -0.073690772 0 -2.220446e-16 -0.073690772 0 -2.220446e-16 -0.073690772
+		 0 -2.220446e-16 -0.073690772 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -2.220446e-16
+		 -0.073690772 0 -2.220446e-16 -0.073690772 0 -2.220446e-16 -0.073690772 0 -2.220446e-16
+		 -0.073690772 0 -2.220446e-16 -0.073690772 0 -2.220446e-16 -0.073690772 0 -2.220446e-16
+		 -0.073690772 0 -2.220446e-16 -0.073690772 0 -2.220446e-16 -0.073690772 0 -2.220446e-16
+		 -0.073690772 0 -2.220446e-16 -0.073690772 0 -2.220446e-16 -0.073690772 0 0 0 0 -2.220446e-16
+		 -0.073690772 0 -2.220446e-16 -0.073690772 0 -2.220446e-16 -0.073690772 0 -2.220446e-16
+		 -0.073690772 0 0 0 0 -2.220446e-16 -0.073690772 0 -2.220446e-16 -0.073690772 0 -2.220446e-16
+		 -0.073690772 0 -2.220446e-16 -0.073690772 0 -2.220446e-16 -0.073690772 0 -2.220446e-16
+		 -0.073690772 0 -2.220446e-16 -0.073690772 0 -2.220446e-16 -0.073690772 0 -2.220446e-16
+		 -0.073690772 0 -2.220446e-16 -0.073690772 0 -2.220446e-16 -0.073690772 0 -2.220446e-16
+		 -0.073690772 0 -2.220446e-16 -0.073690772 0 -2.220446e-16 -0.073690772 0 -2.220446e-16
+		 -0.073690772 0 -2.220446e-16 -0.073690772 0 -2.220446e-16 -0.073690772 0 -2.220446e-16
+		 -0.073690772 0;
+createNode transformGeometry -n "transformGeometry7";
+	rename -uid "1908F970-4995-8234-5848-9A9C17A746B8";
+	setAttr ".txf" -type "matrix" -0.88577645261448534 0 -1.0847632974544267e-16 0 0 0.88577645261448534 0 0
+		 1.0847632974544267e-16 0 -0.88577645261448534 0 0 0.044281677551728793 2.2637743548760008 1;
 select -ne :time1;
 	setAttr ".o" 37;
 	setAttr ".unw" 37;
@@ -3700,10 +4857,24 @@ select -ne :defaultColorMgtGlobals;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
+select -ne :ikSystem;
+	setAttr -s 4 ".sol";
 connectAttr "unit6_vaseProp:polyTweakUV1.out" "unit6_vasePropRN.phl[1]";
 connectAttr "unit6_vaseProp:polyTweakUV1.uvtk[0]" "unit6_vasePropRN.phl[2]";
 connectAttr "unit6_vasePropRN.phl[3]" "polyPlanarProj1.mp";
 connectAttr "unit6_vasePropRN.phl[4]" "transformGeometry1.ig";
+connectAttr "transformGeometry2.og" "unit7_cushionRN.phl[1]";
+connectAttr "transformGeometry3.og" "unit7_cushionRN.phl[2]";
+connectAttr "transformGeometry4.og" "unit7_cushionRN.phl[3]";
+connectAttr "transformGeometry5.og" "unit7_cushionRN.phl[4]";
+connectAttr "transformGeometry6.og" "unit7_cushionRN.phl[5]";
+connectAttr "transformGeometry7.og" "unit7_cushionRN.phl[6]";
+connectAttr "unit7_cushionRN.phl[7]" "polyTweak5.ip";
+connectAttr "unit7_cushionRN.phl[8]" "transformGeometry6.ig";
+connectAttr "unit7_cushionRN.phl[9]" "polyTweak3.ip";
+connectAttr "unit7_cushionRN.phl[10]" "polyTweak4.ip";
+connectAttr "unit7_cushionRN.phl[11]" "polyTweak2.ip";
+connectAttr "unit7_cushionRN.phl[12]" "polyTweak1.ip";
 connectAttr "polyMapCut19.out" "floorShape.i";
 connectAttr "polyMapCut17.out" "frameShape.i";
 connectAttr "polyTweakUV3.uvtk[0]" "frameShape.uvst[0].uvtw";
@@ -3773,6 +4944,11 @@ connectAttr "polySurfaceShape6.o" "polyMapCut19.ip";
 connectAttr "polyMapCut18.out" "polyMapCut20.ip";
 connectAttr "polyMapCut20.out" "polyMapCut21.ip";
 connectAttr "polyMapCut21.out" "polyTweakUV5.ip";
+connectAttr "polyTweak1.out" "transformGeometry2.ig";
+connectAttr "polyTweak2.out" "transformGeometry3.ig";
+connectAttr "polyTweak3.out" "transformGeometry4.ig";
+connectAttr "polyTweak4.out" "transformGeometry5.ig";
+connectAttr "polyTweak5.out" "transformGeometry7.ig";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "floorShape.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "tableShape.iog" ":initialShadingGroup.dsm" -na;
