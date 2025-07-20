@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: scene_1_5.ma
-//Last modified: Tue, Jul 15, 2025 10:51:14 PM
+//Last modified: Fri, Jul 18, 2025 05:47:32 PM
 //Codeset: 1252
 file -rdi 1 -ns "Unit5_LabScene" -dr 1 -rfn "Unit5_LabSceneRN" -op "v=0;" -typ
 		 "mayaAscii" "C:/GitHub/Essentials/DAGV1100and1200/Maya//scenes/Unit5_LabScene.ma";
@@ -10,10 +10,10 @@ file -rdi 1 -ns "unti7_chair" -rfn "unti7_chairRN" -op "v=0;" -typ "mayaAscii"
 		 "C:/GitHub/Essentials/DAGV1100and1200/Maya//scenes/unti7_chair.ma";
 file -rdi 1 -ns "unit7_cushion" -rfn "unit7_cushionRN" -op "v=0;" -typ "mayaAscii"
 		 "C:/GitHub/Essentials/DAGV1100and1200/Maya//scenes/unit7_cushion.ma";
-file -rdi 2 -ns "Unit5_LabScene" -rfn "unit7_cushion:Unit5_LabSceneRN" -op "v=0;"
-		 -typ "mayaAscii" "C:/GitHub/Essentials/DAGV1100and1200/Maya//scenes/Unit5_LabScene.ma";
 file -rdi 1 -ns "unit7_stool" -rfn "unit7_stoolRN" -op "v=0;" -typ "mayaAscii"
 		 "C:/GitHub/Essentials/DAGV1100and1200/Maya//scenes/unit7_stool.ma";
+file -rdi 1 -ns "Unit5_LabScene" -rfn "Unit5_LabSceneRN1" -op "v=0;" -typ "mayaAscii"
+		 "C:/GitHub/Essentials/DAGV1100and1200/Maya//scenes/Unit5_LabScene.ma";
 file -r -ns "Unit5_LabScene" -dr 1 -rfn "Unit5_LabSceneRN" -op "v=0;" -typ "mayaAscii"
 		 "C:/GitHub/Essentials/DAGV1100and1200/Maya//scenes/Unit5_LabScene.ma";
 file -r -ns "unit6_vaseProp" -dr 1 -rfn "unit6_vasePropRN" -op "v=0;" -typ "mayaAscii"
@@ -24,6 +24,8 @@ file -r -ns "unit7_cushion" -dr 1 -rfn "unit7_cushionRN" -op "v=0;" -typ "mayaAs
 		 "C:/GitHub/Essentials/DAGV1100and1200/Maya//scenes/unit7_cushion.ma";
 file -r -ns "unit7_stool" -dr 1 -rfn "unit7_stoolRN" -op "v=0;" -typ "mayaAscii"
 		 "C:/GitHub/Essentials/DAGV1100and1200/Maya//scenes/unit7_stool.ma";
+file -r -ns "Unit5_LabScene" -dr 1 -rfn "Unit5_LabSceneRN1" -op "v=0;" -typ "mayaAscii"
+		 "C:/GitHub/Essentials/DAGV1100and1200/Maya//scenes/Unit5_LabScene.ma";
 requires maya "2025ff03";
 requires "stereoCamera" "10.0";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiImagerDenoiserOidn"
@@ -34,17 +36,17 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
 fileInfo "osv" "Windows 11 Pro v2009 (Build: 26100)";
-fileInfo "UUID" "F1C80467-40E7-0F04-6BEC-909A2A1C2C91";
+fileInfo "UUID" "8351B7E2-493D-3471-16D7-A4BD78EE567D";
 createNode transform -s -n "persp";
 	rename -uid "970F5D04-4490-6334-C79C-39AB4DC3DB66";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 10.730951505690332 2.9532543866991707 4.8052930003173966 ;
-	setAttr ".r" -type "double3" -3.938352731395764 1498.5999999999215 3.8153741397980416e-16 ;
+	setAttr ".t" -type "double3" 16.332061998661509 12.053083909772694 -0.76991185139097174 ;
+	setAttr ".r" -type "double3" -30.938352735974863 1890.9999999989413 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "F693882C-4452-79AB-787C-23966A4C9222";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 13.436686813849576;
+	setAttr ".coi" 19.612496965158829;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -466,10 +468,8 @@ createNode mesh -n "bookShape1" -p "book1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 4 ".pt";
-	setAttr ".pt[2]" -type "float3" -2.9802322e-08 0 0 ;
-	setAttr ".pt[3]" -type "float3" -2.9802322e-08 0 0 ;
-	setAttr ".pt[4]" -type "float3" -2.9802322e-08 0 0 ;
+	setAttr -s 3 ".pt[2:4]" -type "float3"  -2.9802322e-08 0 0 -2.9802322e-08 
+		0 0 -2.9802322e-08 0 0;
 	setAttr -s 38 ".vt[0:37]"  -0.51838338 0.69531643 -2.84912276 -0.44359881 0.69531643 -2.84912276
 		 -0.51838338 1.12544274 -2.84912276 -0.44359884 1.12544274 -2.84912276 -0.51838338 1.12544274 -3.19503856
 		 -0.44359881 1.12544274 -3.19503856 -0.51838338 0.69531643 -3.19503856 -0.44359881 0.69531643 -3.19503856
@@ -599,10 +599,8 @@ createNode mesh -n "bookShape2" -p "book2";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 4 ".pt";
-	setAttr ".pt[2]" -type "float3" -2.9802322e-08 0 0 ;
-	setAttr ".pt[3]" -type "float3" -2.9802322e-08 0 0 ;
-	setAttr ".pt[4]" -type "float3" -2.9802322e-08 0 0 ;
+	setAttr -s 3 ".pt[2:4]" -type "float3"  -2.9802322e-08 0 0 -2.9802322e-08 
+		0 0 -2.9802322e-08 0 0;
 	setAttr -s 38 ".vt[0:37]"  -0.51838338 0.69531643 -2.84912276 -0.44359881 0.69531643 -2.84912276
 		 -0.51838338 1.12544274 -2.84912276 -0.44359884 1.12544274 -2.84912276 -0.51838338 1.12544274 -3.19503856
 		 -0.44359881 1.12544274 -3.19503856 -0.51838338 0.69531643 -3.19503856 -0.44359881 0.69531643 -3.19503856
@@ -865,10 +863,8 @@ createNode mesh -n "bookShape3" -p "book3";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 4 ".pt";
-	setAttr ".pt[2]" -type "float3" -2.9802322e-08 0 0 ;
-	setAttr ".pt[3]" -type "float3" -2.9802322e-08 0 0 ;
-	setAttr ".pt[4]" -type "float3" -2.9802322e-08 0 0 ;
+	setAttr -s 3 ".pt[2:4]" -type "float3"  -2.9802322e-08 0 0 -2.9802322e-08 
+		0 0 -2.9802322e-08 0 0;
 	setAttr -s 38 ".vt[0:37]"  -0.51838338 0.69531643 -2.84912276 -0.44359881 0.69531643 -2.84912276
 		 -0.51838338 1.12544274 -2.84912276 -0.44359884 1.12544274 -2.84912276 -0.51838338 1.12544274 -3.19503856
 		 -0.44359881 1.12544274 -3.19503856 -0.51838338 0.69531643 -3.19503856 -0.44359881 0.69531643 -3.19503856
@@ -1131,10 +1127,8 @@ createNode mesh -n "bookShape4" -p "book4";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 4 ".pt";
-	setAttr ".pt[2]" -type "float3" -2.9802322e-08 0 0 ;
-	setAttr ".pt[3]" -type "float3" -2.9802322e-08 0 0 ;
-	setAttr ".pt[4]" -type "float3" -2.9802322e-08 0 0 ;
+	setAttr -s 3 ".pt[2:4]" -type "float3"  -2.9802322e-08 0 0 -2.9802322e-08 
+		0 0 -2.9802322e-08 0 0;
 	setAttr -s 38 ".vt[0:37]"  -0.51838338 0.69531643 -2.84912276 -0.44359881 0.69531643 -2.84912276
 		 -0.51838338 1.12544274 -2.84912276 -0.44359884 1.12544274 -2.84912276 -0.51838338 1.12544274 -3.19503856
 		 -0.44359881 1.12544274 -3.19503856 -0.51838338 0.69531643 -3.19503856 -0.44359881 0.69531643 -3.19503856
@@ -2992,21 +2986,314 @@ createNode mesh -n "polySurfaceShape7" -p "wall";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode fosterParent -n "unit7_cushionRNfosterParent1";
+	rename -uid "A0646CE5-42DD-840B-BC98-C48A16F0C644";
+createNode transform -n "unit7_cushion:transform1" -p "unit7_cushionRNfosterParent1";
+	rename -uid "71E9FAA3-4DE3-2122-F5AC-AE9B2E6057A1";
+createNode transform -n "unit7_cushion:transform2" -p "unit7_cushionRNfosterParent1";
+	rename -uid "5ADEFE01-44BD-D63A-92F3-D3B846292462";
+createNode transform -n "unit7_cushion:transform3" -p "unit7_cushionRNfosterParent1";
+	rename -uid "83AF9729-43E2-7266-A98F-5DA23C87D306";
+createNode fosterParent -n "Unit5_LabSceneRN1fosterParent1";
+	rename -uid "0306002E-4C16-901B-AAB2-2FAD29DFC401";
+createNode mesh -n "Unit5_LabScene:polySurfaceShape6" -p "Unit5_LabSceneRN1fosterParent1";
+	rename -uid "AA9A2CF8-4F75-7F53-ADDD-EEBAD4E603E2";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr -s 6 ".gtag";
+	setAttr ".gtag[0].gtagnm" -type "string" "back";
+	setAttr ".gtag[0].gtagcmp" -type "componentList" 2 "f[1]" "f[16:21]";
+	setAttr ".gtag[1].gtagnm" -type "string" "bottom";
+	setAttr ".gtag[1].gtagcmp" -type "componentList" 1 "f[25]";
+	setAttr ".gtag[2].gtagnm" -type "string" "front";
+	setAttr ".gtag[2].gtagcmp" -type "componentList" 2 "f[0]" "f[6:11]";
+	setAttr ".gtag[3].gtagnm" -type "string" "left";
+	setAttr ".gtag[3].gtagcmp" -type "componentList" 2 "f[3:5]" "f[14:15]";
+	setAttr ".gtag[4].gtagnm" -type "string" "right";
+	setAttr ".gtag[4].gtagcmp" -type "componentList" 3 "f[2]" "f[12:13]" "f[22:23]";
+	setAttr ".gtag[5].gtagnm" -type "string" "top";
+	setAttr ".gtag[5].gtagcmp" -type "componentList" 1 "f[24]";
+	setAttr ".pv" -type "double2" 0.40263763070106506 0.57348743081092834 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 98 ".uvst[0].uvsp[0:97]" -type "float2" 0.33728829 0.2409901
+		 0.49961102 0.55363911 0.17987478 0.55655688 0.62489086 0.58632356 0.085473835 0.24099088
+		 0.12527987 0.59729809 0.43684664 0.55496711 0.99922204 0.54266435 0.51845056 0.3180905
+		 0.72147524 0.54876548 0.26534861 0.32104903 0.90263766 0.58022243 0.25568435 0.47786671
+		 0.22186425 0.55974013 -5.5879354e-09 0.47649878 0.40302664 0.59119707 0.0011686664
+		 0.4959408 0.42249912 0.59076935 0.0082880519 0.51407021 0.4419716 0.59034163 0.020661294
+		 0.52911222 0.46144408 0.5899139 0.037077203 0.53959459 0.48091662 0.58948618 0.19931692
+		 0.55538821 0.64436334 0.58589584 0.21744627 0.54826874 0.66383588 0.58546805 0.23248833
+		 0.53589553 0.6833083 0.58504033 0.24297065 0.51947963 0.70278084 0.58461255 0.25717136
+		 0.49728709 0.20239174 0.56016785 0.26458681 0.51529735 0.18291923 0.56059557 0.27720484
+		 0.53013474 0.16344675 0.56102335 0.29379031 0.54034668 0.14397426 0.56145108 0.45626694
+		 0.55348009 0.97974956 0.54309207 0.47427729 0.54606467 0.96027708 0.54351985 0.48911455
+		 0.53344661 0.9408046 0.54394764 0.49932653 0.51686114 0.92133212 0.54437536 0.92211014
+		 0.57979465 0.50391346 0.49793178 0.94158262 0.57936692 0.9610551 0.57893914 0.98052758
+		 0.57851142 0.00077801943 0.60003299 0.14475234 0.59687036 0.31271964 0.54493356 0.16422482
+		 0.59644264 0.18369728 0.59601492 0.20316979 0.59558719 0.22264227 0.59515947 0.72225326
+		 0.58418483 0.51696354 0.2986702 0.50954807 0.28065985 0.49693003 0.26582259 0.48034462
+		 0.25561059 0.46141529 0.25102365 0.50038904 0.58905846 0.31786796 0.24247712 0.29985762
+		 0.24989262 0.28502032 0.26251063 0.27480838 0.27909607 0.27022144 0.29802543 0.90185964
+		 0.54480308 0.26418 0.30160689 0.25706059 0.28347749 0.24468735 0.26843545 0.22827148
+		 0.25795314 0.20941979 0.2530567 0.12450178 0.5618788 0.066031776 0.24215952 0.047902375
+		 0.2492789 0.032860316 0.26165217 0.022378035 0.27806807 0.017481565 0.29691976 0.70200276
+		 0.54919326 0.24786705 0.50062799 0.68253028 0.54962105 0.6630578 0.55004877 0.64358532
+		 0.55047649 0.62411284 0.55090427 0.48013854 0.55406684 0.055928856 0.54449099 0.46066603
+		 0.55449456 0.44119361 0.55492228 0.42172107 0.55535007 0.40224862 0.55577779 1 0.57808369
+		 0 0.56461364;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 48 ".pt[0:47]" -type "float3"  1.5066099 0 0 1.5066099 0 
+		0 1.5066099 0 0 1.5066099 0 0 1.5066099 0 0 1.5066099 0 0 1.5066099 0 0 1.5066099 
+		0 0 1.5066099 0 0 1.5066099 0 1.1920929e-07 1.5066099 0 1.1920929e-07 1.5066099 0 
+		1.1920929e-07 1.5066099 0 0 1.5066099 0 0 1.5066099 0 0 1.5066099 0 0 1.5066099 0 
+		0 1.5066099 0 0 1.5066099 0 0 1.5066099 0 1.1920929e-07 1.5066099 0 0 1.5066099 0 
+		0 1.5066099 0 0 1.5066099 0 0 1.5066099 0 0 1.5066099 0 0 1.5066099 0 0 1.5066099 
+		0 0 1.5066099 0 0 1.5066099 0 0 1.5066099 0 0 1.5066099 0 0 1.5066099 0 0 1.5066099 
+		0 0 1.5066099 0 0 1.5066099 0 0 1.5066099 0 0 1.5066099 0 0 1.5066099 0 0 1.5066099 
+		0 0 1.5066099 0 0 1.5066099 0 0 1.5066099 0 0 1.5066099 0 0 1.5066099 0 0 1.5066099 
+		0 0 1.5066099 0 0 1.5066099 0 0;
+	setAttr -s 48 ".vt[0:47]"  -1.51717544 0.45699951 0.52169877 -1.13675225 0.45699951 0.90212196
+		 -1.25430942 0.45699951 0.8835029 -1.36035943 0.45699951 0.82946748 -1.44452119 0.45699951 0.74530602
+		 -1.49855626 0.45699951 0.63925594 -1.51717544 0.67349476 0.52169877 -1.49855626 0.67349476 0.63925594
+		 -1.44452119 0.67349476 0.74530602 -1.36035943 0.67349476 0.82946759 -1.25430942 0.67349476 0.88350302
+		 -1.13675225 0.67349476 0.90212208 0.0046697259 0.45699951 0.52169877 -0.013949454 0.45699951 0.63925594
+		 -0.067984641 0.45699951 0.74530602 -0.15214628 0.45699951 0.82946748 -0.25819626 0.45699951 0.8835029
+		 -0.37575349 0.45699951 0.90212196 0.0046697259 0.67349476 0.52169877 -0.37575349 0.67349476 0.90212208
+		 -0.25819626 0.67349476 0.8835029 -0.15214628 0.67349476 0.82946748 -0.067984641 0.67349476 0.74530602
+		 -0.013949454 0.67349476 0.63925594 -1.25430942 0.67349476 -0.94267786 -1.36035943 0.67349476 -0.88864285
+		 -1.44452119 0.67349476 -0.80448109 -1.49855626 0.67349476 -0.69843107 -1.51717544 0.67349476 -0.58087367
+		 -1.13675225 0.67349476 -0.96129698 -1.51717544 0.45699951 -0.58087367 -1.49855626 0.45699951 -0.69843107
+		 -1.44452119 0.45699951 -0.80448109 -1.36035943 0.45699951 -0.88864285 -1.25430942 0.45699951 -0.94267786
+		 -1.13675225 0.45699951 -0.96129698 -0.013949454 0.67349476 -0.69843107 -0.067984641 0.67349476 -0.80448109
+		 -0.15214628 0.67349476 -0.88864285 -0.25819626 0.67349476 -0.94267786 -0.37575349 0.67349476 -0.96129698
+		 0.0046697259 0.67349476 -0.58087367 0.0046697259 0.45699951 -0.58087367 -0.37575349 0.45699951 -0.96129698
+		 -0.25819626 0.45699951 -0.94267786 -0.15214628 0.45699951 -0.88864285 -0.067984641 0.45699951 -0.80448109
+		 -0.013949454 0.45699951 -0.69843107;
+	setAttr -s 72 ".ed[0:71]"  1 17 0 6 28 0 11 19 0 18 41 0 29 40 0 30 0 0
+		 35 43 0 42 12 0 0 6 1 11 1 1 17 19 1 18 12 1 28 30 1 35 29 1 40 43 1 42 41 1 0 5 0
+		 5 7 1 7 6 0 5 4 0 4 8 1 8 7 0 4 3 0 3 9 1 9 8 0 3 2 0 2 10 1 10 9 0 2 1 0 11 10 0
+		 17 16 0 16 20 1 20 19 0 16 15 0 15 21 1 21 20 0 15 14 0 14 22 1 22 21 0 14 13 0 13 23 1
+		 23 22 0 13 12 0 18 23 0 28 27 0 27 31 1 31 30 0 27 26 0 26 32 1 32 31 0 26 25 0 25 33 1
+		 33 32 0 25 24 0 24 34 1 34 33 0 24 29 0 35 34 0 40 39 0 39 44 1 44 43 0 39 38 0 38 45 1
+		 45 44 0 38 37 0 37 46 1 46 45 0 37 36 0 36 47 1 47 46 0 36 41 0 42 47 0;
+	setAttr -s 26 -ch 144 ".fc[0:25]" -type "polyFaces" 
+		f 4 9 0 10 -3
+		mu 0 4 66 1 89 3
+		f 4 13 4 14 -7
+		mu 0 4 78 5 53 97
+		f 4 11 -8 15 -4
+		mu 0 4 60 9 72 11
+		f 4 12 5 8 1
+		mu 0 4 59 13 95 15
+		f 4 16 17 18 -9
+		mu 0 4 95 94 17 15
+		f 4 19 20 21 -18
+		mu 0 4 94 93 19 17
+		f 4 22 23 24 -21
+		mu 0 4 93 92 21 19
+		f 4 25 26 27 -24
+		mu 0 4 92 90 23 21
+		f 4 28 -10 29 -27
+		mu 0 4 90 1 66 23
+		f 4 30 31 32 -11
+		mu 0 4 89 88 25 3
+		f 4 33 34 35 -32
+		mu 0 4 88 87 27 25
+		f 4 36 37 38 -35
+		mu 0 4 87 86 29 27
+		f 4 39 40 41 -38
+		mu 0 4 86 84 31 29
+		f 4 42 -12 43 -41
+		mu 0 4 84 9 60 31
+		f 4 44 45 46 -13
+		mu 0 4 59 58 33 13
+		f 4 47 48 49 -46
+		mu 0 4 58 57 35 33
+		f 4 50 51 52 -49
+		mu 0 4 57 56 37 35
+		f 4 53 54 55 -52
+		mu 0 4 56 54 39 37
+		f 4 56 -14 57 -55
+		mu 0 4 54 5 78 39
+		f 4 58 59 60 -15
+		mu 0 4 96 52 41 7
+		f 4 61 62 63 -60
+		mu 0 4 52 51 43 41
+		f 4 64 65 66 -63
+		mu 0 4 51 50 45 43
+		f 4 67 68 69 -66
+		mu 0 4 50 48 47 45
+		f 4 70 -16 71 -69
+		mu 0 4 48 11 72 47
+		f 24 -68 -65 -62 -59 -5 -57 -54 -51 -48 -45 -2 -19 -22 -25 -28 -30 2 -33 -36 -39 -42
+		 -44 3 -71
+		mu 0 24 46 44 42 40 6 55 38 36 34 32 12 71 70 69 68 67 0 65 64 63 62 61 8 49
+		f 24 7 -43 -40 -37 -34 -31 -1 -29 -26 -23 -20 -17 -6 -47 -50 -53 -56 -58 6 -61 -64 -67
+		 -70 -72
+		mu 0 24 10 85 30 28 26 24 2 91 22 20 18 16 14 83 82 81 80 79 4 77 76 75 74 73;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode mesh -n "Unit5_LabScene:polySurfaceShape5" -p "Unit5_LabSceneRN1fosterParent1";
+	rename -uid "A92F5C76-4357-65B6-9EA8-27BFE2D585AF";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr -s 6 ".gtag";
+	setAttr ".gtag[0].gtagnm" -type "string" "back";
+	setAttr ".gtag[0].gtagcmp" -type "componentList" 2 "f[1]" "f[16:21]";
+	setAttr ".gtag[1].gtagnm" -type "string" "bottom";
+	setAttr ".gtag[1].gtagcmp" -type "componentList" 1 "f[25]";
+	setAttr ".gtag[2].gtagnm" -type "string" "front";
+	setAttr ".gtag[2].gtagcmp" -type "componentList" 2 "f[0]" "f[6:11]";
+	setAttr ".gtag[3].gtagnm" -type "string" "left";
+	setAttr ".gtag[3].gtagcmp" -type "componentList" 2 "f[3:5]" "f[14:15]";
+	setAttr ".gtag[4].gtagnm" -type "string" "right";
+	setAttr ".gtag[4].gtagcmp" -type "componentList" 3 "f[2]" "f[12:13]" "f[22:23]";
+	setAttr ".gtag[5].gtagnm" -type "string" "top";
+	setAttr ".gtag[5].gtagcmp" -type "componentList" 1 "f[24]";
+	setAttr ".pv" -type "double2" 0.45131883025169373 0.57241809368133545 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 98 ".uvst[0].uvsp[0:97]" -type "float2" 0.33728829 0.2409901
+		 0.49961102 0.55363911 0.17987478 0.55655688 0.62489086 0.58632356 0.085473835 0.24099088
+		 0.12527987 0.59729809 0.43684664 0.55496711 0.99922204 0.54266435 0.51845056 0.3180905
+		 0.72147524 0.54876548 0.26534861 0.32104903 0.90263766 0.58022243 0.25568435 0.47786671
+		 0.22186425 0.55974013 -5.5879354e-09 0.47649878 0.40302664 0.59119707 0.0011686664
+		 0.4959408 0.42249912 0.59076935 0.0082880519 0.51407021 0.4419716 0.59034163 0.020661294
+		 0.52911222 0.46144408 0.5899139 0.037077203 0.53959459 0.48091662 0.58948618 0.19931692
+		 0.55538821 0.64436334 0.58589584 0.21744627 0.54826874 0.66383588 0.58546805 0.23248833
+		 0.53589553 0.6833083 0.58504033 0.24297065 0.51947963 0.70278084 0.58461255 0.25717136
+		 0.49728709 0.20239174 0.56016785 0.26458681 0.51529735 0.18291923 0.56059557 0.27720484
+		 0.53013474 0.16344675 0.56102335 0.29379031 0.54034668 0.14397426 0.56145108 0.45626694
+		 0.55348009 0.97974956 0.54309207 0.47427729 0.54606467 0.96027708 0.54351985 0.48911455
+		 0.53344661 0.9408046 0.54394764 0.49932653 0.51686114 0.92133212 0.54437536 0.92211014
+		 0.57979465 0.50391346 0.49793178 0.94158262 0.57936692 0.9610551 0.57893914 0.98052758
+		 0.57851142 0.00077801943 0.60003299 0.14475234 0.59687036 0.31271964 0.54493356 0.16422482
+		 0.59644264 0.18369728 0.59601492 0.20316979 0.59558719 0.22264227 0.59515947 0.72225326
+		 0.58418483 0.51696354 0.2986702 0.50954807 0.28065985 0.49693003 0.26582259 0.48034462
+		 0.25561059 0.46141529 0.25102365 0.50038904 0.58905846 0.31786796 0.24247712 0.29985762
+		 0.24989262 0.28502032 0.26251063 0.27480838 0.27909607 0.27022144 0.29802543 0.90185964
+		 0.54480308 0.26418 0.30160689 0.25706059 0.28347749 0.24468735 0.26843545 0.22827148
+		 0.25795314 0.20941979 0.2530567 0.12450178 0.5618788 0.066031776 0.24215952 0.047902375
+		 0.2492789 0.032860316 0.26165217 0.022378035 0.27806807 0.017481565 0.29691976 0.70200276
+		 0.54919326 0.24786705 0.50062799 0.68253028 0.54962105 0.6630578 0.55004877 0.64358532
+		 0.55047649 0.62411284 0.55090427 0.48013854 0.55406684 0.055928856 0.54449099 0.46066603
+		 0.55449456 0.44119361 0.55492228 0.42172107 0.55535007 0.40224862 0.55577779 1 0.57808369
+		 0 0.56461364;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 6 ".pt";
+	setAttr ".pt[9]" -type "float3" 0 0 1.1920929e-07 ;
+	setAttr ".pt[10]" -type "float3" 0 0 1.1920929e-07 ;
+	setAttr ".pt[11]" -type "float3" 0 0 1.1920929e-07 ;
+	setAttr ".pt[19]" -type "float3" 0 0 1.1920929e-07 ;
+	setAttr -s 48 ".vt[0:47]"  -1.55174828 0.45699951 0.52169877 -1.17132509 0.45699951 0.90212196
+		 -1.28888226 0.45699951 0.8835029 -1.39493227 0.45699951 0.82946748 -1.47909403 0.45699951 0.74530602
+		 -1.5331291 0.45699951 0.63925594 -1.55174828 0.67349476 0.52169877 -1.5331291 0.67349476 0.63925594
+		 -1.47909403 0.67349476 0.74530602 -1.39493227 0.67349476 0.82946759 -1.28888226 0.67349476 0.88350302
+		 -1.17132509 0.67349476 0.90212208 -0.029903084 0.45699951 0.52169877 -0.048522264 0.45699951 0.63925594
+		 -0.10255745 0.45699951 0.74530602 -0.18671909 0.45699951 0.82946748 -0.29276907 0.45699951 0.8835029
+		 -0.4103263 0.45699951 0.90212196 -0.029903084 0.67349476 0.52169877 -0.4103263 0.67349476 0.90212208
+		 -0.29276907 0.67349476 0.8835029 -0.18671909 0.67349476 0.82946748 -0.10255745 0.67349476 0.74530602
+		 -0.048522264 0.67349476 0.63925594 -1.28888226 0.67349476 -0.94267786 -1.39493227 0.67349476 -0.88864285
+		 -1.47909403 0.67349476 -0.80448109 -1.5331291 0.67349476 -0.69843107 -1.55174828 0.67349476 -0.58087367
+		 -1.17132509 0.67349476 -0.96129698 -1.55174828 0.45699951 -0.58087367 -1.5331291 0.45699951 -0.69843107
+		 -1.47909403 0.45699951 -0.80448109 -1.39493227 0.45699951 -0.88864285 -1.28888226 0.45699951 -0.94267786
+		 -1.17132509 0.45699951 -0.96129698 -0.048522264 0.67349476 -0.69843107 -0.10255745 0.67349476 -0.80448109
+		 -0.18671909 0.67349476 -0.88864285 -0.29276907 0.67349476 -0.94267786 -0.4103263 0.67349476 -0.96129698
+		 -0.029903084 0.67349476 -0.58087367 -0.029903084 0.45699951 -0.58087367 -0.4103263 0.45699951 -0.96129698
+		 -0.29276907 0.45699951 -0.94267786 -0.18671909 0.45699951 -0.88864285 -0.10255745 0.45699951 -0.80448109
+		 -0.048522264 0.45699951 -0.69843107;
+	setAttr -s 72 ".ed[0:71]"  1 17 0 6 28 0 11 19 0 18 41 0 29 40 0 30 0 0
+		 35 43 0 42 12 0 0 6 1 11 1 1 17 19 1 18 12 1 28 30 1 35 29 1 40 43 1 42 41 1 0 5 0
+		 5 7 1 7 6 0 5 4 0 4 8 1 8 7 0 4 3 0 3 9 1 9 8 0 3 2 0 2 10 1 10 9 0 2 1 0 11 10 0
+		 17 16 0 16 20 1 20 19 0 16 15 0 15 21 1 21 20 0 15 14 0 14 22 1 22 21 0 14 13 0 13 23 1
+		 23 22 0 13 12 0 18 23 0 28 27 0 27 31 1 31 30 0 27 26 0 26 32 1 32 31 0 26 25 0 25 33 1
+		 33 32 0 25 24 0 24 34 1 34 33 0 24 29 0 35 34 0 40 39 0 39 44 1 44 43 0 39 38 0 38 45 1
+		 45 44 0 38 37 0 37 46 1 46 45 0 37 36 0 36 47 1 47 46 0 36 41 0 42 47 0;
+	setAttr -s 26 -ch 144 ".fc[0:25]" -type "polyFaces" 
+		f 4 9 0 10 -3
+		mu 0 4 66 1 89 3
+		f 4 13 4 14 -7
+		mu 0 4 78 5 53 97
+		f 4 11 -8 15 -4
+		mu 0 4 60 9 72 11
+		f 4 12 5 8 1
+		mu 0 4 59 13 95 15
+		f 4 16 17 18 -9
+		mu 0 4 95 94 17 15
+		f 4 19 20 21 -18
+		mu 0 4 94 93 19 17
+		f 4 22 23 24 -21
+		mu 0 4 93 92 21 19
+		f 4 25 26 27 -24
+		mu 0 4 92 90 23 21
+		f 4 28 -10 29 -27
+		mu 0 4 90 1 66 23
+		f 4 30 31 32 -11
+		mu 0 4 89 88 25 3
+		f 4 33 34 35 -32
+		mu 0 4 88 87 27 25
+		f 4 36 37 38 -35
+		mu 0 4 87 86 29 27
+		f 4 39 40 41 -38
+		mu 0 4 86 84 31 29
+		f 4 42 -12 43 -41
+		mu 0 4 84 9 60 31
+		f 4 44 45 46 -13
+		mu 0 4 59 58 33 13
+		f 4 47 48 49 -46
+		mu 0 4 58 57 35 33
+		f 4 50 51 52 -49
+		mu 0 4 57 56 37 35
+		f 4 53 54 55 -52
+		mu 0 4 56 54 39 37
+		f 4 56 -14 57 -55
+		mu 0 4 54 5 78 39
+		f 4 58 59 60 -15
+		mu 0 4 96 52 41 7
+		f 4 61 62 63 -60
+		mu 0 4 52 51 43 41
+		f 4 64 65 66 -63
+		mu 0 4 51 50 45 43
+		f 4 67 68 69 -66
+		mu 0 4 50 48 47 45
+		f 4 70 -16 71 -69
+		mu 0 4 48 11 72 47
+		f 24 -68 -65 -62 -59 -5 -57 -54 -51 -48 -45 -2 -19 -22 -25 -28 -30 2 -33 -36 -39 -42
+		 -44 3 -71
+		mu 0 24 46 44 42 40 6 55 38 36 34 32 12 71 70 69 68 67 0 65 64 63 62 61 8 49
+		f 24 7 -43 -40 -37 -34 -31 -1 -29 -26 -23 -20 -17 -6 -47 -50 -53 -56 -58 6 -61 -64 -67
+		 -70 -72
+		mu 0 24 10 85 30 28 26 24 2 91 22 20 18 16 14 83 82 81 80 79 4 77 76 75 74 73;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "33926B7A-4850-7DAF-5E1D-EE928A067BBE";
+	rename -uid "A9C6A9BF-4A2B-F8E8-BDBF-C5A67D02E524";
 	setAttr -s 2 ".lnk";
 	setAttr -s 2 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "C4A3CC5B-4473-704E-A933-C7817462AB61";
+	rename -uid "8C8EC899-4BD0-1ECB-4797-799DBF4CFFE0";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "D2C11073-4D6A-3FED-5312-3084B5E385C7";
+	rename -uid "17E9C6C0-4BFD-AD6E-7DC9-F9B96A29DD31";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "A1318A77-42B8-5E63-A785-EF978A1F75C6";
+	rename -uid "A26951B1-434E-8422-C315-E581D6DDEFA2";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "F0260111-4D08-5492-7649-9AB8E1F472FB";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "374DFFA2-4B7E-2A4B-E0DC-309CB642114A";
+	rename -uid "CDF9B6E4-4F60-C0A7-1F63-02B795D3D125";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "BEBA3D32-4A8F-67B8-884A-8C97179A0829";
 	setAttr ".g" yes;
@@ -3063,6 +3350,7 @@ createNode script -n "sceneConfigurationScriptNode";
 	setAttr ".st" 6;
 createNode aiOptions -s -n "defaultArnoldRenderOptions";
 	rename -uid "3B9AEC4A-407B-88D1-2875-F58A73FC042D";
+	addAttr -ci true -sn "ARV_options" -ln "ARV_options" -dt "string";
 	setAttr ".version" -type "string" "5.4.5";
 createNode aiAOVFilter -s -n "defaultArnoldFilter";
 	rename -uid "199F61AA-4A18-70EB-1A09-FEBD3BD28575";
@@ -3146,774 +3434,39 @@ createNode reference -n "unti7_chairRN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"unti7_chairRN"
 		"unti7_chairRN" 0
-		"unti7_chairRN" 380
+		"unti7_chairRN" 8
 		2 "|unti7_chair:chair|unti7_chair:seat|unti7_chair:seatShape" "uvPivot" " -type \"double2\" 0.5 0.49347394704818726"
 		
 		2 "|unti7_chair:chair|unti7_chair:back|unti7_chair:backShape" "uvPivot" " -type \"double2\" 0.12735376307638513 0.88355392605009964"
 		
-		2 "|unti7_chair:chair|unti7_chair:leg2|unti7_chair:legShape2" "uvSet[0].uvSetPoints" 
-		" -s 84"
-		2 "|unti7_chair:chair|unti7_chair:leg2|unti7_chair:legShape2" "uvSet[0].uvSetPoints[0]" 
-		" -type \"float2\" 0.030424505000000001 0.76524590999999997"
-		2 "|unti7_chair:chair|unti7_chair:leg2|unti7_chair:legShape2" "uvSet[0].uvSetPoints[1]" 
-		" -type \"float2\" 0.029417008000000001 0.76634687000000001"
-		2 "|unti7_chair:chair|unti7_chair:leg2|unti7_chair:legShape2" "uvSet[0].uvSetPoints[2]" 
-		" -type \"float2\" 0.11504388 0.77085888000000002"
-		2 "|unti7_chair:chair|unti7_chair:leg2|unti7_chair:legShape2" "uvSet[0].uvSetPoints[3]" 
-		" -type \"float2\" 0.11584467 0.77211832999999996"
-		2 "|unti7_chair:chair|unti7_chair:leg2|unti7_chair:legShape2" "uvSet[0].uvSetPoints[4]" 
-		" -type \"float2\" 0.028799056999999999 0.76770537999999999"
-		2 "|unti7_chair:chair|unti7_chair:leg2|unti7_chair:legShape2" "uvSet[0].uvSetPoints[5]" 
-		" -type \"float2\" 0.1146715 0.76941371000000003"
-		2 "|unti7_chair:chair|unti7_chair:leg2|unti7_chair:legShape2" "uvSet[0].uvSetPoints[6]" 
-		" -type \"float2\" 0.028631180999999999 0.76918823000000003"
-		2 "|unti7_chair:chair|unti7_chair:leg2|unti7_chair:legShape2" "uvSet[0].uvSetPoints[7]" 
-		" -type \"float2\" 0.11476388999999999 0.76792424999999997"
-		2 "|unti7_chair:chair|unti7_chair:leg2|unti7_chair:legShape2" "uvSet[0].uvSetPoints[8]" 
-		" -type \"float2\" 0.028929680999999999 0.77065050999999996"
-		2 "|unti7_chair:chair|unti7_chair:leg2|unti7_chair:legShape2" "uvSet[0].uvSetPoints[9]" 
-		" -type \"float2\" 0.11531201000000001 0.76653618000000001"
-		2 "|unti7_chair:chair|unti7_chair:leg2|unti7_chair:legShape2" "uvSet[0].uvSetPoints[10]" 
-		" -type \"float2\" 0.029665469999999999 0.77194887000000001"
-		2 "|unti7_chair:chair|unti7_chair:leg2|unti7_chair:legShape2" "uvSet[0].uvSetPoints[11]" 
-		" -type \"float2\" 0.11626235 0.76538539000000005"
-		2 "|unti7_chair:chair|unti7_chair:leg2|unti7_chair:legShape2" "uvSet[0].uvSetPoints[12]" 
-		" -type \"float2\" 0.030766457000000001 0.77295636999999995"
-		2 "|unti7_chair:chair|unti7_chair:leg2|unti7_chair:legShape2" "uvSet[0].uvSetPoints[13]" 
-		" -type \"float2\" 0.11752170000000001 0.76458466000000003"
-		2 "|unti7_chair:chair|unti7_chair:leg2|unti7_chair:legShape2" "uvSet[0].uvSetPoints[14]" 
-		" -type \"float2\" 0.032124907000000001 0.77357434999999997"
-		2 "|unti7_chair:chair|unti7_chair:leg2|unti7_chair:legShape2" "uvSet[0].uvSetPoints[15]" 
-		" -type \"float2\" 0.11896685 0.76421218999999996"
-		2 "|unti7_chair:chair|unti7_chair:leg2|unti7_chair:legShape2" "uvSet[0].uvSetPoints[16]" 
-		" -type \"float2\" 0.033607840999999999 0.77374220000000005"
-		2 "|unti7_chair:chair|unti7_chair:leg2|unti7_chair:legShape2" "uvSet[0].uvSetPoints[17]" 
-		" -type \"float2\" 0.12045636999999999 0.76430463999999998"
-		2 "|unti7_chair:chair|unti7_chair:leg2|unti7_chair:legShape2" "uvSet[0].uvSetPoints[18]" 
-		" -type \"float2\" 0.035070032000000001 0.77344369999999996"
-		2 "|unti7_chair:chair|unti7_chair:leg2|unti7_chair:legShape2" "uvSet[0].uvSetPoints[19]" 
-		" -type \"float2\" 0.12184447 0.76485276000000002"
-		2 "|unti7_chair:chair|unti7_chair:leg2|unti7_chair:legShape2" "uvSet[0].uvSetPoints[20]" 
-		" -type \"float2\" 0.036368458999999999 0.77270793999999998"
-		2 "|unti7_chair:chair|unti7_chair:leg2|unti7_chair:legShape2" "uvSet[0].uvSetPoints[21]" 
-		" -type \"float2\" 0.12299517 0.76580309999999996"
-		2 "|unti7_chair:chair|unti7_chair:leg2|unti7_chair:legShape2" "uvSet[0].uvSetPoints[22]" 
-		" -type \"float2\" 0.037375927000000003 0.77160691999999997"
-		2 "|unti7_chair:chair|unti7_chair:leg2|unti7_chair:legShape2" "uvSet[0].uvSetPoints[23]" 
-		" -type \"float2\" 0.12379598999999999 0.76706242999999996"
-		2 "|unti7_chair:chair|unti7_chair:leg2|unti7_chair:legShape2" "uvSet[0].uvSetPoints[24]" 
-		" -type \"float2\" 0.037993878000000002 0.77024846999999996"
-		2 "|unti7_chair:chair|unti7_chair:leg2|unti7_chair:legShape2" "uvSet[0].uvSetPoints[25]" 
-		" -type \"float2\" 0.12416837 0.76850759999999996"
-		2 "|unti7_chair:chair|unti7_chair:leg2|unti7_chair:legShape2" "uvSet[0].uvSetPoints[26]" 
-		" -type \"float2\" 0.038161814000000002 0.76876557000000001"
-		2 "|unti7_chair:chair|unti7_chair:leg2|unti7_chair:legShape2" "uvSet[0].uvSetPoints[27]" 
-		" -type \"float2\" 0.12407598 0.76999711999999998"
-		2 "|unti7_chair:chair|unti7_chair:leg2|unti7_chair:legShape2" "uvSet[0].uvSetPoints[28]" 
-		" -type \"float2\" 0.037863225 0.76730335000000005"
-		2 "|unti7_chair:chair|unti7_chair:leg2|unti7_chair:legShape2" "uvSet[0].uvSetPoints[29]" 
-		" -type \"float2\" 0.12352784999999999 0.77138519000000005"
-		2 "|unti7_chair:chair|unti7_chair:leg2|unti7_chair:legShape2" "uvSet[0].uvSetPoints[30]" 
-		" -type \"float2\" 0.037127464999999998 0.76600491999999998"
-		2 "|unti7_chair:chair|unti7_chair:leg2|unti7_chair:legShape2" "uvSet[0].uvSetPoints[31]" 
-		" -type \"float2\" 0.12257758000000001 0.77253592000000004"
-		2 "|unti7_chair:chair|unti7_chair:leg2|unti7_chair:legShape2" "uvSet[0].uvSetPoints[32]" 
-		" -type \"float2\" 0.036026448000000003 0.76499748000000001"
-		2 "|unti7_chair:chair|unti7_chair:leg2|unti7_chair:legShape2" "uvSet[0].uvSetPoints[33]" 
-		" -type \"float2\" 0.12131815999999999 0.77333671000000004"
-		2 "|unti7_chair:chair|unti7_chair:leg2|unti7_chair:legShape2" "uvSet[0].uvSetPoints[34]" 
-		" -type \"float2\" 0.034668027999999997 0.76437949999999999"
-		2 "|unti7_chair:chair|unti7_chair:leg2|unti7_chair:legShape2" "uvSet[0].uvSetPoints[35]" 
-		" -type \"float2\" 0.11987302 0.77370912000000003"
-		2 "|unti7_chair:chair|unti7_chair:leg2|unti7_chair:legShape2" "uvSet[0].uvSetPoints[36]" 
-		" -type \"float2\" 0.033185154000000001 0.76421159999999999"
-		2 "|unti7_chair:chair|unti7_chair:leg2|unti7_chair:legShape2" "uvSet[0].uvSetPoints[37]" 
-		" -type \"float2\" 0.11838347 0.77361672999999997"
-		2 "|unti7_chair:chair|unti7_chair:leg2|unti7_chair:legShape2" "uvSet[0].uvSetPoints[38]" 
-		" -type \"float2\" 0.031722872999999999 0.76451015"
-		2 "|unti7_chair:chair|unti7_chair:leg2|unti7_chair:legShape2" "uvSet[0].uvSetPoints[39]" 
-		" -type \"float2\" 0.11699542 0.77306854999999997"
-		2 "|unti7_chair:chair|unti7_chair:leg2|unti7_chair:legShape2" "uvSet[0].uvSetPoints[40]" 
-		" -type \"float2\" 0.033396481999999998 0.76897693"
-		2 "|unti7_chair:chair|unti7_chair:leg2|unti7_chair:legShape2" "uvSet[0].uvSetPoints[41]" 
-		" -type \"float2\" 0.11941992999999999 0.76896065000000002"
-		2 "|unti7_chair:chair|unti7_chair:leg2|unti7_chair:legShape2" "uvSet[0].uvSetPoints[42]" 
-		" -type \"float2\" 0.24150398000000001 0.76421112000000002"
-		2 "|unti7_chair:chair|unti7_chair:leg2|unti7_chair:legShape2" "uvSet[0].uvSetPoints[43]" 
-		" -type \"float2\" 0.21181380999999999 0.76727431999999995"
-		2 "|unti7_chair:chair|unti7_chair:leg2|unti7_chair:legShape2" "uvSet[0].uvSetPoints[44]" 
-		" -type \"float2\" 0.22814342000000001 0.76558954000000001"
-		2 "|unti7_chair:chair|unti7_chair:leg2|unti7_chair:legShape2" "uvSet[0].uvSetPoints[45]" 
-		" -type \"float2\" 0.22962794 0.76543640999999996"
-		2 "|unti7_chair:chair|unti7_chair:leg2|unti7_chair:legShape2" "uvSet[0].uvSetPoints[46]" 
-		" -type \"float2\" 0.22665890999999999 0.76574266000000002"
-		2 "|unti7_chair:chair|unti7_chair:leg2|unti7_chair:legShape2" "uvSet[0].uvSetPoints[47]" 
-		" -type \"float2\" 0.2251744 0.76589589999999996"
-		2 "|unti7_chair:chair|unti7_chair:leg2|unti7_chair:legShape2" "uvSet[0].uvSetPoints[48]" 
-		" -type \"float2\" 0.22368990999999999 0.76604903000000002"
-		2 "|unti7_chair:chair|unti7_chair:leg2|unti7_chair:legShape2" "uvSet[0].uvSetPoints[49]" 
-		" -type \"float2\" 0.22220534 0.76620220999999999"
-		2 "|unti7_chair:chair|unti7_chair:leg2|unti7_chair:legShape2" "uvSet[0].uvSetPoints[50]" 
-		" -type \"float2\" 0.22072089 0.76635534000000005"
-		2 "|unti7_chair:chair|unti7_chair:leg2|unti7_chair:legShape2" "uvSet[0].uvSetPoints[51]" 
-		" -type \"float2\" 0.21923634 0.76650852000000003"
-		2 "|unti7_chair:chair|unti7_chair:leg2|unti7_chair:legShape2" "uvSet[0].uvSetPoints[52]" 
-		" -type \"float2\" 0.21775189 0.76666164000000003"
-		2 "|unti7_chair:chair|unti7_chair:leg2|unti7_chair:legShape2" "uvSet[0].uvSetPoints[53]" 
-		" -type \"float2\" 0.21626732000000001 0.76681482999999995"
-		2 "|unti7_chair:chair|unti7_chair:leg2|unti7_chair:legShape2" "uvSet[0].uvSetPoints[54]" 
-		" -type \"float2\" 0.21478285999999999 0.76696794999999995"
-		2 "|unti7_chair:chair|unti7_chair:leg2|unti7_chair:legShape2" "uvSet[0].uvSetPoints[55]" 
-		" -type \"float2\" 0.21329832000000001 0.76712119999999995"
-		2 "|unti7_chair:chair|unti7_chair:leg2|unti7_chair:legShape2" "uvSet[0].uvSetPoints[56]" 
-		" -type \"float2\" 0.24001947000000001 0.76436424000000003"
-		2 "|unti7_chair:chair|unti7_chair:leg2|unti7_chair:legShape2" "uvSet[0].uvSetPoints[57]" 
-		" -type \"float2\" 0.23853495999999999 0.76451743000000005"
-		2 "|unti7_chair:chair|unti7_chair:leg2|unti7_chair:legShape2" "uvSet[0].uvSetPoints[58]" 
-		" -type \"float2\" 0.23705047000000001 0.76467061000000003"
-		2 "|unti7_chair:chair|unti7_chair:leg2|unti7_chair:legShape2" "uvSet[0].uvSetPoints[59]" 
-		" -type \"float2\" 0.23556595999999999 0.76482373000000003"
-		2 "|unti7_chair:chair|unti7_chair:leg2|unti7_chair:legShape2" "uvSet[0].uvSetPoints[60]" 
-		" -type \"float2\" 0.23408145 0.76497685999999998"
-		2 "|unti7_chair:chair|unti7_chair:leg2|unti7_chair:legShape2" "uvSet[0].uvSetPoints[61]" 
-		" -type \"float2\" 0.23259695999999999 0.76513003999999996"
-		2 "|unti7_chair:chair|unti7_chair:leg2|unti7_chair:legShape2" "uvSet[0].uvSetPoints[62]" 
-		" -type \"float2\" 0.23111245 0.76528322999999998"
-		2 "|unti7_chair:chair|unti7_chair:leg2|unti7_chair:legShape2" "uvSet[0].uvSetPoints[63]" 
-		" -type \"float2\" 0.21859017 0.83295350999999995"
-		2 "|unti7_chair:chair|unti7_chair:leg2|unti7_chair:legShape2" "uvSet[0].uvSetPoints[64]" 
-		" -type \"float2\" 0.24828035000000001 0.82989025000000005"
-		2 "|unti7_chair:chair|unti7_chair:leg2|unti7_chair:legShape2" "uvSet[0].uvSetPoints[65]" 
-		" -type \"float2\" 0.23491978999999999 0.83126873000000001"
-		2 "|unti7_chair:chair|unti7_chair:leg2|unti7_chair:legShape2" "uvSet[0].uvSetPoints[66]" 
-		" -type \"float2\" 0.23640423999999999 0.83111553999999999"
-		2 "|unti7_chair:chair|unti7_chair:leg2|unti7_chair:legShape2" "uvSet[0].uvSetPoints[67]" 
-		" -type \"float2\" 0.23343521 0.83142190999999999"
-		2 "|unti7_chair:chair|unti7_chair:leg2|unti7_chair:legShape2" "uvSet[0].uvSetPoints[68]" 
-		" -type \"float2\" 0.23195076000000001 0.83157504000000004"
-		2 "|unti7_chair:chair|unti7_chair:leg2|unti7_chair:legShape2" "uvSet[0].uvSetPoints[69]" 
-		" -type \"float2\" 0.23046628 0.83172822000000002"
-		2 "|unti7_chair:chair|unti7_chair:leg2|unti7_chair:legShape2" "uvSet[0].uvSetPoints[70]" 
-		" -type \"float2\" 0.22898170000000001 0.83188139999999999"
-		2 "|unti7_chair:chair|unti7_chair:leg2|unti7_chair:legShape2" "uvSet[0].uvSetPoints[71]" 
-		" -type \"float2\" 0.22749718999999999 0.83203453000000005"
-		2 "|unti7_chair:chair|unti7_chair:leg2|unti7_chair:legShape2" "uvSet[0].uvSetPoints[72]" 
-		" -type \"float2\" 0.22601267999999999 0.83218771000000002"
-		2 "|unti7_chair:chair|unti7_chair:leg2|unti7_chair:legShape2" "uvSet[0].uvSetPoints[73]" 
-		" -type \"float2\" 0.22452816 0.83234083999999997"
-		2 "|unti7_chair:chair|unti7_chair:leg2|unti7_chair:legShape2" "uvSet[0].uvSetPoints[74]" 
-		" -type \"float2\" 0.22304367999999999 0.83249401999999995"
-		2 "|unti7_chair:chair|unti7_chair:leg2|unti7_chair:legShape2" "uvSet[0].uvSetPoints[75]" 
-		" -type \"float2\" 0.22155917 0.83264720000000003"
-		2 "|unti7_chair:chair|unti7_chair:leg2|unti7_chair:legShape2" "uvSet[0].uvSetPoints[76]" 
-		" -type \"float2\" 0.22007465000000001 0.83280032999999998"
-		2 "|unti7_chair:chair|unti7_chair:leg2|unti7_chair:legShape2" "uvSet[0].uvSetPoints[77]" 
-		" -type \"float2\" 0.24679582999999999 0.83004343999999997"
-		2 "|unti7_chair:chair|unti7_chair:leg2|unti7_chair:legShape2" "uvSet[0].uvSetPoints[78]" 
-		" -type \"float2\" 0.24531132 0.83019662000000005"
-		2 "|unti7_chair:chair|unti7_chair:leg2|unti7_chair:legShape2" "uvSet[0].uvSetPoints[79]" 
-		" -type \"float2\" 0.24382681 0.83034973999999995"
-		2 "|unti7_chair:chair|unti7_chair:leg2|unti7_chair:legShape2" "uvSet[0].uvSetPoints[80]" 
-		" -type \"float2\" 0.24234232 0.83050292999999997"
-		2 "|unti7_chair:chair|unti7_chair:leg2|unti7_chair:legShape2" "uvSet[0].uvSetPoints[81]" 
-		" -type \"float2\" 0.24085781000000001 0.83065610999999995"
-		2 "|unti7_chair:chair|unti7_chair:leg2|unti7_chair:legShape2" "uvSet[0].uvSetPoints[82]" 
-		" -type \"float2\" 0.23937330000000001 0.83080924"
-		2 "|unti7_chair:chair|unti7_chair:leg2|unti7_chair:legShape2" "uvSet[0].uvSetPoints[83]" 
-		" -type \"float2\" 0.23788877999999999 0.83096241999999998"
-		2 "|unti7_chair:chair|unti7_chair:leg3|unti7_chair:legShape3" "uvSet[0].uvSetPoints" 
-		" -s 84"
-		2 "|unti7_chair:chair|unti7_chair:leg3|unti7_chair:legShape3" "uvSet[0].uvSetPoints[0]" 
-		" -type \"float2\" 0.020710260000000001 0.76524590999999997"
-		2 "|unti7_chair:chair|unti7_chair:leg3|unti7_chair:legShape3" "uvSet[0].uvSetPoints[1]" 
-		" -type \"float2\" 0.019702761999999999 0.76634687000000001"
-		2 "|unti7_chair:chair|unti7_chair:leg3|unti7_chair:legShape3" "uvSet[0].uvSetPoints[2]" 
-		" -type \"float2\" 0.12475812 0.77085888000000002"
-		2 "|unti7_chair:chair|unti7_chair:leg3|unti7_chair:legShape3" "uvSet[0].uvSetPoints[3]" 
-		" -type \"float2\" 0.12555891 0.77211832999999996"
-		2 "|unti7_chair:chair|unti7_chair:leg3|unti7_chair:legShape3" "uvSet[0].uvSetPoints[4]" 
-		" -type \"float2\" 0.019084811 0.76770537999999999"
-		2 "|unti7_chair:chair|unti7_chair:leg3|unti7_chair:legShape3" "uvSet[0].uvSetPoints[5]" 
-		" -type \"float2\" 0.12438573999999999 0.76941371000000003"
-		2 "|unti7_chair:chair|unti7_chair:leg3|unti7_chair:legShape3" "uvSet[0].uvSetPoints[6]" 
-		" -type \"float2\" 0.018916934999999999 0.76918823000000003"
-		2 "|unti7_chair:chair|unti7_chair:leg3|unti7_chair:legShape3" "uvSet[0].uvSetPoints[7]" 
-		" -type \"float2\" 0.12447809999999999 0.76792424999999997"
-		2 "|unti7_chair:chair|unti7_chair:leg3|unti7_chair:legShape3" "uvSet[0].uvSetPoints[8]" 
-		" -type \"float2\" 0.019215434999999999 0.77065050999999996"
-		2 "|unti7_chair:chair|unti7_chair:leg3|unti7_chair:legShape3" "uvSet[0].uvSetPoints[9]" 
-		" -type \"float2\" 0.12502626 0.76653618000000001"
-		2 "|unti7_chair:chair|unti7_chair:leg3|unti7_chair:legShape3" "uvSet[0].uvSetPoints[10]" 
-		" -type \"float2\" 0.019951224 0.77194887000000001"
-		2 "|unti7_chair:chair|unti7_chair:leg3|unti7_chair:legShape3" "uvSet[0].uvSetPoints[11]" 
-		" -type \"float2\" 0.12597653 0.76538539000000005"
-		2 "|unti7_chair:chair|unti7_chair:leg3|unti7_chair:legShape3" "uvSet[0].uvSetPoints[12]" 
-		" -type \"float2\" 0.021052240999999999 0.77295636999999995"
-		2 "|unti7_chair:chair|unti7_chair:leg3|unti7_chair:legShape3" "uvSet[0].uvSetPoints[13]" 
-		" -type \"float2\" 0.12723592 0.76458466000000003"
-		2 "|unti7_chair:chair|unti7_chair:leg3|unti7_chair:legShape3" "uvSet[0].uvSetPoints[14]" 
-		" -type \"float2\" 0.022410660999999998 0.77357434999999997"
-		2 "|unti7_chair:chair|unti7_chair:leg3|unti7_chair:legShape3" "uvSet[0].uvSetPoints[15]" 
-		" -type \"float2\" 0.12868106000000001 0.76421218999999996"
-		2 "|unti7_chair:chair|unti7_chair:leg3|unti7_chair:legShape3" "uvSet[0].uvSetPoints[16]" 
-		" -type \"float2\" 0.023893595 0.77374220000000005"
-		2 "|unti7_chair:chair|unti7_chair:leg3|unti7_chair:legShape3" "uvSet[0].uvSetPoints[17]" 
-		" -type \"float2\" 0.13017055 0.76430463999999998"
-		2 "|unti7_chair:chair|unti7_chair:leg3|unti7_chair:legShape3" "uvSet[0].uvSetPoints[18]" 
-		" -type \"float2\" 0.025355786000000002 0.77344369999999996"
-		2 "|unti7_chair:chair|unti7_chair:leg3|unti7_chair:legShape3" "uvSet[0].uvSetPoints[19]" 
-		" -type \"float2\" 0.13155865999999999 0.76485276000000002"
-		2 "|unti7_chair:chair|unti7_chair:leg3|unti7_chair:legShape3" "uvSet[0].uvSetPoints[20]" 
-		" -type \"float2\" 0.026654213999999999 0.77270793999999998"
-		2 "|unti7_chair:chair|unti7_chair:leg3|unti7_chair:legShape3" "uvSet[0].uvSetPoints[21]" 
-		" -type \"float2\" 0.13270941 0.76580309999999996"
-		2 "|unti7_chair:chair|unti7_chair:leg3|unti7_chair:legShape3" "uvSet[0].uvSetPoints[22]" 
-		" -type \"float2\" 0.027661681 0.77160691999999997"
-		2 "|unti7_chair:chair|unti7_chair:leg3|unti7_chair:legShape3" "uvSet[0].uvSetPoints[23]" 
-		" -type \"float2\" 0.13351017000000001 0.76706242999999996"
-		2 "|unti7_chair:chair|unti7_chair:leg3|unti7_chair:legShape3" "uvSet[0].uvSetPoints[24]" 
-		" -type \"float2\" 0.028279631999999999 0.77024846999999996"
-		2 "|unti7_chair:chair|unti7_chair:leg3|unti7_chair:legShape3" "uvSet[0].uvSetPoints[25]" 
-		" -type \"float2\" 0.13388258 0.76850759999999996"
-		2 "|unti7_chair:chair|unti7_chair:leg3|unti7_chair:legShape3" "uvSet[0].uvSetPoints[26]" 
-		" -type \"float2\" 0.028447567999999999 0.76876557000000001"
-		2 "|unti7_chair:chair|unti7_chair:leg3|unti7_chair:legShape3" "uvSet[0].uvSetPoints[27]" 
-		" -type \"float2\" 0.13379021999999999 0.76999711999999998"
-		2 "|unti7_chair:chair|unti7_chair:leg3|unti7_chair:legShape3" "uvSet[0].uvSetPoints[28]" 
-		" -type \"float2\" 0.028149039000000001 0.76730335000000005"
-		2 "|unti7_chair:chair|unti7_chair:leg3|unti7_chair:legShape3" "uvSet[0].uvSetPoints[29]" 
-		" -type \"float2\" 0.13324204000000001 0.77138519000000005"
-		2 "|unti7_chair:chair|unti7_chair:leg3|unti7_chair:legShape3" "uvSet[0].uvSetPoints[30]" 
-		" -type \"float2\" 0.027413218999999999 0.76600491999999998"
-		2 "|unti7_chair:chair|unti7_chair:leg3|unti7_chair:legShape3" "uvSet[0].uvSetPoints[31]" 
-		" -type \"float2\" 0.13229178999999999 0.77253592000000004"
-		2 "|unti7_chair:chair|unti7_chair:leg3|unti7_chair:legShape3" "uvSet[0].uvSetPoints[32]" 
-		" -type \"float2\" 0.026312202 0.76499748000000001"
-		2 "|unti7_chair:chair|unti7_chair:leg3|unti7_chair:legShape3" "uvSet[0].uvSetPoints[33]" 
-		" -type \"float2\" 0.13103240999999999 0.77333671000000004"
-		2 "|unti7_chair:chair|unti7_chair:leg3|unti7_chair:legShape3" "uvSet[0].uvSetPoints[34]" 
-		" -type \"float2\" 0.024953783 0.76437949999999999"
-		2 "|unti7_chair:chair|unti7_chair:leg3|unti7_chair:legShape3" "uvSet[0].uvSetPoints[35]" 
-		" -type \"float2\" 0.12958726000000001 0.77370912000000003"
-		2 "|unti7_chair:chair|unti7_chair:leg3|unti7_chair:legShape3" "uvSet[0].uvSetPoints[36]" 
-		" -type \"float2\" 0.023470907999999999 0.76421159999999999"
-		2 "|unti7_chair:chair|unti7_chair:leg3|unti7_chair:legShape3" "uvSet[0].uvSetPoints[37]" 
-		" -type \"float2\" 0.12809771 0.77361672999999997"
-		2 "|unti7_chair:chair|unti7_chair:leg3|unti7_chair:legShape3" "uvSet[0].uvSetPoints[38]" 
-		" -type \"float2\" 0.022008627999999999 0.76451015"
-		2 "|unti7_chair:chair|unti7_chair:leg3|unti7_chair:legShape3" "uvSet[0].uvSetPoints[39]" 
-		" -type \"float2\" 0.12670967 0.77306854999999997"
-		2 "|unti7_chair:chair|unti7_chair:leg3|unti7_chair:legShape3" "uvSet[0].uvSetPoints[40]" 
-		" -type \"float2\" 0.023682207 0.76897693"
-		2 "|unti7_chair:chair|unti7_chair:leg3|unti7_chair:legShape3" "uvSet[0].uvSetPoints[41]" 
-		" -type \"float2\" 0.12913417999999999 0.76896065000000002"
-		2 "|unti7_chair:chair|unti7_chair:leg3|unti7_chair:legShape3" "uvSet[0].uvSetPoints[42]" 
-		" -type \"float2\" 0.036117345000000002 0.91609644999999995"
-		2 "|unti7_chair:chair|unti7_chair:leg3|unti7_chair:legShape3" "uvSet[0].uvSetPoints[43]" 
-		" -type \"float2\" 0.0064271985999999996 0.91915964999999999"
-		2 "|unti7_chair:chair|unti7_chair:leg3|unti7_chair:legShape3" "uvSet[0].uvSetPoints[44]" 
-		" -type \"float2\" 0.022756755 0.91747487000000005"
-		2 "|unti7_chair:chair|unti7_chair:leg3|unti7_chair:legShape3" "uvSet[0].uvSetPoints[45]" 
-		" -type \"float2\" 0.024241239000000001 0.91732174"
-		2 "|unti7_chair:chair|unti7_chair:leg3|unti7_chair:legShape3" "uvSet[0].uvSetPoints[46]" 
-		" -type \"float2\" 0.021272302 0.91762805000000003"
-		2 "|unti7_chair:chair|unti7_chair:leg3|unti7_chair:legShape3" "uvSet[0].uvSetPoints[47]" 
-		" -type \"float2\" 0.019787788000000001 0.91778123"
-		2 "|unti7_chair:chair|unti7_chair:leg3|unti7_chair:legShape3" "uvSet[0].uvSetPoints[48]" 
-		" -type \"float2\" 0.018303244999999999 0.91793435999999995"
-		2 "|unti7_chair:chair|unti7_chair:leg3|unti7_chair:legShape3" "uvSet[0].uvSetPoints[49]" 
-		" -type \"float2\" 0.016818731999999999 0.91808754000000004"
-		2 "|unti7_chair:chair|unti7_chair:leg3|unti7_chair:legShape3" "uvSet[0].uvSetPoints[50]" 
-		" -type \"float2\" 0.015334219 0.91824066999999998"
-		2 "|unti7_chair:chair|unti7_chair:leg3|unti7_chair:legShape3" "uvSet[0].uvSetPoints[51]" 
-		" -type \"float2\" 0.013849735 0.91839384999999996"
-		2 "|unti7_chair:chair|unti7_chair:leg3|unti7_chair:legShape3" "uvSet[0].uvSetPoints[52]" 
-		" -type \"float2\" 0.012365222 0.91854703000000004"
-		2 "|unti7_chair:chair|unti7_chair:leg3|unti7_chair:legShape3" "uvSet[0].uvSetPoints[53]" 
-		" -type \"float2\" 0.010880709000000001 0.91870021999999996"
-		2 "|unti7_chair:chair|unti7_chair:leg3|unti7_chair:legShape3" "uvSet[0].uvSetPoints[54]" 
-		" -type \"float2\" 0.0093961953999999997 0.91885340000000004"
-		2 "|unti7_chair:chair|unti7_chair:leg3|unti7_chair:legShape3" "uvSet[0].uvSetPoints[55]" 
-		" -type \"float2\" 0.0079117119 0.91900652999999999"
-		2 "|unti7_chair:chair|unti7_chair:leg3|unti7_chair:legShape3" "uvSet[0].uvSetPoints[56]" 
-		" -type \"float2\" 0.034632862 0.91624956999999996"
-		2 "|unti7_chair:chair|unti7_chair:leg3|unti7_chair:legShape3" "uvSet[0].uvSetPoints[57]" 
-		" -type \"float2\" 0.033148348000000001 0.91640275999999998"
-		2 "|unti7_chair:chair|unti7_chair:leg3|unti7_chair:legShape3" "uvSet[0].uvSetPoints[58]" 
-		" -type \"float2\" 0.031663835000000001 0.91655593999999996"
-		2 "|unti7_chair:chair|unti7_chair:leg3|unti7_chair:legShape3" "uvSet[0].uvSetPoints[59]" 
-		" -type \"float2\" 0.030179292 0.91670907000000001"
-		2 "|unti7_chair:chair|unti7_chair:leg3|unti7_chair:legShape3" "uvSet[0].uvSetPoints[60]" 
-		" -type \"float2\" 0.028694779 0.91686224999999999"
-		2 "|unti7_chair:chair|unti7_chair:leg3|unti7_chair:legShape3" "uvSet[0].uvSetPoints[61]" 
-		" -type \"float2\" 0.027210325 0.91701537"
-		2 "|unti7_chair:chair|unti7_chair:leg3|unti7_chair:legShape3" "uvSet[0].uvSetPoints[62]" 
-		" -type \"float2\" 0.025725752000000001 0.91716861999999999"
-		2 "|unti7_chair:chair|unti7_chair:leg3|unti7_chair:legShape3" "uvSet[0].uvSetPoints[63]" 
-		" -type \"float2\" 0.013203532 0.98483889999999996"
-		2 "|unti7_chair:chair|unti7_chair:leg3|unti7_chair:legShape3" "uvSet[0].uvSetPoints[64]" 
-		" -type \"float2\" 0.042893708000000003 0.98177563999999995"
-		2 "|unti7_chair:chair|unti7_chair:leg3|unti7_chair:legShape3" "uvSet[0].uvSetPoints[65]" 
-		" -type \"float2\" 0.029533118000000001 0.98315412000000002"
-		2 "|unti7_chair:chair|unti7_chair:leg3|unti7_chair:legShape3" "uvSet[0].uvSetPoints[66]" 
-		" -type \"float2\" 0.031017600999999999 0.98300092999999999"
-		2 "|unti7_chair:chair|unti7_chair:leg3|unti7_chair:legShape3" "uvSet[0].uvSetPoints[67]" 
-		" -type \"float2\" 0.028048605000000001 0.98330724000000003"
-		2 "|unti7_chair:chair|unti7_chair:leg3|unti7_chair:legShape3" "uvSet[0].uvSetPoints[68]" 
-		" -type \"float2\" 0.026564091000000001 0.98346043000000005"
-		2 "|unti7_chair:chair|unti7_chair:leg3|unti7_chair:legShape3" "uvSet[0].uvSetPoints[69]" 
-		" -type \"float2\" 0.025079578000000002 0.98361361000000003"
-		2 "|unti7_chair:chair|unti7_chair:leg3|unti7_chair:legShape3" "uvSet[0].uvSetPoints[70]" 
-		" -type \"float2\" 0.023595064999999998 0.98376673000000003"
-		2 "|unti7_chair:chair|unti7_chair:leg3|unti7_chair:legShape3" "uvSet[0].uvSetPoints[71]" 
-		" -type \"float2\" 0.022110551999999999 0.98391985999999998"
-		2 "|unti7_chair:chair|unti7_chair:leg3|unti7_chair:legShape3" "uvSet[0].uvSetPoints[72]" 
-		" -type \"float2\" 0.020626068000000001 0.98407310000000003"
-		2 "|unti7_chair:chair|unti7_chair:leg3|unti7_chair:legShape3" "uvSet[0].uvSetPoints[73]" 
-		" -type \"float2\" 0.019141555000000001 0.98422622999999998"
-		2 "|unti7_chair:chair|unti7_chair:leg3|unti7_chair:legShape3" "uvSet[0].uvSetPoints[74]" 
-		" -type \"float2\" 0.017657042000000001 0.98437940999999995"
-		2 "|unti7_chair:chair|unti7_chair:leg3|unti7_chair:legShape3" "uvSet[0].uvSetPoints[75]" 
-		" -type \"float2\" 0.016172558 0.98453254000000001"
-		2 "|unti7_chair:chair|unti7_chair:leg3|unti7_chair:legShape3" "uvSet[0].uvSetPoints[76]" 
-		" -type \"float2\" 0.014688045 0.98468571999999999"
-		2 "|unti7_chair:chair|unti7_chair:leg3|unti7_chair:legShape3" "uvSet[0].uvSetPoints[77]" 
-		" -type \"float2\" 0.041409194000000003 0.98192882999999997"
-		2 "|unti7_chair:chair|unti7_chair:leg3|unti7_chair:legShape3" "uvSet[0].uvSetPoints[78]" 
-		" -type \"float2\" 0.039924711000000002 0.98208194999999998"
-		2 "|unti7_chair:chair|unti7_chair:leg3|unti7_chair:legShape3" "uvSet[0].uvSetPoints[79]" 
-		" -type \"float2\" 0.038440198000000002 0.98223506999999999"
-		2 "|unti7_chair:chair|unti7_chair:leg3|unti7_chair:legShape3" "uvSet[0].uvSetPoints[80]" 
-		" -type \"float2\" 0.036955684000000003 0.98238831999999998"
-		2 "|unti7_chair:chair|unti7_chair:leg3|unti7_chair:legShape3" "uvSet[0].uvSetPoints[81]" 
-		" -type \"float2\" 0.035471111999999999 0.98254143999999999"
-		2 "|unti7_chair:chair|unti7_chair:leg3|unti7_chair:legShape3" "uvSet[0].uvSetPoints[82]" 
-		" -type \"float2\" 0.033986627999999998 0.98269463000000001"
-		2 "|unti7_chair:chair|unti7_chair:leg3|unti7_chair:legShape3" "uvSet[0].uvSetPoints[83]" 
-		" -type \"float2\" 0.032502114999999998 0.98284780999999999"
-		2 "|unti7_chair:chair|unti7_chair:leg4|unti7_chair:legShape4" "uvSet[0].uvSetPoints" 
-		" -s 84"
-		2 "|unti7_chair:chair|unti7_chair:leg4|unti7_chair:legShape4" "uvSet[0].uvSetPoints[0]" 
-		" -type \"float2\" 0.049852966999999998 0.76524590999999997"
-		2 "|unti7_chair:chair|unti7_chair:leg4|unti7_chair:legShape4" "uvSet[0].uvSetPoints[1]" 
-		" -type \"float2\" 0.0488455 0.76634687000000001"
-		2 "|unti7_chair:chair|unti7_chair:leg4|unti7_chair:legShape4" "uvSet[0].uvSetPoints[2]" 
-		" -type \"float2\" 0.10532969 0.77085888000000002"
-		2 "|unti7_chair:chair|unti7_chair:leg4|unti7_chair:legShape4" "uvSet[0].uvSetPoints[3]" 
-		" -type \"float2\" 0.10613042 0.77211832999999996"
-		2 "|unti7_chair:chair|unti7_chair:leg4|unti7_chair:legShape4" "uvSet[0].uvSetPoints[4]" 
-		" -type \"float2\" 0.048227549000000002 0.76770537999999999"
-		2 "|unti7_chair:chair|unti7_chair:leg4|unti7_chair:legShape4" "uvSet[0].uvSetPoints[5]" 
-		" -type \"float2\" 0.10495725 0.76941371000000003"
-		2 "|unti7_chair:chair|unti7_chair:leg4|unti7_chair:legShape4" "uvSet[0].uvSetPoints[6]" 
-		" -type \"float2\" 0.048059613000000001 0.76918823000000003"
-		2 "|unti7_chair:chair|unti7_chair:leg4|unti7_chair:legShape4" "uvSet[0].uvSetPoints[7]" 
-		" -type \"float2\" 0.10504964 0.76792424999999997"
-		2 "|unti7_chair:chair|unti7_chair:leg4|unti7_chair:legShape4" "uvSet[0].uvSetPoints[8]" 
-		" -type \"float2\" 0.048358171999999998 0.77065050999999996"
-		2 "|unti7_chair:chair|unti7_chair:leg4|unti7_chair:legShape4" "uvSet[0].uvSetPoints[9]" 
-		" -type \"float2\" 0.10559782 0.76653618000000001"
-		2 "|unti7_chair:chair|unti7_chair:leg4|unti7_chair:legShape4" "uvSet[0].uvSetPoints[10]" 
-		" -type \"float2\" 0.049093932 0.77194887000000001"
-		2 "|unti7_chair:chair|unti7_chair:leg4|unti7_chair:legShape4" "uvSet[0].uvSetPoints[11]" 
-		" -type \"float2\" 0.10654810000000001 0.76538539000000005"
-		2 "|unti7_chair:chair|unti7_chair:leg4|unti7_chair:legShape4" "uvSet[0].uvSetPoints[12]" 
-		" -type \"float2\" 0.050194949000000003 0.77295636999999995"
-		2 "|unti7_chair:chair|unti7_chair:leg4|unti7_chair:legShape4" "uvSet[0].uvSetPoints[13]" 
-		" -type \"float2\" 0.10780745999999999 0.76458466000000003"
-		2 "|unti7_chair:chair|unti7_chair:leg4|unti7_chair:legShape4" "uvSet[0].uvSetPoints[14]" 
-		" -type \"float2\" 0.051553398 0.77357434999999997"
-		2 "|unti7_chair:chair|unti7_chair:leg4|unti7_chair:legShape4" "uvSet[0].uvSetPoints[15]" 
-		" -type \"float2\" 0.10925260000000001 0.76421218999999996"
-		2 "|unti7_chair:chair|unti7_chair:leg4|unti7_chair:legShape4" "uvSet[0].uvSetPoints[16]" 
-		" -type \"float2\" 0.053036273000000002 0.77374220000000005"
-		2 "|unti7_chair:chair|unti7_chair:leg4|unti7_chair:legShape4" "uvSet[0].uvSetPoints[17]" 
-		" -type \"float2\" 0.11074215 0.76430463999999998"
-		2 "|unti7_chair:chair|unti7_chair:leg4|unti7_chair:legShape4" "uvSet[0].uvSetPoints[18]" 
-		" -type \"float2\" 0.054498523 0.77344369999999996"
-		2 "|unti7_chair:chair|unti7_chair:leg4|unti7_chair:legShape4" "uvSet[0].uvSetPoints[19]" 
-		" -type \"float2\" 0.11213022 0.76485276000000002"
-		2 "|unti7_chair:chair|unti7_chair:leg4|unti7_chair:legShape4" "uvSet[0].uvSetPoints[20]" 
-		" -type \"float2\" 0.055796920999999999 0.77270793999999998"
-		2 "|unti7_chair:chair|unti7_chair:leg4|unti7_chair:legShape4" "uvSet[0].uvSetPoints[21]" 
-		" -type \"float2\" 0.11328095000000001 0.76580309999999996"
-		2 "|unti7_chair:chair|unti7_chair:leg4|unti7_chair:legShape4" "uvSet[0].uvSetPoints[22]" 
-		" -type \"float2\" 0.056804388999999997 0.77160691999999997"
-		2 "|unti7_chair:chair|unti7_chair:leg4|unti7_chair:legShape4" "uvSet[0].uvSetPoints[23]" 
-		" -type \"float2\" 0.11408174 0.76706242999999996"
-		2 "|unti7_chair:chair|unti7_chair:leg4|unti7_chair:legShape4" "uvSet[0].uvSetPoints[24]" 
-		" -type \"float2\" 0.057422340000000002 0.77024846999999996"
-		2 "|unti7_chair:chair|unti7_chair:leg4|unti7_chair:legShape4" "uvSet[0].uvSetPoints[25]" 
-		" -type \"float2\" 0.11445418 0.76850759999999996"
-		2 "|unti7_chair:chair|unti7_chair:leg4|unti7_chair:legShape4" "uvSet[0].uvSetPoints[26]" 
-		" -type \"float2\" 0.057590245999999998 0.76876557000000001"
-		2 "|unti7_chair:chair|unti7_chair:leg4|unti7_chair:legShape4" "uvSet[0].uvSetPoints[27]" 
-		" -type \"float2\" 0.11436172999999999 0.76999711999999998"
-		2 "|unti7_chair:chair|unti7_chair:leg4|unti7_chair:legShape4" "uvSet[0].uvSetPoints[28]" 
-		" -type \"float2\" 0.057291715999999999 0.76730335000000005"
-		2 "|unti7_chair:chair|unti7_chair:leg4|unti7_chair:legShape4" "uvSet[0].uvSetPoints[29]" 
-		" -type \"float2\" 0.11381361 0.77138519000000005"
-		2 "|unti7_chair:chair|unti7_chair:leg4|unti7_chair:legShape4" "uvSet[0].uvSetPoints[30]" 
-		" -type \"float2\" 0.056555956999999997 0.76600491999999998"
-		2 "|unti7_chair:chair|unti7_chair:leg4|unti7_chair:legShape4" "uvSet[0].uvSetPoints[31]" 
-		" -type \"float2\" 0.11286333 0.77253592000000004"
-		2 "|unti7_chair:chair|unti7_chair:leg4|unti7_chair:legShape4" "uvSet[0].uvSetPoints[32]" 
-		" -type \"float2\" 0.055454940000000001 0.76499748000000001"
-		2 "|unti7_chair:chair|unti7_chair:leg4|unti7_chair:legShape4" "uvSet[0].uvSetPoints[33]" 
-		" -type \"float2\" 0.11160398000000001 0.77333671000000004"
-		2 "|unti7_chair:chair|unti7_chair:leg4|unti7_chair:legShape4" "uvSet[0].uvSetPoints[34]" 
-		" -type \"float2\" 0.054096489999999997 0.76437949999999999"
-		2 "|unti7_chair:chair|unti7_chair:leg4|unti7_chair:legShape4" "uvSet[0].uvSetPoints[35]" 
-		" -type \"float2\" 0.11015877 0.77370912000000003"
-		2 "|unti7_chair:chair|unti7_chair:leg4|unti7_chair:legShape4" "uvSet[0].uvSetPoints[36]" 
-		" -type \"float2\" 0.052613585999999997 0.76421159999999999"
-		2 "|unti7_chair:chair|unti7_chair:leg4|unti7_chair:legShape4" "uvSet[0].uvSetPoints[37]" 
-		" -type \"float2\" 0.10866922 0.77361672999999997"
-		2 "|unti7_chair:chair|unti7_chair:leg4|unti7_chair:legShape4" "uvSet[0].uvSetPoints[38]" 
-		" -type \"float2\" 0.051151364999999997 0.76451015"
-		2 "|unti7_chair:chair|unti7_chair:leg4|unti7_chair:legShape4" "uvSet[0].uvSetPoints[39]" 
-		" -type \"float2\" 0.10728118 0.77306854999999997"
-		2 "|unti7_chair:chair|unti7_chair:leg4|unti7_chair:legShape4" "uvSet[0].uvSetPoints[40]" 
-		" -type \"float2\" 0.052824914000000001 0.76897693"
-		2 "|unti7_chair:chair|unti7_chair:leg4|unti7_chair:legShape4" "uvSet[0].uvSetPoints[41]" 
-		" -type \"float2\" 0.10970568999999999 0.76896065000000002"
-		2 "|unti7_chair:chair|unti7_chair:leg4|unti7_chair:legShape4" "uvSet[0].uvSetPoints[42]" 
-		" -type \"float2\" 0.23734074999999999 0.90763366000000001"
-		2 "|unti7_chair:chair|unti7_chair:leg4|unti7_chair:legShape4" "uvSet[0].uvSetPoints[43]" 
-		" -type \"float2\" 0.20765057000000001 0.91069692000000002"
-		2 "|unti7_chair:chair|unti7_chair:leg4|unti7_chair:legShape4" "uvSet[0].uvSetPoints[44]" 
-		" -type \"float2\" 0.22398016000000001 0.90901213999999997"
-		2 "|unti7_chair:chair|unti7_chair:leg4|unti7_chair:legShape4" "uvSet[0].uvSetPoints[45]" 
-		" -type \"float2\" 0.22546463999999999 0.90885895000000005"
-		2 "|unti7_chair:chair|unti7_chair:leg4|unti7_chair:legShape4" "uvSet[0].uvSetPoints[46]" 
-		" -type \"float2\" 0.22249564999999999 0.90916525999999998"
-		2 "|unti7_chair:chair|unti7_chair:leg4|unti7_chair:legShape4" "uvSet[0].uvSetPoints[47]" 
-		" -type \"float2\" 0.22101113 0.90931839000000003"
-		2 "|unti7_chair:chair|unti7_chair:leg4|unti7_chair:legShape4" "uvSet[0].uvSetPoints[48]" 
-		" -type \"float2\" 0.21952668 0.90947162999999998"
-		2 "|unti7_chair:chair|unti7_chair:leg4|unti7_chair:legShape4" "uvSet[0].uvSetPoints[49]" 
-		" -type \"float2\" 0.21804211000000001 0.90962476000000003"
-		2 "|unti7_chair:chair|unti7_chair:leg4|unti7_chair:legShape4" "uvSet[0].uvSetPoints[50]" 
-		" -type \"float2\" 0.21655762000000001 0.90977794000000001"
-		2 "|unti7_chair:chair|unti7_chair:leg4|unti7_chair:legShape4" "uvSet[0].uvSetPoints[51]" 
-		" -type \"float2\" 0.21507311000000001 0.90993111999999998"
-		2 "|unti7_chair:chair|unti7_chair:leg4|unti7_chair:legShape4" "uvSet[0].uvSetPoints[52]" 
-		" -type \"float2\" 0.21358859999999999 0.91008425000000004"
-		2 "|unti7_chair:chair|unti7_chair:leg4|unti7_chair:legShape4" "uvSet[0].uvSetPoints[53]" 
-		" -type \"float2\" 0.21210408 0.91023743000000001"
-		2 "|unti7_chair:chair|unti7_chair:leg4|unti7_chair:legShape4" "uvSet[0].uvSetPoints[54]" 
-		" -type \"float2\" 0.21061959999999999 0.91039055999999996"
-		2 "|unti7_chair:chair|unti7_chair:leg4|unti7_chair:legShape4" "uvSet[0].uvSetPoints[55]" 
-		" -type \"float2\" 0.20913509 0.91054374000000005"
-		2 "|unti7_chair:chair|unti7_chair:leg4|unti7_chair:legShape4" "uvSet[0].uvSetPoints[56]" 
-		" -type \"float2\" 0.23585626000000001 0.90778685000000003"
-		2 "|unti7_chair:chair|unti7_chair:leg4|unti7_chair:legShape4" "uvSet[0].uvSetPoints[57]" 
-		" -type \"float2\" 0.23437174999999999 0.90793997000000004"
-		2 "|unti7_chair:chair|unti7_chair:leg4|unti7_chair:legShape4" "uvSet[0].uvSetPoints[58]" 
-		" -type \"float2\" 0.23288724 0.90809315000000002"
-		2 "|unti7_chair:chair|unti7_chair:leg4|unti7_chair:legShape4" "uvSet[0].uvSetPoints[59]" 
-		" -type \"float2\" 0.23140272000000001 0.90824634000000004"
-		2 "|unti7_chair:chair|unti7_chair:leg4|unti7_chair:legShape4" "uvSet[0].uvSetPoints[60]" 
-		" -type \"float2\" 0.22991821000000001 0.90839946000000005"
-		2 "|unti7_chair:chair|unti7_chair:leg4|unti7_chair:legShape4" "uvSet[0].uvSetPoints[61]" 
-		" -type \"float2\" 0.22843369999999999 0.90855264999999996"
-		2 "|unti7_chair:chair|unti7_chair:leg4|unti7_chair:legShape4" "uvSet[0].uvSetPoints[62]" 
-		" -type \"float2\" 0.22694916000000001 0.90870576999999997"
-		2 "|unti7_chair:chair|unti7_chair:leg4|unti7_chair:legShape4" "uvSet[0].uvSetPoints[63]" 
-		" -type \"float2\" 0.2144269 0.97637611999999996"
-		2 "|unti7_chair:chair|unti7_chair:leg4|unti7_chair:legShape4" "uvSet[0].uvSetPoints[64]" 
-		" -type \"float2\" 0.24411711 0.97331290999999998"
-		2 "|unti7_chair:chair|unti7_chair:leg4|unti7_chair:legShape4" "uvSet[0].uvSetPoints[65]" 
-		" -type \"float2\" 0.23075649000000001 0.97469132999999997"
-		2 "|unti7_chair:chair|unti7_chair:leg4|unti7_chair:legShape4" "uvSet[0].uvSetPoints[66]" 
-		" -type \"float2\" 0.232241 0.97453820999999996"
-		2 "|unti7_chair:chair|unti7_chair:leg4|unti7_chair:legShape4" "uvSet[0].uvSetPoints[67]" 
-		" -type \"float2\" 0.22927197999999999 0.97484451999999999"
-		2 "|unti7_chair:chair|unti7_chair:leg4|unti7_chair:legShape4" "uvSet[0].uvSetPoints[68]" 
-		" -type \"float2\" 0.22778746 0.97499769999999997"
-		2 "|unti7_chair:chair|unti7_chair:leg4|unti7_chair:legShape4" "uvSet[0].uvSetPoints[69]" 
-		" -type \"float2\" 0.22630297999999999 0.97515081999999997"
-		2 "|unti7_chair:chair|unti7_chair:leg4|unti7_chair:legShape4" "uvSet[0].uvSetPoints[70]" 
-		" -type \"float2\" 0.22481846999999999 0.97530401"
-		2 "|unti7_chair:chair|unti7_chair:leg4|unti7_chair:legShape4" "uvSet[0].uvSetPoints[71]" 
-		" -type \"float2\" 0.22333395 0.97545713000000001"
-		2 "|unti7_chair:chair|unti7_chair:leg4|unti7_chair:legShape4" "uvSet[0].uvSetPoints[72]" 
-		" -type \"float2\" 0.22184946999999999 0.97561032000000003"
-		2 "|unti7_chair:chair|unti7_chair:leg4|unti7_chair:legShape4" "uvSet[0].uvSetPoints[73]" 
-		" -type \"float2\" 0.22036496 0.97576350000000001"
-		2 "|unti7_chair:chair|unti7_chair:leg4|unti7_chair:legShape4" "uvSet[0].uvSetPoints[74]" 
-		" -type \"float2\" 0.21888044000000001 0.97591662000000001"
-		2 "|unti7_chair:chair|unti7_chair:leg4|unti7_chair:legShape4" "uvSet[0].uvSetPoints[75]" 
-		" -type \"float2\" 0.21739592999999999 0.97606981000000004"
-		2 "|unti7_chair:chair|unti7_chair:leg4|unti7_chair:legShape4" "uvSet[0].uvSetPoints[76]" 
-		" -type \"float2\" 0.21591141999999999 0.97622299000000001"
-		2 "|unti7_chair:chair|unti7_chair:leg4|unti7_chair:legShape4" "uvSet[0].uvSetPoints[77]" 
-		" -type \"float2\" 0.2426326 0.97346604000000003"
-		2 "|unti7_chair:chair|unti7_chair:leg4|unti7_chair:legShape4" "uvSet[0].uvSetPoints[78]" 
-		" -type \"float2\" 0.24114807999999999 0.97361922000000001"
-		2 "|unti7_chair:chair|unti7_chair:leg4|unti7_chair:legShape4" "uvSet[0].uvSetPoints[79]" 
-		" -type \"float2\" 0.23966356999999999 0.97377234999999995"
-		2 "|unti7_chair:chair|unti7_chair:leg4|unti7_chair:legShape4" "uvSet[0].uvSetPoints[80]" 
-		" -type \"float2\" 0.23817903000000001 0.97392553000000004"
-		2 "|unti7_chair:chair|unti7_chair:leg4|unti7_chair:legShape4" "uvSet[0].uvSetPoints[81]" 
-		" -type \"float2\" 0.23669456999999999 0.97407871000000001"
-		2 "|unti7_chair:chair|unti7_chair:leg4|unti7_chair:legShape4" "uvSet[0].uvSetPoints[82]" 
-		" -type \"float2\" 0.23521006 0.97423183999999996"
-		2 "|unti7_chair:chair|unti7_chair:leg4|unti7_chair:legShape4" "uvSet[0].uvSetPoints[83]" 
-		" -type \"float2\" 0.23372551999999999 0.97438495999999997"
-		2 "unti7_chair:polyTweakUV1" "uvTweak" " -s 84"
-		2 "unti7_chair:polyTweakUV1" "uvTweak[0]" " -type \"float2\" 0.0048303603999999998 0.69777739000000005"
-		
-		2 "unti7_chair:polyTweakUV1" "uvTweak[1]" " -type \"float2\" 0.020497604999999999 0.70284188000000003"
-		
-		2 "unti7_chair:polyTweakUV1" "uvTweak[2]" " -type \"float2\" 0.039020120999999998 -0.22903125999999999"
-		
-		2 "unti7_chair:polyTweakUV1" "uvTweak[3]" " -type \"float2\" 0.020718828000000002 -0.22786127"
-		
-		2 "unti7_chair:polyTweakUV1" "uvTweak[4]" " -type \"float2\" 0.032051749999999997 0.71090191999999996"
-		
-		2 "unti7_chair:polyTweakUV1" "uvTweak[5]" " -type \"float2\" 0.052259414999999997 -0.23032498000000001"
-		
-		2 "unti7_chair:polyTweakUV1" "uvTweak[6]" " -type \"float2\" 0.038345397000000003 0.72126621000000002"
-		
-		2 "unti7_chair:polyTweakUV1" "uvTweak[7]" " -type \"float2\" 0.059108361999999998 -0.23161309999999999"
-		
-		2 "unti7_chair:polyTweakUV1" "uvTweak[8]" " -type \"float2\" 0.038631532000000003 0.73301225999999997"
-		
-		2 "unti7_chair:polyTweakUV1" "uvTweak[9]" " -type \"float2\" 0.058707729 -0.23276736000000001"
-		
-		2 "unti7_chair:polyTweakUV1" "uvTweak[10]" " -type \"float2\" 0.032680616000000003 0.74504066000000002"
-		
-		2 "unti7_chair:polyTweakUV1" "uvTweak[11]" " -type \"float2\" 0.050813898000000003 -0.23367310999999999"
-		
-		2 "unti7_chair:polyTweakUV1" "uvTweak[12]" " -type \"float2\" 0.020877738 0.75616156999999995"
-		
-		2 "unti7_chair:polyTweakUV1" "uvTweak[13]" " -type \"float2\" 0.035926983000000003 -0.23424216"
-		
-		2 "unti7_chair:polyTweakUV1" "uvTweak[14]" " -type \"float2\" 0.0042624548 0.76521342999999997"
-		
-		2 "unti7_chair:polyTweakUV1" "uvTweak[15]" " -type \"float2\" 0.015350178000000001 -0.23442067"
-		
-		2 "unti7_chair:polyTweakUV1" "uvTweak[16]" " -type \"float2\" -0.015522200999999999 0.77120244999999998"
-		
-		2 "unti7_chair:polyTweakUV1" "uvTweak[17]" " -type \"float2\" -0.0088686272999999993 -0.23419411000000001"
-		
-		2 "unti7_chair:polyTweakUV1" "uvTweak[18]" " -type \"float2\" -0.036392650999999998 0.77344369999999996"
-		
-		2 "unti7_chair:polyTweakUV1" "uvTweak[19]" " -type \"float2\" -0.034142843999999999 -0.2335874"
-		
-		2 "unti7_chair:polyTweakUV1" "uvTweak[20]" " -type \"float2\" -0.056085281000000001 0.77166736000000002"
-		
-		2 "unti7_chair:polyTweakUV1" "uvTweak[21]" " -type \"float2\" -0.057684592999999999 -0.23266113999999999"
-		
-		2 "unti7_chair:polyTweakUV1" "uvTweak[22]" " -type \"float2\" -0.072469233999999993 0.76606863999999997"
-		
-		2 "unti7_chair:polyTweakUV1" "uvTweak[23]" " -type \"float2\" -0.076908520999999994 -0.23150556999999999"
-		
-		2 "unti7_chair:polyTweakUV1" "uvTweak[24]" " -type \"float2\" -0.083837687999999994 0.75727796999999997"
-		
-		2 "unti7_chair:polyTweakUV1" "uvTweak[25]" " -type \"float2\" -0.089800677999999995 -0.23023134000000001"
-		
-		2 "unti7_chair:polyTweakUV1" "uvTweak[26]" " -type \"float2\" -0.089115053 0.74626546999999999"
-		
-		2 "unti7_chair:polyTweakUV1" "uvTweak[27]" " -type \"float2\" -0.095166883999999993 -0.22896045000000001"
-		
-		2 "unti7_chair:polyTweakUV1" "uvTweak[28]" " -type \"float2\" -0.087942615000000002 0.73420118999999995"
-		
-		2 "unti7_chair:polyTweakUV1" "uvTweak[29]" " -type \"float2\" -0.092714481000000001 -0.22781489999999999"
-		
-		2 "unti7_chair:polyTweakUV1" "uvTweak[30]" " -type \"float2\" -0.080647453999999993 0.72230576999999996"
-		
-		2 "unti7_chair:polyTweakUV1" "uvTweak[31]" " -type \"float2\" -0.082982740999999999 -0.22690551"
-		
-		2 "unti7_chair:polyTweakUV1" "uvTweak[32]" " -type \"float2\" -0.068127288999999994 0.71171819999999997"
-		
-		2 "unti7_chair:polyTweakUV1" "uvTweak[33]" " -type \"float2\" -0.067171923999999994 -0.22632221999999999"
-		
-		2 "unti7_chair:polyTweakUV1" "uvTweak[34]" " -type \"float2\" -0.051696069999999997 0.70339697999999995"
-		
-		2 "unti7_chair:polyTweakUV1" "uvTweak[35]" " -type \"float2\" -0.046938986000000002 -0.22612397000000001"
-		
-		2 "unti7_chair:polyTweakUV1" "uvTweak[36]" " -type \"float2\" -0.032927169999999999 0.69805682000000002"
-		
-		2 "unti7_chair:polyTweakUV1" "uvTweak[37]" " -type \"float2\" -0.024202182999999999 -0.22633318999999999"
-		
-		2 "unti7_chair:polyTweakUV1" "uvTweak[38]" " -type \"float2\" -0.013516866000000001 0.69613468999999994"
-		
-		2 "unti7_chair:polyTweakUV1" "uvTweak[39]" " -type \"float2\" -0.00098243355999999993 -0.22693150000000001"
-		
-		2 "unti7_chair:polyTweakUV1" "uvTweak[40]" " -type \"float2\" -0.024499238 0.73360144999999999"
-		
-		2 "unti7_chair:polyTweakUV1" "uvTweak[41]" " -type \"float2\" -0.016787066999999999 -0.23029119000000001"
-		
-		2 "unti7_chair:polyTweakUV1" "uvTweak[42]" " -type \"float2\" 0.035558566 0.76167136000000002"
-		
-		2 "unti7_chair:polyTweakUV1" "uvTweak[43]" " -type \"float2\" 0.0058683269 0.76473457"
-		
-		2 "unti7_chair:polyTweakUV1" "uvTweak[44]" " -type \"float2\" 0.026088215000000001 0.69721401000000005"
-		
-		2 "unti7_chair:polyTweakUV1" "uvTweak[45]" " -type \"float2\" 0.047218352999999998 0.69796800999999997"
-		
-		2 "unti7_chair:polyTweakUV1" "uvTweak[46]" " -type \"float2\" 0.0037311465 0.69958788000000005"
-		
-		2 "unti7_chair:polyTweakUV1" "uvTweak[47]" " -type \"float2\" -0.018005199999999999 0.70491338000000003"
-		
-		2 "unti7_chair:polyTweakUV1" "uvTweak[48]" " -type \"float2\" -0.037279353000000001 0.71276974999999998"
-		
-		2 "unti7_chair:polyTweakUV1" "uvTweak[49]" " -type \"float2\" -0.052384987000000001 0.72250307000000002"
-		
-		2 "unti7_chair:polyTweakUV1" "uvTweak[50]" " -type \"float2\" -0.061900421999999997 0.73325324000000003"
-		
-		2 "unti7_chair:polyTweakUV1" "uvTweak[51]" " -type \"float2\" -0.064856081999999995 0.74400842"
-		
-		2 "unti7_chair:polyTweakUV1" "uvTweak[52]" " -type \"float2\" -0.060895144999999998 0.75369114000000004"
-		
-		2 "unti7_chair:polyTweakUV1" "uvTweak[53]" " -type \"float2\" -0.050393224 0.76127654"
-		
-		2 "unti7_chair:polyTweakUV1" "uvTweak[54]" " -type \"float2\" -0.034486346000000001 0.76592742999999996"
-		
-		2 "unti7_chair:polyTweakUV1" "uvTweak[55]" " -type \"float2\" -0.014979862 0.76712119999999995"
-		
-		2 "unti7_chair:polyTweakUV1" "uvTweak[56]" " -type \"float2\" 0.055341579000000002 0.75600332000000003"
-		
-		2 "unti7_chair:polyTweakUV1" "uvTweak[57]" " -type \"float2\" 0.071830764000000005 0.74772263000000005"
-		
-		2 "unti7_chair:polyTweakUV1" "uvTweak[58]" " -type \"float2\" 0.083250119999999997 0.73776238999999999"
-		
-		2 "unti7_chair:polyTweakUV1" "uvTweak[59]" " -type \"float2\" 0.088452399000000001 0.72718548999999999"
-		
-		2 "unti7_chair:polyTweakUV1" "uvTweak[60]" " -type \"float2\" 0.086980223999999995 0.71705483999999997"
-		
-		2 "unti7_chair:polyTweakUV1" "uvTweak[61]" " -type \"float2\" 0.079034156999999994 0.70832658000000004"
-		
-		2 "unti7_chair:polyTweakUV1" "uvTweak[62]" " -type \"float2\" 0.065377578000000006 0.70177816999999998"
-		
-		2 "unti7_chair:polyTweakUV1" "uvTweak[63]" " -type \"float2\" -0.077264606999999999 -0.16554521"
-		
-		2 "unti7_chair:polyTweakUV1" "uvTweak[64]" " -type \"float2\" -0.047574401000000002 -0.16860847000000001"
-		
-		2 "unti7_chair:polyTweakUV1" "uvTweak[65]" " -type \"float2\" -0.049587755999999997 -0.16873131999999999"
-		
-		2 "unti7_chair:polyTweakUV1" "uvTweak[66]" " -type \"float2\" -0.025251254000000001 -0.16886406000000001"
-		
-		2 "unti7_chair:polyTweakUV1" "uvTweak[67]" " -type \"float2\" -0.075680092000000004 -0.16852795000000001"
-		
-		2 "unti7_chair:polyTweakUV1" "uvTweak[68]" " -type \"float2\" -0.10139093 -0.168258"
-		
-		2 "unti7_chair:polyTweakUV1" "uvTweak[69]" " -type \"float2\" -0.12455353 -0.16793064999999999"
-		
-		2 "unti7_chair:polyTweakUV1" "uvTweak[70]" " -type \"float2\" -0.14310828 -0.16755997"
-		
-		2 "unti7_chair:polyTweakUV1" "uvTweak[71]" " -type \"float2\" -0.15527478 -0.16716549999999999"
-		
-		2 "unti7_chair:polyTweakUV1" "uvTweak[72]" " -type \"float2\" -0.15975987999999999 -0.16676985"
-		
-		2 "unti7_chair:polyTweakUV1" "uvTweak[73]" " -type \"float2\" -0.15597057 -0.16639803"
-		
-		2 "unti7_chair:polyTweakUV1" "uvTweak[74]" " -type \"float2\" -0.14419045999999999 -0.1660739"
-		
-		2 "unti7_chair:polyTweakUV1" "uvTweak[75]" " -type \"float2\" -0.12565029 -0.16581694999999999"
-		
-		2 "unti7_chair:polyTweakUV1" "uvTweak[76]" " -type \"float2\" -0.10244230999999999 -0.16563974000000001"
-		
-		2 "unti7_chair:polyTweakUV1" "uvTweak[77]" " -type \"float2\" -0.023350528999999998 -0.16858946"
-		
-		2 "unti7_chair:polyTweakUV1" "uvTweak[78]" " -type \"float2\" -0.0028130262999999998 -0.16863022999999999"
-		
-		2 "unti7_chair:polyTweakUV1" "uvTweak[79]" " -type \"float2\" 0.011848733 -0.16870867000000001"
-		
-		2 "unti7_chair:polyTweakUV1" "uvTweak[80]" " -type \"float2\" 0.019208304999999998 -0.16880046000000001"
-		
-		2 "unti7_chair:polyTweakUV1" "uvTweak[81]" " -type \"float2\" 0.018672577999999999 -0.16888122"
-		
-		2 "unti7_chair:polyTweakUV1" "uvTweak[82]" " -type \"float2\" 0.010431498000000001 -0.16892943999999999"
-		
-		2 "unti7_chair:polyTweakUV1" "uvTweak[83]" " -type \"float2\" -0.0046646893000000002 -0.16892771000000001"
-		
-		2 "unti7_chair:polyTweakUV2" "uvTweak" " -s 18"
-		2 "unti7_chair:polyTweakUV2" "uvTweak[0]" " -type \"float2\" 0.082162245999999994 0.81084173999999998"
-		
-		2 "unti7_chair:polyTweakUV2" "uvTweak[1]" " -type \"float2\" 0.11159843 0.82219087999999996"
-		
-		2 "unti7_chair:polyTweakUV2" "uvTweak[2]" " -type \"float2\" 0.047938511000000003 0.70753454999999998"
-		
-		2 "unti7_chair:polyTweakUV2" "uvTweak[3]" " -type \"float2\" 0.0064271985999999996 0.77383440999999997"
-		
-		2 "unti7_chair:polyTweakUV2" "uvTweak[4]" " -type \"float2\" -0.98894941999999997 0.64968239999999999"
-		
-		2 "unti7_chair:polyTweakUV2" "uvTweak[5]" " -type \"float2\" -0.58556043999999996 0.77668238000000001"
-		
-		2 "unti7_chair:polyTweakUV2" "uvTweak[6]" " -type \"float2\" -0.98893929000000003 0.74825763999999995"
-		
-		2 "unti7_chair:polyTweakUV2" "uvTweak[7]" " -type \"float2\" -0.50810981 0.72657864999999999"
-		
-		2 "unti7_chair:polyTweakUV2" "uvTweak[8]" " -type \"float2\" 0.025309189999999999 0.73844451"
-		
-		2 "unti7_chair:polyTweakUV2" "uvTweak[9]" " -type \"float2\" -0.91003727999999995 0.75331932000000001"
-		
-		2 "unti7_chair:polyTweakUV2" "uvTweak[10]" " -type \"float2\" 0.094426572 0.73211557000000005"
-		
-		2 "unti7_chair:polyTweakUV2" "uvTweak[11]" " -type \"float2\" -0.65539431999999997 0.79303836999999999"
-		
-		2 "unti7_chair:polyTweakUV2" "uvTweak[12]" " -type \"float2\" -0.81022203000000004 0.83026319999999998"
-		
-		2 "unti7_chair:polyTweakUV2" "uvTweak[13]" " -type \"float2\" 0.032552391 0.81718033999999995"
-		
-		2 "unti7_chair:polyTweakUV2" "uvTweak[14]" " -type \"float2\" -0.58971344999999997 0.84969068000000003"
-		
-		2 "unti7_chair:polyTweakUV2" "uvTweak[15]" " -type \"float2\" 0.14747051999999999 0.70882422"
-		
-		2 "unti7_chair:polyTweakUV2" "uvTweak[16]" " -type \"float2\" -0.82219743999999995 0.84586148999999999"
-		
-		2 "unti7_chair:polyTweakUV2" "uvTweak[17]" " -type \"float2\" -0.82218729999999995 0.94443666999999998"
-		
-		2 "unti7_chair:polyTweakUV3" "uvTweak" " -s 18"
-		2 "unti7_chair:polyTweakUV3" "uvTweak[0]" " -type \"float2\" -0.24547759 0.42613834"
-		
-		2 "unti7_chair:polyTweakUV3" "uvTweak[1]" " -type \"float2\" -0.16504872000000001 -0.10297940999999999"
-		
-		2 "unti7_chair:polyTweakUV3" "uvTweak[2]" " -type \"float2\" -0.27047970999999998 0.0066008046000000003"
-		
-		2 "unti7_chair:polyTweakUV3" "uvTweak[3]" " -type \"float2\" -0.27893609000000003 0.53903866"
-		
-		2 "unti7_chair:polyTweakUV3" "uvTweak[4]" " -type \"float2\" 0.088130667999999995 0.14262544999999999"
-		
-		2 "unti7_chair:polyTweakUV3" "uvTweak[5]" " -type \"float2\" 0.028698504 0.88235056000000001"
-		
-		2 "unti7_chair:polyTweakUV3" "uvTweak[6]" " -type \"float2\" 0.17196127999999999 0.12985884"
-		
-		2 "unti7_chair:polyTweakUV3" "uvTweak[7]" " -type \"float2\" 0.10249864 0.83186780999999999"
-		
-		2 "unti7_chair:polyTweakUV3" "uvTweak[8]" " -type \"float2\" -0.35196576000000002 -0.0064807683000000001"
-		
-		2 "unti7_chair:polyTweakUV3" "uvTweak[9]" " -type \"float2\" -0.030237541 0.17303648999999999"
-		
-		2 "unti7_chair:polyTweakUV3" "uvTweak[10]" " -type \"float2\" -0.28974617000000003 0.43736385999999999"
-		
-		2 "unti7_chair:polyTweakUV3" "uvTweak[11]" " -type \"float2\" -0.048518925999999997 0.90937710000000005"
-		
-		2 "unti7_chair:polyTweakUV3" "uvTweak[12]" " -type \"float2\" 0.22227141 0.022631310000000002"
-		
-		2 "unti7_chair:polyTweakUV3" "uvTweak[13]" " -type \"float2\" -0.31428351999999998 -0.23337938"
-		
-		2 "unti7_chair:polyTweakUV3" "uvTweak[14]" " -type \"float2\" 0.087032213999999997 0.85781872000000003"
-		
-		2 "unti7_chair:polyTweakUV3" "uvTweak[15]" " -type \"float2\" -0.18223211 0.51967441999999997"
-		
-		2 "unti7_chair:polyTweakUV3" "uvTweak[16]" " -type \"float2\" -0.21199261999999999 0.0029020309000000002"
-		
-		2 "unti7_chair:polyTweakUV3" "uvTweak[17]" " -type \"float2\" -0.37277063999999999 -0.22968072";
+		2 "|unti7_chair:chair|unti7_chair:leg2|unti7_chair:legShape2" "uvst[0].uvsp[0:83]" 
+		(" -s 84 -type \"float2\" 0.030424505000000001 0.76524590999999997 0.029417008000000001 0.76634687000000001 0.11504388 0.77085888000000002 0.11584467 0.77211832999999996 0.028799056999999999 0.76770537999999999 0.1146715 0.76941371000000003 0.028631180999999999 0.76918823000000003 0.11476388999999999 0.76792424999999997 0.028929680999999999 0.77065050999999996 0.11531201000000001 0.76653618000000001 0.029665469999999999 0.77194887000000001 0.11626235 0.76538539000000005 0.030766457000000001 0.77295636999999995 0.11752170000000001 0.76458466000000003 0.032124907000000001 0.77357434999999997 0.11896685 0.76421218999999996 0.033607840999999999 0.77374220000000005 0.12045636999999999 0.76430463999999998 0.035070032000000001 0.77344369999999996 0.12184447 0.76485276000000002 0.036368458999999999 0.77270793999999998 0.12299517 0.76580309999999996 0.037375927000000003 0.77160691999999997 0.12379598999999999 0.76706242999999996 0.037993878000000002 0.77024846999999996 0.12416837 0.76850759999999996 0.038161814000000002 0"
+		+ ".76876557000000001 0.12407598 0.76999711999999998 0.037863225 0.76730335000000005 0.12352784999999999 0.77138519000000005 0.037127464999999998 0.76600491999999998 0.12257758000000001 0.77253592000000004 0.036026448000000003 0.76499748000000001 0.12131815999999999 0.77333671000000004 0.034668027999999997 0.76437949999999999 0.11987302 0.77370912000000003 0.033185154000000001 0.76421159999999999 0.11838347 0.77361672999999997 0.031722872999999999 0.76451015 0.11699542 0.77306854999999997 0.033396481999999998 0.76897693 0.11941992999999999 0.76896065000000002 0.24150398000000001 0.76421112000000002 0.21181380999999999 0.76727431999999995 0.22814342000000001 0.76558954000000001 0.22962794 0.76543640999999996 0.22665890999999999 0.76574266000000002 0.2251744 0.76589589999999996 0.22368990999999999 0.76604903000000002 0.22220534 0.76620220999999999 0.22072089 0.76635534000000005 0.21923634 0.76650852000000003 0.21775189 0.76666164000000003 0.21626732000000001 0.76681482999999995 0.21478285999999999 0.76696794999999"
+		+ "995 0.21329832000000001 0.76712119999999995 0.24001947000000001 0.76436424000000003 0.23853495999999999 0.76451743000000005 0.23705047000000001 0.76467061000000003 0.23556595999999999 0.76482373000000003 0.23408145 0.76497685999999998 0.23259695999999999 0.76513003999999996 0.23111245 0.76528322999999998 0.21859017 0.83295350999999995 0.24828035000000001 0.82989025000000005 0.23491978999999999 0.83126873000000001 0.23640423999999999 0.83111553999999999 0.23343521 0.83142190999999999 0.23195076000000001 0.83157504000000004 0.23046628 0.83172822000000002 0.22898170000000001 0.83188139999999999 0.22749718999999999 0.83203453000000005 0.22601267999999999 0.83218771000000002 0.22452816 0.83234083999999997 0.22304367999999999 0.83249401999999995 0.22155917 0.83264720000000003 0.22007465000000001 0.83280032999999998 0.24679582999999999 0.83004343999999997 0.24531132 0.83019662000000005 0.24382681 0.83034973999999995 0.24234232 0.83050292999999997 0.24085781000000001 0.83065610999999995 0.23937330000000001 0.83080924"
+		+ " 0.23788877999999999 0.83096241999999998")
+		2 "|unti7_chair:chair|unti7_chair:leg3|unti7_chair:legShape3" "uvst[0].uvsp[0:83]" 
+		(" -s 84 -type \"float2\" 0.020710260000000001 0.76524590999999997 0.019702761999999999 0.76634687000000001 0.12475812 0.77085888000000002 0.12555891 0.77211832999999996 0.019084811 0.76770537999999999 0.12438573999999999 0.76941371000000003 0.018916934999999999 0.76918823000000003 0.12447809999999999 0.76792424999999997 0.019215434999999999 0.77065050999999996 0.12502626 0.76653618000000001 0.019951224 0.77194887000000001 0.12597653 0.76538539000000005 0.021052240999999999 0.77295636999999995 0.12723592 0.76458466000000003 0.022410660999999998 0.77357434999999997 0.12868106000000001 0.76421218999999996 0.023893595 0.77374220000000005 0.13017055 0.76430463999999998 0.025355786000000002 0.77344369999999996 0.13155865999999999 0.76485276000000002 0.026654213999999999 0.77270793999999998 0.13270941 0.76580309999999996 0.027661681 0.77160691999999997 0.13351017000000001 0.76706242999999996 0.028279631999999999 0.77024846999999996 0.13388258 0.76850759999999996 0.028447567999999999 0.76876557000000001 0.13379021999999"
+		+ "999 0.76999711999999998 0.028149039000000001 0.76730335000000005 0.13324204000000001 0.77138519000000005 0.027413218999999999 0.76600491999999998 0.13229178999999999 0.77253592000000004 0.026312202 0.76499748000000001 0.13103240999999999 0.77333671000000004 0.024953783 0.76437949999999999 0.12958726000000001 0.77370912000000003 0.023470907999999999 0.76421159999999999 0.12809771 0.77361672999999997 0.022008627999999999 0.76451015 0.12670967 0.77306854999999997 0.023682207 0.76897693 0.12913417999999999 0.76896065000000002 0.036117345000000002 0.91609644999999995 0.0064271985999999996 0.91915964999999999 0.022756755 0.91747487000000005 0.024241239000000001 0.91732174 0.021272302 0.91762805000000003 0.019787788000000001 0.91778123 0.018303244999999999 0.91793435999999995 0.016818731999999999 0.91808754000000004 0.015334219 0.91824066999999998 0.013849735 0.91839384999999996 0.012365222 0.91854703000000004 0.010880709000000001 0.91870021999999996 0.0093961953999999997 0.91885340000000004 0.0079117119 0.919006529"
+		+ "99999999 0.034632862 0.91624956999999996 0.033148348000000001 0.91640275999999998 0.031663835000000001 0.91655593999999996 0.030179292 0.91670907000000001 0.028694779 0.91686224999999999 0.027210325 0.91701537 0.025725752000000001 0.91716861999999999 0.013203532 0.98483889999999996 0.042893708000000003 0.98177563999999995 0.029533118000000001 0.98315412000000002 0.031017600999999999 0.98300092999999999 0.028048605000000001 0.98330724000000003 0.026564091000000001 0.98346043000000005 0.025079578000000002 0.98361361000000003 0.023595064999999998 0.98376673000000003 0.022110551999999999 0.98391985999999998 0.020626068000000001 0.98407310000000003 0.019141555000000001 0.98422622999999998 0.017657042000000001 0.98437940999999995 0.016172558 0.98453254000000001 0.014688045 0.98468571999999999 0.041409194000000003 0.98192882999999997 0.039924711000000002 0.98208194999999998 0.038440198000000002 0.98223506999999999 0.036955684000000003 0.98238831999999998 0.035471111999999999 0.98254143999999999 0.033986627999999998 "
+		+ "0.98269463000000001 0.032502114999999998 0.98284780999999999")
+		2 "|unti7_chair:chair|unti7_chair:leg4|unti7_chair:legShape4" "uvst[0].uvsp[0:83]" 
+		(" -s 84 -type \"float2\" 0.049852966999999998 0.76524590999999997 0.0488455 0.76634687000000001 0.10532969 0.77085888000000002 0.10613042 0.77211832999999996 0.048227549000000002 0.76770537999999999 0.10495725 0.76941371000000003 0.048059613000000001 0.76918823000000003 0.10504964 0.76792424999999997 0.048358171999999998 0.77065050999999996 0.10559782 0.76653618000000001 0.049093932 0.77194887000000001 0.10654810000000001 0.76538539000000005 0.050194949000000003 0.77295636999999995 0.10780745999999999 0.76458466000000003 0.051553398 0.77357434999999997 0.10925260000000001 0.76421218999999996 0.053036273000000002 0.77374220000000005 0.11074215 0.76430463999999998 0.054498523 0.77344369999999996 0.11213022 0.76485276000000002 0.055796920999999999 0.77270793999999998 0.11328095000000001 0.76580309999999996 0.056804388999999997 0.77160691999999997 0.11408174 0.76706242999999996 0.057422340000000002 0.77024846999999996 0.11445418 0.76850759999999996 0.057590245999999998 0.76876557000000001 0.11436172999999999 0.76999"
+		+ "711999999998 0.057291715999999999 0.76730335000000005 0.11381361 0.77138519000000005 0.056555956999999997 0.76600491999999998 0.11286333 0.77253592000000004 0.055454940000000001 0.76499748000000001 0.11160398000000001 0.77333671000000004 0.054096489999999997 0.76437949999999999 0.11015877 0.77370912000000003 0.052613585999999997 0.76421159999999999 0.10866922 0.77361672999999997 0.051151364999999997 0.76451015 0.10728118 0.77306854999999997 0.052824914000000001 0.76897693 0.10970568999999999 0.76896065000000002 0.23734074999999999 0.90763366000000001 0.20765057000000001 0.91069692000000002 0.22398016000000001 0.90901213999999997 0.22546463999999999 0.90885895000000005 0.22249564999999999 0.90916525999999998 0.22101113 0.90931839000000003 0.21952668 0.90947162999999998 0.21804211000000001 0.90962476000000003 0.21655762000000001 0.90977794000000001 0.21507311000000001 0.90993111999999998 0.21358859999999999 0.91008425000000004 0.21210408 0.91023743000000001 0.21061959999999999 0.91039055999999996 0.20913509 0.9"
+		+ "1054374000000005 0.23585626000000001 0.90778685000000003 0.23437174999999999 0.90793997000000004 0.23288724 0.90809315000000002 0.23140272000000001 0.90824634000000004 0.22991821000000001 0.90839946000000005 0.22843369999999999 0.90855264999999996 0.22694916000000001 0.90870576999999997 0.2144269 0.97637611999999996 0.24411711 0.97331290999999998 0.23075649000000001 0.97469132999999997 0.232241 0.97453820999999996 0.22927197999999999 0.97484451999999999 0.22778746 0.97499769999999997 0.22630297999999999 0.97515081999999997 0.22481846999999999 0.97530401 0.22333395 0.97545713000000001 0.22184946999999999 0.97561032000000003 0.22036496 0.97576350000000001 0.21888044000000001 0.97591662000000001 0.21739592999999999 0.97606981000000004 0.21591141999999999 0.97622299000000001 0.2426326 0.97346604000000003 0.24114807999999999 0.97361922000000001 0.23966356999999999 0.97377234999999995 0.23817903000000001 0.97392553000000004 0.23669456999999999 0.97407871000000001 0.23521006 0.97423183999999996 0.23372551999999999 0"
+		+ ".97438495999999997")
+		2 "unti7_chair:polyTweakUV1" "uvtk[0:83]" (" -s 84 -type \"float2\" 0.0048303603999999998 0.69777739000000005 0.020497604999999999 0.70284188000000003 0.039020120999999998 -0.22903125999999999 0.020718828000000002 -0.22786127 0.032051749999999997 0.71090191999999996 0.052259414999999997 -0.23032498000000001 0.038345397000000003 0.72126621000000002 0.059108361999999998 -0.23161309999999999 0.038631532000000003 0.73301225999999997 0.058707729 -0.23276736000000001 0.032680616000000003 0.74504066000000002 0.050813898000000003 -0.23367310999999999 0.020877738 0.75616156999999995 0.035926983000000003 -0.23424216 0.0042624548 0.76521342999999997 0.015350178000000001 -0.23442067 -0.015522200999999999 0.77120244999999998 -0.0088686272999999993 -0.23419411000000001 -0.036392650999999998 0.77344369999999996 -0.034142843999999999 -0.2335874 -0.056085281000000001 0.77166736000000002 -0.057684592999999999 -0.23266113999999999 -0.072469233999999993 0.76606863999999997 -0.076908520999999994 -0.23150556999999999 -0.083837687999999994 0.75727796999999997 -0.08980067799999"
+		+ "9995 -0.23023134000000001 -0.089115053 0.74626546999999999 -0.095166883999999993 -0.22896045000000001 -0.087942615000000002 0.73420118999999995 -0.092714481000000001 -0.22781489999999999 -0.080647453999999993 0.72230576999999996 -0.082982740999999999 -0.22690551 -0.068127288999999994 0.71171819999999997 -0.067171923999999994 -0.22632221999999999 -0.051696069999999997 0.70339697999999995 -0.046938986000000002 -0.22612397000000001 -0.032927169999999999 0.69805682000000002 -0.024202182999999999 -0.22633318999999999 -0.013516866000000001 0.69613468999999994 -0.00098243355999999993 -0.22693150000000001 -0.024499238 0.73360144999999999 -0.016787066999999999 -0.23029119000000001 0.035558566 0.76167136000000002 0.0058683269 0.76473457 0.026088215000000001 0.69721401000000005 0.047218352999999998 0.69796800999999997 0.0037311465 0.69958788000000005 -0.018005199999999999 0.70491338000000003 -0.037279353000000001 0.71276974999999998 -0.052384987000000001 0.72250307000000002 -0.061900421999999997 0.73325324000000003 -0.0"
+		+ "64856081999999995 0.74400842 -0.060895144999999998 0.75369114000000004 -0.050393224 0.76127654 -0.034486346000000001 0.76592742999999996 -0.014979862 0.76712119999999995 0.055341579000000002 0.75600332000000003 0.071830764000000005 0.74772263000000005 0.083250119999999997 0.73776238999999999 0.088452399000000001 0.72718548999999999 0.086980223999999995 0.71705483999999997 0.079034156999999994 0.70832658000000004 0.065377578000000006 0.70177816999999998 -0.077264606999999999 -0.16554521 -0.047574401000000002 -0.16860847000000001 -0.049587755999999997 -0.16873131999999999 -0.025251254000000001 -0.16886406000000001 -0.075680092000000004 -0.16852795000000001 -0.10139093 -0.168258 -0.12455353 -0.16793064999999999 -0.14310828 -0.16755997 -0.15527478 -0.16716549999999999 -0.15975987999999999 -0.16676985 -0.15597057 -0.16639803 -0.14419045999999999 -0.1660739 -0.12565029 -0.16581694999999999 -0.10244230999999999 -0.16563974000000001 -0.023350528999999998 -0.16858946 -0.0028130262999999998 -0.16863022999999999 0.01184"
+		+ "8733 -0.16870867000000001 0.019208304999999998 -0.16880046000000001 0.018672577999999999 -0.16888122 0.010431498000000001 -0.16892943999999999 -0.0046646893000000002 -0.16892771000000001"
+		)
+		2 "unti7_chair:polyTweakUV2" "uvtk[0:17]" " -s 18 -type \"float2\" 0.082162245999999994 0.81084173999999998 0.11159843 0.82219087999999996 0.047938511000000003 0.70753454999999998 0.0064271985999999996 0.77383440999999997 -0.98894941999999997 0.64968239999999999 -0.58556043999999996 0.77668238000000001 -0.98893929000000003 0.74825763999999995 -0.50810981 0.72657864999999999 0.025309189999999999 0.73844451 -0.91003727999999995 0.75331932000000001 0.094426572 0.73211557000000005 -0.65539431999999997 0.79303836999999999 -0.81022203000000004 0.83026319999999998 0.032552391 0.81718033999999995 -0.58971344999999997 0.84969068000000003 0.14747051999999999 0.70882422 -0.82219743999999995 0.84586148999999999 -0.82218729999999995 0.94443666999999998"
+		
+		2 "unti7_chair:polyTweakUV3" "uvtk[0:17]" " -s 18 -type \"float2\" -0.24547759 0.42613834 -0.16504872000000001 -0.10297940999999999 -0.27047970999999998 0.0066008046000000003 -0.27893609000000003 0.53903866 0.088130667999999995 0.14262544999999999 0.028698504 0.88235056000000001 0.17196127999999999 0.12985884 0.10249864 0.83186780999999999 -0.35196576000000002 -0.0064807683000000001 -0.030237541 0.17303648999999999 -0.28974617000000003 0.43736385999999999 -0.048518925999999997 0.90937710000000005 0.22227141 0.022631310000000002 -0.31428351999999998 -0.23337938 0.087032213999999997 0.85781872000000003 -0.18223211 0.51967441999999997 -0.21199261999999999 0.0029020309000000002 -0.37277063999999999 -0.22968072";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "unit7_cushionRN";
 	rename -uid "26186891-49D0-0703-F569-7AAFFE526878";
 	setAttr -s 12 ".phl";
-	setAttr ".phl[1]" 0;
-	setAttr ".phl[2]" 0;
-	setAttr ".phl[3]" 0;
-	setAttr ".phl[4]" 0;
-	setAttr ".phl[5]" 0;
-	setAttr ".phl[6]" 0;
 	setAttr ".phl[7]" 0;
 	setAttr ".phl[8]" 0;
 	setAttr ".phl[9]" 0;
@@ -3922,10 +3475,14 @@ createNode reference -n "unit7_cushionRN";
 	setAttr ".phl[12]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"unit7_cushionRN"
-		"unit7_cushion:Unit5_LabSceneRN" 0
-		"unit7_cushionRN" 0
-		"unit7_cushion:Unit5_LabSceneRN" 42
-		2 "|unit7_cushion:Unit5_LabScene:couch" "translate" " -type \"double3\" 0 0 0"
+		"unit7_cushion:Unit5_LabSceneRN" 45
+		0 "|unit7_cushionRNfosterParent1|unit7_cushion:transform3" "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:cushion1" 
+		"-s -r "
+		0 "|unit7_cushionRNfosterParent1|unit7_cushion:transform2" "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:cushion1" 
+		"-s -r "
+		0 "|unit7_cushionRNfosterParent1|unit7_cushion:transform1" "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:cushion1" 
+		"-s -r "
+		2 "|unit7_cushion:Unit5_LabScene:couch" "translate" " -type \"double3\" 0 0 7.29470174060470988"
 		
 		2 "|unit7_cushion:Unit5_LabScene:couch" "rotate" " -type \"double3\" 0 0 0"
 		
@@ -4000,17 +3557,17 @@ createNode reference -n "unit7_cushionRN";
 		2 "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:cushion2|unit7_cushion:Unit5_LabScene:cushionShape2" 
 		"pt[0:47]" " -s 48 -type \"float3\" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
 		
-		3 "unit7_cushion:Unit5_LabScene:transformGeometry3.outputGeometry" "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:cushion1|unit7_cushion:Unit5_LabScene:cushionShape1.inMesh" 
-		""
 		3 "unit7_cushion:Unit5_LabScene:polyTweakUV6.output" "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:base|unit7_cushion:Unit5_LabScene:baseShape.inMesh" 
 		""
-		3 "unit7_cushion:Unit5_LabScene:polyTweakUV4.output" "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:arm_right|unit7_cushion:Unit5_LabScene:arm_rightShape.inMesh" 
-		""
-		3 "unit7_cushion:Unit5_LabScene:polyTweakUV3.output" "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:back|unit7_cushion:Unit5_LabScene:backShape.inMesh" 
+		3 "unit7_cushion:Unit5_LabScene:transformGeometry3.outputGeometry" "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:cushion1|unit7_cushion:Unit5_LabScene:cushionShape1.inMesh" 
 		""
 		3 "unit7_cushion:Unit5_LabScene:polyTweakUV2.output" "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:cushion2|unit7_cushion:Unit5_LabScene:cushionShape2.inMesh" 
 		""
+		3 "unit7_cushion:Unit5_LabScene:polyTweakUV3.output" "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:back|unit7_cushion:Unit5_LabScene:backShape.inMesh" 
+		""
 		3 "unit7_cushion:Unit5_LabScene:polyTweakUV5.output" "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:arm_left|unit7_cushion:Unit5_LabScene:arm_leftShape.inMesh" 
+		""
+		3 "unit7_cushion:Unit5_LabScene:polyTweakUV4.output" "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:arm_right|unit7_cushion:Unit5_LabScene:arm_rightShape.inMesh" 
 		""
 		5 4 "unit7_cushionRN" "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:base|unit7_cushion:Unit5_LabScene:baseShape.inMesh" 
 		"unit7_cushionRN.placeHolderList[1]" ""
@@ -4024,7 +3581,13 @@ createNode reference -n "unit7_cushionRN";
 		"unit7_cushionRN.placeHolderList[5]" ""
 		5 4 "unit7_cushionRN" "|unit7_cushion:Unit5_LabScene:couch|unit7_cushion:Unit5_LabScene:cushion2|unit7_cushion:Unit5_LabScene:cushionShape2.inMesh" 
 		"unit7_cushionRN.placeHolderList[6]" ""
-		"unit7_cushionRN" 12
+		"unit7_cushionRN" 15
+		0 "|unit7_cushion:Unit5_LabScene:polySurfaceShape1" "|unit7_cushionRNfosterParent1|unit7_cushion:transform1" 
+		"-s -r "
+		0 "|unit7_cushion:Unit5_LabScene:polySurfaceShape1" "|unit7_cushionRNfosterParent1|unit7_cushion:transform2" 
+		"-s -r "
+		0 "|unit7_cushion:Unit5_LabScene:polySurfaceShape1" "|unit7_cushionRNfosterParent1|unit7_cushion:transform3" 
+		"-s -r "
 		2 "unit7_cushion:Unit5_LabScene:polyTweakUV1" "uvtk[0:95]" (" -s 96 -type \"float2\" 0.022078812 -0.013078451 0.10603577 0.23576527999999999 -0.14632618 0.40035655999999997 -0.2996915 0.10634708 0.51001017999999998 0.28479527999999998 0.52531075000000005 -0.29444705999999998 0.12098005000000001 -0.099364430000000004 0.20789426999999999 0.19054579999999999 -0.32738846999999999 -0.068103701000000003 -0.31252104000000003 0.19339454 0.014950335 0.17519376 -0.027610183 0.067580192999999997 0.46530968 -0.092350081000000001 0.64397901000000002 -0.092121117000000002 0.52344822999999996 0.52391487000000003 0.40731359 0.025232254999999999 0.49340630000000002 0.54138649000000005 0.36700746000000001 0.051403447999999997 0.44336914999999999 0.55148101000000005 0.30767359999999999 0.073624029999999993 0.37864986 0.55260878999999996 0.23546218999999999 0.090125382000000004 0.30712402 0.54425025000000005 0.15892655 0.099863276000000001 -0.19493257999999999 0.37880598999999998 -0.34717905999999998 0.10525969 -0.22648466 0.35419445999999999 -0.37471168999999999 0.10061431 -0.2387872900000"
 		+ "0001 0.32936104999999999 -0.38057988999999998 0.094157009999999999 -0.23209846000000001 0.30695581 -0.36576897000000003 0.087630421 0.47129645999999997 -0.095780491999999995 0.65429121000000001 -0.11589924 0.46219843999999999 -0.098563254000000003 0.64673150000000001 -0.13970134000000001 0.44000787000000002 -0.10046586 0.62320774999999995 -0.16216689000000001 0.40761465000000002 -0.10146871 0.58681159999999999 -0.18221451 0.082761376999999997 -0.098654538 0.16191712 0.17778251 0.042541443999999998 -0.097864120999999998 0.11328822 0.16851076000000001 0.0033719539999999999 -0.097065806000000004 0.065968691999999995 0.16272089000000001 -0.031669438000000001 -0.096232146000000005 0.023919224999999999 0.1601803 0.0055279732000000003 0.068797439000000002 -0.059522510000000001 -0.095270902000000005 0.047797263 0.072375983000000005 0.095351993999999995 0.07871446 0.14421603 0.088009803999999997 0.23119935 -0.38353932000000002 0.57107061000000003 -0.27870977000000002 0.36830967999999997 -0.10169783 0.60768520999999998"
 		+ " -0.26025593000000002 0.63137244999999997 -0.23974492999999999 0.63901817999999999 -0.21809497 0.62869452999999997 -0.19646247 -0.33323562000000001 0.082550287 -0.35717452 -0.062369003999999999 -0.37212282000000002 -0.055852964999999997 -0.36934102000000002 -0.049147456999999999 -0.34761930000000002 -0.043096438000000001 -0.30817633999999999 -0.038660674999999999 0.087509095999999995 0.10279077 0.083927690999999999 -0.010119705999999999 0.15022963 -0.011086695000000001 0.21246609 -0.015868276000000001 0.26298252 -0.023644358000000001 0.29641395999999998 -0.0331375 -0.0090320109999999995 0.16041859999999999 0.039483905 0.16768475999999999 0.074233353000000002 0.16569576 0.11616284 0.16921781999999999 0.54130321999999997 -0.1990671 0.55847089999999999 0.30143207 0.60056067000000002 0.32014619999999999 0.63203967000000005 0.33936828000000002 0.64911549999999996 0.35741149999999999 0.64902645000000003 0.37255614999999997 -0.34476762999999999 0.20100856 -0.20848536000000001 0.28911868000000002 -0.35938287000000002"
@@ -4073,689 +3636,31 @@ createNode reference -n "unit7_stoolRN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"unit7_stoolRN"
 		"unit7_stoolRN" 0
-		"unit7_stoolRN" 341
+		"unit7_stoolRN" 5
 		2 "|unit7_stool:stool|unit7_stool:seat|unit7_stool:seatShape" "uvPivot" " -type \"double2\" 0.63250410869228901 0.37284812196519401"
 		
-		2 "|unit7_stool:stool|unit7_stool:seat|unit7_stool:seatShape" "uvSet[0].uvSetPoints" 
-		" -s 84"
-		2 "|unit7_stool:stool|unit7_stool:seat|unit7_stool:seatShape" "uvSet[0].uvSetPoints[0]" 
-		" -type \"float2\" 0.62665342999999996 0.3294706"
-		2 "|unit7_stool:stool|unit7_stool:seat|unit7_stool:seatShape" "uvSet[0].uvSetPoints[1]" 
-		" -type \"float2\" 0.63498622000000005 0.32220480000000001"
-		2 "|unit7_stool:stool|unit7_stool:seat|unit7_stool:seatShape" "uvSet[0].uvSetPoints[2]" 
-		" -type \"float2\" 0.71068555 0.28403297"
-		2 "|unit7_stool:stool|unit7_stool:seat|unit7_stool:seatShape" "uvSet[0].uvSetPoints[3]" 
-		" -type \"float2\" 0.70440698000000002 0.27493307"
-		2 "|unit7_stool:stool|unit7_stool:seat|unit7_stool:seatShape" "uvSet[0].uvSetPoints[4]" 
-		" -type \"float2\" 0.64066601000000001 0.31271955000000001"
-		2 "|unit7_stool:stool|unit7_stool:seat|unit7_stool:seatShape" "uvSet[0].uvSetPoints[5]" 
-		" -type \"float2\" 0.7138449 0.29462769999999999"
-		2 "|unit7_stool:stool|unit7_stool:seat|unit7_stool:seatShape" "uvSet[0].uvSetPoints[6]" 
-		" -type \"float2\" 0.64313662000000005 0.30194345"
-		2 "|unit7_stool:stool|unit7_stool:seat|unit7_stool:seatShape" "uvSet[0].uvSetPoints[7]" 
-		" -type \"float2\" 0.71357559999999998 0.30568012999999999"
-		2 "|unit7_stool:stool|unit7_stool:seat|unit7_stool:seatShape" "uvSet[0].uvSetPoints[8]" 
-		" -type \"float2\" 0.64215635999999998 0.29093124999999997"
-		2 "|unit7_stool:stool|unit7_stool:seat|unit7_stool:seatShape" "uvSet[0].uvSetPoints[9]" 
-		" -type \"float2\" 0.70990419000000005 0.31610838000000002"
-		2 "|unit7_stool:stool|unit7_stool:seat|unit7_stool:seatShape" "uvSet[0].uvSetPoints[10]" 
-		" -type \"float2\" 0.63782114000000001 0.28076103000000002"
-		2 "|unit7_stool:stool|unit7_stool:seat|unit7_stool:seatShape" "uvSet[0].uvSetPoints[11]" 
-		" -type \"float2\" 0.70318997000000005 0.32489178000000002"
-		2 "|unit7_stool:stool|unit7_stool:seat|unit7_stool:seatShape" "uvSet[0].uvSetPoints[12]" 
-		" -type \"float2\" 0.63055527 0.27242818000000002"
-		2 "|unit7_stool:stool|unit7_stool:seat|unit7_stool:seatShape" "uvSet[0].uvSetPoints[13]" 
-		" -type \"float2\" 0.69409001000000004 0.33117041000000003"
-		2 "|unit7_stool:stool|unit7_stool:seat|unit7_stool:seatShape" "uvSet[0].uvSetPoints[14]" 
-		" -type \"float2\" 0.62107003000000005 0.26674846000000002"
-		2 "|unit7_stool:stool|unit7_stool:seat|unit7_stool:seatShape" "uvSet[0].uvSetPoints[15]" 
-		" -type \"float2\" 0.68349539999999998 0.33432969000000001"
-		2 "|unit7_stool:stool|unit7_stool:seat|unit7_stool:seatShape" "uvSet[0].uvSetPoints[16]" 
-		" -type \"float2\" 0.61029398000000001 0.26427779000000001"
-		2 "|unit7_stool:stool|unit7_stool:seat|unit7_stool:seatShape" "uvSet[0].uvSetPoints[17]" 
-		" -type \"float2\" 0.67244291 0.33406046"
-		2 "|unit7_stool:stool|unit7_stool:seat|unit7_stool:seatShape" "uvSet[0].uvSetPoints[18]" 
-		" -type \"float2\" 0.59928179000000004 0.26525803999999997"
-		2 "|unit7_stool:stool|unit7_stool:seat|unit7_stool:seatShape" "uvSet[0].uvSetPoints[19]" 
-		" -type \"float2\" 0.66201460000000001 0.33038898999999999"
-		2 "|unit7_stool:stool|unit7_stool:seat|unit7_stool:seatShape" "uvSet[0].uvSetPoints[20]" 
-		" -type \"float2\" 0.58911150999999995 0.26959327"
-		2 "|unit7_stool:stool|unit7_stool:seat|unit7_stool:seatShape" "uvSet[0].uvSetPoints[21]" 
-		" -type \"float2\" 0.65323125999999998 0.32367477"
-		2 "|unit7_stool:stool|unit7_stool:seat|unit7_stool:seatShape" "uvSet[0].uvSetPoints[22]" 
-		" -type \"float2\" 0.58077866 0.27685913000000001"
-		2 "|unit7_stool:stool|unit7_stool:seat|unit7_stool:seatShape" "uvSet[0].uvSetPoints[23]" 
-		" -type \"float2\" 0.64695263000000003 0.31457487000000001"
-		2 "|unit7_stool:stool|unit7_stool:seat|unit7_stool:seatShape" "uvSet[0].uvSetPoints[24]" 
-		" -type \"float2\" 0.57509893000000001 0.28634431999999999"
-		2 "|unit7_stool:stool|unit7_stool:seat|unit7_stool:seatShape" "uvSet[0].uvSetPoints[25]" 
-		" -type \"float2\" 0.64379333999999999 0.30398019999999998"
-		2 "|unit7_stool:stool|unit7_stool:seat|unit7_stool:seatShape" "uvSet[0].uvSetPoints[26]" 
-		" -type \"float2\" 0.57262826 0.29712048000000002"
-		2 "|unit7_stool:stool|unit7_stool:seat|unit7_stool:seatShape" "uvSet[0].uvSetPoints[27]" 
-		" -type \"float2\" 0.64406258000000005 0.29292783"
-		2 "|unit7_stool:stool|unit7_stool:seat|unit7_stool:seatShape" "uvSet[0].uvSetPoints[28]" 
-		" -type \"float2\" 0.57360851999999996 0.30813262000000002"
-		2 "|unit7_stool:stool|unit7_stool:seat|unit7_stool:seatShape" "uvSet[0].uvSetPoints[29]" 
-		" -type \"float2\" 0.64773404999999995 0.28249945999999998"
-		2 "|unit7_stool:stool|unit7_stool:seat|unit7_stool:seatShape" "uvSet[0].uvSetPoints[30]" 
-		" -type \"float2\" 0.57794380000000001 0.3183029"
-		2 "|unit7_stool:stool|unit7_stool:seat|unit7_stool:seatShape" "uvSet[0].uvSetPoints[31]" 
-		" -type \"float2\" 0.65444827000000005 0.27371612000000001"
-		2 "|unit7_stool:stool|unit7_stool:seat|unit7_stool:seatShape" "uvSet[0].uvSetPoints[32]" 
-		" -type \"float2\" 0.58520961000000005 0.32663575"
-		2 "|unit7_stool:stool|unit7_stool:seat|unit7_stool:seatShape" "uvSet[0].uvSetPoints[33]" 
-		" -type \"float2\" 0.66354816999999999 0.26743749"
-		2 "|unit7_stool:stool|unit7_stool:seat|unit7_stool:seatShape" "uvSet[0].uvSetPoints[34]" 
-		" -type \"float2\" 0.59469485 0.33231547"
-		2 "|unit7_stool:stool|unit7_stool:seat|unit7_stool:seatShape" "uvSet[0].uvSetPoints[35]" 
-		" -type \"float2\" 0.67414284000000002 0.26427813999999999"
-		2 "|unit7_stool:stool|unit7_stool:seat|unit7_stool:seatShape" "uvSet[0].uvSetPoints[36]" 
-		" -type \"float2\" 0.60547096 0.33478615"
-		2 "|unit7_stool:stool|unit7_stool:seat|unit7_stool:seatShape" "uvSet[0].uvSetPoints[37]" 
-		" -type \"float2\" 0.68519527000000002 0.26454744000000002"
-		2 "|unit7_stool:stool|unit7_stool:seat|unit7_stool:seatShape" "uvSet[0].uvSetPoints[38]" 
-		" -type \"float2\" 0.61648309000000001 0.33380588999999999"
-		2 "|unit7_stool:stool|unit7_stool:seat|unit7_stool:seatShape" "uvSet[0].uvSetPoints[39]" 
-		" -type \"float2\" 0.69562352000000005 0.26821885000000001"
-		2 "|unit7_stool:stool|unit7_stool:seat|unit7_stool:seatShape" "uvSet[0].uvSetPoints[40]" 
-		" -type \"float2\" 0.60788244000000002 0.29953196999999998"
-		2 "|unit7_stool:stool|unit7_stool:seat|unit7_stool:seatShape" "uvSet[0].uvSetPoints[41]" 
-		" -type \"float2\" 0.67881906000000003 0.29930392"
-		2 "|unit7_stool:stool|unit7_stool:seat|unit7_stool:seatShape" "uvSet[0].uvSetPoints[42]" 
-		" -type \"float2\" 0.56750034999999999 0.28585938"
-		2 "|unit7_stool:stool|unit7_stool:seat|unit7_stool:seatShape" "uvSet[0].uvSetPoints[43]" 
-		" -type \"float2\" 0.56509339999999997 0.29664984"
-		2 "|unit7_stool:stool|unit7_stool:seat|unit7_stool:seatShape" "uvSet[0].uvSetPoints[44]" 
-		" -type \"float2\" 0.56990730999999994 0.27506884999999998"
-		2 "|unit7_stool:stool|unit7_stool:seat|unit7_stool:seatShape" "uvSet[0].uvSetPoints[45]" 
-		" -type \"float2\" 0.5723142 0.26427832000000001"
-		2 "|unit7_stool:stool|unit7_stool:seat|unit7_stool:seatShape" "uvSet[0].uvSetPoints[46]" 
-		" -type \"float2\" 0.52658242 0.46929820999999999"
-		2 "|unit7_stool:stool|unit7_stool:seat|unit7_stool:seatShape" "uvSet[0].uvSetPoints[47]" 
-		" -type \"float2\" 0.52898931999999999 0.45850769000000002"
-		2 "|unit7_stool:stool|unit7_stool:seat|unit7_stool:seatShape" "uvSet[0].uvSetPoints[48]" 
-		" -type \"float2\" 0.53139627 0.44771722000000003"
-		2 "|unit7_stool:stool|unit7_stool:seat|unit7_stool:seatShape" "uvSet[0].uvSetPoints[49]" 
-		" -type \"float2\" 0.53380322000000002 0.43692669000000001"
-		2 "|unit7_stool:stool|unit7_stool:seat|unit7_stool:seatShape" "uvSet[0].uvSetPoints[50]" 
-		" -type \"float2\" 0.53621017999999998 0.42613616999999998"
-		2 "|unit7_stool:stool|unit7_stool:seat|unit7_stool:seatShape" "uvSet[0].uvSetPoints[51]" 
-		" -type \"float2\" 0.53861713 0.41534564000000002"
-		2 "|unit7_stool:stool|unit7_stool:seat|unit7_stool:seatShape" "uvSet[0].uvSetPoints[52]" 
-		" -type \"float2\" 0.54102402999999999 0.40455511"
-		2 "|unit7_stool:stool|unit7_stool:seat|unit7_stool:seatShape" "uvSet[0].uvSetPoints[53]" 
-		" -type \"float2\" 0.54343092000000004 0.39376459000000003"
-		2 "|unit7_stool:stool|unit7_stool:seat|unit7_stool:seatShape" "uvSet[0].uvSetPoints[54]" 
-		" -type \"float2\" 0.54583788 0.38297406000000001"
-		2 "|unit7_stool:stool|unit7_stool:seat|unit7_stool:seatShape" "uvSet[0].uvSetPoints[55]" 
-		" -type \"float2\" 0.54824483000000002 0.37218352999999998"
-		2 "|unit7_stool:stool|unit7_stool:seat|unit7_stool:seatShape" "uvSet[0].uvSetPoints[56]" 
-		" -type \"float2\" 0.55065178999999997 0.361393"
-		2 "|unit7_stool:stool|unit7_stool:seat|unit7_stool:seatShape" "uvSet[0].uvSetPoints[57]" 
-		" -type \"float2\" 0.55305873999999999 0.35060247999999999"
-		2 "|unit7_stool:stool|unit7_stool:seat|unit7_stool:seatShape" "uvSet[0].uvSetPoints[58]" 
-		" -type \"float2\" 0.55546569999999995 0.33981194999999997"
-		2 "|unit7_stool:stool|unit7_stool:seat|unit7_stool:seatShape" "uvSet[0].uvSetPoints[59]" 
-		" -type \"float2\" 0.55787259 0.32902142000000001"
-		2 "|unit7_stool:stool|unit7_stool:seat|unit7_stool:seatShape" "uvSet[0].uvSetPoints[60]" 
-		" -type \"float2\" 0.56027954999999996 0.31823096000000001"
-		2 "|unit7_stool:stool|unit7_stool:seat|unit7_stool:seatShape" "uvSet[0].uvSetPoints[61]" 
-		" -type \"float2\" 0.56268644000000001 0.30744037000000002"
-		2 "|unit7_stool:stool|unit7_stool:seat|unit7_stool:seatShape" "uvSet[0].uvSetPoints[62]" 
-		" -type \"float2\" 0.57346129000000001 0.28718897999999998"
-		2 "|unit7_stool:stool|unit7_stool:seat|unit7_stool:seatShape" "uvSet[0].uvSetPoints[63]" 
-		" -type \"float2\" 0.57105439999999996 0.29797950000000001"
-		2 "|unit7_stool:stool|unit7_stool:seat|unit7_stool:seatShape" "uvSet[0].uvSetPoints[64]" 
-		" -type \"float2\" 0.57586824999999997 0.27639850999999999"
-		2 "|unit7_stool:stool|unit7_stool:seat|unit7_stool:seatShape" "uvSet[0].uvSetPoints[65]" 
-		" -type \"float2\" 0.53013646999999997 0.48141845999999999"
-		2 "|unit7_stool:stool|unit7_stool:seat|unit7_stool:seatShape" "uvSet[0].uvSetPoints[66]" 
-		" -type \"float2\" 0.53254341999999999 0.47062793000000003"
-		2 "|unit7_stool:stool|unit7_stool:seat|unit7_stool:seatShape" "uvSet[0].uvSetPoints[67]" 
-		" -type \"float2\" 0.53495031999999998 0.45983734999999998"
-		2 "|unit7_stool:stool|unit7_stool:seat|unit7_stool:seatShape" "uvSet[0].uvSetPoints[68]" 
-		" -type \"float2\" 0.53735727 0.44904687999999998"
-		2 "|unit7_stool:stool|unit7_stool:seat|unit7_stool:seatShape" "uvSet[0].uvSetPoints[69]" 
-		" -type \"float2\" 0.53976416999999999 0.43825628999999999"
-		2 "|unit7_stool:stool|unit7_stool:seat|unit7_stool:seatShape" "uvSet[0].uvSetPoints[70]" 
-		" -type \"float2\" 0.54217112000000001 0.42746577000000002"
-		2 "|unit7_stool:stool|unit7_stool:seat|unit7_stool:seatShape" "uvSet[0].uvSetPoints[71]" 
-		" -type \"float2\" 0.54457807999999996 0.41667535999999999"
-		2 "|unit7_stool:stool|unit7_stool:seat|unit7_stool:seatShape" "uvSet[0].uvSetPoints[72]" 
-		" -type \"float2\" 0.54698502999999998 0.40588482999999997"
-		2 "|unit7_stool:stool|unit7_stool:seat|unit7_stool:seatShape" "uvSet[0].uvSetPoints[73]" 
-		" -type \"float2\" 0.54939192999999997 0.39509424999999998"
-		2 "|unit7_stool:stool|unit7_stool:seat|unit7_stool:seatShape" "uvSet[0].uvSetPoints[74]" 
-		" -type \"float2\" 0.55179887999999999 0.38430372000000002"
-		2 "|unit7_stool:stool|unit7_stool:seat|unit7_stool:seatShape" "uvSet[0].uvSetPoints[75]" 
-		" -type \"float2\" 0.55420583000000001 0.37351318999999999"
-		2 "|unit7_stool:stool|unit7_stool:seat|unit7_stool:seatShape" "uvSet[0].uvSetPoints[76]" 
-		" -type \"float2\" 0.55661273 0.36272267000000002"
-		2 "|unit7_stool:stool|unit7_stool:seat|unit7_stool:seatShape" "uvSet[0].uvSetPoints[77]" 
-		" -type \"float2\" 0.55901968000000002 0.35193214"
-		2 "|unit7_stool:stool|unit7_stool:seat|unit7_stool:seatShape" "uvSet[0].uvSetPoints[78]" 
-		" -type \"float2\" 0.56142663999999998 0.34114160999999998"
-		2 "|unit7_stool:stool|unit7_stool:seat|unit7_stool:seatShape" "uvSet[0].uvSetPoints[79]" 
-		" -type \"float2\" 0.56383359 0.33035108000000002"
-		2 "|unit7_stool:stool|unit7_stool:seat|unit7_stool:seatShape" "uvSet[0].uvSetPoints[80]" 
-		" -type \"float2\" 0.56624048999999999 0.31956055999999999"
-		2 "|unit7_stool:stool|unit7_stool:seat|unit7_stool:seatShape" "uvSet[0].uvSetPoints[81]" 
-		" -type \"float2\" 0.56864744 0.30877002999999997"
-		2 "|unit7_stool:stool|unit7_stool:seat|unit7_stool:seatShape" "uvSet[0].uvSetPoints[82]" 
-		" -type \"float2\" 0.57827519999999999 0.26560792"
-		2 "|unit7_stool:stool|unit7_stool:seat|unit7_stool:seatShape" "uvSet[0].uvSetPoints[83]" 
-		" -type \"float2\" 0.52417546999999998 0.48008874000000001"
-		2 "|unit7_stool:stool|unit7_stool:leg1|unit7_stool:legShape1" "uvSet[0].uvSetPoints" 
-		" -s 84"
-		2 "|unit7_stool:stool|unit7_stool:leg1|unit7_stool:legShape1" "uvSet[0].uvSetPoints[0]" 
-		" -type \"float2\" 0.56818341999999999 0.27078423000000001"
-		2 "|unit7_stool:stool|unit7_stool:leg1|unit7_stool:legShape1" "uvSet[0].uvSetPoints[1]" 
-		" -type \"float2\" 0.56901436999999999 0.27005783"
-		2 "|unit7_stool:stool|unit7_stool:leg1|unit7_stool:legShape1" "uvSet[0].uvSetPoints[2]" 
-		" -type \"float2\" 0.64136344000000001 0.26620987000000002"
-		2 "|unit7_stool:stool|unit7_stool:leg1|unit7_stool:legShape1" "uvSet[0].uvSetPoints[3]" 
-		" -type \"float2\" 0.64072669000000004 0.26530847000000002"
-		2 "|unit7_stool:stool|unit7_stool:leg1|unit7_stool:legShape1" "uvSet[0].uvSetPoints[4]" 
-		" -type \"float2\" 0.56958014000000001 0.26911028999999997"
-		2 "|unit7_stool:stool|unit7_stool:leg1|unit7_stool:legShape1" "uvSet[0].uvSetPoints[5]" 
-		" -type \"float2\" 0.64169054999999997 0.26726398000000001"
-		2 "|unit7_stool:stool|unit7_stool:leg1|unit7_stool:legShape1" "uvSet[0].uvSetPoints[6]" 
-		" -type \"float2\" 0.56982540999999998 0.26803424999999997"
-		2 "|unit7_stool:stool|unit7_stool:leg1|unit7_stool:legShape1" "uvSet[0].uvSetPoints[7]" 
-		" -type \"float2\" 0.64167589000000003 0.26836744000000001"
-		2 "|unit7_stool:stool|unit7_stool:leg1|unit7_stool:legShape1" "uvSet[0].uvSetPoints[8]" 
-		" -type \"float2\" 0.56972623 0.26693507999999999"
-		2 "|unit7_stool:stool|unit7_stool:leg1|unit7_stool:legShape1" "uvSet[0].uvSetPoints[9]" 
-		" -type \"float2\" 0.64132093999999995 0.26941249"
-		2 "|unit7_stool:stool|unit7_stool:leg1|unit7_stool:legShape1" "uvSet[0].uvSetPoints[10]" 
-		" -type \"float2\" 0.56929213000000001 0.26592042999999999"
-		2 "|unit7_stool:stool|unit7_stool:leg1|unit7_stool:legShape1" "uvSet[0].uvSetPoints[11]" 
-		" -type \"float2\" 0.64066045999999999 0.27029666000000002"
-		2 "|unit7_stool:stool|unit7_stool:leg1|unit7_stool:legShape1" "uvSet[0].uvSetPoints[12]" 
-		" -type \"float2\" 0.56856578999999996 0.26508947999999999"
-		2 "|unit7_stool:stool|unit7_stool:leg1|unit7_stool:legShape1" "uvSet[0].uvSetPoints[13]" 
-		" -type \"float2\" 0.63975906000000005 0.27093341999999998"
-		2 "|unit7_stool:stool|unit7_stool:leg1|unit7_stool:legShape1" "uvSet[0].uvSetPoints[14]" 
-		" -type \"float2\" 0.56761813000000005 0.26452365999999999"
-		2 "|unit7_stool:stool|unit7_stool:leg1|unit7_stool:legShape1" "uvSet[0].uvSetPoints[15]" 
-		" -type \"float2\" 0.63870495999999999 0.27126053"
-		2 "|unit7_stool:stool|unit7_stool:leg1|unit7_stool:legShape1" "uvSet[0].uvSetPoints[16]" 
-		" -type \"float2\" 0.56654214999999997 0.26427844"
-		2 "|unit7_stool:stool|unit7_stool:leg1|unit7_stool:legShape1" "uvSet[0].uvSetPoints[17]" 
-		" -type \"float2\" 0.63760143999999996 0.27124587"
-		2 "|unit7_stool:stool|unit7_stool:leg1|unit7_stool:legShape1" "uvSet[0].uvSetPoints[18]" 
-		" -type \"float2\" 0.56544291999999996 0.26437768"
-		2 "|unit7_stool:stool|unit7_stool:leg1|unit7_stool:legShape1" "uvSet[0].uvSetPoints[19]" 
-		" -type \"float2\" 0.63655651000000002 0.27089091999999998"
-		2 "|unit7_stool:stool|unit7_stool:leg1|unit7_stool:legShape1" "uvSet[0].uvSetPoints[20]" 
-		" -type \"float2\" 0.56442826999999995 0.26481171999999997"
-		2 "|unit7_stool:stool|unit7_stool:leg1|unit7_stool:legShape1" "uvSet[0].uvSetPoints[21]" 
-		" -type \"float2\" 0.63567227000000004 0.27023044000000002"
-		2 "|unit7_stool:stool|unit7_stool:leg1|unit7_stool:legShape1" "uvSet[0].uvSetPoints[22]" 
-		" -type \"float2\" 0.56359731999999996 0.26553807000000001"
-		2 "|unit7_stool:stool|unit7_stool:leg1|unit7_stool:legShape1" "uvSet[0].uvSetPoints[23]" 
-		" -type \"float2\" 0.63503546 0.26932898"
-		2 "|unit7_stool:stool|unit7_stool:leg1|unit7_stool:legShape1" "uvSet[0].uvSetPoints[24]" 
-		" -type \"float2\" 0.56303155000000005 0.26648571999999998"
-		2 "|unit7_stool:stool|unit7_stool:leg1|unit7_stool:legShape1" "uvSet[0].uvSetPoints[25]" 
-		" -type \"float2\" 0.63470839999999995 0.26827498999999999"
-		2 "|unit7_stool:stool|unit7_stool:leg1|unit7_stool:legShape1" "uvSet[0].uvSetPoints[26]" 
-		" -type \"float2\" 0.56278634000000005 0.26756170000000001"
-		2 "|unit7_stool:stool|unit7_stool:leg1|unit7_stool:legShape1" "uvSet[0].uvSetPoints[27]" 
-		" -type \"float2\" 0.63472306999999994 0.26717147000000002"
-		2 "|unit7_stool:stool|unit7_stool:leg1|unit7_stool:legShape1" "uvSet[0].uvSetPoints[28]" 
-		" -type \"float2\" 0.56288552000000003 0.26866087"
-		2 "|unit7_stool:stool|unit7_stool:leg1|unit7_stool:legShape1" "uvSet[0].uvSetPoints[29]" 
-		" -type \"float2\" 0.63507795 0.26612641999999997"
-		2 "|unit7_stool:stool|unit7_stool:leg1|unit7_stool:legShape1" "uvSet[0].uvSetPoints[30]" 
-		" -type \"float2\" 0.56331962000000002 0.26967558000000003"
-		2 "|unit7_stool:stool|unit7_stool:leg1|unit7_stool:legShape1" "uvSet[0].uvSetPoints[31]" 
-		" -type \"float2\" 0.63573849000000004 0.26524225000000001"
-		2 "|unit7_stool:stool|unit7_stool:leg1|unit7_stool:legShape1" "uvSet[0].uvSetPoints[32]" 
-		" -type \"float2\" 0.56404597000000001 0.27050647"
-		2 "|unit7_stool:stool|unit7_stool:leg1|unit7_stool:legShape1" "uvSet[0].uvSetPoints[33]" 
-		" -type \"float2\" 0.63663994999999995 0.26460542999999997"
-		2 "|unit7_stool:stool|unit7_stool:leg1|unit7_stool:legShape1" "uvSet[0].uvSetPoints[34]" 
-		" -type \"float2\" 0.56499356000000001 0.27107224000000002"
-		2 "|unit7_stool:stool|unit7_stool:leg1|unit7_stool:legShape1" "uvSet[0].uvSetPoints[35]" 
-		" -type \"float2\" 0.63769394000000001 0.26427837999999998"
-		2 "|unit7_stool:stool|unit7_stool:leg1|unit7_stool:legShape1" "uvSet[0].uvSetPoints[36]" 
-		" -type \"float2\" 0.56606959999999995 0.27131750999999998"
-		2 "|unit7_stool:stool|unit7_stool:leg1|unit7_stool:legShape1" "uvSet[0].uvSetPoints[37]" 
-		" -type \"float2\" 0.63879752000000001 0.26429303999999998"
-		2 "|unit7_stool:stool|unit7_stool:leg1|unit7_stool:legShape1" "uvSet[0].uvSetPoints[38]" 
-		" -type \"float2\" 0.56716876999999999 0.27121826999999998"
-		2 "|unit7_stool:stool|unit7_stool:leg1|unit7_stool:legShape1" "uvSet[0].uvSetPoints[39]" 
-		" -type \"float2\" 0.63984251000000003 0.26464799"
-		2 "|unit7_stool:stool|unit7_stool:leg1|unit7_stool:legShape1" "uvSet[0].uvSetPoints[40]" 
-		" -type \"float2\" 0.56630588000000004 0.26779797999999999"
-		2 "|unit7_stool:stool|unit7_stool:leg1|unit7_stool:legShape1" "uvSet[0].uvSetPoints[41]" 
-		" -type \"float2\" 0.63819945 0.26776942999999997"
-		2 "|unit7_stool:stool|unit7_stool:leg1|unit7_stool:legShape1" "uvSet[0].uvSetPoints[42]" 
-		" -type \"float2\" 0.73564242999999996 0.31097343999999999"
-		2 "|unit7_stool:stool|unit7_stool:leg1|unit7_stool:legShape1" "uvSet[0].uvSetPoints[43]" 
-		" -type \"float2\" 0.73674589000000001 0.31095502000000003"
-		2 "|unit7_stool:stool|unit7_stool:leg1|unit7_stool:legShape1" "uvSet[0].uvSetPoints[44]" 
-		" -type \"float2\" 0.73453891000000004 0.31099190999999998"
-		2 "|unit7_stool:stool|unit7_stool:leg1|unit7_stool:legShape1" "uvSet[0].uvSetPoints[45]" 
-		" -type \"float2\" 0.73343544999999999 0.31101026999999998"
-		2 "|unit7_stool:stool|unit7_stool:leg1|unit7_stool:legShape1" "uvSet[0].uvSetPoints[46]" 
-		" -type \"float2\" 0.73233199000000004 0.31102875000000002"
-		2 "|unit7_stool:stool|unit7_stool:leg1|unit7_stool:legShape1" "uvSet[0].uvSetPoints[47]" 
-		" -type \"float2\" 0.73122847000000002 0.31104716999999998"
-		2 "|unit7_stool:stool|unit7_stool:leg1|unit7_stool:legShape1" "uvSet[0].uvSetPoints[48]" 
-		" -type \"float2\" 0.73012494999999999 0.31106558000000001"
-		2 "|unit7_stool:stool|unit7_stool:leg1|unit7_stool:legShape1" "uvSet[0].uvSetPoints[49]" 
-		" -type \"float2\" 0.72902149000000005 0.31108406"
-		2 "|unit7_stool:stool|unit7_stool:leg1|unit7_stool:legShape1" "uvSet[0].uvSetPoints[50]" 
-		" -type \"float2\" 0.72791802999999999 0.31110248000000001"
-		2 "|unit7_stool:stool|unit7_stool:leg1|unit7_stool:legShape1" "uvSet[0].uvSetPoints[51]" 
-		" -type \"float2\" 0.72681450999999997 0.31112089999999998"
-		2 "|unit7_stool:stool|unit7_stool:leg1|unit7_stool:legShape1" "uvSet[0].uvSetPoints[52]" 
-		" -type \"float2\" 0.72571098999999994 0.31113932"
-		2 "|unit7_stool:stool|unit7_stool:leg1|unit7_stool:legShape1" "uvSet[0].uvSetPoints[53]" 
-		" -type \"float2\" 0.72460753 0.31115778999999999"
-		2 "|unit7_stool:stool|unit7_stool:leg1|unit7_stool:legShape1" "uvSet[0].uvSetPoints[54]" 
-		" -type \"float2\" 0.72350407000000005 0.31117621000000001"
-		2 "|unit7_stool:stool|unit7_stool:leg1|unit7_stool:legShape1" "uvSet[0].uvSetPoints[55]" 
-		" -type \"float2\" 0.72240061 0.31119463000000003"
-		2 "|unit7_stool:stool|unit7_stool:leg1|unit7_stool:legShape1" "uvSet[0].uvSetPoints[56]" 
-		" -type \"float2\" 0.72129708999999997 0.31121304999999999"
-		2 "|unit7_stool:stool|unit7_stool:leg1|unit7_stool:legShape1" "uvSet[0].uvSetPoints[57]" 
-		" -type \"float2\" 0.72019361999999998 0.31123146000000002"
-		2 "|unit7_stool:stool|unit7_stool:leg1|unit7_stool:legShape1" "uvSet[0].uvSetPoints[58]" 
-		" -type \"float2\" 0.71909016000000003 0.31124987999999998"
-		2 "|unit7_stool:stool|unit7_stool:leg1|unit7_stool:legShape1" "uvSet[0].uvSetPoints[59]" 
-		" -type \"float2\" 0.74005639999999995 0.31089976000000002"
-		2 "|unit7_stool:stool|unit7_stool:leg1|unit7_stool:legShape1" "uvSet[0].uvSetPoints[60]" 
-		" -type \"float2\" 0.73895288000000003 0.31091817999999999"
-		2 "|unit7_stool:stool|unit7_stool:leg1|unit7_stool:legShape1" "uvSet[0].uvSetPoints[61]" 
-		" -type \"float2\" 0.73784934999999996 0.31093665999999998"
-		2 "|unit7_stool:stool|unit7_stool:leg1|unit7_stool:legShape1" "uvSet[0].uvSetPoints[62]" 
-		" -type \"float2\" 0.71798658000000004 0.3112683"
-		2 "|unit7_stool:stool|unit7_stool:leg1|unit7_stool:legShape1" "uvSet[0].uvSetPoints[63]" 
-		" -type \"float2\" 0.73641871999999997 0.35745785000000002"
-		2 "|unit7_stool:stool|unit7_stool:leg1|unit7_stool:legShape1" "uvSet[0].uvSetPoints[64]" 
-		" -type \"float2\" 0.73752224 0.35743943"
-		2 "|unit7_stool:stool|unit7_stool:leg1|unit7_stool:legShape1" "uvSet[0].uvSetPoints[65]" 
-		" -type \"float2\" 0.73531526000000003 0.35747625999999999"
-		2 "|unit7_stool:stool|unit7_stool:leg1|unit7_stool:legShape1" "uvSet[0].uvSetPoints[66]" 
-		" -type \"float2\" 0.73421179999999997 0.35749461999999999"
-		2 "|unit7_stool:stool|unit7_stool:leg1|unit7_stool:legShape1" "uvSet[0].uvSetPoints[67]" 
-		" -type \"float2\" 0.73310827999999995 0.35751309999999997"
-		2 "|unit7_stool:stool|unit7_stool:leg1|unit7_stool:legShape1" "uvSet[0].uvSetPoints[68]" 
-		" -type \"float2\" 0.73200476000000003 0.35753151999999999"
-		2 "|unit7_stool:stool|unit7_stool:leg1|unit7_stool:legShape1" "uvSet[0].uvSetPoints[69]" 
-		" -type \"float2\" 0.73090129999999998 0.35754994000000001"
-		2 "|unit7_stool:stool|unit7_stool:leg1|unit7_stool:legShape1" "uvSet[0].uvSetPoints[70]" 
-		" -type \"float2\" 0.72979784000000003 0.35756834999999998"
-		2 "|unit7_stool:stool|unit7_stool:leg1|unit7_stool:legShape1" "uvSet[0].uvSetPoints[71]" 
-		" -type \"float2\" 0.72869432000000001 0.35758683000000002"
-		2 "|unit7_stool:stool|unit7_stool:leg1|unit7_stool:legShape1" "uvSet[0].uvSetPoints[72]" 
-		" -type \"float2\" 0.72759085999999995 0.35760524999999999"
-		2 "|unit7_stool:stool|unit7_stool:leg1|unit7_stool:legShape1" "uvSet[0].uvSetPoints[73]" 
-		" -type \"float2\" 0.72648740000000001 0.35762367"
-		2 "|unit7_stool:stool|unit7_stool:leg1|unit7_stool:legShape1" "uvSet[0].uvSetPoints[74]" 
-		" -type \"float2\" 0.72538393999999995 0.35764214"
-		2 "|unit7_stool:stool|unit7_stool:leg1|unit7_stool:legShape1" "uvSet[0].uvSetPoints[75]" 
-		" -type \"float2\" 0.72428042000000004 0.35766056000000002"
-		2 "|unit7_stool:stool|unit7_stool:leg1|unit7_stool:legShape1" "uvSet[0].uvSetPoints[76]" 
-		" -type \"float2\" 0.72317695999999998 0.35767897999999998"
-		2 "|unit7_stool:stool|unit7_stool:leg1|unit7_stool:legShape1" "uvSet[0].uvSetPoints[77]" 
-		" -type \"float2\" 0.72207343999999996 0.3576974"
-		2 "|unit7_stool:stool|unit7_stool:leg1|unit7_stool:legShape1" "uvSet[0].uvSetPoints[78]" 
-		" -type \"float2\" 0.72096996999999996 0.35771582000000002"
-		2 "|unit7_stool:stool|unit7_stool:leg1|unit7_stool:legShape1" "uvSet[0].uvSetPoints[79]" 
-		" -type \"float2\" 0.71986645000000005 0.35773422999999999"
-		2 "|unit7_stool:stool|unit7_stool:leg1|unit7_stool:legShape1" "uvSet[0].uvSetPoints[80]" 
-		" -type \"float2\" 0.71876298999999999 0.35775265000000001"
-		2 "|unit7_stool:stool|unit7_stool:leg1|unit7_stool:legShape1" "uvSet[0].uvSetPoints[81]" 
-		" -type \"float2\" 0.74083275000000004 0.35738412000000003"
-		2 "|unit7_stool:stool|unit7_stool:leg1|unit7_stool:legShape1" "uvSet[0].uvSetPoints[82]" 
-		" -type \"float2\" 0.73972917000000005 0.35740253"
-		2 "|unit7_stool:stool|unit7_stool:leg1|unit7_stool:legShape1" "uvSet[0].uvSetPoints[83]" 
-		" -type \"float2\" 0.73862576000000002 0.35742095000000002"
-		2 "|unit7_stool:stool|unit7_stool:leg2|unit7_stool:legShape2" "uvSet[0].uvSetPoints" 
-		" -s 84"
-		2 "|unit7_stool:stool|unit7_stool:leg2|unit7_stool:legShape2" "uvSet[0].uvSetPoints[0]" 
-		" -type \"float2\" 0.58398008000000001 0.27083143999999998"
-		2 "|unit7_stool:stool|unit7_stool:leg2|unit7_stool:legShape2" "uvSet[0].uvSetPoints[1]" 
-		" -type \"float2\" 0.58483302999999998 0.27013108000000002"
-		2 "|unit7_stool:stool|unit7_stool:leg2|unit7_stool:legShape2" "uvSet[0].uvSetPoints[2]" 
-		" -type \"float2\" 0.63385206000000005 0.26631983999999997"
-		2 "|unit7_stool:stool|unit7_stool:leg2|unit7_stool:legShape2" "uvSet[0].uvSetPoints[3]" 
-		" -type \"float2\" 0.63324279000000006 0.26539965999999998"
-		2 "|unit7_stool:stool|unit7_stool:leg2|unit7_stool:legShape2" "uvSet[0].uvSetPoints[4]" 
-		" -type \"float2\" 0.58542775999999996 0.26920143000000002"
-		2 "|unit7_stool:stool|unit7_stool:leg2|unit7_stool:legShape2" "uvSet[0].uvSetPoints[5]" 
-		" -type \"float2\" 0.63414716999999998 0.26738330999999999"
-		2 "|unit7_stool:stool|unit7_stool:leg2|unit7_stool:legShape2" "uvSet[0].uvSetPoints[6]" 
-		" -type \"float2\" 0.58570610999999995 0.26813343000000001"
-		2 "|unit7_stool:stool|unit7_stool:leg2|unit7_stool:legShape2" "uvSet[0].uvSetPoints[7]" 
-		" -type \"float2\" 0.63409919000000003 0.26848587000000002"
-		2 "|unit7_stool:stool|unit7_stool:leg2|unit7_stool:legShape2" "uvSet[0].uvSetPoints[8]" 
-		" -type \"float2\" 0.58564079000000002 0.26703169999999998"
-		2 "|unit7_stool:stool|unit7_stool:leg2|unit7_stool:legShape2" "uvSet[0].uvSetPoints[9]" 
-		" -type \"float2\" 0.63371283 0.26951972000000002"
-		2 "|unit7_stool:stool|unit7_stool:leg2|unit7_stool:legShape2" "uvSet[0].uvSetPoints[10]" 
-		" -type \"float2\" 0.58523822000000003 0.26600416999999998"
-		2 "|unit7_stool:stool|unit7_stool:leg2|unit7_stool:legShape2" "uvSet[0].uvSetPoints[11]" 
-		" -type \"float2\" 0.63302594000000001 0.27038357000000002"
-		2 "|unit7_stool:stool|unit7_stool:leg2|unit7_stool:legShape2" "uvSet[0].uvSetPoints[12]" 
-		" -type \"float2\" 0.58453785999999996 0.26515123000000002"
-		2 "|unit7_stool:stool|unit7_stool:leg2|unit7_stool:legShape2" "uvSet[0].uvSetPoints[13]" 
-		" -type \"float2\" 0.63210571000000004 0.27099278999999998"
-		2 "|unit7_stool:stool|unit7_stool:leg2|unit7_stool:legShape2" "uvSet[0].uvSetPoints[14]" 
-		" -type \"float2\" 0.58360814999999999 0.26455650000000003"
-		2 "|unit7_stool:stool|unit7_stool:leg2|unit7_stool:legShape2" "uvSet[0].uvSetPoints[15]" 
-		" -type \"float2\" 0.63104223999999998 0.27128788999999998"
-		2 "|unit7_stool:stool|unit7_stool:leg2|unit7_stool:legShape2" "uvSet[0].uvSetPoints[16]" 
-		" -type \"float2\" 0.58254021 0.26427813999999999"
-		2 "|unit7_stool:stool|unit7_stool:leg2|unit7_stool:legShape2" "uvSet[0].uvSetPoints[17]" 
-		" -type \"float2\" 0.62993968 0.27123997"
-		2 "|unit7_stool:stool|unit7_stool:leg2|unit7_stool:legShape2" "uvSet[0].uvSetPoints[18]" 
-		" -type \"float2\" 0.58143847999999998 0.26434341"
-		2 "|unit7_stool:stool|unit7_stool:leg2|unit7_stool:legShape2" "uvSet[0].uvSetPoints[19]" 
-		" -type \"float2\" 0.62890588999999997 0.27085355"
-		2 "|unit7_stool:stool|unit7_stool:leg2|unit7_stool:legShape2" "uvSet[0].uvSetPoints[20]" 
-		" -type \"float2\" 0.58041089999999995 0.26474597999999999"
-		2 "|unit7_stool:stool|unit7_stool:leg2|unit7_stool:legShape2" "uvSet[0].uvSetPoints[21]" 
-		" -type \"float2\" 0.62804203999999997 0.27016667"
-		2 "|unit7_stool:stool|unit7_stool:leg2|unit7_stool:legShape2" "uvSet[0].uvSetPoints[22]" 
-		" -type \"float2\" 0.57955800999999996 0.26544638999999998"
-		2 "|unit7_stool:stool|unit7_stool:leg2|unit7_stool:legShape2" "uvSet[0].uvSetPoints[23]" 
-		" -type \"float2\" 0.62743276000000003 0.26924649"
-		2 "|unit7_stool:stool|unit7_stool:leg2|unit7_stool:legShape2" "uvSet[0].uvSetPoints[24]" 
-		" -type \"float2\" 0.57896327999999997 0.26637604999999998"
-		2 "|unit7_stool:stool|unit7_stool:leg2|unit7_stool:legShape2" "uvSet[0].uvSetPoints[25]" 
-		" -type \"float2\" 0.62713766000000004 0.26818301999999999"
-		2 "|unit7_stool:stool|unit7_stool:leg2|unit7_stool:legShape2" "uvSet[0].uvSetPoints[26]" 
-		" -type \"float2\" 0.57868487000000002 0.26744398000000003"
-		2 "|unit7_stool:stool|unit7_stool:leg2|unit7_stool:legShape2" "uvSet[0].uvSetPoints[27]" 
-		" -type \"float2\" 0.62718563999999999 0.2670804"
-		2 "|unit7_stool:stool|unit7_stool:leg2|unit7_stool:legShape2" "uvSet[0].uvSetPoints[28]" 
-		" -type \"float2\" 0.57875019000000005 0.26854566000000002"
-		2 "|unit7_stool:stool|unit7_stool:leg2|unit7_stool:legShape2" "uvSet[0].uvSetPoints[29]" 
-		" -type \"float2\" 0.62757194000000005 0.26604661000000002"
-		2 "|unit7_stool:stool|unit7_stool:leg2|unit7_stool:legShape2" "uvSet[0].uvSetPoints[30]" 
-		" -type \"float2\" 0.57915269999999996 0.26957330000000002"
-		2 "|unit7_stool:stool|unit7_stool:leg2|unit7_stool:legShape2" "uvSet[0].uvSetPoints[31]" 
-		" -type \"float2\" 0.62825882 0.26518276000000002"
-		2 "|unit7_stool:stool|unit7_stool:leg2|unit7_stool:legShape2" "uvSet[0].uvSetPoints[32]" 
-		" -type \"float2\" 0.57985312 0.27042618000000002"
-		2 "|unit7_stool:stool|unit7_stool:leg2|unit7_stool:legShape2" "uvSet[0].uvSetPoints[33]" 
-		" -type \"float2\" 0.62917911999999998 0.26457354"
-		2 "|unit7_stool:stool|unit7_stool:leg2|unit7_stool:legShape2" "uvSet[0].uvSetPoints[34]" 
-		" -type \"float2\" 0.58078277 0.27102092"
-		2 "|unit7_stool:stool|unit7_stool:leg2|unit7_stool:legShape2" "uvSet[0].uvSetPoints[35]" 
-		" -type \"float2\" 0.63024259000000005 0.26427837999999998"
-		2 "|unit7_stool:stool|unit7_stool:leg2|unit7_stool:legShape2" "uvSet[0].uvSetPoints[36]" 
-		" -type \"float2\" 0.58185076999999996 0.27129933000000001"
-		2 "|unit7_stool:stool|unit7_stool:leg2|unit7_stool:legShape2" "uvSet[0].uvSetPoints[37]" 
-		" -type \"float2\" 0.63134515000000002 0.26432635999999998"
-		2 "|unit7_stool:stool|unit7_stool:leg2|unit7_stool:legShape2" "uvSet[0].uvSetPoints[38]" 
-		" -type \"float2\" 0.58295249999999998 0.27123401000000003"
-		2 "|unit7_stool:stool|unit7_stool:leg2|unit7_stool:legShape2" "uvSet[0].uvSetPoints[39]" 
-		" -type \"float2\" 0.63237893999999994 0.26471272000000001"
-		2 "|unit7_stool:stool|unit7_stool:leg2|unit7_stool:legShape2" "uvSet[0].uvSetPoints[40]" 
-		" -type \"float2\" 0.58219546 0.26778868"
-		2 "|unit7_stool:stool|unit7_stool:leg2|unit7_stool:legShape2" "uvSet[0].uvSetPoints[41]" 
-		" -type \"float2\" 0.63064240999999999 0.26778313999999998"
-		2 "|unit7_stool:stool|unit7_stool:leg2|unit7_stool:legShape2" "uvSet[0].uvSetPoints[42]" 
-		" -type \"float2\" 0.73185359999999999 0.26439193"
-		2 "|unit7_stool:stool|unit7_stool:leg2|unit7_stool:legShape2" "uvSet[0].uvSetPoints[43]" 
-		" -type \"float2\" 0.73295695000000005 0.26436349999999997"
-		2 "|unit7_stool:stool|unit7_stool:leg2|unit7_stool:legShape2" "uvSet[0].uvSetPoints[44]" 
-		" -type \"float2\" 0.73075038000000003 0.26442041999999999"
-		2 "|unit7_stool:stool|unit7_stool:leg2|unit7_stool:legShape2" "uvSet[0].uvSetPoints[45]" 
-		" -type \"float2\" 0.72964709999999999 0.26444885000000001"
-		2 "|unit7_stool:stool|unit7_stool:leg2|unit7_stool:legShape2" "uvSet[0].uvSetPoints[46]" 
-		" -type \"float2\" 0.72854388000000003 0.26447727999999998"
-		2 "|unit7_stool:stool|unit7_stool:leg2|unit7_stool:legShape2" "uvSet[0].uvSetPoints[47]" 
-		" -type \"float2\" 0.72744059999999999 0.26450571"
-		2 "|unit7_stool:stool|unit7_stool:leg2|unit7_stool:legShape2" "uvSet[0].uvSetPoints[48]" 
-		" -type \"float2\" 0.72633731000000001 0.26453415000000002"
-		2 "|unit7_stool:stool|unit7_stool:leg2|unit7_stool:legShape2" "uvSet[0].uvSetPoints[49]" 
-		" -type \"float2\" 0.72523402999999997 0.26456257999999999"
-		2 "|unit7_stool:stool|unit7_stool:leg2|unit7_stool:legShape2" "uvSet[0].uvSetPoints[50]" 
-		" -type \"float2\" 0.72413075000000005 0.26459106999999998"
-		2 "|unit7_stool:stool|unit7_stool:leg2|unit7_stool:legShape2" "uvSet[0].uvSetPoints[51]" 
-		" -type \"float2\" 0.72302747000000001 0.26461950000000001"
-		2 "|unit7_stool:stool|unit7_stool:leg2|unit7_stool:legShape2" "uvSet[0].uvSetPoints[52]" 
-		" -type \"float2\" 0.72192418999999997 0.26464792999999998"
-		2 "|unit7_stool:stool|unit7_stool:leg2|unit7_stool:legShape2" "uvSet[0].uvSetPoints[53]" 
-		" -type \"float2\" 0.72082089999999999 0.26467636"
-		2 "|unit7_stool:stool|unit7_stool:leg2|unit7_stool:legShape2" "uvSet[0].uvSetPoints[54]" 
-		" -type \"float2\" 0.71971761999999995 0.26470479000000002"
-		2 "|unit7_stool:stool|unit7_stool:leg2|unit7_stool:legShape2" "uvSet[0].uvSetPoints[55]" 
-		" -type \"float2\" 0.71861434000000002 0.26473322999999999"
-		2 "|unit7_stool:stool|unit7_stool:leg2|unit7_stool:legShape2" "uvSet[0].uvSetPoints[56]" 
-		" -type \"float2\" 0.71751105999999998 0.26476171999999998"
-		2 "|unit7_stool:stool|unit7_stool:leg2|unit7_stool:legShape2" "uvSet[0].uvSetPoints[57]" 
-		" -type \"float2\" 0.71640784000000002 0.26479015"
-		2 "|unit7_stool:stool|unit7_stool:leg2|unit7_stool:legShape2" "uvSet[0].uvSetPoints[58]" 
-		" -type \"float2\" 0.71530448999999996 0.26481858000000003"
-		2 "|unit7_stool:stool|unit7_stool:leg2|unit7_stool:legShape2" "uvSet[0].uvSetPoints[59]" 
-		" -type \"float2\" 0.73626672999999998 0.26427813999999999"
-		2 "|unit7_stool:stool|unit7_stool:leg2|unit7_stool:legShape2" "uvSet[0].uvSetPoints[60]" 
-		" -type \"float2\" 0.73516345000000005 0.26430662999999999"
-		2 "|unit7_stool:stool|unit7_stool:leg2|unit7_stool:legShape2" "uvSet[0].uvSetPoints[61]" 
-		" -type \"float2\" 0.73406017000000001 0.26433507000000001"
-		2 "|unit7_stool:stool|unit7_stool:leg2|unit7_stool:legShape2" "uvSet[0].uvSetPoints[62]" 
-		" -type \"float2\" 0.71420127 0.26484700999999999"
-		2 "|unit7_stool:stool|unit7_stool:leg2|unit7_stool:legShape2" "uvSet[0].uvSetPoints[63]" 
-		" -type \"float2\" 0.73305184000000001 0.31086733999999999"
-		2 "|unit7_stool:stool|unit7_stool:leg2|unit7_stool:legShape2" "uvSet[0].uvSetPoints[64]" 
-		" -type \"float2\" 0.73415505999999997 0.31083891000000002"
-		2 "|unit7_stool:stool|unit7_stool:leg2|unit7_stool:legShape2" "uvSet[0].uvSetPoints[65]" 
-		" -type \"float2\" 0.73194855000000003 0.31089577000000002"
-		2 "|unit7_stool:stool|unit7_stool:leg2|unit7_stool:legShape2" "uvSet[0].uvSetPoints[66]" 
-		" -type \"float2\" 0.73084526999999999 0.31092419999999998"
-		2 "|unit7_stool:stool|unit7_stool:leg2|unit7_stool:legShape2" "uvSet[0].uvSetPoints[67]" 
-		" -type \"float2\" 0.72974205000000003 0.31095263000000001"
-		2 "|unit7_stool:stool|unit7_stool:leg2|unit7_stool:legShape2" "uvSet[0].uvSetPoints[68]" 
-		" -type \"float2\" 0.72863876999999999 0.31098107000000003"
-		2 "|unit7_stool:stool|unit7_stool:leg2|unit7_stool:legShape2" "uvSet[0].uvSetPoints[69]" 
-		" -type \"float2\" 0.72753542999999998 0.31100956000000002"
-		2 "|unit7_stool:stool|unit7_stool:leg2|unit7_stool:legShape2" "uvSet[0].uvSetPoints[70]" 
-		" -type \"float2\" 0.72643219999999997 0.31103805000000001"
-		2 "|unit7_stool:stool|unit7_stool:leg2|unit7_stool:legShape2" "uvSet[0].uvSetPoints[71]" 
-		" -type \"float2\" 0.72532892000000004 0.31106647999999998"
-		2 "|unit7_stool:stool|unit7_stool:leg2|unit7_stool:legShape2" "uvSet[0].uvSetPoints[72]" 
-		" -type \"float2\" 0.72422564 0.31109491"
-		2 "|unit7_stool:stool|unit7_stool:leg2|unit7_stool:legShape2" "uvSet[0].uvSetPoints[73]" 
-		" -type \"float2\" 0.72312235999999996 0.31112334000000003"
-		2 "|unit7_stool:stool|unit7_stool:leg2|unit7_stool:legShape2" "uvSet[0].uvSetPoints[74]" 
-		" -type \"float2\" 0.72201914 0.31115183000000002"
-		2 "|unit7_stool:stool|unit7_stool:leg2|unit7_stool:legShape2" "uvSet[0].uvSetPoints[75]" 
-		" -type \"float2\" 0.72091578999999995 0.31118020000000002"
-		2 "|unit7_stool:stool|unit7_stool:leg2|unit7_stool:legShape2" "uvSet[0].uvSetPoints[76]" 
-		" -type \"float2\" 0.71981251000000002 0.3112087"
-		2 "|unit7_stool:stool|unit7_stool:leg2|unit7_stool:legShape2" "uvSet[0].uvSetPoints[77]" 
-		" -type \"float2\" 0.71870922999999998 0.31123712999999997"
-		2 "|unit7_stool:stool|unit7_stool:leg2|unit7_stool:legShape2" "uvSet[0].uvSetPoints[78]" 
-		" -type \"float2\" 0.71760595000000005 0.31126549999999997"
-		2 "|unit7_stool:stool|unit7_stool:leg2|unit7_stool:legShape2" "uvSet[0].uvSetPoints[79]" 
-		" -type \"float2\" 0.71650272999999998 0.31129399000000002"
-		2 "|unit7_stool:stool|unit7_stool:leg2|unit7_stool:legShape2" "uvSet[0].uvSetPoints[80]" 
-		" -type \"float2\" 0.71539949999999997 0.31132248000000001"
-		2 "|unit7_stool:stool|unit7_stool:leg2|unit7_stool:legShape2" "uvSet[0].uvSetPoints[81]" 
-		" -type \"float2\" 0.73746489999999998 0.31075361000000001"
-		2 "|unit7_stool:stool|unit7_stool:leg2|unit7_stool:legShape2" "uvSet[0].uvSetPoints[82]" 
-		" -type \"float2\" 0.73636162000000005 0.31078199000000001"
-		2 "|unit7_stool:stool|unit7_stool:leg2|unit7_stool:legShape2" "uvSet[0].uvSetPoints[83]" 
-		" -type \"float2\" 0.73525834000000001 0.31081041999999998"
-		2 "|unit7_stool:stool|unit7_stool:leg3|unit7_stool:legShape3" "uvSet[0].uvSetPoints" 
-		" -s 84"
-		2 "|unit7_stool:stool|unit7_stool:leg3|unit7_stool:legShape3" "uvSet[0].uvSetPoints[0]" 
-		" -type \"float2\" 0.55399352000000002 0.26992205000000002"
-		2 "|unit7_stool:stool|unit7_stool:leg3|unit7_stool:legShape3" "uvSet[0].uvSetPoints[1]" 
-		" -type \"float2\" 0.55450957999999995 0.26894649999999998"
-		2 "|unit7_stool:stool|unit7_stool:leg3|unit7_stool:legShape3" "uvSet[0].uvSetPoints[2]" 
-		" -type \"float2\" 0.55521553999999995 0.26772508"
-		2 "|unit7_stool:stool|unit7_stool:leg3|unit7_stool:legShape3" "uvSet[0].uvSetPoints[3]" 
-		" -type \"float2\" 0.55536359999999996 0.26881876999999998"
-		2 "|unit7_stool:stool|unit7_stool:leg3|unit7_stool:legShape3" "uvSet[0].uvSetPoints[4]" 
-		" -type \"float2\" 0.55469893999999997 0.26785924999999999"
-		2 "|unit7_stool:stool|unit7_stool:leg3|unit7_stool:legShape3" "uvSet[0].uvSetPoints[5]" 
-		" -type \"float2\" 0.55541264999999995 0.26663920000000002"
-		2 "|unit7_stool:stool|unit7_stool:leg3|unit7_stool:legShape3" "uvSet[0].uvSetPoints[6]" 
-		" -type \"float2\" 0.55454302 0.26676664"
-		2 "|unit7_stool:stool|unit7_stool:leg3|unit7_stool:legShape3" "uvSet[0].uvSetPoints[7]" 
-		" -type \"float2\" 0.55593574000000001 0.26566735000000002"
-		2 "|unit7_stool:stool|unit7_stool:leg3|unit7_stool:legShape3" "uvSet[0].uvSetPoints[8]" 
-		" -type \"float2\" 0.55405718000000004 0.26577571"
-		2 "|unit7_stool:stool|unit7_stool:leg3|unit7_stool:legShape3" "uvSet[0].uvSetPoints[9]" 
-		" -type \"float2\" 0.55673349000000005 0.26490477000000001"
-		2 "|unit7_stool:stool|unit7_stool:leg3|unit7_stool:legShape3" "uvSet[0].uvSetPoints[10]" 
-		" -type \"float2\" 0.55328882000000001 0.26498345000000001"
-		2 "|unit7_stool:stool|unit7_stool:leg3|unit7_stool:legShape3" "uvSet[0].uvSetPoints[11]" 
-		" -type \"float2\" 0.55772787000000001 0.26442596000000002"
-		2 "|unit7_stool:stool|unit7_stool:leg3|unit7_stool:legShape3" "uvSet[0].uvSetPoints[12]" 
-		" -type \"float2\" 0.55231333000000005 0.26446739000000002"
-		2 "|unit7_stool:stool|unit7_stool:leg3|unit7_stool:legShape3" "uvSet[0].uvSetPoints[13]" 
-		" -type \"float2\" 0.55882156000000005 0.26427791"
-		2 "|unit7_stool:stool|unit7_stool:leg3|unit7_stool:legShape3" "uvSet[0].uvSetPoints[14]" 
-		" -type \"float2\" 0.55122601999999998 0.26427802"
-		2 "|unit7_stool:stool|unit7_stool:leg3|unit7_stool:legShape3" "uvSet[0].uvSetPoints[15]" 
-		" -type \"float2\" 0.55990744000000003 0.26447507999999997"
-		2 "|unit7_stool:stool|unit7_stool:leg3|unit7_stool:legShape3" "uvSet[0].uvSetPoints[16]" 
-		" -type \"float2\" 0.55013347000000001 0.26443389"
-		2 "|unit7_stool:stool|unit7_stool:leg3|unit7_stool:legShape3" "uvSet[0].uvSetPoints[17]" 
-		" -type \"float2\" 0.56087922999999995 0.26499811000000001"
-		2 "|unit7_stool:stool|unit7_stool:leg3|unit7_stool:legShape3" "uvSet[0].uvSetPoints[18]" 
-		" -type \"float2\" 0.54914253999999996 0.26491978999999999"
-		2 "|unit7_stool:stool|unit7_stool:leg3|unit7_stool:legShape3" "uvSet[0].uvSetPoints[19]" 
-		" -type \"float2\" 0.56164186999999999 0.26579585999999999"
-		2 "|unit7_stool:stool|unit7_stool:leg3|unit7_stool:legShape3" "uvSet[0].uvSetPoints[20]" 
-		" -type \"float2\" 0.54835027000000003 0.26568808999999999"
-		2 "|unit7_stool:stool|unit7_stool:leg3|unit7_stool:legShape3" "uvSet[0].uvSetPoints[21]" 
-		" -type \"float2\" 0.56212068000000004 0.26679017999999999"
-		2 "|unit7_stool:stool|unit7_stool:leg3|unit7_stool:legShape3" "uvSet[0].uvSetPoints[22]" 
-		" -type \"float2\" 0.54783415999999996 0.2666637"
-		2 "|unit7_stool:stool|unit7_stool:leg3|unit7_stool:legShape3" "uvSet[0].uvSetPoints[23]" 
-		" -type \"float2\" 0.56226872999999999 0.26788392999999999"
-		2 "|unit7_stool:stool|unit7_stool:leg3|unit7_stool:legShape3" "uvSet[0].uvSetPoints[24]" 
-		" -type \"float2\" 0.54764478999999999 0.26775094999999999"
-		2 "|unit7_stool:stool|unit7_stool:leg3|unit7_stool:legShape3" "uvSet[0].uvSetPoints[25]" 
-		" -type \"float2\" 0.56207156000000003 0.26896974000000001"
-		2 "|unit7_stool:stool|unit7_stool:leg3|unit7_stool:legShape3" "uvSet[0].uvSetPoints[26]" 
-		" -type \"float2\" 0.54780072000000002 0.26884350000000001"
-		2 "|unit7_stool:stool|unit7_stool:leg3|unit7_stool:legShape3" "uvSet[0].uvSetPoints[27]" 
-		" -type \"float2\" 0.56154853000000005 0.2699416"
-		2 "|unit7_stool:stool|unit7_stool:leg3|unit7_stool:legShape3" "uvSet[0].uvSetPoints[28]" 
-		" -type \"float2\" 0.54828655999999998 0.26983443000000001"
-		2 "|unit7_stool:stool|unit7_stool:leg3|unit7_stool:legShape3" "uvSet[0].uvSetPoints[29]" 
-		" -type \"float2\" 0.56075078 0.27070418000000002"
-		2 "|unit7_stool:stool|unit7_stool:leg3|unit7_stool:legShape3" "uvSet[0].uvSetPoints[30]" 
-		" -type \"float2\" 0.54905492 0.27062669"
-		2 "|unit7_stool:stool|unit7_stool:leg3|unit7_stool:legShape3" "uvSet[0].uvSetPoints[31]" 
-		" -type \"float2\" 0.55975640000000004 0.27118303999999999"
-		2 "|unit7_stool:stool|unit7_stool:leg3|unit7_stool:legShape3" "uvSet[0].uvSetPoints[32]" 
-		" -type \"float2\" 0.55003047000000005 0.27114281000000001"
-		2 "|unit7_stool:stool|unit7_stool:leg3|unit7_stool:legShape3" "uvSet[0].uvSetPoints[33]" 
-		" -type \"float2\" 0.55866276999999998 0.27133109999999999"
-		2 "|unit7_stool:stool|unit7_stool:leg3|unit7_stool:legShape3" "uvSet[0].uvSetPoints[34]" 
-		" -type \"float2\" 0.55111772000000003 0.27133216999999998"
-		2 "|unit7_stool:stool|unit7_stool:leg3|unit7_stool:legShape3" "uvSet[0].uvSetPoints[35]" 
-		" -type \"float2\" 0.55757683999999996 0.27113393000000002"
-		2 "|unit7_stool:stool|unit7_stool:leg3|unit7_stool:legShape3" "uvSet[0].uvSetPoints[36]" 
-		" -type \"float2\" 0.55221032999999997 0.27117625000000001"
-		2 "|unit7_stool:stool|unit7_stool:leg3|unit7_stool:legShape3" "uvSet[0].uvSetPoints[37]" 
-		" -type \"float2\" 0.55660504 0.27061089999999999"
-		2 "|unit7_stool:stool|unit7_stool:leg3|unit7_stool:legShape3" "uvSet[0].uvSetPoints[38]" 
-		" -type \"float2\" 0.55320126000000003 0.27069035000000002"
-		2 "|unit7_stool:stool|unit7_stool:leg3|unit7_stool:legShape3" "uvSet[0].uvSetPoints[39]" 
-		" -type \"float2\" 0.55584239999999996 0.26981315"
-		2 "|unit7_stool:stool|unit7_stool:leg3|unit7_stool:legShape3" "uvSet[0].uvSetPoints[40]" 
-		" -type \"float2\" 0.55117190000000005 0.26780513"
-		2 "|unit7_stool:stool|unit7_stool:leg3|unit7_stool:legShape3" "uvSet[0].uvSetPoints[41]" 
-		" -type \"float2\" 0.55874217000000004 0.26780440999999999"
-		2 "|unit7_stool:stool|unit7_stool:leg3|unit7_stool:legShape3" "uvSet[0].uvSetPoints[42]" 
-		" -type \"float2\" 0.54310417 0.26476333000000002"
-		2 "|unit7_stool:stool|unit7_stool:leg3|unit7_stool:legShape3" "uvSet[0].uvSetPoints[43]" 
-		" -type \"float2\" 0.54420745000000004 0.26479365999999999"
-		2 "|unit7_stool:stool|unit7_stool:leg3|unit7_stool:legShape3" "uvSet[0].uvSetPoints[44]" 
-		" -type \"float2\" 0.54200101000000001 0.26473299"
-		2 "|unit7_stool:stool|unit7_stool:leg3|unit7_stool:legShape3" "uvSet[0].uvSetPoints[45]" 
-		" -type \"float2\" 0.54089772999999997 0.26470271000000001"
-		2 "|unit7_stool:stool|unit7_stool:leg3|unit7_stool:legShape3" "uvSet[0].uvSetPoints[46]" 
-		" -type \"float2\" 0.53979456000000003 0.26467236999999999"
-		2 "|unit7_stool:stool|unit7_stool:leg3|unit7_stool:legShape3" "uvSet[0].uvSetPoints[47]" 
-		" -type \"float2\" 0.53869127999999999 0.26464202999999997"
-		2 "|unit7_stool:stool|unit7_stool:leg3|unit7_stool:legShape3" "uvSet[0].uvSetPoints[48]" 
-		" -type \"float2\" 0.53758806000000003 0.26461174999999998"
-		2 "|unit7_stool:stool|unit7_stool:leg3|unit7_stool:legShape3" "uvSet[0].uvSetPoints[49]" 
-		" -type \"float2\" 0.53648483999999996 0.26458141000000002"
-		2 "|unit7_stool:stool|unit7_stool:leg3|unit7_stool:legShape3" "uvSet[0].uvSetPoints[50]" 
-		" -type \"float2\" 0.53538162 0.26455107"
-		2 "|unit7_stool:stool|unit7_stool:leg3|unit7_stool:legShape3" "uvSet[0].uvSetPoints[51]" 
-		" -type \"float2\" 0.53427838999999999 0.26452079000000001"
-		2 "|unit7_stool:stool|unit7_stool:leg3|unit7_stool:legShape3" "uvSet[0].uvSetPoints[52]" 
-		" -type \"float2\" 0.53317517000000003 0.26449045999999998"
-		2 "|unit7_stool:stool|unit7_stool:leg3|unit7_stool:legShape3" "uvSet[0].uvSetPoints[53]" 
-		" -type \"float2\" 0.53207194999999996 0.26446012000000002"
-		2 "|unit7_stool:stool|unit7_stool:leg3|unit7_stool:legShape3" "uvSet[0].uvSetPoints[54]" 
-		" -type \"float2\" 0.53096878999999997 0.26442984000000003"
-		2 "|unit7_stool:stool|unit7_stool:leg3|unit7_stool:legShape3" "uvSet[0].uvSetPoints[55]" 
-		" -type \"float2\" 0.52986549999999999 0.26439955999999998"
-		2 "|unit7_stool:stool|unit7_stool:leg3|unit7_stool:legShape3" "uvSet[0].uvSetPoints[56]" 
-		" -type \"float2\" 0.52876228000000003 0.26436915999999999"
-		2 "|unit7_stool:stool|unit7_stool:leg3|unit7_stool:legShape3" "uvSet[0].uvSetPoints[57]" 
-		" -type \"float2\" 0.52765905999999996 0.26433888"
-		2 "|unit7_stool:stool|unit7_stool:leg3|unit7_stool:legShape3" "uvSet[0].uvSetPoints[58]" 
-		" -type \"float2\" 0.52655584 0.26430853999999998"
-		2 "|unit7_stool:stool|unit7_stool:leg3|unit7_stool:legShape3" "uvSet[0].uvSetPoints[59]" 
-		" -type \"float2\" 0.54751706 0.26488462000000002"
-		2 "|unit7_stool:stool|unit7_stool:leg3|unit7_stool:legShape3" "uvSet[0].uvSetPoints[60]" 
-		" -type \"float2\" 0.54641384000000004 0.26485428"
-		2 "|unit7_stool:stool|unit7_stool:leg3|unit7_stool:legShape3" "uvSet[0].uvSetPoints[61]" 
-		" -type \"float2\" 0.54531061999999997 0.26482393999999998"
-		2 "|unit7_stool:stool|unit7_stool:leg3|unit7_stool:legShape3" "uvSet[0].uvSetPoints[62]" 
-		" -type \"float2\" 0.52545260999999999 0.26427820000000002"
-		2 "|unit7_stool:stool|unit7_stool:leg3|unit7_stool:legShape3" "uvSet[0].uvSetPoints[63]" 
-		" -type \"float2\" 0.54182708000000002 0.31123665"
-		2 "|unit7_stool:stool|unit7_stool:leg3|unit7_stool:legShape3" "uvSet[0].uvSetPoints[64]" 
-		" -type \"float2\" 0.54293031000000003 0.31126693"
-		2 "|unit7_stool:stool|unit7_stool:leg3|unit7_stool:legShape3" "uvSet[0].uvSetPoints[65]" 
-		" -type \"float2\" 0.54072385999999995 0.31120630999999999"
-		2 "|unit7_stool:stool|unit7_stool:leg3|unit7_stool:legShape3" "uvSet[0].uvSetPoints[66]" 
-		" -type \"float2\" 0.53962063999999998 0.31117597000000002"
-		2 "|unit7_stool:stool|unit7_stool:leg3|unit7_stool:legShape3" "uvSet[0].uvSetPoints[67]" 
-		" -type \"float2\" 0.53851742000000002 0.31114563000000001"
-		2 "|unit7_stool:stool|unit7_stool:leg3|unit7_stool:legShape3" "uvSet[0].uvSetPoints[68]" 
-		" -type \"float2\" 0.53741419000000001 0.31111535000000001"
-		2 "|unit7_stool:stool|unit7_stool:leg3|unit7_stool:legShape3" "uvSet[0].uvSetPoints[69]" 
-		" -type \"float2\" 0.53631097000000005 0.31108501999999999"
-		2 "|unit7_stool:stool|unit7_stool:leg3|unit7_stool:legShape3" "uvSet[0].uvSetPoints[70]" 
-		" -type \"float2\" 0.53520774999999998 0.31105474"
-		2 "|unit7_stool:stool|unit7_stool:leg3|unit7_stool:legShape3" "uvSet[0].uvSetPoints[71]" 
-		" -type \"float2\" 0.53410447000000005 0.31102439999999998"
-		2 "|unit7_stool:stool|unit7_stool:leg3|unit7_stool:legShape3" "uvSet[0].uvSetPoints[72]" 
-		" -type \"float2\" 0.53300130000000001 0.31099406000000002"
-		2 "|unit7_stool:stool|unit7_stool:leg3|unit7_stool:legShape3" "uvSet[0].uvSetPoints[73]" 
-		" -type \"float2\" 0.53189801999999997 0.31096378000000002"
-		2 "|unit7_stool:stool|unit7_stool:leg3|unit7_stool:legShape3" "uvSet[0].uvSetPoints[74]" 
-		" -type \"float2\" 0.53079485999999998 0.31093344000000001"
-		2 "|unit7_stool:stool|unit7_stool:leg3|unit7_stool:legShape3" "uvSet[0].uvSetPoints[75]" 
-		" -type \"float2\" 0.52969158000000005 0.31090309999999999"
-		2 "|unit7_stool:stool|unit7_stool:leg3|unit7_stool:legShape3" "uvSet[0].uvSetPoints[76]" 
-		" -type \"float2\" 0.52858841000000001 0.31087281999999999"
-		2 "|unit7_stool:stool|unit7_stool:leg3|unit7_stool:legShape3" "uvSet[0].uvSetPoints[77]" 
-		" -type \"float2\" 0.52748512999999997 0.31084247999999998"
-		2 "|unit7_stool:stool|unit7_stool:leg3|unit7_stool:legShape3" "uvSet[0].uvSetPoints[78]" 
-		" -type \"float2\" 0.52638196999999998 0.31081215000000001"
-		2 "|unit7_stool:stool|unit7_stool:leg3|unit7_stool:legShape3" "uvSet[0].uvSetPoints[79]" 
-		" -type \"float2\" 0.52527875000000002 0.31078187000000002"
-		2 "|unit7_stool:stool|unit7_stool:leg3|unit7_stool:legShape3" "uvSet[0].uvSetPoints[80]" 
-		" -type \"float2\" 0.52417546999999998 0.31075153"
-		2 "|unit7_stool:stool|unit7_stool:leg3|unit7_stool:legShape3" "uvSet[0].uvSetPoints[81]" 
-		" -type \"float2\" 0.54623997000000002 0.31135789000000003"
-		2 "|unit7_stool:stool|unit7_stool:leg3|unit7_stool:legShape3" "uvSet[0].uvSetPoints[82]" 
-		" -type \"float2\" 0.54513668999999998 0.31132760999999998"
-		2 "|unit7_stool:stool|unit7_stool:leg3|unit7_stool:legShape3" "uvSet[0].uvSetPoints[83]" 
-		" -type \"float2\" 0.54403352999999999 0.31129727000000001";
+		2 "|unit7_stool:stool|unit7_stool:seat|unit7_stool:seatShape" "uvst[0].uvsp[0:83]" 
+		(" -s 84 -type \"float2\" 0.62665342999999996 0.3294706 0.63498622000000005 0.32220480000000001 0.71068555 0.28403297 0.70440698000000002 0.27493307 0.64066601000000001 0.31271955000000001 0.7138449 0.29462769999999999 0.64313662000000005 0.30194345 0.71357559999999998 0.30568012999999999 0.64215635999999998 0.29093124999999997 0.70990419000000005 0.31610838000000002 0.63782114000000001 0.28076103000000002 0.70318997000000005 0.32489178000000002 0.63055527 0.27242818000000002 0.69409001000000004 0.33117041000000003 0.62107003000000005 0.26674846000000002 0.68349539999999998 0.33432969000000001 0.61029398000000001 0.26427779000000001 0.67244291 0.33406046 0.59928179000000004 0.26525803999999997 0.66201460000000001 0.33038898999999999 0.58911150999999995 0.26959327 0.65323125999999998 0.32367477 0.58077866 0.27685913000000001 0.64695263000000003 0.31457487000000001 0.57509893000000001 0.28634431999999999 0.64379333999999999 0.30398019999999998 0.57262826 0.29712048000000002 0.64406258000000005 0.29292783 0.57360851"
+		+ "999999996 0.30813262000000002 0.64773404999999995 0.28249945999999998 0.57794380000000001 0.3183029 0.65444827000000005 0.27371612000000001 0.58520961000000005 0.32663575 0.66354816999999999 0.26743749 0.59469485 0.33231547 0.67414284000000002 0.26427813999999999 0.60547096 0.33478615 0.68519527000000002 0.26454744000000002 0.61648309000000001 0.33380588999999999 0.69562352000000005 0.26821885000000001 0.60788244000000002 0.29953196999999998 0.67881906000000003 0.29930392 0.56750034999999999 0.28585938 0.56509339999999997 0.29664984 0.56990730999999994 0.27506884999999998 0.5723142 0.26427832000000001 0.52658242 0.46929820999999999 0.52898931999999999 0.45850769000000002 0.53139627 0.44771722000000003 0.53380322000000002 0.43692669000000001 0.53621017999999998 0.42613616999999998 0.53861713 0.41534564000000002 0.54102402999999999 0.40455511 0.54343092000000004 0.39376459000000003 0.54583788 0.38297406000000001 0.54824483000000002 0.37218352999999998 0.55065178999999997 0.361393 0.55305873999999999 0.350602479"
+		+ "99999999 0.55546569999999995 0.33981194999999997 0.55787259 0.32902142000000001 0.56027954999999996 0.31823096000000001 0.56268644000000001 0.30744037000000002 0.57346129000000001 0.28718897999999998 0.57105439999999996 0.29797950000000001 0.57586824999999997 0.27639850999999999 0.53013646999999997 0.48141845999999999 0.53254341999999999 0.47062793000000003 0.53495031999999998 0.45983734999999998 0.53735727 0.44904687999999998 0.53976416999999999 0.43825628999999999 0.54217112000000001 0.42746577000000002 0.54457807999999996 0.41667535999999999 0.54698502999999998 0.40588482999999997 0.54939192999999997 0.39509424999999998 0.55179887999999999 0.38430372000000002 0.55420583000000001 0.37351318999999999 0.55661273 0.36272267000000002 0.55901968000000002 0.35193214 0.56142663999999998 0.34114160999999998 0.56383359 0.33035108000000002 0.56624048999999999 0.31956055999999999 0.56864744 0.30877002999999997 0.57827519999999999 0.26560792 0.52417546999999998 0.48008874000000001"
+		)
+		2 "|unit7_stool:stool|unit7_stool:leg1|unit7_stool:legShape1" "uvst[0].uvsp[0:83]" 
+		(" -s 84 -type \"float2\" 0.56818341999999999 0.27078423000000001 0.56901436999999999 0.27005783 0.64136344000000001 0.26620987000000002 0.64072669000000004 0.26530847000000002 0.56958014000000001 0.26911028999999997 0.64169054999999997 0.26726398000000001 0.56982540999999998 0.26803424999999997 0.64167589000000003 0.26836744000000001 0.56972623 0.26693507999999999 0.64132093999999995 0.26941249 0.56929213000000001 0.26592042999999999 0.64066045999999999 0.27029666000000002 0.56856578999999996 0.26508947999999999 0.63975906000000005 0.27093341999999998 0.56761813000000005 0.26452365999999999 0.63870495999999999 0.27126053 0.56654214999999997 0.26427844 0.63760143999999996 0.27124587 0.56544291999999996 0.26437768 0.63655651000000002 0.27089091999999998 0.56442826999999995 0.26481171999999997 0.63567227000000004 0.27023044000000002 0.56359731999999996 0.26553807000000001 0.63503546 0.26932898 0.56303155000000005 0.26648571999999998 0.63470839999999995 0.26827498999999999 0.56278634000000005 0.26756170000000001 0.6"
+		+ "3472306999999994 0.26717147000000002 0.56288552000000003 0.26866087 0.63507795 0.26612641999999997 0.56331962000000002 0.26967558000000003 0.63573849000000004 0.26524225000000001 0.56404597000000001 0.27050647 0.63663994999999995 0.26460542999999997 0.56499356000000001 0.27107224000000002 0.63769394000000001 0.26427837999999998 0.56606959999999995 0.27131750999999998 0.63879752000000001 0.26429303999999998 0.56716876999999999 0.27121826999999998 0.63984251000000003 0.26464799 0.56630588000000004 0.26779797999999999 0.63819945 0.26776942999999997 0.73564242999999996 0.31097343999999999 0.73674589000000001 0.31095502000000003 0.73453891000000004 0.31099190999999998 0.73343544999999999 0.31101026999999998 0.73233199000000004 0.31102875000000002 0.73122847000000002 0.31104716999999998 0.73012494999999999 0.31106558000000001 0.72902149000000005 0.31108406 0.72791802999999999 0.31110248000000001 0.72681450999999997 0.31112089999999998 0.72571098999999994 0.31113932 0.72460753 0.31115778999999999 0.72350407000000005"
+		+ " 0.31117621000000001 0.72240061 0.31119463000000003 0.72129708999999997 0.31121304999999999 0.72019361999999998 0.31123146000000002 0.71909016000000003 0.31124987999999998 0.74005639999999995 0.31089976000000002 0.73895288000000003 0.31091817999999999 0.73784934999999996 0.31093665999999998 0.71798658000000004 0.3112683 0.73641871999999997 0.35745785000000002 0.73752224 0.35743943 0.73531526000000003 0.35747625999999999 0.73421179999999997 0.35749461999999999 0.73310827999999995 0.35751309999999997 0.73200476000000003 0.35753151999999999 0.73090129999999998 0.35754994000000001 0.72979784000000003 0.35756834999999998 0.72869432000000001 0.35758683000000002 0.72759085999999995 0.35760524999999999 0.72648740000000001 0.35762367 0.72538393999999995 0.35764214 0.72428042000000004 0.35766056000000002 0.72317695999999998 0.35767897999999998 0.72207343999999996 0.3576974 0.72096996999999996 0.35771582000000002 0.71986645000000005 0.35773422999999999 0.71876298999999999 0.35775265000000001 0.74083275000000004 0.357384"
+		+ "12000000003 0.73972917000000005 0.35740253 0.73862576000000002 0.35742095000000002"
+		)
+		2 "|unit7_stool:stool|unit7_stool:leg2|unit7_stool:legShape2" "uvst[0].uvsp[0:83]" 
+		(" -s 84 -type \"float2\" 0.58398008000000001 0.27083143999999998 0.58483302999999998 0.27013108000000002 0.63385206000000005 0.26631983999999997 0.63324279000000006 0.26539965999999998 0.58542775999999996 0.26920143000000002 0.63414716999999998 0.26738330999999999 0.58570610999999995 0.26813343000000001 0.63409919000000003 0.26848587000000002 0.58564079000000002 0.26703169999999998 0.63371283 0.26951972000000002 0.58523822000000003 0.26600416999999998 0.63302594000000001 0.27038357000000002 0.58453785999999996 0.26515123000000002 0.63210571000000004 0.27099278999999998 0.58360814999999999 0.26455650000000003 0.63104223999999998 0.27128788999999998 0.58254021 0.26427813999999999 0.62993968 0.27123997 0.58143847999999998 0.26434341 0.62890588999999997 0.27085355 0.58041089999999995 0.26474597999999999 0.62804203999999997 0.27016667 0.57955800999999996 0.26544638999999998 0.62743276000000003 0.26924649 0.57896327999999997 0.26637604999999998 0.62713766000000004 0.26818301999999999 0.57868487000000002 0.267443980000"
+		+ "00003 0.62718563999999999 0.2670804 0.57875019000000005 0.26854566000000002 0.62757194000000005 0.26604661000000002 0.57915269999999996 0.26957330000000002 0.62825882 0.26518276000000002 0.57985312 0.27042618000000002 0.62917911999999998 0.26457354 0.58078277 0.27102092 0.63024259000000005 0.26427837999999998 0.58185076999999996 0.27129933000000001 0.63134515000000002 0.26432635999999998 0.58295249999999998 0.27123401000000003 0.63237893999999994 0.26471272000000001 0.58219546 0.26778868 0.63064240999999999 0.26778313999999998 0.73185359999999999 0.26439193 0.73295695000000005 0.26436349999999997 0.73075038000000003 0.26442041999999999 0.72964709999999999 0.26444885000000001 0.72854388000000003 0.26447727999999998 0.72744059999999999 0.26450571 0.72633731000000001 0.26453415000000002 0.72523402999999997 0.26456257999999999 0.72413075000000005 0.26459106999999998 0.72302747000000001 0.26461950000000001 0.72192418999999997 0.26464792999999998 0.72082089999999999 0.26467636 0.71971761999999995 0.2647047900000000"
+		+ "2 0.71861434000000002 0.26473322999999999 0.71751105999999998 0.26476171999999998 0.71640784000000002 0.26479015 0.71530448999999996 0.26481858000000003 0.73626672999999998 0.26427813999999999 0.73516345000000005 0.26430662999999999 0.73406017000000001 0.26433507000000001 0.71420127 0.26484700999999999 0.73305184000000001 0.31086733999999999 0.73415505999999997 0.31083891000000002 0.73194855000000003 0.31089577000000002 0.73084526999999999 0.31092419999999998 0.72974205000000003 0.31095263000000001 0.72863876999999999 0.31098107000000003 0.72753542999999998 0.31100956000000002 0.72643219999999997 0.31103805000000001 0.72532892000000004 0.31106647999999998 0.72422564 0.31109491 0.72312235999999996 0.31112334000000003 0.72201914 0.31115183000000002 0.72091578999999995 0.31118020000000002 0.71981251000000002 0.3112087 0.71870922999999998 0.31123712999999997 0.71760595000000005 0.31126549999999997 0.71650272999999998 0.31129399000000002 0.71539949999999997 0.31132248000000001 0.73746489999999998 0.310753610000000"
+		+ "01 0.73636162000000005 0.31078199000000001 0.73525834000000001 0.31081041999999998"
+		)
+		2 "|unit7_stool:stool|unit7_stool:leg3|unit7_stool:legShape3" "uvst[0].uvsp[0:83]" 
+		(" -s 84 -type \"float2\" 0.55399352000000002 0.26992205000000002 0.55450957999999995 0.26894649999999998 0.55521553999999995 0.26772508 0.55536359999999996 0.26881876999999998 0.55469893999999997 0.26785924999999999 0.55541264999999995 0.26663920000000002 0.55454302 0.26676664 0.55593574000000001 0.26566735000000002 0.55405718000000004 0.26577571 0.55673349000000005 0.26490477000000001 0.55328882000000001 0.26498345000000001 0.55772787000000001 0.26442596000000002 0.55231333000000005 0.26446739000000002 0.55882156000000005 0.26427791 0.55122601999999998 0.26427802 0.55990744000000003 0.26447507999999997 0.55013347000000001 0.26443389 0.56087922999999995 0.26499811000000001 0.54914253999999996 0.26491978999999999 0.56164186999999999 0.26579585999999999 0.54835027000000003 0.26568808999999999 0.56212068000000004 0.26679017999999999 0.54783415999999996 0.2666637 0.56226872999999999 0.26788392999999999 0.54764478999999999 0.26775094999999999 0.56207156000000003 0.26896974000000001 0.54780072000000002 0.2688435000000"
+		+ "0001 0.56154853000000005 0.2699416 0.54828655999999998 0.26983443000000001 0.56075078 0.27070418000000002 0.54905492 0.27062669 0.55975640000000004 0.27118303999999999 0.55003047000000005 0.27114281000000001 0.55866276999999998 0.27133109999999999 0.55111772000000003 0.27133216999999998 0.55757683999999996 0.27113393000000002 0.55221032999999997 0.27117625000000001 0.55660504 0.27061089999999999 0.55320126000000003 0.27069035000000002 0.55584239999999996 0.26981315 0.55117190000000005 0.26780513 0.55874217000000004 0.26780440999999999 0.54310417 0.26476333000000002 0.54420745000000004 0.26479365999999999 0.54200101000000001 0.26473299 0.54089772999999997 0.26470271000000001 0.53979456000000003 0.26467236999999999 0.53869127999999999 0.26464202999999997 0.53758806000000003 0.26461174999999998 0.53648483999999996 0.26458141000000002 0.53538162 0.26455107 0.53427838999999999 0.26452079000000001 0.53317517000000003 0.26449045999999998 0.53207194999999996 0.26446012000000002 0.53096878999999997 0.26442984000000003"
+		+ " 0.52986549999999999 0.26439955999999998 0.52876228000000003 0.26436915999999999 0.52765905999999996 0.26433888 0.52655584 0.26430853999999998 0.54751706 0.26488462000000002 0.54641384000000004 0.26485428 0.54531061999999997 0.26482393999999998 0.52545260999999999 0.26427820000000002 0.54182708000000002 0.31123665 0.54293031000000003 0.31126693 0.54072385999999995 0.31120630999999999 0.53962063999999998 0.31117597000000002 0.53851742000000002 0.31114563000000001 0.53741419000000001 0.31111535000000001 0.53631097000000005 0.31108501999999999 0.53520774999999998 0.31105474 0.53410447000000005 0.31102439999999998 0.53300130000000001 0.31099406000000002 0.53189801999999997 0.31096378000000002 0.53079485999999998 0.31093344000000001 0.52969158000000005 0.31090309999999999 0.52858841000000001 0.31087281999999999 0.52748512999999997 0.31084247999999998 0.52638196999999998 0.31081215000000001 0.52527875000000002 0.31078187000000002 0.52417546999999998 0.31075153 0.54623997000000002 0.31135789000000003 0.5451366899999"
+		+ "9998 0.31132760999999998 0.54403352999999999 0.31129727000000001");
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode polyMapDel -n "polyMapDel1";
@@ -5195,6 +4100,565 @@ createNode polyTweakUV -n "polyTweakUV5";
 		 -0.5056771 -0.25237381 0.25378814 -0.25237381 0.25378525 -0.25237381 0.24361196 -0.25308025
 		 0.24361485 -0.25308025 0.2158154 -0.25359738 0.21581829 -0.25359738 -0.4955067 -0.25308025
 		 -0.46771014 -0.25359738 -0.49550956 -0.25308025 -0.467713 -0.25359738;
+createNode reference -n "Unit5_LabSceneRN1";
+	rename -uid "9C9183F9-4023-735D-6C68-399B383A7B71";
+	setAttr -s 4 ".phl";
+	setAttr ".phl[1]" 0;
+	setAttr ".phl[2]" 0;
+	setAttr ".phl[3]" 0;
+	setAttr ".phl[4]" 0;
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"Unit5_LabSceneRN1"
+		"Unit5_LabSceneRN1" 0
+		"Unit5_LabSceneRN1" 184
+		0 "|Unit5_LabSceneRN1fosterParent1|Unit5_LabScene:polySurfaceShape5" "|Unit5_LabScene:couch|Unit5_LabScene:cushion1" 
+		"-s -r "
+		0 "|Unit5_LabSceneRN1fosterParent1|Unit5_LabScene:polySurfaceShape6" "|Unit5_LabScene:couch|Unit5_LabScene:cushion2" 
+		"-s -r "
+		2 "|Unit5_LabScene:couch" "translate" " -type \"double3\" 0 0.065548600463846252 2.32920718727313814"
+		
+		2 "|Unit5_LabScene:couch" "rotate" " -type \"double3\" 0 180 0"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:base|Unit5_LabScene:baseShape" "uvPivot" 
+		" -type \"double2\" 0.83267313241958618 0.723406583070755"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:base|Unit5_LabScene:baseShape" "uvSet[0].uvSetPoints" 
+		" -s 20"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:base|Unit5_LabScene:baseShape" "uvSet[0].uvSetPoints[0]" 
+		" -type \"float2\" 0.98913013999999999 0.57336050000000005"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:base|Unit5_LabScene:baseShape" "uvSet[0].uvSetPoints[1]" 
+		" -type \"float2\" 0.91899322999999999 0.59568213999999997"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:base|Unit5_LabScene:baseShape" "uvSet[0].uvSetPoints[2]" 
+		" -type \"float2\" 0.94847333 0.60843754000000005"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:base|Unit5_LabScene:baseShape" "uvSet[0].uvSetPoints[3]" 
+		" -type \"float2\" 0.79702782999999999 0.69801842999999997"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:base|Unit5_LabScene:baseShape" "uvSet[0].uvSetPoints[4]" 
+		" -type \"float2\" 0.99228095999999999 0.59434991999999998"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:base|Unit5_LabScene:baseShape" "uvSet[0].uvSetPoints[5]" 
+		" -type \"float2\" 0.94847333 0.59724604999999997"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:base|Unit5_LabScene:baseShape" "uvSet[0].uvSetPoints[6]" 
+		" -type \"float2\" 0.98913013999999999 0.58455199000000002"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:base|Unit5_LabScene:baseShape" "uvSet[0].uvSetPoints[7]" 
+		" -type \"float2\" 0.91472971000000003 0.50826137999999998"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:base|Unit5_LabScene:baseShape" "uvSet[0].uvSetPoints[8]" 
+		" -type \"float2\" 0.87132061000000005 0.70287579"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:base|Unit5_LabScene:baseShape" "uvSet[0].uvSetPoints[9]" 
+		" -type \"float2\" 0.86831831999999998 0.74879472999999996"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:base|Unit5_LabScene:baseShape" "uvSet[0].uvSetPoints[10]" 
+		" -type \"float2\" 0.87759673999999999 0.63123"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:base|Unit5_LabScene:baseShape" "uvSet[0].uvSetPoints[11]" 
+		" -type \"float2\" 0.79402565999999997 0.74393737000000004"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:base|Unit5_LabScene:baseShape" "uvSet[0].uvSetPoints[12]" 
+		" -type \"float2\" 0.95691179999999998 0.56961024000000005"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:base|Unit5_LabScene:baseShape" "uvSet[0].uvSetPoints[13]" 
+		" -type \"float2\" 0.94532251 0.59863960999999999"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:base|Unit5_LabScene:baseShape" "uvSet[0].uvSetPoints[14]" 
+		" -type \"float2\" 0.94532263000000005 0.58744812000000002"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:base|Unit5_LabScene:baseShape" "uvSet[0].uvSetPoints[15]" 
+		" -type \"float2\" 0.87681114999999998 0.53433328999999996"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:base|Unit5_LabScene:baseShape" "uvSet[0].uvSetPoints[16]" 
+		" -type \"float2\" 0.87759673999999999 0.62003850999999999"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:base|Unit5_LabScene:baseShape" "uvSet[0].uvSetPoints[17]" 
+		" -type \"float2\" 0.87444591999999999 0.61024058000000003"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:base|Unit5_LabScene:baseShape" "uvSet[0].uvSetPoints[18]" 
+		" -type \"float2\" 0.87444591999999999 0.62143207"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:base|Unit5_LabScene:baseShape" "uvSet[0].uvSetPoints[19]" 
+		" -type \"float2\" 0.99228095999999999 0.58315843000000001"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:arm_left|Unit5_LabScene:arm_leftShape" 
+		"uvSet[0].uvSetPoints" " -s 42"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:arm_left|Unit5_LabScene:arm_leftShape" 
+		"uvSet[0].uvSetPoints[0]" " -type \"float2\" 0.78352129000000004 0.50905131999999997"
+		
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:arm_left|Unit5_LabScene:arm_leftShape" 
+		"uvSet[0].uvSetPoints[1]" " -type \"float2\" 0.96837938000000001 0.62433492999999995"
+		
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:arm_left|Unit5_LabScene:arm_leftShape" 
+		"uvSet[0].uvSetPoints[2]" " -type \"float2\" 0.86394548000000004 0.53201984999999996"
+		
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:arm_left|Unit5_LabScene:arm_leftShape" 
+		"uvSet[0].uvSetPoints[3]" " -type \"float2\" 0.94986342999999995 0.66731781000000001"
+		
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:arm_left|Unit5_LabScene:arm_leftShape" 
+		"uvSet[0].uvSetPoints[4]" " -type \"float2\" 0.92601268999999997 0.65631050000000002"
+		
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:arm_left|Unit5_LabScene:arm_leftShape" 
+		"uvSet[0].uvSetPoints[5]" " -type \"float2\" 0.79734724999999995 0.52868581000000003"
+		
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:arm_left|Unit5_LabScene:arm_leftShape" 
+		"uvSet[0].uvSetPoints[6]" " -type \"float2\" 0.94017421999999995 0.61131811000000003"
+		
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:arm_left|Unit5_LabScene:arm_leftShape" 
+		"uvSet[0].uvSetPoints[7]" " -type \"float2\" 0.94561768000000002 0.61383027000000001"
+		
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:arm_left|Unit5_LabScene:arm_leftShape" 
+		"uvSet[0].uvSetPoints[8]" " -type \"float2\" 0.78781091999999997 0.50958937000000004"
+		
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:arm_left|Unit5_LabScene:arm_leftShape" 
+		"uvSet[0].uvSetPoints[9]" " -type \"float2\" 0.97284937000000005 0.62639796999999997"
+		
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:arm_left|Unit5_LabScene:arm_leftShape" 
+		"uvSet[0].uvSetPoints[10]" " -type \"float2\" 0.86033868999999996 0.52963632000000005"
+		
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:arm_left|Unit5_LabScene:arm_leftShape" 
+		"uvSet[0].uvSetPoints[11]" " -type \"float2\" 0.94539344000000003 0.66525482999999996"
+		
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:arm_left|Unit5_LabScene:arm_leftShape" 
+		"uvSet[0].uvSetPoints[12]" " -type \"float2\" 0.86066472999999999 0.53083389999999997"
+		
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:arm_left|Unit5_LabScene:arm_leftShape" 
+		"uvSet[0].uvSetPoints[13]" " -type \"float2\" 0.94652044999999996 0.66577494000000004"
+		
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:arm_left|Unit5_LabScene:arm_leftShape" 
+		"uvSet[0].uvSetPoints[14]" " -type \"float2\" 0.86154580000000003 0.53170812000000001"
+		
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:arm_left|Unit5_LabScene:arm_leftShape" 
+		"uvSet[0].uvSetPoints[15]" " -type \"float2\" 0.94764744999999995 0.66629505"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:arm_left|Unit5_LabScene:arm_leftShape" 
+		"uvSet[0].uvSetPoints[16]" " -type \"float2\" 0.86514312000000004 0.53169381999999998"
+		
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:arm_left|Unit5_LabScene:arm_leftShape" 
+		"uvSet[0].uvSetPoints[17]" " -type \"float2\" 0.95099043999999999 0.66783791999999997"
+		
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:arm_left|Unit5_LabScene:arm_leftShape" 
+		"uvSet[0].uvSetPoints[18]" " -type \"float2\" 0.86601733999999997 0.53081268000000004"
+		
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:arm_left|Unit5_LabScene:arm_leftShape" 
+		"uvSet[0].uvSetPoints[19]" " -type \"float2\" 0.95211743999999998 0.66835803000000005"
+		
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:arm_left|Unit5_LabScene:arm_leftShape" 
+		"uvSet[0].uvSetPoints[20]" " -type \"float2\" 0.97172236000000001 0.62587780000000004"
+		
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:arm_left|Unit5_LabScene:arm_leftShape" 
+		"uvSet[0].uvSetPoints[21]" " -type \"float2\" 0.86633384000000002 0.52961254000000002"
+		
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:arm_left|Unit5_LabScene:arm_leftShape" 
+		"uvSet[0].uvSetPoints[22]" " -type \"float2\" 0.97059547999999995 0.62535775000000005"
+		
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:arm_left|Unit5_LabScene:arm_leftShape" 
+		"uvSet[0].uvSetPoints[23]" " -type \"float2\" 0.96946847000000003 0.62483763999999997"
+		
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:arm_left|Unit5_LabScene:arm_leftShape" 
+		"uvSet[0].uvSetPoints[24]" " -type \"float2\" 0.96725236999999997 0.62381481999999999"
+		
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:arm_left|Unit5_LabScene:arm_leftShape" 
+		"uvSet[0].uvSetPoints[25]" " -type \"float2\" 0.862746 0.53202455999999998"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:arm_left|Unit5_LabScene:arm_leftShape" 
+		"uvSet[0].uvSetPoints[26]" " -type \"float2\" 0.96612536999999998 0.62329471000000003"
+		
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:arm_left|Unit5_LabScene:arm_leftShape" 
+		"uvSet[0].uvSetPoints[27]" " -type \"float2\" 0.96499836000000005 0.62277459999999996"
+		
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:arm_left|Unit5_LabScene:arm_leftShape" 
+		"uvSet[0].uvSetPoints[28]" " -type \"float2\" 0.86624920000000005 0.50826751999999997"
+		
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:arm_left|Unit5_LabScene:arm_leftShape" 
+		"uvSet[0].uvSetPoints[29]" " -type \"float2\" 0.86025404999999999 0.5082913"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:arm_left|Unit5_LabScene:arm_leftShape" 
+		"uvSet[0].uvSetPoints[30]" " -type \"float2\" 0.95324445000000002 0.66887814000000001"
+		
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:arm_left|Unit5_LabScene:arm_leftShape" 
+		"uvSet[0].uvSetPoints[31]" " -type \"float2\" 0.78698783999999999 0.50866032000000005"
+		
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:arm_left|Unit5_LabScene:arm_leftShape" 
+		"uvSet[0].uvSetPoints[32]" " -type \"float2\" 0.78581053000000001 0.50826722000000002"
+		
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:arm_left|Unit5_LabScene:arm_leftShape" 
+		"uvSet[0].uvSetPoints[33]" " -type \"float2\" 0.78459442000000001 0.50851548000000002"
+		
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:arm_left|Unit5_LabScene:arm_leftShape" 
+		"uvSet[0].uvSetPoints[34]" " -type \"float2\" 0.94877434000000005 0.66681515999999996"
+		
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:arm_left|Unit5_LabScene:arm_leftShape" 
+		"uvSet[0].uvSetPoints[35]" " -type \"float2\" 0.78259217999999997 0.50987439999999995"
+		
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:arm_left|Unit5_LabScene:arm_leftShape" 
+		"uvSet[0].uvSetPoints[36]" " -type \"float2\" 0.78219914000000001 0.51105164999999997"
+		
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:arm_left|Unit5_LabScene:arm_leftShape" 
+		"uvSet[0].uvSetPoints[37]" " -type \"float2\" 0.78244734000000005 0.51226782999999998"
+		
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:arm_left|Unit5_LabScene:arm_leftShape" 
+		"uvSet[0].uvSetPoints[38]" " -type \"float2\" 0.92056930000000003 0.65379827999999995"
+		
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:arm_left|Unit5_LabScene:arm_leftShape" 
+		"uvSet[0].uvSetPoints[39]" " -type \"float2\" 0.79198371999999995 0.53136419999999995"
+		
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:arm_left|Unit5_LabScene:arm_leftShape" 
+		"uvSet[0].uvSetPoints[40]" " -type \"float2\" 0.97262514 0.67782253000000003"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:arm_left|Unit5_LabScene:arm_leftShape" 
+		"uvSet[0].uvSetPoints[41]" " -type \"float2\" 0.99223017999999996 0.63534230000000003"
+		
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:back|Unit5_LabScene:backShape" "uvPivot" 
+		" -type \"double2\" 0.88310074765112001 0.62852806063700539"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:back|Unit5_LabScene:backShape" "uvSet[0].uvSetPoints" 
+		" -s 58"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:back|Unit5_LabScene:backShape" "uvSet[0].uvSetPoints[0]" 
+		" -type \"float2\" 0.77690064999999997 0.55333465000000004"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:back|Unit5_LabScene:backShape" "uvSet[0].uvSetPoints[1]" 
+		" -type \"float2\" 0.84301472 0.58315724000000002"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:back|Unit5_LabScene:backShape" "uvSet[0].uvSetPoints[2]" 
+		" -type \"float2\" 0.95245694999999997 0.70823163"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:back|Unit5_LabScene:backShape" "uvSet[0].uvSetPoints[3]" 
+		" -type \"float2\" 0.88204426000000002 0.52221191"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:back|Unit5_LabScene:backShape" "uvSet[0].uvSetPoints[4]" 
+		" -type \"float2\" 0.83238471000000003 0.62327944999999996"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:back|Unit5_LabScene:backShape" "uvSet[0].uvSetPoints[5]" 
+		" -type \"float2\" 0.86214161 0.53432035"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:back|Unit5_LabScene:backShape" "uvSet[0].uvSetPoints[6]" 
+		" -type \"float2\" 0.78678261999999999 0.69760126"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:back|Unit5_LabScene:backShape" "uvSet[0].uvSetPoints[7]" 
+		" -type \"float2\" 0.82506727999999996 0.61968409999999996"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:back|Unit5_LabScene:backShape" "uvSet[0].uvSetPoints[8]" 
+		" -type \"float2\" 0.84448838000000004 0.51110314999999995"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:back|Unit5_LabScene:backShape" "uvSet[0].uvSetPoints[9]" 
+		" -type \"float2\" 0.87981224000000002 0.50826669000000002"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:back|Unit5_LabScene:backShape" "uvSet[0].uvSetPoints[10]" 
+		" -type \"float2\" 0.87276690999999995 0.70928460000000004"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:back|Unit5_LabScene:backShape" "uvSet[0].uvSetPoints[11]" 
+		" -type \"float2\" 0.84524679000000003 0.59710240000000003"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:back|Unit5_LabScene:backShape" "uvSet[0].uvSetPoints[12]" 
+		" -type \"float2\" 0.87336533999999999 0.711487"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:back|Unit5_LabScene:backShape" "uvSet[0].uvSetPoints[13]" 
+		" -type \"float2\" 0.84625328 0.59505403000000001"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:back|Unit5_LabScene:backShape" "uvSet[0].uvSetPoints[14]" 
+		" -type \"float2\" 0.87463069000000004 0.71339750000000002"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:back|Unit5_LabScene:backShape" "uvSet[0].uvSetPoints[15]" 
+		" -type \"float2\" 0.84726380999999995 0.59299736999999997"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:back|Unit5_LabScene:backShape" "uvSet[0].uvSetPoints[16]" 
+		" -type \"float2\" 0.87643897999999998 0.71482908999999994"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:back|Unit5_LabScene:backShape" "uvSet[0].uvSetPoints[17]" 
+		" -type \"float2\" 0.84828091000000005 0.59092736000000001"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:back|Unit5_LabScene:backShape" "uvSet[0].uvSetPoints[18]" 
+		" -type \"float2\" 0.87861328999999999 0.71564161999999998"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:back|Unit5_LabScene:backShape" "uvSet[0].uvSetPoints[19]" 
+		" -type \"float2\" 0.84930450000000002 0.58884406"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:back|Unit5_LabScene:backShape" "uvSet[0].uvSetPoints[20]" 
+		" -type \"float2\" 0.95470977000000001 0.70763582000000003"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:back|Unit5_LabScene:backShape" "uvSet[0].uvSetPoints[21]" 
+		" -type \"float2\" 0.88307190000000002 0.52012044000000002"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:back|Unit5_LabScene:backShape" "uvSet[0].uvSetPoints[22]" 
+		" -type \"float2\" 0.95666742000000005 0.70638858999999998"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:back|Unit5_LabScene:backShape" "uvSet[0].uvSetPoints[23]" 
+		" -type \"float2\" 0.88409548999999998 0.51803714000000001"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:back|Unit5_LabScene:backShape" "uvSet[0].uvSetPoints[24]" 
+		" -type \"float2\" 0.95813822999999998 0.70461202000000001"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:back|Unit5_LabScene:backShape" "uvSet[0].uvSetPoints[25]" 
+		" -type \"float2\" 0.88511258000000004 0.51596713000000005"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:back|Unit5_LabScene:backShape" "uvSet[0].uvSetPoints[26]" 
+		" -type \"float2\" 0.95897818000000001 0.70248001999999998"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:back|Unit5_LabScene:backShape" "uvSet[0].uvSetPoints[27]" 
+		" -type \"float2\" 0.88612318000000001 0.51391047000000001"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:back|Unit5_LabScene:backShape" "uvSet[0].uvSetPoints[28]" 
+		" -type \"float2\" 0.87880575999999999 0.51031506000000004"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:back|Unit5_LabScene:backShape" "uvSet[0].uvSetPoints[29]" 
+		" -type \"float2\" 0.95910512999999997 0.70020132999999996"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:back|Unit5_LabScene:backShape" "uvSet[0].uvSetPoints[30]" 
+		" -type \"float2\" 0.87779521999999999 0.51237178000000005"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:back|Unit5_LabScene:backShape" "uvSet[0].uvSetPoints[31]" 
+		" -type \"float2\" 0.87677813000000004 0.51444173000000004"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:back|Unit5_LabScene:backShape" "uvSet[0].uvSetPoints[32]" 
+		" -type \"float2\" 0.87575448 0.51652503000000005"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:back|Unit5_LabScene:backShape" "uvSet[0].uvSetPoints[33]" 
+		" -type \"float2\" 0.87472689000000003 0.51861643999999996"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:back|Unit5_LabScene:backShape" "uvSet[0].uvSetPoints[34]" 
+		" -type \"float2\" 0.84198713000000003 0.58524871000000001"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:back|Unit5_LabScene:backShape" "uvSet[0].uvSetPoints[35]" 
+		" -type \"float2\" 0.88094079000000003 0.71575557999999995"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:back|Unit5_LabScene:backShape" "uvSet[0].uvSetPoints[36]" 
+		" -type \"float2\" 0.84096347999999999 0.58733195000000005"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:back|Unit5_LabScene:backShape" "uvSet[0].uvSetPoints[37]" 
+		" -type \"float2\" 0.83994639000000004 0.58940196"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:back|Unit5_LabScene:backShape" "uvSet[0].uvSetPoints[38]" 
+		" -type \"float2\" 0.83893585000000004 0.59145862000000005"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:back|Unit5_LabScene:backShape" "uvSet[0].uvSetPoints[39]" 
+		" -type \"float2\" 0.83792937000000001 0.59350698999999996"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:back|Unit5_LabScene:backShape" "uvSet[0].uvSetPoints[40]" 
+		" -type \"float2\" 0.95605361 0.67119508999999999"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:back|Unit5_LabScene:backShape" "uvSet[0].uvSetPoints[41]" 
+		" -type \"float2\" 0.86971527000000004 0.68027835999999997"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:back|Unit5_LabScene:backShape" "uvSet[0].uvSetPoints[42]" 
+		" -type \"float2\" 0.78123796000000001 0.72737372"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:back|Unit5_LabScene:backShape" "uvSet[0].uvSetPoints[43]" 
+		" -type \"float2\" 0.84283447 0.50953048000000001"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:back|Unit5_LabScene:backShape" "uvSet[0].uvSetPoints[44]" 
+		" -type \"float2\" 0.84076178000000001 0.50855326999999995"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:back|Unit5_LabScene:backShape" "uvSet[0].uvSetPoints[45]" 
+		" -type \"float2\" 0.83847320000000003 0.50826716000000005"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:back|Unit5_LabScene:backShape" "uvSet[0].uvSetPoints[46]" 
+		" -type \"float2\" 0.83619273000000005 0.50870019"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:back|Unit5_LabScene:backShape" "uvSet[0].uvSetPoints[47]" 
+		" -type \"float2\" 0.83414376000000001 0.50980990999999998"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:back|Unit5_LabScene:backShape" "uvSet[0].uvSetPoints[48]" 
+		" -type \"float2\" 0.85033214000000001 0.58675264999999999"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:back|Unit5_LabScene:backShape" "uvSet[0].uvSetPoints[49]" 
+		" -type \"float2\" 0.77528346000000004 0.55501246000000004"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:back|Unit5_LabScene:backShape" "uvSet[0].uvSetPoints[50]" 
+		" -type \"float2\" 0.77425664999999999 0.55709416"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:back|Unit5_LabScene:backShape" "uvSet[0].uvSetPoints[51]" 
+		" -type \"float2\" 0.77392053999999999 0.55937588000000005"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:back|Unit5_LabScene:backShape" "uvSet[0].uvSetPoints[52]" 
+		" -type \"float2\" 0.77430809 0.56163441999999997"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:back|Unit5_LabScene:backShape" "uvSet[0].uvSetPoints[53]" 
+		" -type \"float2\" 0.77538138999999995 0.56364857999999995"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:back|Unit5_LabScene:backShape" "uvSet[0].uvSetPoints[54]" 
+		" -type \"float2\" 0.79410004999999995 0.70119666999999997"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:back|Unit5_LabScene:backShape" "uvSet[0].uvSetPoints[55]" 
+		" -type \"float2\" 0.79303455 0.58686578"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:back|Unit5_LabScene:backShape" "uvSet[0].uvSetPoints[56]" 
+		" -type \"float2\" 0.88712959999999996 0.51186215999999995"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:back|Unit5_LabScene:backShape" "uvSet[0].uvSetPoints[57]" 
+		" -type \"float2\" 0.77392053999999999 0.72377831000000004"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:cushion1|Unit5_LabScene:cushionShape1" 
+		"uvPivot" " -type \"double2\" 0.62630985040186882 0.63501136979036832"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:cushion1|Unit5_LabScene:cushionShape1" 
+		"uvSet[0].uvSetName" " -type \"string\" \"map1\""
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:cushion2|Unit5_LabScene:cushionShape2" 
+		"uvPivot" " -type \"double2\" 0.622344970703125 0.62484660012657711"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:cushion2|Unit5_LabScene:cushionShape2" 
+		"uvSet[0].uvSetName" " -type \"string\" \"map1\""
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:cushion2|Unit5_LabScene:cushionShape2" 
+		"pnts" " -s 3"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:cushion2|Unit5_LabScene:cushionShape2" 
+		"pnts[0]" " -type \"float3\" 0 0 0"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:cushion2|Unit5_LabScene:cushionShape2" 
+		"pnts[12]" " -type \"float3\" 0 0 0"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:cushion2|Unit5_LabScene:cushionShape2" 
+		"pnts[14]" " -type \"float3\" 0 0 0"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:arm_left1|Unit5_LabScene:arm_left1Shape" 
+		"uvSet[0].uvSetPoints" " -s 42"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:arm_left1|Unit5_LabScene:arm_left1Shape" 
+		"uvSet[0].uvSetPoints[0]" " -type \"float2\" 0.77524269000000001 0.50905131999999997"
+		
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:arm_left1|Unit5_LabScene:arm_left1Shape" 
+		"uvSet[0].uvSetPoints[1]" " -type \"float2\" 0.86667132000000002 0.62654567000000005"
+		
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:arm_left1|Unit5_LabScene:arm_left1Shape" 
+		"uvSet[0].uvSetPoints[2]" " -type \"float2\" 0.801265 0.53201984999999996"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:arm_left1|Unit5_LabScene:arm_left1Shape" 
+		"uvSet[0].uvSetPoints[3]" " -type \"float2\" 0.84815549999999995 0.66952847999999998"
+		
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:arm_left1|Unit5_LabScene:arm_left1Shape" 
+		"uvSet[0].uvSetPoints[4]" " -type \"float2\" 0.8243047 0.65852111999999996"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:arm_left1|Unit5_LabScene:arm_left1Shape" 
+		"uvSet[0].uvSetPoints[5]" " -type \"float2\" 0.78906869999999996 0.52868581000000003"
+		
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:arm_left1|Unit5_LabScene:arm_left1Shape" 
+		"uvSet[0].uvSetPoints[6]" " -type \"float2\" 0.83846628999999995 0.61352872999999997"
+		
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:arm_left1|Unit5_LabScene:arm_left1Shape" 
+		"uvSet[0].uvSetPoints[7]" " -type \"float2\" 0.84390962000000003 0.61604095000000003"
+		
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:arm_left1|Unit5_LabScene:arm_left1Shape" 
+		"uvSet[0].uvSetPoints[8]" " -type \"float2\" 0.77953231000000001 0.50958937000000004"
+		
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:arm_left1|Unit5_LabScene:arm_left1Shape" 
+		"uvSet[0].uvSetPoints[9]" " -type \"float2\" 0.87114137000000003 0.62860857999999997"
+		
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:arm_left1|Unit5_LabScene:arm_left1Shape" 
+		"uvSet[0].uvSetPoints[10]" " -type \"float2\" 0.79765821000000003 0.52963632000000005"
+		
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:arm_left1|Unit5_LabScene:arm_left1Shape" 
+		"uvSet[0].uvSetPoints[11]" " -type \"float2\" 0.84368544999999995 0.66746550999999998"
+		
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:arm_left1|Unit5_LabScene:arm_left1Shape" 
+		"uvSet[0].uvSetPoints[12]" " -type \"float2\" 0.79798418000000004 0.53083389999999997"
+		
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:arm_left1|Unit5_LabScene:arm_left1Shape" 
+		"uvSet[0].uvSetPoints[13]" " -type \"float2\" 0.84481238999999997 0.66798561999999995"
+		
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:arm_left1|Unit5_LabScene:arm_left1Shape" 
+		"uvSet[0].uvSetPoints[14]" " -type \"float2\" 0.79886531999999999 0.53170812000000001"
+		
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:arm_left1|Unit5_LabScene:arm_left1Shape" 
+		"uvSet[0].uvSetPoints[15]" " -type \"float2\" 0.84593940000000001 0.66850573000000002"
+		
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:arm_left1|Unit5_LabScene:arm_left1Shape" 
+		"uvSet[0].uvSetPoints[16]" " -type \"float2\" 0.80246258000000004 0.53169381999999998"
+		
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:arm_left1|Unit5_LabScene:arm_left1Shape" 
+		"uvSet[0].uvSetPoints[17]" " -type \"float2\" 0.84928250000000005 0.67004859000000005"
+		
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:arm_left1|Unit5_LabScene:arm_left1Shape" 
+		"uvSet[0].uvSetPoints[18]" " -type \"float2\" 0.80333679999999996 0.53081268000000004"
+		
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:arm_left1|Unit5_LabScene:arm_left1Shape" 
+		"uvSet[0].uvSetPoints[19]" " -type \"float2\" 0.85040945000000001 0.67056870000000002"
+		
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:arm_left1|Unit5_LabScene:arm_left1Shape" 
+		"uvSet[0].uvSetPoints[20]" " -type \"float2\" 0.87001443000000001 0.62808847000000001"
+		
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:arm_left1|Unit5_LabScene:arm_left1Shape" 
+		"uvSet[0].uvSetPoints[21]" " -type \"float2\" 0.80365330000000001 0.52961254000000002"
+		
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:arm_left1|Unit5_LabScene:arm_left1Shape" 
+		"uvSet[0].uvSetPoints[22]" " -type \"float2\" 0.86888741999999997 0.62756836000000005"
+		
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:arm_left1|Unit5_LabScene:arm_left1Shape" 
+		"uvSet[0].uvSetPoints[23]" " -type \"float2\" 0.86776041999999998 0.62704824999999997"
+		
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:arm_left1|Unit5_LabScene:arm_left1Shape" 
+		"uvSet[0].uvSetPoints[24]" " -type \"float2\" 0.86554432000000003 0.62602550000000001"
+		
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:arm_left1|Unit5_LabScene:arm_left1Shape" 
+		"uvSet[0].uvSetPoints[25]" " -type \"float2\" 0.80006551999999997 0.53202455999999998"
+		
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:arm_left1|Unit5_LabScene:arm_left1Shape" 
+		"uvSet[0].uvSetPoints[26]" " -type \"float2\" 0.86441743000000004 0.62550539000000005"
+		
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:arm_left1|Unit5_LabScene:arm_left1Shape" 
+		"uvSet[0].uvSetPoints[27]" " -type \"float2\" 0.86329043000000005 0.62498533999999994"
+		
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:arm_left1|Unit5_LabScene:arm_left1Shape" 
+		"uvSet[0].uvSetPoints[28]" " -type \"float2\" 0.80356866000000005 0.50826751999999997"
+		
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:arm_left1|Unit5_LabScene:arm_left1Shape" 
+		"uvSet[0].uvSetPoints[29]" " -type \"float2\" 0.79757356999999995 0.5082913"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:arm_left1|Unit5_LabScene:arm_left1Shape" 
+		"uvSet[0].uvSetPoints[30]" " -type \"float2\" 0.85153639000000003 0.67108880999999998"
+		
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:arm_left1|Unit5_LabScene:arm_left1Shape" 
+		"uvSet[0].uvSetPoints[31]" " -type \"float2\" 0.77870929 0.50866032000000005"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:arm_left1|Unit5_LabScene:arm_left1Shape" 
+		"uvSet[0].uvSetPoints[32]" " -type \"float2\" 0.77753198000000001 0.50826722000000002"
+		
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:arm_left1|Unit5_LabScene:arm_left1Shape" 
+		"uvSet[0].uvSetPoints[33]" " -type \"float2\" 0.77631581000000005 0.50851548000000002"
+		
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:arm_left1|Unit5_LabScene:arm_left1Shape" 
+		"uvSet[0].uvSetPoints[34]" " -type \"float2\" 0.8470664 0.66902583999999998"
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:arm_left1|Unit5_LabScene:arm_left1Shape" 
+		"uvSet[0].uvSetPoints[35]" " -type \"float2\" 0.77431362999999997 0.50987439999999995"
+		
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:arm_left1|Unit5_LabScene:arm_left1Shape" 
+		"uvSet[0].uvSetPoints[36]" " -type \"float2\" 0.77392053999999999 0.51105164999999997"
+		
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:arm_left1|Unit5_LabScene:arm_left1Shape" 
+		"uvSet[0].uvSetPoints[37]" " -type \"float2\" 0.77416872999999997 0.51226782999999998"
+		
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:arm_left1|Unit5_LabScene:arm_left1Shape" 
+		"uvSet[0].uvSetPoints[38]" " -type \"float2\" 0.81886124999999998 0.65600895999999997"
+		
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:arm_left1|Unit5_LabScene:arm_left1Shape" 
+		"uvSet[0].uvSetPoints[39]" " -type \"float2\" 0.78370512000000003 0.53136419999999995"
+		
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:arm_left1|Unit5_LabScene:arm_left1Shape" 
+		"uvSet[0].uvSetPoints[40]" " -type \"float2\" 0.87091719999999995 0.68003314999999998"
+		
+		2 "|Unit5_LabScene:couch|Unit5_LabScene:arm_left1|Unit5_LabScene:arm_left1Shape" 
+		"uvSet[0].uvSetPoints[41]" " -type \"float2\" 0.89052211999999997 0.63755298000000005"
+		
+		5 4 "Unit5_LabSceneRN1" "|Unit5_LabScene:couch|Unit5_LabScene:cushion1|Unit5_LabScene:cushionShape1.uvSet[0].uvSetTweakLocation" 
+		"Unit5_LabSceneRN1.placeHolderList[1]" ""
+		5 4 "Unit5_LabSceneRN1" "|Unit5_LabScene:couch|Unit5_LabScene:cushion1|Unit5_LabScene:cushionShape1.inMesh" 
+		"Unit5_LabSceneRN1.placeHolderList[2]" ""
+		5 4 "Unit5_LabSceneRN1" "|Unit5_LabScene:couch|Unit5_LabScene:cushion2|Unit5_LabScene:cushionShape2.uvSet[0].uvSetTweakLocation" 
+		"Unit5_LabSceneRN1.placeHolderList[3]" ""
+		5 4 "Unit5_LabSceneRN1" "|Unit5_LabScene:couch|Unit5_LabScene:cushion2|Unit5_LabScene:cushionShape2.inMesh" 
+		"Unit5_LabSceneRN1.placeHolderList[4]" "";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
+createNode polyMapCut -n "polyMapCut14";
+	rename -uid "B5C6F76E-41D9-01EC-7127-F5A34CAF5DE5";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[8:9]";
+createNode polyTweakUV -n "polyTweakUV6";
+	rename -uid "C74A0107-4A98-6AD6-BF24-BDB50141F978";
+	setAttr ".uopa" yes;
+	setAttr -s 102 ".uvtk[0:101]" -type "float2" -2.9802322e-08 -1.4901161e-08
+		 0 0 2.9802322e-08 -5.9604645e-08 0 -5.9604645e-08 0 1.4901161e-08 -1.4901161e-08
+		 5.9604645e-08 0 0 0 1.1920929e-07 0 2.9802322e-08 0 0 2.9802322e-08 -2.9802322e-08
+		 0 0 0 0 -1.4901161e-08 0 1.1219091e-08 -2.9802322e-08 0 0 -2.3283064e-09 0 -2.9802322e-08
+		 0 9.3132257e-10 0 0 0 1.3038516e-08 0 2.9802322e-08 0 1.4901161e-08 0 0 0 -2.9802322e-08
+		 0 0 -5.9604645e-08 1.4901161e-08 0 -5.9604645e-08 -5.9604645e-08 -1.4901161e-08 0
+		 0 -5.9604645e-08 -1.4901161e-08 0 -5.9604645e-08 0 0 -2.9802322e-08 0 0 2.9802322e-08
+		 5.9604645e-08 1.4901161e-08 0 2.9802322e-08 0 0 0 0 -5.9604645e-08 1.4901161e-08
+		 0 0 0 0 1.1920929e-07 -2.9802322e-08 -5.9604645e-08 0 5.9604645e-08 2.9802322e-08
+		 0 0 0 0 0 0 5.9604645e-08 0 5.9604645e-08 0 0 5.9604645e-08 5.9604645e-08 5.9604645e-08
+		 1.1920929e-07 5.9604645e-08 5.9604645e-08 3.2014214e-09 5.9604645e-08 -1.4901161e-08
+		 5.9604645e-08 0 0 -1.4901161e-08 0 1.4901161e-08 0 -1.4901161e-08 0 1.4901161e-08
+		 -5.9604645e-08 0 0 0 0 0 2.9802322e-08 0 0 -2.9802322e-08 2.9802322e-08 -2.9802322e-08
+		 -2.9802322e-08 -5.9604645e-08 -1.7881393e-07 0 -2.9802322e-08 2.9802322e-08 -1.4901161e-08
+		 0 2.9802322e-08 0 2.9802322e-08 0 0 0 5.9604645e-08 -2.9802322e-08 0 0 0 0 0 -4.4703484e-08
+		 2.9802322e-08 0 0 2.9802322e-08 5.9604645e-08 -7.4505806e-09 1.4901161e-08 0 1.4901161e-08
+		 -3.7252903e-09 0 -9.3132257e-09 2.9802322e-08 0 0 0 -5.9604645e-08 2.9802322e-08
+		 0 0 -5.9604645e-08 0 -5.9604645e-08 0 -5.9604645e-08 0 -1.1920929e-07 2.9802322e-08
+		 0 7.4505806e-09 0 0 0 -2.9802322e-08 5.9604645e-08 0 0 0 -1.1920929e-07 1.1920929e-07
+		 5.9604645e-08 -2.0525535e-08 5.9604645e-08 5.9604645e-08 -5.9604645e-08 -2.9802322e-08
+		 -1.1920929e-07 0 0 2.9802322e-08 -1.1920929e-07;
+createNode polyMapCut -n "polyMapCut15";
+	rename -uid "B8AAB2EB-4453-9BED-A213-109C7F31F71C";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[11]";
+createNode polyTweakUV -n "polyTweakUV7";
+	rename -uid "1E6755FF-43E5-AD6B-BBF0-928EA4C93FED";
+	setAttr ".uopa" yes;
+	setAttr -s 104 ".uvtk[0:103]" -type "float2" 0.32437485 0.29949597 0.24308234
+		 0.1588856 0.41049862 0.12686551 -0.052629024 0.12992094 0.46214062 0.29949555 0.44036478
+		 0.10301635 0.26991153 0.12773508 -0.25643593 0.15378305 0.22527012 0.25731823 -0.10546544
+		 0.15046696 0.36374027 0.25569984 -0.20359959 0.133237 0.36901623 0.16991279 0.38752842
+		 0.1235624 0.50889903 0.17066115 0.2959187 0.13833955 0.50825971 0.16002545 0.28526634
+		 0.13857353 0.50436509 0.15010777 0.27461392 0.13880756 0.49759626 0.14187905 0.26396149
+		 0.13904148 0.48861599 0.13614467 0.25330907 0.13927549 0.39986289 0.12750471 -0.063281417
+		 0.13015489 0.38994527 0.13139945 -0.07393384 0.1303889 0.38171643 0.13816825 -0.084586263
+		 0.13062285 0.37598205 0.14714852 -0.095238656 0.13085686 0.36820275 0.15928888 0.39818072
+		 0.12332845 0.36414611 0.14943632 0.40883321 0.12309444 0.35724342 0.14131957 0.41948563
+		 0.12286043 0.3481704 0.13573319 0.43013805 0.12262642 0.25928766 0.12854856 -0.24578358
+		 0.1535491 0.24943517 0.13260514 -0.2351311 0.1533151 0.2413184 0.13950783 -0.2244788
+		 0.15308109 0.2357319 0.14858094 -0.21382637 0.15284708 -0.21425195 0.13347101 0.23322266
+		 0.15893623 -0.22490443 0.13370496 -0.2355568 0.13393897 -0.24620916 0.13417298 0.50847346
+		 0.10152021 0.42971236 0.10325035 0.33781511 0.13322389 0.41905993 0.10348436 0.40840763
+		 0.10371831 0.39775515 0.10395232 0.38710272 0.10418639 -0.10492045 0.13106942 0.22608367
+		 0.2679421 0.2301403 0.27779463 0.2370429 0.28591135 0.24611598 0.29149786 0.25647134
+		 0.29400709 0.015479617 0.12842481 0.33499879 0.29868248 0.34485126 0.29462585 0.35296798
+		 0.28772315 0.35855442 0.27865008 0.36106378 0.26829484 -0.20317395 0.15261313 0.36437964
+		 0.26633564 0.36827421 0.27625331 0.37504303 0.28448209 0.38402337 0.29021642 0.3943361
+		 0.29289499 0.44079047 0.12239242 0.47277641 0.29885629 0.48269409 0.2949616 0.49092281
+		 0.28819284 0.49665713 0.2792125 0.49933583 0.26889971 -0.094813019 0.15023302 0.37330359
+		 0.15746129 -0.084160656 0.14999901 -0.073508233 0.149765 -0.06285584 0.14953099 -0.052203417
+		 0.14929698 0.25373471 0.15865165 0.47830319 0.13346606 0.26438713 0.15841764 0.27503955
+		 0.15818363 0.28569198 0.15794963 0.28884923 0.1257301 -0.25686157 0.13440698 0.50889903
+		 0.12089634 0.24265665 0.1395095 0.015905224 0.14780091 0.29634434 0.15771562 0.28842366
+		 0.10635403 -0.10589108 0.13109086 -0.10449478 0.15044561;
+createNode polyMapCut -n "polyMapCut16";
+	rename -uid "90516F89-4F9F-7D87-1E86-EC8F91A5C725";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[8]";
+createNode polyMapCut -n "polyMapCut17";
+	rename -uid "FF99DBF4-45C6-5605-2297-6ABB23F02EC7";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[37]";
+createNode polyMapCut -n "polyMapCut18";
+	rename -uid "18DBD299-458A-587E-6622-3EA83D44C6D3";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[37]";
+createNode polyTweakUV -n "polyTweakUV8";
+	rename -uid "97BBCBCC-4E24-5F64-27E0-1C91840B0D42";
+	setAttr ".uopa" yes;
+	setAttr -s 102 ".uvtk[0:101]" -type "float2" 0.31890428 0.29266164 0.15496135
+		 0.14614673 0.40806532 0.11367901 0.083905578 0.12760891 0.46160734 0.2926605 0.43903023
+		 0.089086398 0.26243711 0.11458142 -0.26554537 0.14002293 0.21615337 0.24893211 -0.10801403
+		 0.13656248 0.35958666 0.24725334 -0.21076505 0.1187209 0.36518806 0.15831088 0.38424987
+		 0.11038835 0.510086 0.15908609 0.20974165 0.12484474 0.50942314 0.14805891 0.19869733
+		 0.1250874 0.50538522 0.13777639 0.18765301 0.12532999 0.49836737 0.12924488 0.17660868
+		 0.12557252 0.48905659 0.12329955 0.1655643 0.12581511 0.39703822 0.11434187 0.072861224
+		 0.1278515 0.38675565 0.11837979 0.061816953 0.12809415 0.37822419 0.12539758 -0.086366653
+		 0.11598821 0.37227887 0.1347083 -0.097410977 0.11623086 0.36434466 0.14729615 0.39529425
+		 0.11014564 0.36013883 0.1370811 0.40633857 0.10990317 0.35298222 0.1286657 0.4173829
+		 0.10966052 0.34357524 0.12287374 0.42842716 0.10941793 0.25142241 0.11542495 -0.2545011
+		 0.13978034 0.24120735 0.11963065 -0.24345671 0.13953769 0.23279203 0.12678732 -0.23241241
+		 0.13929504 0.22700004 0.13619418 -0.22136809 0.13905245 -0.22180931 0.11896344 0.22439842
+		 0.14693053 -0.2328537 0.11920603 -0.24389796 0.11944874 -0.25494236 0.11969133 0.50964469
+		 0.087535247 0.42798585 0.089328989 0.33283895 0.12027217 0.41694164 0.08957158 0.40589726
+		 0.089814171 0.39485294 0.090056762 0.38380867 0.090299353 -0.10845532 0.11647345
+		 0.21699683 0.25994679 0.22120266 0.27016184 0.2283593 0.27857718 0.23776616 0.2843692
+		 0.24850243 0.28697082 0.15452003 0.1260577 0.32991898 0.29181823 0.34013402 0.28761229
+		 0.34854937 0.28045574 0.35434145 0.27104875 0.35694295 0.26031253 -0.21032377 0.13880986
+		 0.36024946 0.25828055 0.36428744 0.26856306 0.37130517 0.27709451 0.38061589 0.28303996
+		 0.39130813 0.285817 0.43947154 0.10917534 0.47263432 0.29199764 0.48291689 0.28795961
+		 0.4914484 0.28094181 0.49739367 0.27163115 0.50017083 0.26093885 -0.096969724 0.13631983
+		 0.36950177 0.14540052 0.051213995 0.14842571 0.062258206 0.14818312 0.073302537 0.14794047
+		 0.084346861 0.14769782 0.16600564 0.14590414 0.47836447 0.12052245 0.17704996 0.14566153
+		 0.18809423 0.14541894 0.19913861 0.14517629 0.28194028 0.11263575 -0.26598656 0.11993386
+		 0.510086 0.10762425 0.21018291 0.1449337 0.28149891 0.092546806 -0.0859254 0.13607724
+		 0.050772592 0.12833668;
 select -ne :time1;
 	setAttr ".o" 37;
 	setAttr ".unw" 37;
@@ -5246,18 +4710,10 @@ connectAttr "unit6_vaseProp:polyTweakUV1.out" "unit6_vasePropRN.phl[1]";
 connectAttr "unit6_vaseProp:polyTweakUV1.uvtk[0]" "unit6_vasePropRN.phl[2]";
 connectAttr "unit6_vasePropRN.phl[3]" "polyPlanarProj1.mp";
 connectAttr "unit6_vasePropRN.phl[4]" "transformGeometry1.ig";
-connectAttr "transformGeometry2.og" "unit7_cushionRN.phl[1]";
-connectAttr "transformGeometry3.og" "unit7_cushionRN.phl[2]";
-connectAttr "transformGeometry4.og" "unit7_cushionRN.phl[3]";
-connectAttr "transformGeometry5.og" "unit7_cushionRN.phl[4]";
-connectAttr "transformGeometry6.og" "unit7_cushionRN.phl[5]";
-connectAttr "transformGeometry7.og" "unit7_cushionRN.phl[6]";
-connectAttr "unit7_cushionRN.phl[7]" "polyTweak5.ip";
-connectAttr "unit7_cushionRN.phl[8]" "transformGeometry6.ig";
-connectAttr "unit7_cushionRN.phl[9]" "polyTweak3.ip";
-connectAttr "unit7_cushionRN.phl[10]" "polyTweak4.ip";
-connectAttr "unit7_cushionRN.phl[11]" "polyTweak2.ip";
-connectAttr "unit7_cushionRN.phl[12]" "polyTweak1.ip";
+connectAttr "polyTweakUV7.uvtk[0]" "Unit5_LabSceneRN1.phl[1]";
+connectAttr "polyTweakUV7.out" "Unit5_LabSceneRN1.phl[2]";
+connectAttr "polyTweakUV8.uvtk[0]" "Unit5_LabSceneRN1.phl[3]";
+connectAttr "polyTweakUV8.out" "Unit5_LabSceneRN1.phl[4]";
 connectAttr "polyTweakUV4.out" "floorShape.i";
 connectAttr "polyTweakUV4.uvtk[0]" "floorShape.uvst[0].uvtw";
 connectAttr "polyTweakUV3.out" "frameShape.i";
@@ -5277,14 +4733,27 @@ connectAttr ":defaultArnoldDisplayDriver.msg" ":defaultArnoldRenderOptions.drive
 connectAttr ":defaultArnoldFilter.msg" ":defaultArnoldRenderOptions.filt";
 connectAttr ":defaultArnoldDriver.msg" ":defaultArnoldRenderOptions.drvr";
 connectAttr "sharedReferenceNode.sr" "Unit5_LabSceneRN.sr";
+connectAttr "transformGeometry2.og" "unit7_cushionRN.phl[1]";
+connectAttr "transformGeometry3.og" "unit7_cushionRN.phl[2]";
+connectAttr "transformGeometry4.og" "unit7_cushionRN.phl[3]";
+connectAttr "transformGeometry5.og" "unit7_cushionRN.phl[4]";
+connectAttr "transformGeometry6.og" "unit7_cushionRN.phl[5]";
+connectAttr "transformGeometry7.og" "unit7_cushionRN.phl[6]";
+connectAttr "unit7_cushionRNfosterParent1.msg" "unit7_cushionRN.fp";
 connectAttr "transformGeometry1.og" "polyMapDel1.ip";
 connectAttr "polyMapDel1.out" "polyPlanarProj1.ip";
 connectAttr "polyPlanarProj1.out" "unit6_vaseProp:polyMapCut2.ip";
 connectAttr "unit6_vaseProp:polyMapCut2.out" "unit6_vaseProp:polyTweakUV1.ip";
+connectAttr "unit7_cushionRN.phl[12]" "polyTweak1.ip";
 connectAttr "polyTweak1.out" "transformGeometry2.ig";
+connectAttr "unit7_cushionRN.phl[11]" "polyTweak2.ip";
 connectAttr "polyTweak2.out" "transformGeometry3.ig";
+connectAttr "unit7_cushionRN.phl[9]" "polyTweak3.ip";
 connectAttr "polyTweak3.out" "transformGeometry4.ig";
+connectAttr "unit7_cushionRN.phl[10]" "polyTweak4.ip";
 connectAttr "polyTweak4.out" "transformGeometry5.ig";
+connectAttr "unit7_cushionRN.phl[8]" "transformGeometry6.ig";
+connectAttr "unit7_cushionRN.phl[7]" "polyTweak5.ip";
 connectAttr "polyTweak5.out" "transformGeometry7.ig";
 connectAttr "polySurfaceShape6.o" "polyMapCut1.ip";
 connectAttr "polyMapCut1.out" "polyMapCut2.ip";
@@ -5331,6 +4800,16 @@ connectAttr "polyPlanarProj2.out" "polyTweakUV4.ip";
 connectAttr "polyMapDel2.out" "polyPlanarProj3.ip";
 connectAttr "wallShape.wm" "polyPlanarProj3.mp";
 connectAttr "polyPlanarProj3.out" "polyTweakUV5.ip";
+connectAttr "sharedReferenceNode.sr" "Unit5_LabSceneRN1.sr";
+connectAttr "Unit5_LabSceneRN1fosterParent1.msg" "Unit5_LabSceneRN1.fp";
+connectAttr "Unit5_LabScene:polySurfaceShape5.o" "polyMapCut14.ip";
+connectAttr "polyMapCut14.out" "polyTweakUV6.ip";
+connectAttr "polyTweakUV6.out" "polyMapCut15.ip";
+connectAttr "polyMapCut15.out" "polyTweakUV7.ip";
+connectAttr "Unit5_LabScene:polySurfaceShape6.o" "polyMapCut16.ip";
+connectAttr "polyMapCut16.out" "polyMapCut17.ip";
+connectAttr "polyMapCut17.out" "polyMapCut18.ip";
+connectAttr "polyMapCut18.out" "polyTweakUV8.ip";
 connectAttr "place2dTexture1.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "file1.msg" ":defaultTextureList1.tx" -na;
