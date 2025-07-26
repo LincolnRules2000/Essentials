@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: scene2_main.ma
-//Last modified: Wed, Jul 23, 2025 11:31:10 PM
+//Last modified: Fri, Jul 25, 2025 05:24:33 PM
 //Codeset: 1252
 file -rdi 1 -ns "deskLamp" -rfn "deskLampRN" -op "v=0;" -typ "mayaAscii" "C:/GitHub/Essentials/DAGV1100and1200/Maya//scenes/deskLamp.ma";
 file -rdi 1 -ns "desk" -rfn "deskRN" -op "v=0;" -typ "mayaAscii" "C:/GitHub/Essentials/DAGV1100and1200/Maya//scenes/desk.ma";
@@ -16,7 +16,7 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
 fileInfo "osv" "Windows 11 Pro v2009 (Build: 26100)";
-fileInfo "UUID" "6BAB7629-43BA-8722-A3FE-FBA0FFCBCA09";
+fileInfo "UUID" "74D8639C-48DB-349E-99CA-A9B90534CE9E";
 createNode transform -s -n "persp";
 	rename -uid "07FB18F1-457B-3293-5906-70ADB2D8BDF5";
 	setAttr ".v" no;
