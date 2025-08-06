@@ -1,15 +1,17 @@
 //Maya ASCII 2025ff03 scene
 //Name: scene2_main.ma
-//Last modified: Fri, Aug 01, 2025 05:02:00 PM
+//Last modified: Tue, Aug 05, 2025 07:34:09 PM
 //Codeset: 1252
 file -rdi 1 -ns "deskLamp" -rfn "deskLampRN" -op "v=0;" -typ "mayaAscii" "C:/GitHub/Essentials/DAGV1100and1200/Maya//scenes/deskLamp.ma";
 file -rdi 1 -ns "desk" -rfn "deskRN" -op "v=0;" -typ "mayaAscii" "C:/GitHub/Essentials/DAGV1100and1200/Maya//scenes/desk.ma";
 file -rdi 1 -ns "penHolder" -rfn "penHolderRN" -op "v=0;" -typ "mayaAscii" "C:/GitHub/Essentials/DAGV1100and1200/Maya//scenes/penHolder.ma";
 file -rdi 1 -ns "mug" -rfn "mugRN" -op "v=0;" -typ "mayaAscii" "C:/GitHub/Essentials/DAGV1100and1200/Maya//scenes/mug.ma";
+file -rdi 1 -ns "sketchpad" -rfn "sketchpadRN" -op "v=0;" -typ "mayaAscii" "C:/GitHub/Essentials/DAGV1100and1200/Maya//scenes/sketchpad.ma";
 file -r -ns "deskLamp" -dr 1 -rfn "deskLampRN" -op "v=0;" -typ "mayaAscii" "C:/GitHub/Essentials/DAGV1100and1200/Maya//scenes/deskLamp.ma";
 file -r -ns "desk" -dr 1 -rfn "deskRN" -op "v=0;" -typ "mayaAscii" "C:/GitHub/Essentials/DAGV1100and1200/Maya//scenes/desk.ma";
 file -r -ns "penHolder" -dr 1 -rfn "penHolderRN" -op "v=0;" -typ "mayaAscii" "C:/GitHub/Essentials/DAGV1100and1200/Maya//scenes/penHolder.ma";
 file -r -ns "mug" -dr 1 -rfn "mugRN" -op "v=0;" -typ "mayaAscii" "C:/GitHub/Essentials/DAGV1100and1200/Maya//scenes/mug.ma";
+file -r -ns "sketchpad" -dr 1 -rfn "sketchpadRN" -op "v=0;" -typ "mayaAscii" "C:/GitHub/Essentials/DAGV1100and1200/Maya//scenes/sketchpad.ma";
 requires maya "2025ff03";
 requires "stereoCamera" "10.0";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiImagerDenoiserOidn"
@@ -20,17 +22,17 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
 fileInfo "osv" "Windows 11 Pro v2009 (Build: 26100)";
-fileInfo "UUID" "1514B192-40E7-F626-2CDE-9E83A1BDC2E8";
+fileInfo "UUID" "F3A2F9CE-463B-5A19-4332-A0BEBF5ED364";
 createNode transform -s -n "persp";
 	rename -uid "07FB18F1-457B-3293-5906-70ADB2D8BDF5";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -0.14487991262054578 2.989898638447813 4.2869589973643611 ;
-	setAttr ".r" -type "double3" -9.3383527296300528 -0.59999999999992149 4.3486530429689153e-17 ;
+	setAttr ".t" -type "double3" -0.31834908375453463 6.6755475312768953 7.2306249539715175 ;
+	setAttr ".r" -type "double3" -25.53835272963105 -1.3999999999999371 -4.9711006141188276e-17 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "C1F5758F-42B5-C103-E22D-168E6464915B";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 7.3670724089444199;
+	setAttr ".coi" 11.321944881986974;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -172,20 +174,20 @@ createNode mesh -n "pCubeShape2" -p "pCube2";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".dr" 1;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "8D4B212D-4F46-53B2-858E-67AB729816D1";
+	rename -uid "AF339CB1-4687-0651-0F6B-F3BC9E5FF976";
 	setAttr -s 2 ".lnk";
 	setAttr -s 2 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "54798979-4C7D-61FD-665C-B7830973597A";
+	rename -uid "26B7453A-4820-D261-810C-49AFF8B8A8B6";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "117840CC-4EAE-66AB-9D19-1E9C2C4E3F64";
+	rename -uid "07299A45-4402-142E-5CC0-97AD7375A47C";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "74614B8B-4DAF-5955-CEF8-4B90FC91FFE7";
+	rename -uid "499A8FFA-4603-E754-C0BA-8ABEE9A200AC";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "369F906D-4B6D-AAB5-A61F-05BD1FC2FEFC";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "7F036F99-400E-0E81-16CF-BFAA264E3747";
+	rename -uid "63253865-4B63-8F33-F8CD-8886E5E8DAC7";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "CDF723ED-47AF-AC8D-37BE-2FACF7DC2815";
 	setAttr ".g" yes;
@@ -567,7 +569,7 @@ createNode reference -n "mugRN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"mugRN"
 		"mugRN" 0
-		"mugRN" 900
+		"mugRN" 16
 		2 "|mug:mug" "translate" " -type \"double3\" -1.56198802807469272 1.94518518447875954 -2.01038929210127604"
 		
 		2 "|mug:mug" "rotate" " -type \"double3\" 0 33.07305266316804904 0"
@@ -586,1783 +588,46 @@ createNode reference -n "mugRN";
 		
 		2 "|mug:mug|mug:polySurface1|mug:polySurfaceShape1" "uvSet[0].uvSetName" 
 		" -type \"string\" \"map1\""
-		2 "mug:polyTweakUV1" "uvTweak" " -s 124"
-		2 "mug:polyTweakUV1" "uvTweak[0]" " -type \"float2\" -0.069360480000000002 0.65789162999999995"
-		
-		2 "mug:polyTweakUV1" "uvTweak[1]" " -type \"float2\" 0.015614375 0.63184242999999995"
-		
-		2 "mug:polyTweakUV1" "uvTweak[2]" " -type \"float2\" -0.088961735 -0.040793627999999998"
-		
-		2 "mug:polyTweakUV1" "uvTweak[3]" " -type \"float2\" -0.16206619 -0.062323420999999997"
-		
-		2 "mug:polyTweakUV1" "uvTweak[4]" " -type \"float2\" -0.21192811 -0.089697449999999998"
-		
-		2 "mug:polyTweakUV1" "uvTweak[5]" " -type \"float2\" -0.13131746999999999 0.68900812"
-		
-		2 "mug:polyTweakUV1" "uvTweak[6]" " -type \"float2\" 0.11554994 0.61265236000000001"
-		
-		2 "mug:polyTweakUV1" "uvTweak[7]" " -type \"float2\" -0.0010616928 -0.027912467999999999"
-		
-		2 "mug:polyTweakUV1" "uvTweak[8]" " -type \"float2\" -0.074430182999999997 -0.045239300000000003"
-		
-		2 "mug:polyTweakUV1" "uvTweak[9]" " -type \"float2\" -0.14200428000000001 -0.065799356000000003"
-		
-		2 "mug:polyTweakUV1" "uvTweak[10]" " -type \"float2\" -0.23251984000000001 -0.12207152"
-		
-		2 "mug:polyTweakUV1" "uvTweak[11]" " -type \"float2\" -0.16201159000000001 0.72287077"
-		
-		2 "mug:polyTweakUV1" "uvTweak[12]" " -type \"float2\" -0.18741688000000001 -0.091880410999999995"
-		
-		2 "mug:polyTweakUV1" "uvTweak[13]" " -type \"float2\" 0.22300258000000001 0.60163593000000004"
-		
-		2 "mug:polyTweakUV1" "uvTweak[14]" " -type \"float2\" 0.095575660000000007 -0.024850994000000001"
-		
-		2 "mug:polyTweakUV1" "uvTweak[15]" " -type \"float2\" 0.0074378997000000002 -0.032999067999999999"
-		
-		2 "mug:polyTweakUV1" "uvTweak[16]" " -type \"float2\" -0.21745012999999999 -0.15642328999999999"
-		
-		2 "mug:polyTweakUV1" "uvTweak[17]" " -type \"float2\" -0.15419535000000001 0.75658566000000005"
-		
-		2 "mug:polyTweakUV1" "uvTweak[18]" " -type \"float2\" -0.20538335999999999 -0.12258954"
-		
-		2 "mug:polyTweakUV1" "uvTweak[19]" " -type \"float2\" 0.33104807000000003 0.59964572999999999"
-		
-		2 "mug:polyTweakUV1" "uvTweak[20]" " -type \"float2\" 0.19540614000000001 -0.031828850999999998"
-		
-		2 "mug:polyTweakUV1" "uvTweak[21]" " -type \"float2\" 0.097761719999999996 -0.030131191000000002"
-		
-		2 "mug:polyTweakUV1" "uvTweak[22]" " -type \"float2\" -0.16284700999999999 -0.18925238"
-		
-		2 "mug:polyTweakUV1" "uvTweak[23]" " -type \"float2\" -0.1036372 0.78673941000000003"
-		
-		2 "mug:polyTweakUV1" "uvTweak[24]" " -type \"float2\" -0.19022778000000001 -0.15507360000000001"
-		
-		2 "mug:polyTweakUV1" "uvTweak[25]" " -type \"float2\" 0.43291304000000003 0.60704254999999996"
-		
-		2 "mug:polyTweakUV1" "uvTweak[26]" " -type \"float2\" 0.29276766999999998 -0.048243195000000003"
-		
-		2 "mug:polyTweakUV1" "uvTweak[27]" " -type \"float2\" 0.19113988000000001 -0.036827355999999999"
-		
-		2 "mug:polyTweakUV1" "uvTweak[28]" " -type \"float2\" -0.070055439999999997 -0.21695559"
-		
-		2 "mug:polyTweakUV1" "uvTweak[29]" " -type \"float2\" -0.011592165 0.80967568999999995"
-		
-		2 "mug:polyTweakUV1" "uvTweak[30]" " -type \"float2\" -0.13881447999999999 -0.18603659"
-		
-		2 "mug:polyTweakUV1" "uvTweak[31]" " -type \"float2\" 0.52154940000000005 0.62362110999999998"
-		
-		2 "mug:polyTweakUV1" "uvTweak[32]" " -type \"float2\" 0.381291 -0.072739868999999999"
-		
-		2 "mug:polyTweakUV1" "uvTweak[33]" " -type \"float2\" 0.28205255000000001 -0.052502423999999999"
-		
-		2 "mug:polyTweakUV1" "uvTweak[34]" " -type \"float2\" 0.052284166 -0.23628245"
-		
-		2 "mug:polyTweakUV1" "uvTweak[35]" " -type \"float2\" 0.11332401 0.82207960000000002"
-		
-		2 "mug:polyTweakUV1" "uvTweak[36]" " -type \"float2\" -0.052796677 -0.21210609"
-		
-		2 "mug:polyTweakUV1" "uvTweak[37]" " -type \"float2\" 0.58937048999999997 0.64849913000000003"
-		
-		2 "mug:polyTweakUV1" "uvTweak[38]" " -type \"float2\" 0.45351767999999998 -0.10329606"
-		
-		2 "mug:polyTweakUV1" "uvTweak[39]" " -type \"float2\" 0.36436733999999998 -0.075845808000000001"
-		
-		2 "mug:polyTweakUV1" "uvTweak[40]" " -type \"float2\" 0.18830609000000001 -0.24487184000000001"
-		
-		2 "mug:polyTweakUV1" "uvTweak[41]" " -type \"float2\" 0.25530525999999998 0.82178319"
-		
-		2 "mug:polyTweakUV1" "uvTweak[42]" " -type \"float2\" 0.059713833000000001 -0.23026559999999999"
-		
-		2 "mug:polyTweakUV1" "uvTweak[43]" " -type \"float2\" 0.62840545000000003 0.67998886000000003"
-		
-		2 "mug:polyTweakUV1" "uvTweak[44]" " -type \"float2\" 0.50099932999999996 -0.13732644999999999"
-		
-		2 "mug:polyTweakUV1" "uvTweak[45]" " -type \"float2\" 0.43104451999999999 -0.10490383"
-		
-		2 "mug:polyTweakUV1" "uvTweak[46]" " -type \"float2\" 0.31804958 -0.24171213999999999"
-		
-		2 "mug:polyTweakUV1" "uvTweak[47]" " -type \"float2\" 0.39436736999999999 0.80847382999999995"
-		
-		2 "mug:polyTweakUV1" "uvTweak[48]" " -type \"float2\" 0.18434808 -0.23833858999999999"
-		
-		2 "mug:polyTweakUV1" "uvTweak[49]" " -type \"float2\" 0.63115560999999998 0.71549362000000005"
-		
-		2 "mug:polyTweakUV1" "uvTweak[50]" " -type \"float2\" 0.51520502999999995 -0.17181063999999999"
-		
-		2 "mug:polyTweakUV1" "uvTweak[51]" " -type \"float2\" 0.47429383000000003 -0.13718495"
-		
-		2 "mug:polyTweakUV1" "uvTweak[52]" " -type \"float2\" 0.42270434000000001 -0.22730111"
-		
-		2 "mug:polyTweakUV1" "uvTweak[53]" " -type \"float2\" 0.51131576000000001 0.78391469000000003"
-		
-		2 "mug:polyTweakUV1" "uvTweak[54]" " -type \"float2\" 0.30324778000000002 -0.23539320999999999"
-		
-		2 "mug:polyTweakUV1" "uvTweak[55]" " -type \"float2\" 0.59233676999999996 0.75151765000000004"
-		
-		2 "mug:polyTweakUV1" "uvTweak[56]" " -type \"float2\" 0.48947927000000002 -0.20340621"
-		
-		2 "mug:polyTweakUV1" "uvTweak[57]" " -type \"float2\" 0.48644546 -0.16978528000000001"
-		
-		2 "mug:polyTweakUV1" "uvTweak[58]" " -type \"float2\" 0.39957282 -0.22189007999999999"
-		
-		2 "mug:polyTweakUV1" "uvTweak[59]" " -type \"float2\" 0.46169594000000003 -0.19950986000000001"
-		
-		2 "mug:polyTweakUV1" "uvTweak[60]" " -type \"float2\" -0.090056791999999997 0.60735929"
-		
-		2 "mug:polyTweakUV1" "uvTweak[61]" " -type \"float2\" -0.16203972999999999 0.61258453000000002"
-		
-		2 "mug:polyTweakUV1" "uvTweak[62]" " -type \"float2\" -0.21318339 0.61726831999999998"
-		
-		2 "mug:polyTweakUV1" "uvTweak[63]" " -type \"float2\" -0.0017162411999999999 0.60312432000000005"
-		
-		2 "mug:polyTweakUV1" "uvTweak[64]" " -type \"float2\" -0.23475494999999999 0.62368745000000003"
-		
-		2 "mug:polyTweakUV1" "uvTweak[65]" " -type \"float2\" 0.096426188999999995 0.59995478000000002"
-		
-		2 "mug:polyTweakUV1" "uvTweak[66]" " -type \"float2\" -0.22083221 0.63153398000000005"
-		
-		2 "mug:polyTweakUV1" "uvTweak[67]" " -type \"float2\" 0.19795366 0.59812319000000003"
-		
-		2 "mug:polyTweakUV1" "uvTweak[68]" " -type \"float2\" -0.16830686 0.63994461000000002"
-		
-		2 "mug:polyTweakUV1" "uvTweak[69]" " -type \"float2\" 0.29627046000000001 0.59808123000000002"
-		
-		2 "mug:polyTweakUV1" "uvTweak[70]" " -type \"float2\" -0.079011992000000003 0.64755463999999996"
-		
-		2 "mug:polyTweakUV1" "uvTweak[71]" " -type \"float2\" 0.38426027000000001 0.60037123999999997"
-		
-		2 "mug:polyTweakUV1" "uvTweak[72]" " -type \"float2\" 0.038755320000000003 0.65280157000000005"
-		
-		2 "mug:polyTweakUV1" "uvTweak[73]" " -type \"float2\" 0.45412578999999997 0.60545968999999999"
-		
-		2 "mug:polyTweakUV1" "uvTweak[74]" " -type \"float2\" 0.17051163 0.65437292999999996"
-		
-		2 "mug:polyTweakUV1" "uvTweak[75]" " -type \"float2\" 0.49764550000000002 0.61350340000000003"
-		
-		2 "mug:polyTweakUV1" "uvTweak[76]" " -type \"float2\" 0.29822948999999999 0.65170967999999996"
-		
-		2 "mug:polyTweakUV1" "uvTweak[77]" " -type \"float2\" 0.50709855999999998 0.62408512999999999"
-		
-		2 "mug:polyTweakUV1" "uvTweak[78]" " -type \"float2\" 0.40461113999999998 0.64519304"
-		
-		2 "mug:polyTweakUV1" "uvTweak[79]" " -type \"float2\" 0.47701320000000003 0.63600712999999998"
-		
-		2 "mug:polyTweakUV1" "uvTweak[80]" " -type \"float2\" 0.23454185999999999 0.70142375999999995"
-		
-		2 "mug:polyTweakUV1" "uvTweak[81]" " -type \"float2\" 0.134857 0.62282013999999997"
-		
-		2 "mug:polyTweakUV1" "uvTweak[82]" " -type \"float2\" 0.41924961999999999 -0.016312033"
-		
-		2 "mug:polyTweakUV1" "uvTweak[83]" " -type \"float2\" 0.49392459 -0.0070886910000000003"
-		
-		2 "mug:polyTweakUV1" "uvTweak[84]" " -type \"float2\" 0.52081913000000002 0.0036588907"
-		
-		2 "mug:polyTweakUV1" "uvTweak[85]" " -type \"float2\" 0.30337157999999997 -0.022572607000000001"
-		
-		2 "mug:polyTweakUV1" "uvTweak[86]" " -type \"float2\" 0.50099932999999996 0.01454401"
-		
-		2 "mug:polyTweakUV1" "uvTweak[87]" " -type \"float2\" 0.16125971 -0.024734229"
-		
-		2 "mug:polyTweakUV1" "uvTweak[88]" " -type \"float2\" 0.66710108999999995 0.033979534999999998"
-		
-		2 "mug:polyTweakUV1" "uvTweak[89]" " -type \"float2\" 0.013964877000000001 -0.022320300000000001"
-		
-		2 "mug:polyTweakUV1" "uvTweak[90]" " -type \"float2\" 0.5749824 0.042117186000000001"
-		
-		2 "mug:polyTweakUV1" "uvTweak[91]" " -type \"float2\" -0.1163954 -0.015682608000000001"
-		
-		2 "mug:polyTweakUV1" "uvTweak[92]" " -type \"float2\" 0.46035603000000003 0.047993965"
-		
-		2 "mug:polyTweakUV1" "uvTweak[93]" " -type \"float2\" -0.21209238 -0.0058755279000000001"
-		
-		2 "mug:polyTweakUV1" "uvTweak[94]" " -type \"float2\" 0.33213985000000001 0.051332422000000003"
-		
-		2 "mug:polyTweakUV1" "uvTweak[95]" " -type \"float2\" -0.26310459000000003 0.0056837201000000002"
-		
-		2 "mug:polyTweakUV1" "uvTweak[96]" " -type \"float2\" 0.19864852999999999 0.051999278000000003"
-		
-		2 "mug:polyTweakUV1" "uvTweak[97]" " -type \"float2\" -0.26733394999999999 0.017582238"
-		
-		2 "mug:polyTweakUV1" "uvTweak[98]" " -type \"float2\" 0.067791781999999995 0.049959190000000001"
-		
-		2 "mug:polyTweakUV1" "uvTweak[99]" " -type \"float2\" -0.22863205 0.028652251"
-		
-		2 "mug:polyTweakUV1" "uvTweak[100]" " -type \"float2\" -0.052553013000000003 0.045261212000000002"
-		
-		2 "mug:polyTweakUV1" "uvTweak[101]" " -type \"float2\" -0.15421043000000001 0.038056672"
-		
-		2 "mug:polyTweakUV1" "uvTweak[102]" " -type \"float2\" 0.47454527000000002 0.85957276999999999"
-		
-		2 "mug:polyTweakUV1" "uvTweak[103]" " -type \"float2\" 0.40241805000000003 0.88137834999999998"
-		
-		2 "mug:polyTweakUV1" "uvTweak[104]" " -type \"float2\" 0.50093138000000004 0.83434867999999995"
-		
-		2 "mug:polyTweakUV1" "uvTweak[105]" " -type \"float2\" 0.29106197 0.89663773999999996"
-		
-		2 "mug:polyTweakUV1" "uvTweak[106]" " -type \"float2\" 0.70874046999999996 0.81827950000000005"
-		
-		2 "mug:polyTweakUV1" "uvTweak[107]" " -type \"float2\" 0.15485154000000001 0.90289611000000003"
-		
-		2 "mug:polyTweakUV1" "uvTweak[108]" " -type \"float2\" 0.65085685000000004 0.79478258000000002"
-		
-		2 "mug:polyTweakUV1" "uvTweak[109]" " -type \"float2\" 0.013810351 0.89912718999999997"
-		
-		2 "mug:polyTweakUV1" "uvTweak[110]" " -type \"float2\" 0.56193835000000003 0.77515674000000001"
-		
-		2 "mug:polyTweakUV1" "uvTweak[111]" " -type \"float2\" -0.1110612 0.88608819000000005"
-		
-		2 "mug:polyTweakUV1" "uvTweak[112]" " -type \"float2\" 0.45091273999999998 0.76052909999999996"
-		
-		2 "mug:polyTweakUV1" "uvTweak[113]" " -type \"float2\" -0.20285320000000001 0.86605584999999996"
-		
-		2 "mug:polyTweakUV1" "uvTweak[114]" " -type \"float2\" 0.32645016999999998 0.75154412000000004"
-		
-		2 "mug:polyTweakUV1" "uvTweak[115]" " -type \"float2\" -0.25186655000000002 0.84210742000000005"
-		
-		2 "mug:polyTweakUV1" "uvTweak[116]" " -type \"float2\" 0.19670261 0.74851584000000004"
-		
-		2 "mug:polyTweakUV1" "uvTweak[117]" " -type \"float2\" -0.25588915000000001 0.81733858999999998"
-		
-		2 "mug:polyTweakUV1" "uvTweak[118]" " -type \"float2\" 0.069459401000000004 0.75152814000000001"
-		
-		2 "mug:polyTweakUV1" "uvTweak[119]" " -type \"float2\" -0.21841572000000001 0.79433334"
-		
-		2 "mug:polyTweakUV1" "uvTweak[120]" " -type \"float2\" -0.047526076 0.76046537999999997"
-		
-		2 "mug:polyTweakUV1" "uvTweak[121]" " -type \"float2\" -0.14624944000000001 0.77497"
-		
-		2 "mug:polyTweakUV1" "uvTweak[122]" " -type \"float2\" 0.48231830999999997 0.80874842000000002"
-		
-		2 "mug:polyTweakUV1" "uvTweak[123]" " -type \"float2\" 0.72742145999999996 0.024075091"
-		
+		2 "mug:polyTweakUV1" "uvtk[0:123]" (" -s 124 -type \"float2\" -0.069360480000000002 0.65789162999999995 0.015614375 0.63184242999999995 -0.088961735 -0.040793627999999998 -0.16206619 -0.062323420999999997 -0.21192811 -0.089697449999999998 -0.13131746999999999 0.68900812 0.11554994 0.61265236000000001 -0.0010616928 -0.027912467999999999 -0.074430182999999997 -0.045239300000000003 -0.14200428000000001 -0.065799356000000003 -0.23251984000000001 -0.12207152 -0.16201159000000001 0.72287077 -0.18741688000000001 -0.091880410999999995 0.22300258000000001 0.60163593000000004 0.095575660000000007 -0.024850994000000001 0.0074378997000000002 -0.032999067999999999 -0.21745012999999999 -0.15642328999999999 -0.15419535000000001 0.75658566000000005 -0.20538335999999999 -0.12258954 0.33104807000000003 0.59964572999999999 0.19540614000000001 -0.031828850999999998 0.097761719999999996 -0.030131191000000002 -0.16284700999999999 -0.18925238 -0.1036372 0.78673941000000003 -0.19022778000000001 -0.15507360000000001 0.43291304000000003 0.60704254999999996 0.29276766999999"
+		+ "998 -0.048243195000000003 0.19113988000000001 -0.036827355999999999 -0.070055439999999997 -0.21695559 -0.011592165 0.80967568999999995 -0.13881447999999999 -0.18603659 0.52154940000000005 0.62362110999999998 0.381291 -0.072739868999999999 0.28205255000000001 -0.052502423999999999 0.052284166 -0.23628245 0.11332401 0.82207960000000002 -0.052796677 -0.21210609 0.58937048999999997 0.64849913000000003 0.45351767999999998 -0.10329606 0.36436733999999998 -0.075845808000000001 0.18830609000000001 -0.24487184000000001 0.25530525999999998 0.82178319 0.059713833000000001 -0.23026559999999999 0.62840545000000003 0.67998886000000003 0.50099932999999996 -0.13732644999999999 0.43104451999999999 -0.10490383 0.31804958 -0.24171213999999999 0.39436736999999999 0.80847382999999995 0.18434808 -0.23833858999999999 0.63115560999999998 0.71549362000000005 0.51520502999999995 -0.17181063999999999 0.47429383000000003 -0.13718495 0.42270434000000001 -0.22730111 0.51131576000000001 0.78391469000000003 0.30324778000000002 -0.2353932099"
+		+ "9999999 0.59233676999999996 0.75151765000000004 0.48947927000000002 -0.20340621 0.48644546 -0.16978528000000001 0.39957282 -0.22189007999999999 0.46169594000000003 -0.19950986000000001 -0.090056791999999997 0.60735929 -0.16203972999999999 0.61258453000000002 -0.21318339 0.61726831999999998 -0.0017162411999999999 0.60312432000000005 -0.23475494999999999 0.62368745000000003 0.096426188999999995 0.59995478000000002 -0.22083221 0.63153398000000005 0.19795366 0.59812319000000003 -0.16830686 0.63994461000000002 0.29627046000000001 0.59808123000000002 -0.079011992000000003 0.64755463999999996 0.38426027000000001 0.60037123999999997 0.038755320000000003 0.65280157000000005 0.45412578999999997 0.60545968999999999 0.17051163 0.65437292999999996 0.49764550000000002 0.61350340000000003 0.29822948999999999 0.65170967999999996 0.50709855999999998 0.62408512999999999 0.40461113999999998 0.64519304 0.47701320000000003 0.63600712999999998 0.23454185999999999 0.70142375999999995 0.134857 0.62282013999999997 0.41924961999999999"
+		+ " -0.016312033 0.49392459 -0.0070886910000000003 0.52081913000000002 0.0036588907 0.30337157999999997 -0.022572607000000001 0.50099932999999996 0.01454401 0.16125971 -0.024734229 0.66710108999999995 0.033979534999999998 0.013964877000000001 -0.022320300000000001 0.5749824 0.042117186000000001 -0.1163954 -0.015682608000000001 0.46035603000000003 0.047993965 -0.21209238 -0.0058755279000000001 0.33213985000000001 0.051332422000000003 -0.26310459000000003 0.0056837201000000002 0.19864852999999999 0.051999278000000003 -0.26733394999999999 0.017582238 0.067791781999999995 0.049959190000000001 -0.22863205 0.028652251 -0.052553013000000003 0.045261212000000002 -0.15421043000000001 0.038056672 0.47454527000000002 0.85957276999999999 0.40241805000000003 0.88137834999999998 0.50093138000000004 0.83434867999999995 0.29106197 0.89663773999999996 0.70874046999999996 0.81827950000000005 0.15485154000000001 0.90289611000000003 0.65085685000000004 0.79478258000000002 0.013810351 0.89912718999999997 0.56193835000000003 0.775156"
+		+ "74000000001 -0.1110612 0.88608819000000005 0.45091273999999998 0.76052909999999996 -0.20285320000000001 0.86605584999999996 0.32645016999999998 0.75154412000000004 -0.25186655000000002 0.84210742000000005 0.19670261 0.74851584000000004 -0.25588915000000001 0.81733858999999998 0.069459401000000004 0.75152814000000001 -0.21841572000000001 0.79433334 -0.047526076 0.76046537999999997 -0.14624944000000001 0.77497 0.48231830999999997 0.80874842000000002 0.72742145999999996 0.024075091"
+		)
 		2 "mug:polyTweakUV2" "uvTweak" " -s 764"
-		2 "mug:polyTweakUV2" "uvTweak[0]" " -type \"float2\" 0.20151587000000001 0.68910872999999995"
-		
-		2 "mug:polyTweakUV2" "uvTweak[1]" " -type \"float2\" 0.12530959 0.70384579999999997"
-		
-		2 "mug:polyTweakUV2" "uvTweak[2]" " -type \"float2\" 0.12740904 0.68457329"
-		
-		2 "mug:polyTweakUV2" "uvTweak[3]" " -type \"float2\" 0.20324136000000001 0.66790152000000003"
-		
-		2 "mug:polyTweakUV2" "uvTweak[4]" " -type \"float2\" 0.12965941 0.66511266999999996"
-		
-		2 "mug:polyTweakUV2" "uvTweak[5]" " -type \"float2\" 0.20444454000000001 0.64429426000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[6]" " -type \"float2\" 0.19900037000000001 0.64960921000000005"
-		
-		2 "mug:polyTweakUV2" "uvTweak[7]" " -type \"float2\" 0.19786097 0.67349981999999997"
-		
-		2 "mug:polyTweakUV2" "uvTweak[8]" " -type \"float2\" 0.19622376999999999 0.69750661000000003"
-		
-		2 "mug:polyTweakUV2" "uvTweak[9]" " -type \"float2\" 0.19391319000000001 0.66021269999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[10]" " -type \"float2\" 0.19212243000000001 0.68397169999999996"
-		
-		2 "mug:polyTweakUV2" "uvTweak[11]" " -type \"float2\" 0.18942276 0.67536627999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[12]" " -type \"float2\" 0.18580076000000001 0.69398135000000005"
-		
-		2 "mug:polyTweakUV2" "uvTweak[13]" " -type \"float2\" 0.18323448000000001 0.71472013000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[14]" " -type \"float2\" 0.18971476000000001 0.70595859999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[15]" " -type \"float2\" 0.18185428000000001 0.73603289999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[16]" " -type \"float2\" 0.18830802999999999 0.72616177999999998"
-		
-		2 "mug:polyTweakUV2" "uvTweak[17]" " -type \"float2\" 0.18170694000000001 0.75631236999999996"
-		
-		2 "mug:polyTweakUV2" "uvTweak[18]" " -type \"float2\" 0.18675014000000001 0.74663234000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[19]" " -type \"float2\" 0.19174740000000001 0.73705315999999998"
-		
-		2 "mug:polyTweakUV2" "uvTweak[20]" " -type \"float2\" 0.19406369000000001 0.71708070999999995"
-		
-		2 "mug:polyTweakUV2" "uvTweak[21]" " -type \"float2\" 0.19672466999999999 0.72755681999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[22]" " -type \"float2\" 0.11816942 0.73142344000000004"
-		
-		2 "mug:polyTweakUV2" "uvTweak[23]" " -type \"float2\" 0.12161589 0.74216627999999996"
-		
-		2 "mug:polyTweakUV2" "uvTweak[24]" " -type \"float2\" 0.12337905 0.7230162"
-		
-		2 "mug:polyTweakUV2" "uvTweak[25]" " -type \"float2\" 0.19414476 0.74767828000000003"
-		
-		2 "mug:polyTweakUV2" "uvTweak[26]" " -type \"float2\" 0.18883612999999999 0.75983005999999997"
-		
-		2 "mug:polyTweakUV2" "uvTweak[27]" " -type \"float2\" 0.18276920999999999 0.77400440000000004"
-		
-		2 "mug:polyTweakUV2" "uvTweak[28]" " -type \"float2\" 0.18488702000000001 0.78780698999999998"
-		
-		2 "mug:polyTweakUV2" "uvTweak[29]" " -type \"float2\" 0.190635 0.77302492"
-		
-		2 "mug:polyTweakUV2" "uvTweak[30]" " -type \"float2\" 0.19614908 0.75829411000000002"
-		
-		2 "mug:polyTweakUV2" "uvTweak[31]" " -type \"float2\" 0.18785819000000001 0.79672050000000005"
-		
-		2 "mug:polyTweakUV2" "uvTweak[32]" " -type \"float2\" 0.19319865 0.78394812000000003"
-		
-		2 "mug:polyTweakUV2" "uvTweak[33]" " -type \"float2\" 0.19142202 0.80011904"
-		
-		2 "mug:polyTweakUV2" "uvTweak[34]" " -type \"float2\" 0.19530960999999999 0.79777586"
-		
-		2 "mug:polyTweakUV2" "uvTweak[35]" " -type \"float2\" 0.19919513 0.78988992999999996"
-		
-		2 "mug:polyTweakUV2" "uvTweak[36]" " -type \"float2\" 0.19776560000000001 0.77393818000000003"
-		
-		2 "mug:polyTweakUV2" "uvTweak[37]" " -type \"float2\" 0.13272047000000001 0.7995584"
-		
-		2 "mug:polyTweakUV2" "uvTweak[38]" " -type \"float2\" 0.12784934000000001 0.78466314000000004"
-		
-		2 "mug:polyTweakUV2" "uvTweak[39]" " -type \"float2\" 0.13656067999999999 0.78499686999999996"
-		
-		2 "mug:polyTweakUV2" "uvTweak[40]" " -type \"float2\" 0.13263797999999999 0.77414656000000004"
-		
-		2 "mug:polyTweakUV2" "uvTweak[41]" " -type \"float2\" 0.12882811 0.76345134000000003"
-		
-		2 "mug:polyTweakUV2" "uvTweak[42]" " -type \"float2\" 0.12369752000000001 0.77187324000000002"
-		
-		2 "mug:polyTweakUV2" "uvTweak[43]" " -type \"float2\" 0.12515335999999999 0.75281894000000005"
-		
-		2 "mug:polyTweakUV2" "uvTweak[44]" " -type \"float2\" 0.19865699000000001 0.73778140999999997"
-		
-		2 "mug:polyTweakUV2" "uvTweak[45]" " -type \"float2\" 0.13023317000000001 0.74446303000000003"
-		
-		2 "mug:polyTweakUV2" "uvTweak[46]" " -type \"float2\" 0.13450377999999999 0.75541592000000002"
-		
-		2 "mug:polyTweakUV2" "uvTweak[47]" " -type \"float2\" 0.13949703999999999 0.76738059999999997"
-		
-		2 "mug:polyTweakUV2" "uvTweak[48]" " -type \"float2\" 0.14139992000000001 0.74797939999999996"
-		
-		2 "mug:polyTweakUV2" "uvTweak[49]" " -type \"float2\" 0.13654326999999999 0.73665433999999996"
-		
-		2 "mug:polyTweakUV2" "uvTweak[50]" " -type \"float2\" 0.13180178000000001 0.72542881999999997"
-		
-		2 "mug:polyTweakUV2" "uvTweak[51]" " -type \"float2\" 0.14216632000000001 0.72811431000000004"
-		
-		2 "mug:polyTweakUV2" "uvTweak[52]" " -type \"float2\" 0.13795233000000001 0.71532731999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[53]" " -type \"float2\" 0.14175767 0.70910918999999994"
-		
-		2 "mug:polyTweakUV2" "uvTweak[54]" " -type \"float2\" 0.14017546 0.69223595000000004"
-		
-		2 "mug:polyTweakUV2" "uvTweak[55]" " -type \"float2\" 0.13752424999999999 0.67865944"
-		
-		2 "mug:polyTweakUV2" "uvTweak[56]" " -type \"float2\" 0.13457811 0.70209849000000002"
-		
-		2 "mug:polyTweakUV2" "uvTweak[57]" " -type \"float2\" 0.13394987999999999 0.66936737000000002"
-		
-		2 "mug:polyTweakUV2" "uvTweak[58]" " -type \"float2\" 0.13092571 0.693322"
-		
-		2 "mug:polyTweakUV2" "uvTweak[59]" " -type \"float2\" 0.12849045000000001 0.71463507000000004"
-		
-		2 "mug:polyTweakUV2" "uvTweak[60]" " -type \"float2\" 0.12674742999999999 0.73374437999999997"
-		
-		2 "mug:polyTweakUV2" "uvTweak[61]" " -type \"float2\" 0.21793731 0.014687777000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[62]" " -type \"float2\" 0.26159044999999997 0.024445294999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[63]" " -type \"float2\" 0.22310126 0.025126219000000002"
-		
-		2 "mug:polyTweakUV2" "uvTweak[64]" " -type \"float2\" 0.2227084 0.0097975135000000005"
-		
-		2 "mug:polyTweakUV2" "uvTweak[65]" " -type \"float2\" 0.26234858999999999 0.044695265999999997"
-		
-		2 "mug:polyTweakUV2" "uvTweak[66]" " -type \"float2\" 0.22377683000000001 0.040327257999999998"
-		
-		2 "mug:polyTweakUV2" "uvTweak[67]" " -type \"float2\" 0.25624022000000002 0.031507163999999997"
-		
-		2 "mug:polyTweakUV2" "uvTweak[68]" " -type \"float2\" 0.25692578999999999 0.052373207999999997"
-		
-		2 "mug:polyTweakUV2" "uvTweak[69]" " -type \"float2\" 0.25511595999999997 0.010250598"
-		
-		2 "mug:polyTweakUV2" "uvTweak[70]" " -type \"float2\" 0.25065503 0.034750909000000003"
-		
-		2 "mug:polyTweakUV2" "uvTweak[71]" " -type \"float2\" 0.25196110999999999 0.054254777999999997"
-		
-		2 "mug:polyTweakUV2" "uvTweak[72]" " -type \"float2\" 0.24449198999999999 0.040200211"
-		
-		2 "mug:polyTweakUV2" "uvTweak[73]" " -type \"float2\" 0.24773723 0.050129659"
-		
-		2 "mug:polyTweakUV2" "uvTweak[74]" " -type \"float2\" 0.24872440000000001 0.017667263999999998"
-		
-		2 "mug:polyTweakUV2" "uvTweak[75]" " -type \"float2\" 0.24238005000000001 0.025055289000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[76]" " -type \"float2\" 0.24779364000000001 -0.00072830914999999995"
-		
-		2 "mug:polyTweakUV2" "uvTweak[77]" " -type \"float2\" 0.24150109 0.0057201385000000002"
-		
-		2 "mug:polyTweakUV2" "uvTweak[78]" " -type \"float2\" 0.24674462999999999 -0.019562215000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[79]" " -type \"float2\" 0.24187326000000001 -0.016423762000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[80]" " -type \"float2\" 0.25339540999999999 -0.0059248208999999998"
-		
-		2 "mug:polyTweakUV2" "uvTweak[81]" " -type \"float2\" 0.25156060000000002 -0.022631437000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[82]" " -type \"float2\" 0.25849694000000001 -0.0094628035999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[83]" " -type \"float2\" 0.21785603000000001 -0.016706616000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[84]" " -type \"float2\" 0.22254341999999999 -0.0057325363000000004"
-		
-		2 "mug:polyTweakUV2" "uvTweak[85]" " -type \"float2\" 0.2225461 -0.021519034999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[86]" " -type \"float2\" 0.25428708999999999 -0.042676419"
-		
-		2 "mug:polyTweakUV2" "uvTweak[87]" " -type \"float2\" 0.24923345 -0.041056782"
-		
-		2 "mug:polyTweakUV2" "uvTweak[88]" " -type \"float2\" 0.24344170000000001 -0.039709300000000003"
-		
-		2 "mug:polyTweakUV2" "uvTweak[89]" " -type \"float2\" 0.25146729000000001 -0.062681705000000004"
-		
-		2 "mug:polyTweakUV2" "uvTweak[90]" " -type \"float2\" 0.24601745999999999 -0.062388867000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[91]" " -type \"float2\" 0.25664586 -0.062815696000000004"
-		
-		2 "mug:polyTweakUV2" "uvTweak[92]" " -type \"float2\" 0.25445764999999998 -0.085062533999999995"
-		
-		2 "mug:polyTweakUV2" "uvTweak[93]" " -type \"float2\" 0.24936104000000001 -0.082733720999999996"
-		
-		2 "mug:polyTweakUV2" "uvTweak[94]" " -type \"float2\" 0.25714245000000002 -0.1105627"
-		
-		2 "mug:polyTweakUV2" "uvTweak[95]" " -type \"float2\" 0.25317201 -0.099203601000000002"
-		
-		2 "mug:polyTweakUV2" "uvTweak[96]" " -type \"float2\" 0.25882541999999997 -0.089166312999999997"
-		
-		2 "mug:polyTweakUV2" "uvTweak[97]" " -type \"float2\" 0.26091236000000001 -0.11602683"
-		
-		2 "mug:polyTweakUV2" "uvTweak[98]" " -type \"float2\" 0.26233929 -0.088358432000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[99]" " -type \"float2\" 0.23893780000000001 -0.11002739"
-		
-		2 "mug:polyTweakUV2" "uvTweak[100]" " -type \"float2\" 0.23679253 -0.084133773999999995"
-		
-		2 "mug:polyTweakUV2" "uvTweak[101]" " -type \"float2\" 0.24142015 -0.10538442000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[102]" " -type \"float2\" 0.26055136000000001 -0.065122277000000006"
-		
-		2 "mug:polyTweakUV2" "uvTweak[103]" " -type \"float2\" 0.23205358000000001 -0.063102751999999998"
-		
-		2 "mug:polyTweakUV2" "uvTweak[104]" " -type \"float2\" 0.25857010000000002 -0.045199901000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[105]" " -type \"float2\" 0.22728407 -0.042249292000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[106]" " -type \"float2\" 0.23178649000000001 -0.046887785000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[107]" " -type \"float2\" 0.23708093 -0.069628267999999993"
-		
-		2 "mug:polyTweakUV2" "uvTweak[108]" " -type \"float2\" 0.24293345 -0.095068842000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[109]" " -type \"float2\" 0.23757052000000001 -0.055363982999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[110]" " -type \"float2\" 0.24333641 -0.079972356999999994"
-		
-		2 "mug:polyTweakUV2" "uvTweak[111]" " -type \"float2\" 0.23170540000000001 -0.030912608000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[112]" " -type \"float2\" 0.23723224000000001 -0.036573261000000003"
-		
-		2 "mug:polyTweakUV2" "uvTweak[113]" " -type \"float2\" 0.242569 -0.061206548999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[114]" " -type \"float2\" 0.23763951999999999 -0.017929344999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[115]" " -type \"float2\" 0.24064815000000001 -0.040065795000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[116]" " -type \"float2\" 0.23255780000000001 -0.013454944"
-		
-		2 "mug:polyTweakUV2" "uvTweak[117]" " -type \"float2\" 0.23369575000000001 0.0037607551000000002"
-		
-		2 "mug:polyTweakUV2" "uvTweak[118]" " -type \"float2\" 0.22783234999999999 0.0058948398000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[119]" " -type \"float2\" 0.22900033 0.023613334"
-		
-		2 "mug:polyTweakUV2" "uvTweak[120]" " -type \"float2\" 0.22720304 -0.010491043"
-		
-		2 "mug:polyTweakUV2" "uvTweak[121]" " -type \"float2\" 0.22716027 -0.026252656999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[122]" " -type \"float2\" 0.33512091999999999 0.051074840000000003"
-		
-		2 "mug:polyTweakUV2" "uvTweak[123]" " -type \"float2\" 0.30036715000000003 0.047035106"
-		
-		2 "mug:polyTweakUV2" "uvTweak[124]" " -type \"float2\" 0.39248374000000003 0.064441174000000004"
-		
-		2 "mug:polyTweakUV2" "uvTweak[125]" " -type \"float2\" 0.36198679 0.060519813999999998"
-		
-		2 "mug:polyTweakUV2" "uvTweak[126]" " -type \"float2\" 0.43356821000000001 0.082656234999999995"
-		
-		2 "mug:polyTweakUV2" "uvTweak[127]" " -type \"float2\" 0.40652618000000001 0.078939825000000005"
-		
-		2 "mug:polyTweakUV2" "uvTweak[128]" " -type \"float2\" 0.46290495999999998 0.10409337"
-		
-		2 "mug:polyTweakUV2" "uvTweak[129]" " -type \"float2\" 0.43854478000000002 0.10087734"
-		
-		2 "mug:polyTweakUV2" "uvTweak[130]" " -type \"float2\" 0.48484680000000002 0.12840566"
-		
-		2 "mug:polyTweakUV2" "uvTweak[131]" " -type \"float2\" 0.46241887999999998 0.12596831"
-		
-		2 "mug:polyTweakUV2" "uvTweak[132]" " -type \"float2\" 0.50209022000000003 0.15600024000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[133]" " -type \"float2\" 0.48084471000000001 0.15446065"
-		
-		2 "mug:polyTweakUV2" "uvTweak[134]" " -type \"float2\" 0.51594609000000002 0.18728194000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[135]" " -type \"float2\" 0.49518951999999999 0.18659043"
-		
-		2 "mug:polyTweakUV2" "uvTweak[136]" " -type \"float2\" 0.52679478999999996 0.22201035999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[137]" " -type \"float2\" 0.50595045000000005 0.22204167999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[138]" " -type \"float2\" 0.53429722999999996 0.25987363000000002"
-		
-		2 "mug:polyTweakUV2" "uvTweak[139]" " -type \"float2\" 0.51290261999999998 0.26059288000000003"
-		
-		2 "mug:polyTweakUV2" "uvTweak[140]" " -type \"float2\" 0.53869473999999995 0.30216222999999998"
-		
-		2 "mug:polyTweakUV2" "uvTweak[141]" " -type \"float2\" 0.51629424000000002 0.30351507999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[142]" " -type \"float2\" 0.54026269999999998 0.35030252000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[143]" " -type \"float2\" 0.51639175000000004 0.35219389000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[144]" " -type \"float2\" 0.53897094999999995 0.40328425000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[145]" " -type \"float2\" 0.51321781 0.40565580000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[146]" " -type \"float2\" 0.53448647000000005 0.45659929999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[147]" " -type \"float2\" 0.50657004000000005 0.45950173999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[148]" " -type \"float2\" 0.52666676000000001 0.50602365000000005"
-		
-		2 "mug:polyTweakUV2" "uvTweak[149]" " -type \"float2\" 0.49641106000000002 0.50957154999999998"
-		
-		2 "mug:polyTweakUV2" "uvTweak[150]" " -type \"float2\" 0.51563466000000002 0.54763894999999996"
-		
-		2 "mug:polyTweakUV2" "uvTweak[151]" " -type \"float2\" 0.48295251 0.55201613999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[152]" " -type \"float2\" 0.50182455999999998 0.58025515000000005"
-		
-		2 "mug:polyTweakUV2" "uvTweak[153]" " -type \"float2\" 0.46662893999999999 0.58567327000000002"
-		
-		2 "mug:polyTweakUV2" "uvTweak[154]" " -type \"float2\" 0.48586288 0.60442227000000004"
-		
-		2 "mug:polyTweakUV2" "uvTweak[155]" " -type \"float2\" 0.44800833000000001 0.61107831999999995"
-		
-		2 "mug:polyTweakUV2" "uvTweak[156]" " -type \"float2\" 0.46849790000000002 0.62097042999999996"
-		
-		2 "mug:polyTweakUV2" "uvTweak[157]" " -type \"float2\" 0.42777279000000001 0.6290251"
-		
-		2 "mug:polyTweakUV2" "uvTweak[158]" " -type \"float2\" 0.44970157999999999 0.63192862000000005"
-		
-		2 "mug:polyTweakUV2" "uvTweak[159]" " -type \"float2\" 0.40579757 0.64141309000000002"
-		
-		2 "mug:polyTweakUV2" "uvTweak[160]" " -type \"float2\" 0.42733976000000001 0.64027374999999997"
-		
-		2 "mug:polyTweakUV2" "uvTweak[161]" " -type \"float2\" 0.37987008999999999 0.65108383000000003"
-		
-		2 "mug:polyTweakUV2" "uvTweak[162]" " -type \"float2\" 0.39929447000000001 0.64712948000000003"
-		
-		2 "mug:polyTweakUV2" "uvTweak[163]" " -type \"float2\" 0.34784743000000001 0.65923524"
-		
-		2 "mug:polyTweakUV2" "uvTweak[164]" " -type \"float2\" 0.36471048 0.65251647999999995"
-		
-		2 "mug:polyTweakUV2" "uvTweak[165]" " -type \"float2\" 0.30883619000000001 0.66604560999999995"
-		
-		2 "mug:polyTweakUV2" "uvTweak[166]" " -type \"float2\" 0.32363324999999998 0.65498566999999996"
-		
-		2 "mug:polyTweakUV2" "uvTweak[167]" " -type \"float2\" 0.26259196000000001 0.67026514000000004"
-		
-		2 "mug:polyTweakUV2" "uvTweak[168]" " -type \"float2\" 0.27223547999999997 0.65292262999999995"
-		
-		2 "mug:polyTweakUV2" "uvTweak[169]" " -type \"float2\" 0.20484379999999999 0.67056488999999997"
-		
-		2 "mug:polyTweakUV2" "uvTweak[170]" " -type \"float2\" 0.32993549 0.059104263999999997"
-		
-		2 "mug:polyTweakUV2" "uvTweak[171]" " -type \"float2\" 0.38728335000000003 0.072571396999999996"
-		
-		2 "mug:polyTweakUV2" "uvTweak[172]" " -type \"float2\" 0.42810312 0.090706199000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[173]" " -type \"float2\" 0.45707442999999998 0.11192089"
-		
-		2 "mug:polyTweakUV2" "uvTweak[174]" " -type \"float2\" 0.47868273 0.13592407000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[175]" " -type \"float2\" 0.49569401000000002 0.16320054000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[176]" " -type \"float2\" 0.50942593999999997 0.1942248"
-		
-		2 "mug:polyTweakUV2" "uvTweak[177]" " -type \"float2\" 0.52022796999999998 0.22878472999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[178]" " -type \"float2\" 0.52771847999999999 0.26653636000000003"
-		
-		2 "mug:polyTweakUV2" "uvTweak[179]" " -type \"float2\" 0.53212791999999998 0.30878747000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[180]" " -type \"float2\" 0.53371942000000006 0.35698902999999998"
-		
-		2 "mug:polyTweakUV2" "uvTweak[181]" " -type \"float2\" 0.53244990000000003 0.41010422000000002"
-		
-		2 "mug:polyTweakUV2" "uvTweak[182]" " -type \"float2\" 0.52797930999999998 0.46354603999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[183]" " -type \"float2\" 0.52016938000000001 0.51302892"
-		
-		2 "mug:polyTweakUV2" "uvTweak[184]" " -type \"float2\" 0.50915736 0.55457687"
-		
-		2 "mug:polyTweakUV2" "uvTweak[185]" " -type \"float2\" 0.49540468999999998 0.58698868999999998"
-		
-		2 "mug:polyTweakUV2" "uvTweak[186]" " -type \"float2\" 0.47956935000000001 0.61084234999999998"
-		
-		2 "mug:polyTweakUV2" "uvTweak[187]" " -type \"float2\" 0.46243276999999999 0.62701278999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[188]" " -type \"float2\" 0.44396438999999999 0.63760715999999995"
-		
-		2 "mug:polyTweakUV2" "uvTweak[189]" " -type \"float2\" 0.42193255000000002 0.64568585000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[190]" " -type \"float2\" 0.39411721 0.65238023000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[191]" " -type \"float2\" 0.35961667000000003 0.65768068999999996"
-		
-		2 "mug:polyTweakUV2" "uvTweak[192]" " -type \"float2\" 0.31855652000000001 0.66010272999999997"
-		
-		2 "mug:polyTweakUV2" "uvTweak[193]" " -type \"float2\" 0.26708346999999999 0.65806191999999997"
-		
-		2 "mug:polyTweakUV2" "uvTweak[194]" " -type \"float2\" 0.32562327000000002 0.061303853999999998"
-		
-		2 "mug:polyTweakUV2" "uvTweak[195]" " -type \"float2\" 0.38374928000000003 0.075024486000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[196]" " -type \"float2\" 0.42534520999999997 0.093454896999999995"
-		
-		2 "mug:polyTweakUV2" "uvTweak[197]" " -type \"float2\" 0.45504144000000002 0.11507468999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[198]" " -type \"float2\" 0.47726139000000001 0.13958585000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[199]" " -type \"float2\" 0.49473503000000002 0.16742165000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[200]" " -type \"float2\" 0.50878506999999995 0.19900109999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[201]" " -type \"float2\" 0.51979160000000002 0.23408361"
-		
-		2 "mug:polyTweakUV2" "uvTweak[202]" " -type \"float2\" 0.52741336999999999 0.27235144"
-		
-		2 "mug:polyTweakUV2" "uvTweak[203]" " -type \"float2\" 0.53189324999999998 0.31511271000000002"
-		
-		2 "mug:polyTweakUV2" "uvTweak[204]" " -type \"float2\" 0.53350776 0.36381029999999998"
-		
-		2 "mug:polyTweakUV2" "uvTweak[205]" " -type \"float2\" 0.53222477000000001 0.417409"
-		
-		2 "mug:polyTweakUV2" "uvTweak[206]" " -type \"float2\" 0.52770901000000003 0.47132254000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[207]" " -type \"float2\" 0.51981818999999996 0.52125352999999996"
-		
-		2 "mug:polyTweakUV2" "uvTweak[208]" " -type \"float2\" 0.50868022000000002 0.56322408000000002"
-		
-		2 "mug:polyTweakUV2" "uvTweak[209]" " -type \"float2\" 0.49473915000000002 0.59603918"
-		
-		2 "mug:polyTweakUV2" "uvTweak[210]" " -type \"float2\" 0.47863105 0.62028110000000003"
-		
-		2 "mug:polyTweakUV2" "uvTweak[211]" " -type \"float2\" 0.46111611000000002 0.63682448999999997"
-		
-		2 "mug:polyTweakUV2" "uvTweak[212]" " -type \"float2\" 0.44216390999999999 0.64774019000000005"
-		
-		2 "mug:polyTweakUV2" "uvTweak[213]" " -type \"float2\" 0.41960218999999999 0.65602744000000002"
-		
-		2 "mug:polyTweakUV2" "uvTweak[214]" " -type \"float2\" 0.39127227999999997 0.66281902999999998"
-		
-		2 "mug:polyTweakUV2" "uvTweak[215]" " -type \"float2\" 0.35629207000000002 0.66814523999999997"
-		
-		2 "mug:polyTweakUV2" "uvTweak[216]" " -type \"float2\" 0.31470111000000001 0.67057239999999996"
-		
-		2 "mug:polyTweakUV2" "uvTweak[217]" " -type \"float2\" 0.26260188000000001 0.66854638"
-		
-		2 "mug:polyTweakUV2" "uvTweak[218]" " -type \"float2\" 0.32240637999999999 0.057473995"
-		
-		2 "mug:polyTweakUV2" "uvTweak[219]" " -type \"float2\" 0.38208017 0.071576117999999994"
-		
-		2 "mug:polyTweakUV2" "uvTweak[220]" " -type \"float2\" 0.42546614999999999 0.090650736999999995"
-		
-		2 "mug:polyTweakUV2" "uvTweak[221]" " -type \"float2\" 0.45695015999999999 0.11327379999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[222]" " -type \"float2\" 0.48070201000000001 0.13907969000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[223]" " -type \"float2\" 0.49931318000000002 0.16832337999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[224]" " -type \"float2\" 0.51410913000000003 0.20124497999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[225]" " -type \"float2\" 0.52556378000000004 0.23751731000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[226]" " -type \"float2\" 0.53345220999999998 0.27690463999999998"
-		
-		2 "mug:polyTweakUV2" "uvTweak[227]" " -type \"float2\" 0.53805756999999999 0.32069713"
-		
-		2 "mug:polyTweakUV2" "uvTweak[228]" " -type \"float2\" 0.53969073000000001 0.37030070999999998"
-		
-		2 "mug:polyTweakUV2" "uvTweak[229]" " -type \"float2\" 0.53835659999999996 0.42470776999999998"
-		
-		2 "mug:polyTweakUV2" "uvTweak[230]" " -type \"float2\" 0.53373479999999995 0.47941225999999998"
-		
-		2 "mug:polyTweakUV2" "uvTweak[231]" " -type \"float2\" 0.52567470000000005 0.53015714999999997"
-		
-		2 "mug:polyTweakUV2" "uvTweak[232]" " -type \"float2\" 0.51426892999999996 0.57301908999999995"
-		
-		2 "mug:polyTweakUV2" "uvTweak[233]" " -type \"float2\" 0.49990296000000001 0.60682440000000004"
-		
-		2 "mug:polyTweakUV2" "uvTweak[234]" " -type \"float2\" 0.4831396 0.63213348000000003"
-		
-		2 "mug:polyTweakUV2" "uvTweak[235]" " -type \"float2\" 0.46466007999999998 0.64977127000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[236]" " -type \"float2\" 0.44443454999999998 0.66166066999999995"
-		
-		2 "mug:polyTweakUV2" "uvTweak[237]" " -type \"float2\" 0.42050681000000001 0.67060673000000004"
-		
-		2 "mug:polyTweakUV2" "uvTweak[238]" " -type \"float2\" 0.39094296000000001 0.67774206000000004"
-		
-		2 "mug:polyTweakUV2" "uvTweak[239]" " -type \"float2\" 0.35494745 0.68320256000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[240]" " -type \"float2\" 0.31231174 0.68568211999999995"
-		
-		2 "mug:polyTweakUV2" "uvTweak[241]" " -type \"float2\" 0.2590827 0.68365878000000002"
-		
-		2 "mug:polyTweakUV2" "uvTweak[242]" " -type \"float2\" 0.32046195999999999 0.047797120999999998"
-		
-		2 "mug:polyTweakUV2" "uvTweak[243]" " -type \"float2\" 0.38236125999999998 0.062375097999999997"
-		
-		2 "mug:polyTweakUV2" "uvTweak[244]" " -type \"float2\" 0.42844905999999999 0.082391739000000005"
-		
-		2 "mug:polyTweakUV2" "uvTweak[245]" " -type \"float2\" 0.46268388999999999 0.10654956"
-		
-		2 "mug:polyTweakUV2" "uvTweak[246]" " -type \"float2\" 0.4888033 0.13435834999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[247]" " -type \"float2\" 0.50916249000000002 0.16577636000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[248]" " -type \"float2\" 0.52508909000000004 0.20074901000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[249]" " -type \"float2\" 0.53720688999999999 0.23880825999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[250]" " -type \"float2\" 0.54548061000000003 0.27985132000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[251]" " -type \"float2\" 0.55025572 0.32513492999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[252]" " -type \"float2\" 0.55189984999999997 0.37599903000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[253]" " -type \"float2\" 0.55047727000000002 0.43148839"
-		
-		2 "mug:polyTweakUV2" "uvTweak[254]" " -type \"float2\" 0.5456934 0.48725288999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[255]" " -type \"float2\" 0.53738260000000004 0.53912568000000005"
-		
-		2 "mug:polyTweakUV2" "uvTweak[256]" " -type \"float2\" 0.52558254999999998 0.58328921"
-		
-		2 "mug:polyTweakUV2" "uvTweak[257]" " -type \"float2\" 0.51058042000000003 0.61860590999999998"
-		
-		2 "mug:polyTweakUV2" "uvTweak[258]" " -type \"float2\" 0.49281844000000002 0.64558773999999997"
-		
-		2 "mug:polyTweakUV2" "uvTweak[259]" " -type \"float2\" 0.47284337999999998 0.66496515"
-		
-		2 "mug:polyTweakUV2" "uvTweak[260]" " -type \"float2\" 0.45062426 0.67840761000000005"
-		
-		2 "mug:polyTweakUV2" "uvTweak[261]" " -type \"float2\" 0.42457250000000002 0.68840855000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[262]" " -type \"float2\" 0.3931289 0.69610059000000002"
-		
-		2 "mug:polyTweakUV2" "uvTweak[263]" " -type \"float2\" 0.35564702999999998 0.70178646"
-		
-		2 "mug:polyTweakUV2" "uvTweak[264]" " -type \"float2\" 0.31152155999999998 0.704355"
-		
-		2 "mug:polyTweakUV2" "uvTweak[265]" " -type \"float2\" 0.25672983999999999 0.70231741999999997"
-		
-		2 "mug:polyTweakUV2" "uvTweak[266]" " -type \"float2\" 0.31988105 0.032872826000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[267]" " -type \"float2\" 0.38453797000000001 0.047980674000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[268]" " -type \"float2\" 0.43406799000000001 0.069162846"
-		
-		2 "mug:polyTweakUV2" "uvTweak[269]" " -type \"float2\" 0.47184595000000001 0.095279157000000003"
-		
-		2 "mug:polyTweakUV2" "uvTweak[270]" " -type \"float2\" 0.50102155999999998 0.12566801999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[271]" " -type \"float2\" 0.52362989999999998 0.15988784"
-		
-		2 "mug:polyTweakUV2" "uvTweak[272]" " -type \"float2\" 0.54099894000000004 0.1974892"
-		
-		2 "mug:polyTweakUV2" "uvTweak[273]" " -type \"float2\" 0.55395156000000001 0.23781757000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[274]" " -type \"float2\" 0.56270158000000003 0.28094542"
-		
-		2 "mug:polyTweakUV2" "uvTweak[275]" " -type \"float2\" 0.56767630999999996 0.32808226000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[276]" " -type \"float2\" 0.56932008000000001 0.38047773000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[277]" " -type \"float2\" 0.56777489000000003 0.43725085000000002"
-		
-		2 "mug:polyTweakUV2" "uvTweak[278]" " -type \"float2\" 0.56278002000000005 0.49427235000000003"
-		
-		2 "mug:polyTweakUV2" "uvTweak[279]" " -type \"float2\" 0.55415230999999998 0.54750865999999998"
-		
-		2 "mug:polyTweakUV2" "uvTweak[280]" " -type \"float2\" 0.54185461999999995 0.59329312999999995"
-		
-		2 "mug:polyTweakUV2" "uvTweak[281]" " -type \"float2\" 0.52604490999999998 0.63053501000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[282]" " -type \"float2\" 0.50700414000000005 0.65967726999999998"
-		
-		2 "mug:polyTweakUV2" "uvTweak[283]" " -type \"float2\" 0.48509343999999999 0.68131584000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[284]" " -type \"float2\" 0.46028361000000001 0.69677818000000002"
-		
-		2 "mug:polyTweakUV2" "uvTweak[285]" " -type \"float2\" 0.43148395 0.70814675000000005"
-		
-		2 "mug:polyTweakUV2" "uvTweak[286]" " -type \"float2\" 0.39763906999999998 0.71655816000000006"
-		
-		2 "mug:polyTweakUV2" "uvTweak[287]" " -type \"float2\" 0.35830221000000001 0.72253573000000004"
-		
-		2 "mug:polyTweakUV2" "uvTweak[288]" " -type \"float2\" 0.31234387000000002 0.72521572999999995"
-		
-		2 "mug:polyTweakUV2" "uvTweak[289]" " -type \"float2\" 0.25566122000000002 0.72314537000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[290]" " -type \"float2\" 0.32065305 0.013715625"
-		
-		2 "mug:polyTweakUV2" "uvTweak[291]" " -type \"float2\" 0.38840929000000002 0.029360890000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[292]" " -type \"float2\" 0.44188907999999999 0.051838136999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[293]" " -type \"float2\" 0.48376754 0.080193818"
-		
-		2 "mug:polyTweakUV2" "uvTweak[294]" " -type \"float2\" 0.51648592999999998 0.11356086"
-		
-		2 "mug:polyTweakUV2" "uvTweak[295]" " -type \"float2\" 0.54169469999999997 0.15101866"
-		
-		2 "mug:polyTweakUV2" "uvTweak[296]" " -type \"float2\" 0.56071859999999996 0.19164732000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[297]" " -type \"float2\" 0.57461828000000004 0.23457069999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[298]" " -type \"float2\" 0.58390008999999998 0.28006887000000003"
-		
-		2 "mug:polyTweakUV2" "uvTweak[299]" " -type \"float2\" 0.58908826000000003 0.32929265000000002"
-		
-		2 "mug:polyTweakUV2" "uvTweak[300]" " -type \"float2\" 0.59071642000000002 0.38338304000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[301]" " -type \"float2\" 0.58902096999999998 0.44155024999999998"
-		
-		2 "mug:polyTweakUV2" "uvTweak[302]" " -type \"float2\" 0.58377962999999999 0.49993580999999998"
-		
-		2 "mug:polyTweakUV2" "uvTweak[303]" " -type \"float2\" 0.57478737999999996 0.55467272000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[304]" " -type \"float2\" 0.56192147999999997 0.60227913"
-		
-		2 "mug:polyTweakUV2" "uvTweak[305]" " -type \"float2\" 0.54518515000000001 0.64172065"
-		
-		2 "mug:polyTweakUV2" "uvTweak[306]" " -type \"float2\" 0.52466685000000002 0.67335469000000003"
-		
-		2 "mug:polyTweakUV2" "uvTweak[307]" " -type \"float2\" 0.50050711999999997 0.697613"
-		
-		2 "mug:polyTweakUV2" "uvTweak[308]" " -type \"float2\" 0.47268090000000001 0.71541332999999996"
-		
-		2 "mug:polyTweakUV2" "uvTweak[309]" " -type \"float2\" 0.44069638999999999 0.72835623999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[310]" " -type \"float2\" 0.40409489999999998 0.73758858000000005"
-		
-		2 "mug:polyTweakUV2" "uvTweak[311]" " -type \"float2\" 0.36266663999999998 0.74389439999999996"
-		
-		2 "mug:polyTweakUV2" "uvTweak[312]" " -type \"float2\" 0.3146641 0.74669450999999998"
-		
-		2 "mug:polyTweakUV2" "uvTweak[313]" " -type \"float2\" 0.25589684000000001 0.74457406999999998"
-		
-		2 "mug:polyTweakUV2" "uvTweak[314]" " -type \"float2\" 0.32266513000000002 -0.0082966089000000003"
-		
-		2 "mug:polyTweakUV2" "uvTweak[315]" " -type \"float2\" 0.39363714999999999 0.0078466236999999994"
-		
-		2 "mug:polyTweakUV2" "uvTweak[316]" " -type \"float2\" 0.45129266000000001 0.031644255000000003"
-		
-		2 "mug:polyTweakUV2" "uvTweak[317]" " -type \"float2\" 0.49753985000000001 0.062351315999999997"
-		
-		2 "mug:polyTweakUV2" "uvTweak[318]" " -type \"float2\" 0.53403931999999998 0.098875999000000006"
-		
-		2 "mug:polyTweakUV2" "uvTweak[319]" " -type \"float2\" 0.56201535000000002 0.13977459"
-		
-		2 "mug:polyTweakUV2" "uvTweak[320]" " -type \"float2\" 0.58278883000000004 0.18361104"
-		
-		2 "mug:polyTweakUV2" "uvTweak[321]" " -type \"float2\" 0.59767908000000003 0.22926832999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[322]" " -type \"float2\" 0.60750853999999999 0.27725142000000003"
-		
-		2 "mug:polyTweakUV2" "uvTweak[323]" " -type \"float2\" 0.61290573999999998 0.32864457000000002"
-		
-		2 "mug:polyTweakUV2" "uvTweak[324]" " -type \"float2\" 0.61450309000000003 0.38446998999999998"
-		
-		2 "mug:polyTweakUV2" "uvTweak[325]" " -type \"float2\" 0.61263829000000003 0.44403874999999998"
-		
-		2 "mug:polyTweakUV2" "uvTweak[326]" " -type \"float2\" 0.60713046999999998 0.50379430999999997"
-		
-		2 "mug:polyTweakUV2" "uvTweak[327]" " -type \"float2\" 0.59775215000000004 0.56005722000000002"
-		
-		2 "mug:polyTweakUV2" "uvTweak[328]" " -type \"float2\" 0.58428513999999998 0.60955179000000004"
-		
-		2 "mug:polyTweakUV2" "uvTweak[329]" " -type \"float2\" 0.56656616999999998 0.65130429999999995"
-		
-		2 "mug:polyTweakUV2" "uvTweak[330]" " -type \"float2\" 0.54447305000000001 0.68557745000000003"
-		
-		2 "mug:polyTweakUV2" "uvTweak[331]" " -type \"float2\" 0.51790570999999996 0.71262031999999997"
-		
-		2 "mug:polyTweakUV2" "uvTweak[332]" " -type \"float2\" 0.48685029000000002 0.73290336"
-		
-		2 "mug:polyTweakUV2" "uvTweak[333]" " -type \"float2\" 0.45147046000000002 0.74750744999999996"
-		
-		2 "mug:polyTweakUV2" "uvTweak[334]" " -type \"float2\" 0.41195770999999998 0.75759578000000005"
-		
-		2 "mug:polyTweakUV2" "uvTweak[335]" " -type \"float2\" 0.36835369000000001 0.76423722999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[336]" " -type \"float2\" 0.31824657000000001 0.76715374000000003"
-		
-		2 "mug:polyTweakUV2" "uvTweak[337]" " -type \"float2\" 0.25735581000000002 0.76496874999999998"
-		
-		2 "mug:polyTweakUV2" "uvTweak[338]" " -type \"float2\" 0.32570600999999999 -0.031520544999999997"
-		
-		2 "mug:polyTweakUV2" "uvTweak[339]" " -type \"float2\" 0.39976725000000002 -0.014962672999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[340]" " -type \"float2\" 0.46151492 0.010074437"
-		
-		2 "mug:polyTweakUV2" "uvTweak[341]" " -type \"float2\" 0.51207833999999997 0.043062485999999997"
-		
-		2 "mug:polyTweakUV2" "uvTweak[342]" " -type \"float2\" 0.55232077999999996 0.082685201999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[343]" " -type \"float2\" 0.58302951000000003 0.12696790999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[344]" " -type \"float2\" 0.60551929000000004 0.17395289"
-		
-		2 "mug:polyTweakUV2" "uvTweak[345]" " -type \"float2\" 0.62136983999999995 0.22227789000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[346]" " -type \"float2\" 0.63172161999999998 0.27267468"
-		
-		2 "mug:polyTweakUV2" "uvTweak[347]" " -type \"float2\" 0.63730752000000002 0.32615750999999998"
-		
-		2 "mug:polyTweakUV2" "uvTweak[348]" " -type \"float2\" 0.63886045999999996 0.38362741"
-		
-		2 "mug:polyTweakUV2" "uvTweak[349]" " -type \"float2\" 0.63682079000000003 0.44449960999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[350]" " -type \"float2\" 0.63104671000000001 0.50552761999999996"
-		
-		2 "mug:polyTweakUV2" "uvTweak[351]" " -type \"float2\" 0.62128854 0.56322664"
-		
-		2 "mug:polyTweakUV2" "uvTweak[352]" " -type \"float2\" 0.60723174000000002 0.61453283000000003"
-		
-		2 "mug:polyTweakUV2" "uvTweak[353]" " -type \"float2\" 0.58854388999999996 0.65853518"
-		
-		2 "mug:polyTweakUV2" "uvTweak[354]" " -type \"float2\" 0.5648917 0.69539803"
-		
-		2 "mug:polyTweakUV2" "uvTweak[355]" " -type \"float2\" 0.53593433000000001 0.72518389999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[356]" " -type \"float2\" 0.50167273999999995 0.74791032000000002"
-		
-		2 "mug:polyTweakUV2" "uvTweak[357]" " -type \"float2\" 0.46293834 0.76413827999999995"
-		
-		2 "mug:polyTweakUV2" "uvTweak[358]" " -type \"float2\" 0.42057433999999999 0.77505296000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[359]" " -type \"float2\" 0.37487397 0.78201127000000004"
-		
-		2 "mug:polyTweakUV2" "uvTweak[360]" " -type \"float2\" 0.32275863999999999 0.78503144000000002"
-		
-		2 "mug:polyTweakUV2" "uvTweak[361]" " -type \"float2\" 0.25986673999999998 0.78277503999999998"
-		
-		2 "mug:polyTweakUV2" "uvTweak[362]" " -type \"float2\" 0.3294822 -0.054189651999999998"
-		
-		2 "mug:polyTweakUV2" "uvTweak[363]" " -type \"float2\" 0.40626737000000002 -0.037332087999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[364]" " -type \"float2\" 0.47171344999999998 -0.01123473"
-		
-		2 "mug:polyTweakUV2" "uvTweak[365]" " -type \"float2\" 0.52621525999999996 0.023785471999999998"
-		
-		2 "mug:polyTweakUV2" "uvTweak[366]" " -type \"float2\" 0.56988072000000001 0.066206843000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[367]" " -type \"float2\" 0.60308242000000001 0.11355730999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[368]" " -type \"float2\" 0.62712646000000005 0.16338901"
-		
-		2 "mug:polyTweakUV2" "uvTweak[369]" " -type \"float2\" 0.64383650000000003 0.21411158"
-		
-		2 "mug:polyTweakUV2" "uvTweak[370]" " -type \"float2\" 0.65464783000000004 0.266666"
-		
-		2 "mug:polyTweakUV2" "uvTweak[371]" " -type \"float2\" 0.66038989999999997 0.32199960999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[372]" " -type \"float2\" 0.66188955000000005 0.380898"
-		
-		2 "mug:polyTweakUV2" "uvTweak[373]" " -type \"float2\" 0.65968287000000003 0.44287496999999998"
-		
-		2 "mug:polyTweakUV2" "uvTweak[374]" " -type \"float2\" 0.65366405000000005 0.50498027000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[375]" " -type \"float2\" 0.64356190000000002 0.56391614999999995"
-		
-		2 "mug:polyTweakUV2" "uvTweak[376]" " -type \"float2\" 0.62897265000000002 0.61682104999999998"
-		
-		2 "mug:polyTweakUV2" "uvTweak[377]" " -type \"float2\" 0.60940486000000005 0.66284257000000002"
-		
-		2 "mug:polyTweakUV2" "uvTweak[378]" " -type \"float2\" 0.584328 0.70205282999999996"
-		
-		2 "mug:polyTweakUV2" "uvTweak[379]" " -type \"float2\" 0.55317861000000002 0.73433714999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[380]" " -type \"float2\" 0.51597594999999996 0.75928843000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[381]" " -type \"float2\" 0.47417930000000003 0.77698612"
-		
-		2 "mug:polyTweakUV2" "uvTweak[382]" " -type \"float2\" 0.42923804999999998 0.78863919000000005"
-		
-		2 "mug:polyTweakUV2" "uvTweak[383]" " -type \"float2\" 0.38167527000000001 0.79587346000000003"
-		
-		2 "mug:polyTweakUV2" "uvTweak[384]" " -type \"float2\" 0.32779807 0.79897868999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[385]" " -type \"float2\" 0.26317795999999999 0.79665266999999995"
-		
-		2 "mug:polyTweakUV2" "uvTweak[386]" " -type \"float2\" 0.33364116999999999 -0.074568390999999998"
-		
-		2 "mug:polyTweakUV2" "uvTweak[387]" " -type \"float2\" 0.41257426000000003 -0.057549149000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[388]" " -type \"float2\" 0.48104270999999998 -0.030652164999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[389]" " -type \"float2\" 0.53880417000000003 0.0059946178999999997"
-		
-		2 "mug:polyTweakUV2" "uvTweak[390]" " -type \"float2\" 0.58531266000000004 0.050696946999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[391]" " -type \"float2\" 0.62057965999999998 0.10055964000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[392]" " -type \"float2\" 0.64590095999999997 0.15271584999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[393]" " -type \"float2\" 0.66330725000000001 0.20537989000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[394]" " -type \"float2\" 0.67448366000000004 0.25967013999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[395]" " -type \"float2\" 0.68034088999999998 0.31647335999999998"
-		
-		2 "mug:polyTweakUV2" "uvTweak[396]" " -type \"float2\" 0.681786 0.37647498000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[397]" " -type \"float2\" 0.67943584999999995 0.43927442999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[398]" " -type \"float2\" 0.67321545000000005 0.50218021999999995"
-		
-		2 "mug:polyTweakUV2" "uvTweak[399]" " -type \"float2\" 0.66283435000000002 0.56206"
-		
-		2 "mug:polyTweakUV2" "uvTweak[400]" " -type \"float2\" 0.64781213000000004 0.61623013000000004"
-		
-		2 "mug:polyTweakUV2" "uvTweak[401]" " -type \"float2\" 0.62752222999999996 0.66389012000000003"
-		
-		2 "mug:polyTweakUV2" "uvTweak[402]" " -type \"float2\" 0.60126674000000002 0.70503121999999996"
-		
-		2 "mug:polyTweakUV2" "uvTweak[403]" " -type \"float2\" 0.56829262000000003 0.73938656000000003"
-		
-		2 "mug:polyTweakUV2" "uvTweak[404]" " -type \"float2\" 0.52863800999999999 0.76618527999999997"
-		
-		2 "mug:polyTweakUV2" "uvTweak[405]" " -type \"float2\" 0.48430106000000001 0.78509611000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[406]" " -type \"float2\" 0.43724760000000001 0.79735005000000003"
-		
-		2 "mug:polyTweakUV2" "uvTweak[407]" " -type \"float2\" 0.38819524999999999 0.80480300999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[408]" " -type \"float2\" 0.33293176000000002 0.80797189000000003"
-		
-		2 "mug:polyTweakUV2" "uvTweak[409]" " -type \"float2\" 0.26698548 0.80558669999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[410]" " -type \"float2\" 0.33780408000000001 -0.091112136999999996"
-		
-		2 "mug:polyTweakUV2" "uvTweak[411]" " -type \"float2\" 0.41814318 -0.074081063000000003"
-		
-		2 "mug:polyTweakUV2" "uvTweak[412]" " -type \"float2\" 0.48872986000000002 -0.046704322"
-		
-		2 "mug:polyTweakUV2" "uvTweak[413]" " -type \"float2\" 0.54882693000000005 -0.0089601278000000003"
-		
-		2 "mug:polyTweakUV2" "uvTweak[414]" " -type \"float2\" 0.59738427000000005 0.037331073999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[415]" " -type \"float2\" 0.63413465000000002 0.088957517999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[416]" " -type \"float2\" 0.66036289999999997 0.14273712"
-		
-		2 "mug:polyTweakUV2" "uvTweak[417]" " -type \"float2\" 0.67825334999999998 0.19673779999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[418]" " -type \"float2\" 0.68967639999999997 0.25220906999999998"
-		
-		2 "mug:polyTweakUV2" "uvTweak[419]" " -type \"float2\" 0.69560283000000001 0.30998963000000002"
-		
-		2 "mug:polyTweakUV2" "uvTweak[420]" " -type \"float2\" 0.69699900999999997 0.37068599000000002"
-		
-		2 "mug:polyTweakUV2" "uvTweak[421]" " -type \"float2\" 0.69454252999999999 0.43396365999999997"
-		
-		2 "mug:polyTweakUV2" "uvTweak[422]" " -type \"float2\" 0.68818045000000005 0.49733286999999998"
-		
-		2 "mug:polyTweakUV2" "uvTweak[423]" " -type \"float2\" 0.67760967999999999 0.55779301999999997"
-		
-		2 "mug:polyTweakUV2" "uvTweak[424]" " -type \"float2\" 0.66229062999999999 0.61280142999999998"
-		
-		2 "mug:polyTweakUV2" "uvTweak[425]" " -type \"float2\" 0.64149582000000005 0.66159785000000004"
-		
-		2 "mug:polyTweakUV2" "uvTweak[426]" " -type \"float2\" 0.61440026999999997 0.70411259000000004"
-		
-		2 "mug:polyTweakUV2" "uvTweak[427]" " -type \"float2\" 0.58011013 0.73996269999999997"
-		
-		2 "mug:polyTweakUV2" "uvTweak[428]" " -type \"float2\" 0.53867894000000005 0.76810115999999995"
-		
-		2 "mug:polyTweakUV2" "uvTweak[429]" " -type \"float2\" 0.49251249000000002 0.78788661999999998"
-		
-		2 "mug:polyTweakUV2" "uvTweak[430]" " -type \"float2\" 0.44396575999999999 0.80056583999999997"
-		
-		2 "mug:polyTweakUV2" "uvTweak[431]" " -type \"float2\" 0.39390233000000002 0.80816703999999995"
-		
-		2 "mug:polyTweakUV2" "uvTweak[432]" " -type \"float2\" 0.33772802000000002 0.81137645000000003"
-		
-		2 "mug:polyTweakUV2" "uvTweak[433]" " -type \"float2\" 0.27095522999999999 0.80894827999999996"
-		
-		2 "mug:polyTweakUV2" "uvTweak[434]" " -type \"float2\" 0.34159793999999999 -0.10260083"
-		
-		2 "mug:polyTweakUV2" "uvTweak[435]" " -type \"float2\" 0.422497 -0.085710465999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[436]" " -type \"float2\" 0.49414405 -0.058206200999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[437]" " -type \"float2\" 0.55548209000000004 -0.019973069"
-		
-		2 "mug:polyTweakUV2" "uvTweak[438]" " -type \"float2\" 0.60514575000000004 0.027097315"
-		
-		2 "mug:polyTweakUV2" "uvTweak[439]" " -type \"float2\" 0.64269279999999995 0.079607099000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[440]" " -type \"float2\" 0.66939526999999999 0.13418779"
-		
-		2 "mug:polyTweakUV2" "uvTweak[441]" " -type \"float2\" 0.68752670000000005 0.18882090000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[442]" " -type \"float2\" 0.69906508999999994 0.24483265000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[443]" " -type \"float2\" 0.70501387000000004 0.30302720999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[444]" " -type \"float2\" 0.70637393000000004 0.36396044"
-		
-		2 "mug:polyTweakUV2" "uvTweak[445]" " -type \"float2\" 0.70385872999999999 0.42733788"
-		
-		2 "mug:polyTweakUV2" "uvTweak[446]" " -type \"float2\" 0.69742811000000005 0.49080104000000002"
-		
-		2 "mug:polyTweakUV2" "uvTweak[447]" " -type \"float2\" 0.68677186999999995 0.55143702000000006"
-		
-		2 "mug:polyTweakUV2" "uvTweak[448]" " -type \"float2\" 0.67131733999999998 0.60679680000000003"
-		
-		2 "mug:polyTweakUV2" "uvTweak[449]" " -type \"float2\" 0.65027499 0.65614682000000002"
-		
-		2 "mug:polyTweakUV2" "uvTweak[450]" " -type \"float2\" 0.62274556999999997 0.69938058000000003"
-		
-		2 "mug:polyTweakUV2" "uvTweak[451]" " -type \"float2\" 0.58774841 0.73604493999999998"
-		
-		2 "mug:polyTweakUV2" "uvTweak[452]" " -type \"float2\" 0.54534656000000004 0.76492517999999998"
-		
-		2 "mug:polyTweakUV2" "uvTweak[453]" " -type \"float2\" 0.49819231000000003 0.78519004999999997"
-		
-		2 "mug:polyTweakUV2" "uvTweak[454]" " -type \"float2\" 0.44887527999999999 0.79809260000000004"
-		
-		2 "mug:polyTweakUV2" "uvTweak[455]" " -type \"float2\" 0.39834931000000001 0.80576323999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[456]" " -type \"float2\" 0.34179989 0.80898820999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[457]" " -type \"float2\" 0.27475873000000001 0.80653870000000005"
-		
-		2 "mug:polyTweakUV2" "uvTweak[458]" " -type \"float2\" 0.34468516999999999 -0.10823579"
-		
-		2 "mug:polyTweakUV2" "uvTweak[459]" " -type \"float2\" 0.42526308000000002 -0.091628760000000004"
-		
-		2 "mug:polyTweakUV2" "uvTweak[460]" " -type \"float2\" 0.49684623 -0.064356505999999994"
-		
-		2 "mug:polyTweakUV2" "uvTweak[461]" " -type \"float2\" 0.55825174 -0.026274174000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[462]" " -type \"float2\" 0.60800898000000003 0.020713240000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[463]" " -type \"float2\" 0.64561665000000001 0.073166698000000002"
-		
-		2 "mug:polyTweakUV2" "uvTweak[464]" " -type \"float2\" 0.67233372000000002 0.12767329999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[465]" " -type \"float2\" 0.69045049000000003 0.18219352"
-		
-		2 "mug:polyTweakUV2" "uvTweak[466]" " -type \"float2\" 0.70196795000000001 0.23806922"
-		
-		2 "mug:polyTweakUV2" "uvTweak[467]" " -type \"float2\" 0.70789396999999998 0.29608947000000002"
-		
-		2 "mug:polyTweakUV2" "uvTweak[468]" " -type \"float2\" 0.70923488999999995 0.3567881"
-		
-		2 "mug:polyTweakUV2" "uvTweak[469]" " -type \"float2\" 0.70671231000000001 0.41988373000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[470]" " -type \"float2\" 0.70029079999999999 0.48306763000000003"
-		
-		2 "mug:polyTweakUV2" "uvTweak[471]" " -type \"float2\" 0.68966055000000004 0.54346525999999995"
-		
-		2 "mug:polyTweakUV2" "uvTweak[472]" " -type \"float2\" 0.67424094999999995 0.59866684999999997"
-		
-		2 "mug:polyTweakUV2" "uvTweak[473]" " -type \"float2\" 0.65322769000000003 0.64795077000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[474]" " -type \"float2\" 0.62570143 0.69119965999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[475]" " -type \"float2\" 0.59065604000000005 0.72794223000000002"
-		
-		2 "mug:polyTweakUV2" "uvTweak[476]" " -type \"float2\" 0.54815548999999997 0.75691651999999998"
-		
-		2 "mug:polyTweakUV2" "uvTweak[477]" " -type \"float2\" 0.50091922 0.77723348000000003"
-		
-		2 "mug:polyTweakUV2" "uvTweak[478]" " -type \"float2\" 0.45160254999999999 0.79014337000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[479]" " -type \"float2\" 0.40118905999999999 0.79779887000000005"
-		
-		2 "mug:polyTweakUV2" "uvTweak[480]" " -type \"float2\" 0.34482153999999998 0.80101239999999996"
-		
-		2 "mug:polyTweakUV2" "uvTweak[481]" " -type \"float2\" 0.27808270000000002 0.79856294000000005"
-		
-		2 "mug:polyTweakUV2" "uvTweak[482]" " -type \"float2\" 0.33030552000000002 -0.10294648000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[483]" " -type \"float2\" 0.41567478000000002 -0.087009758000000006"
-		
-		2 "mug:polyTweakUV2" "uvTweak[484]" " -type \"float2\" 0.49018958000000001 -0.060473472"
-		
-		2 "mug:polyTweakUV2" "uvTweak[485]" " -type \"float2\" 0.55325574 -0.023288785999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[486]" " -type \"float2\" 0.60373186999999995 0.022686958"
-		
-		2 "mug:polyTweakUV2" "uvTweak[487]" " -type \"float2\" 0.64136671999999995 0.074131190999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[488]" " -type \"float2\" 0.66762792999999998 0.12773532000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[489]" " -type \"float2\" 0.68495035000000004 0.18149987000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[490]" " -type \"float2\" 0.69535743999999999 0.23672535"
-		
-		2 "mug:polyTweakUV2" "uvTweak[491]" " -type \"float2\" 0.69986433000000003 0.29420751000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[492]" " -type \"float2\" 0.69948619999999995 0.35449225000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[493]" " -type \"float2\" 0.69496446999999995 0.41727912"
-		
-		2 "mug:polyTweakUV2" "uvTweak[494]" " -type \"float2\" 0.68631852000000004 0.48022686999999997"
-		
-		2 "mug:polyTweakUV2" "uvTweak[495]" " -type \"float2\" 0.67329967000000002 0.54045016000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[496]" " -type \"float2\" 0.65536468999999997 0.59553367000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[497]" " -type \"float2\" 0.63167477000000005 0.64477867"
-		
-		2 "mug:polyTweakUV2" "uvTweak[498]" " -type \"float2\" 0.60123360000000003 0.68812293000000002"
-		
-		2 "mug:polyTweakUV2" "uvTweak[499]" " -type \"float2\" 0.56294279999999997 0.72518009000000005"
-		
-		2 "mug:polyTweakUV2" "uvTweak[500]" " -type \"float2\" 0.51680809000000005 0.75480263999999997"
-		
-		2 "mug:polyTweakUV2" "uvTweak[501]" " -type \"float2\" 0.46559253 0.77614903000000002"
-		
-		2 "mug:polyTweakUV2" "uvTweak[502]" " -type \"float2\" 0.41198828999999998 0.79040246999999997"
-		
-		2 "mug:polyTweakUV2" "uvTweak[503]" " -type \"float2\" 0.35693792000000002 0.79962814000000004"
-		
-		2 "mug:polyTweakUV2" "uvTweak[504]" " -type \"float2\" 0.29508325000000002 0.80477308999999997"
-		
-		2 "mug:polyTweakUV2" "uvTweak[505]" " -type \"float2\" 0.22124614000000001 0.80484544999999996"
-		
-		2 "mug:polyTweakUV2" "uvTweak[506]" " -type \"float2\" 0.33118373000000001 -0.098190203000000004"
-		
-		2 "mug:polyTweakUV2" "uvTweak[507]" " -type \"float2\" 0.41462883 -0.082354218000000007"
-		
-		2 "mug:polyTweakUV2" "uvTweak[508]" " -type \"float2\" 0.48697129 -0.056340486000000002"
-		
-		2 "mug:polyTweakUV2" "uvTweak[509]" " -type \"float2\" 0.54788320999999995 -0.020156621999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[510]" " -type \"float2\" 0.59654045 0.024436623000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[511]" " -type \"float2\" 0.63286197 0.074337155000000002"
-		
-		2 "mug:polyTweakUV2" "uvTweak[512]" " -type \"float2\" 0.65829908999999998 0.12645804999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[513]" " -type \"float2\" 0.67515813999999996 0.17891102"
-		
-		2 "mug:polyTweakUV2" "uvTweak[514]" " -type \"float2\" 0.68532068000000002 0.23290695"
-		
-		2 "mug:polyTweakUV2" "uvTweak[515]" " -type \"float2\" 0.68974959999999996 0.28926461999999997"
-		
-		2 "mug:polyTweakUV2" "uvTweak[516]" " -type \"float2\" 0.68940853999999996 0.34857433999999998"
-		
-		2 "mug:polyTweakUV2" "uvTweak[517]" " -type \"float2\" 0.68499445999999997 0.41050356999999998"
-		
-		2 "mug:polyTweakUV2" "uvTweak[518]" " -type \"float2\" 0.67651808000000002 0.47261589999999998"
-		
-		2 "mug:polyTweakUV2" "uvTweak[519]" " -type \"float2\" 0.66374898000000004 0.53197687999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[520]" " -type \"float2\" 0.64619260999999995 0.58610861999999997"
-		
-		2 "mug:polyTweakUV2" "uvTweak[521]" " -type \"float2\" 0.62308978999999998 0.63429290000000005"
-		
-		2 "mug:polyTweakUV2" "uvTweak[522]" " -type \"float2\" 0.59353595999999997 0.67650151000000003"
-		
-		2 "mug:polyTweakUV2" "uvTweak[523]" " -type \"float2\" 0.55653238000000005 0.71241504"
-		
-		2 "mug:polyTweakUV2" "uvTweak[524]" " -type \"float2\" 0.51206344000000004 0.74105381999999997"
-		
-		2 "mug:polyTweakUV2" "uvTweak[525]" " -type \"float2\" 0.46258608000000001 0.76176476000000004"
-		
-		2 "mug:polyTweakUV2" "uvTweak[526]" " -type \"float2\" 0.41050776999999999 0.77571224999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[527]" " -type \"float2\" 0.35667612999999998 0.78484522999999995"
-		
-		2 "mug:polyTweakUV2" "uvTweak[528]" " -type \"float2\" 0.29605880000000001 0.79000079999999995"
-		
-		2 "mug:polyTweakUV2" "uvTweak[529]" " -type \"float2\" 0.22359017 0.79017621000000005"
-		
-		2 "mug:polyTweakUV2" "uvTweak[530]" " -type \"float2\" 0.33082908 -0.087850839"
-		
-		2 "mug:polyTweakUV2" "uvTweak[531]" " -type \"float2\" 0.41171917000000002 -0.072209029999999993"
-		
-		2 "mug:polyTweakUV2" "uvTweak[532]" " -type \"float2\" 0.48103942999999999 -0.046973824999999997"
-		
-		2 "mug:polyTweakUV2" "uvTweak[533]" " -type \"float2\" 0.53889370000000003 -0.012268424"
-		
-		2 "mug:polyTweakUV2" "uvTweak[534]" " -type \"float2\" 0.58494919999999995 0.030290365"
-		
-		2 "mug:polyTweakUV2" "uvTweak[535]" " -type \"float2\" 0.61939073 0.077937125999999995"
-		
-		2 "mug:polyTweakUV2" "uvTweak[536]" " -type \"float2\" 0.64365344999999996 0.12792015000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[537]" " -type \"float2\" 0.65985835000000004 0.17851270999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[538]" " -type \"float2\" 0.66967635999999997 0.23078800999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[539]" " -type \"float2\" 0.67399430000000005 0.28560417999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[540]" " -type \"float2\" 0.67370319000000001 0.34362292"
-		
-		2 "mug:polyTweakUV2" "uvTweak[541]" " -type \"float2\" 0.66943275999999996 0.40445465000000003"
-		
-		2 "mug:polyTweakUV2" "uvTweak[542]" " -type \"float2\" 0.66117751999999996 0.46549684000000002"
-		
-		2 "mug:polyTweakUV2" "uvTweak[543]" " -type \"float2\" 0.64872885000000002 0.52371900999999998"
-		
-		2 "mug:polyTweakUV2" "uvTweak[544]" " -type \"float2\" 0.63166641999999995 0.57653206999999995"
-		
-		2 "mug:polyTweakUV2" "uvTweak[545]" " -type \"float2\" 0.60934675000000005 0.62318205999999998"
-		
-		2 "mug:polyTweakUV2" "uvTweak[546]" " -type \"float2\" 0.58100498 0.66369599000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[547]" " -type \"float2\" 0.54579520000000004 0.69786292000000005"
-		
-		2 "mug:polyTweakUV2" "uvTweak[548]" " -type \"float2\" 0.50367624 0.72497224999999998"
-		
-		2 "mug:polyTweakUV2" "uvTweak[549]" " -type \"float2\" 0.45664999000000001 0.74467808000000002"
-		
-		2 "mug:polyTweakUV2" "uvTweak[550]" " -type \"float2\" 0.40669546000000001 0.75812524999999997"
-		
-		2 "mug:polyTweakUV2" "uvTweak[551]" " -type \"float2\" 0.35450928999999998 0.76708388000000005"
-		
-		2 "mug:polyTweakUV2" "uvTweak[552]" " -type \"float2\" 0.29553750000000001 0.77221178999999995"
-		
-		2 "mug:polyTweakUV2" "uvTweak[553]" " -type \"float2\" 0.2248513 0.77248991"
-		
-		2 "mug:polyTweakUV2" "uvTweak[554]" " -type \"float2\" 0.32920843 -0.072765796999999993"
-		
-		2 "mug:polyTweakUV2" "uvTweak[555]" " -type \"float2\" 0.40709700999999998 -0.057397217"
-		
-		2 "mug:polyTweakUV2" "uvTweak[556]" " -type \"float2\" 0.47276393 -0.033137947000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[557]" " -type \"float2\" 0.52688062000000002 -0.00027310848000000002"
-		
-		2 "mug:polyTweakUV2" "uvTweak[558]" " -type \"float2\" 0.56974327999999996 0.039760447999999997"
-		
-		2 "mug:polyTweakUV2" "uvTweak[559]" " -type \"float2\" 0.60187637999999999 0.084621102000000004"
-		
-		2 "mug:polyTweakUV2" "uvTweak[560]" " -type \"float2\" 0.62470042999999997 0.13197738000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[561]" " -type \"float2\" 0.64010763000000004 0.18030450000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[562]" " -type \"float2\" 0.64950454000000002 0.23049958000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[563]" " -type \"float2\" 0.65368563000000002 0.28347367000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[564]" " -type \"float2\" 0.65345167999999998 0.33998042000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[565]" " -type \"float2\" 0.64934932999999995 0.39955509"
-		
-		2 "mug:polyTweakUV2" "uvTweak[566]" " -type \"float2\" 0.64134835999999995 0.45937013999999998"
-		
-		2 "mug:polyTweakUV2" "uvTweak[567]" " -type \"float2\" 0.62926841 0.51626134000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[568]" " -type \"float2\" 0.61277771000000003 0.56748611000000004"
-		
-		2 "mug:polyTweakUV2" "uvTweak[569]" " -type \"float2\" 0.59138036000000005 0.61224239999999996"
-		
-		2 "mug:polyTweakUV2" "uvTweak[570]" " -type \"float2\" 0.56448829 0.65062838999999995"
-		
-		2 "mug:polyTweakUV2" "uvTweak[571]" " -type \"float2\" 0.53145266000000002 0.68257241999999996"
-		
-		2 "mug:polyTweakUV2" "uvTweak[572]" " -type \"float2\" 0.49220725999999998 0.70771348000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[573]" " -type \"float2\" 0.44817963 0.72611046000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[574]" " -type \"float2\" 0.40080424999999997 0.73889207999999995"
-		
-		2 "mug:polyTweakUV2" "uvTweak[575]" " -type \"float2\" 0.35058044999999999 0.74760269999999995"
-		
-		2 "mug:polyTweakUV2" "uvTweak[576]" " -type \"float2\" 0.29355332000000001 0.75266367000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[577]" " -type \"float2\" 0.22493325 0.75302899000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[578]" " -type \"float2\" 0.32637441 -0.054037838999999997"
-		
-		2 "mug:polyTweakUV2" "uvTweak[579]" " -type \"float2\" 0.40101643999999997 -0.039001136999999998"
-		
-		2 "mug:polyTweakUV2" "uvTweak[580]" " -type \"float2\" 0.46264717 -0.015847236000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[581]" " -type \"float2\" 0.51260220999999995 0.014947981000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[582]" " -type \"float2\" 0.55190086000000005 0.052148856"
-		
-		2 "mug:polyTweakUV2" "uvTweak[583]" " -type \"float2\" 0.58145707999999996 0.093893319000000003"
-		
-		2 "mug:polyTweakUV2" "uvTweak[584]" " -type \"float2\" 0.60267817999999995 0.13832507999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[585]" " -type \"float2\" 0.61719871000000004 0.18414511"
-		
-		2 "mug:polyTweakUV2" "uvTweak[586]" " -type \"float2\" 0.62612688999999999 0.23204992999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[587]" " -type \"float2\" 0.63015418999999995 0.28301166999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[588]" " -type \"float2\" 0.62998109999999996 0.33789228999999998"
-		
-		2 "mug:polyTweakUV2" "uvTweak[589]" " -type \"float2\" 0.62605893999999995 0.39613783000000002"
-		
-		2 "mug:polyTweakUV2" "uvTweak[590]" " -type \"float2\" 0.61832893 0.45465493000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[591]" " -type \"float2\" 0.60663926999999995 0.51011609999999996"
-		
-		2 "mug:polyTweakUV2" "uvTweak[592]" " -type \"float2\" 0.59075856000000004 0.55959541000000002"
-		
-		2 "mug:polyTweakUV2" "uvTweak[593]" " -type \"float2\" 0.57035875000000003 0.60223274999999998"
-		
-		2 "mug:polyTweakUV2" "uvTweak[594]" " -type \"float2\" 0.54505587 0.63820684000000005"
-		
-		2 "mug:polyTweakUV2" "uvTweak[595]" " -type \"float2\" 0.51442993000000004 0.66760659"
-		
-		2 "mug:polyTweakUV2" "uvTweak[596]" " -type \"float2\" 0.47839179999999998 0.69047426999999995"
-		
-		2 "mug:polyTweakUV2" "uvTweak[597]" " -type \"float2\" 0.43771579999999999 0.70734417000000005"
-		
-		2 "mug:polyTweakUV2" "uvTweak[598]" " -type \"float2\" 0.39320967000000001 0.71933579000000003"
-		
-		2 "mug:polyTweakUV2" "uvTweak[599]" " -type \"float2\" 0.34514073000000001 0.72773944999999995"
-		
-		2 "mug:polyTweakUV2" "uvTweak[600]" " -type \"float2\" 0.29023107999999997 0.73269611999999995"
-		
-		2 "mug:polyTweakUV2" "uvTweak[601]" " -type \"float2\" 0.22382699 0.73312378"
-		
-		2 "mug:polyTweakUV2" "uvTweak[602]" " -type \"float2\" 0.32245310999999999 -0.032952040000000002"
-		
-		2 "mug:polyTweakUV2" "uvTweak[603]" " -type \"float2\" 0.39381065999999998 -0.018281192000000002"
-		
-		2 "mug:polyTweakUV2" "uvTweak[604]" " -type \"float2\" 0.45128365999999998 0.0037136375999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[605]" " -type \"float2\" 0.49692497000000002 0.032351344999999997"
-		
-		2 "mug:polyTweakUV2" "uvTweak[606]" " -type \"float2\" 0.53252268000000003 0.066607386000000005"
-		
-		2 "mug:polyTweakUV2" "uvTweak[607]" " -type \"float2\" 0.55940323999999997 0.10512041"
-		
-		2 "mug:polyTweakUV2" "uvTweak[608]" " -type \"float2\" 0.57896185 0.14653061000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[609]" " -type \"float2\" 0.59256518000000002 0.18977371000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[610]" " -type \"float2\" 0.60100746000000005 0.23533425999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[611]" " -type \"float2\" 0.60487400999999996 0.28424996000000002"
-		
-		2 "mug:polyTweakUV2" "uvTweak[612]" " -type \"float2\" 0.60476105999999996 0.33749985999999998"
-		
-		2 "mug:polyTweakUV2" "uvTweak[613]" " -type \"float2\" 0.60101937999999999 0.39443391999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[614]" " -type \"float2\" 0.59355937999999997 0.45166951"
-		
-		2 "mug:polyTweakUV2" "uvTweak[615]" " -type \"float2\" 0.58225691000000002 0.50569856000000002"
-		
-		2 "mug:polyTweakUV2" "uvTweak[616]" " -type \"float2\" 0.56698596000000001 0.55339413999999998"
-		
-		2 "mug:polyTweakUV2" "uvTweak[617]" " -type \"float2\" 0.54759568000000003 0.59383147999999997"
-		
-		2 "mug:polyTweakUV2" "uvTweak[618]" " -type \"float2\" 0.52391958000000005 0.62727409999999995"
-		
-		2 "mug:polyTweakUV2" "uvTweak[619]" " -type \"float2\" 0.49578473000000001 0.65397959999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[620]" " -type \"float2\" 0.46308449000000002 0.67441994000000005"
-		
-		2 "mug:polyTweakUV2" "uvTweak[621]" " -type \"float2\" 0.42590233999999999 0.68964409999999998"
-		
-		2 "mug:polyTweakUV2" "uvTweak[622]" " -type \"float2\" 0.38437666999999998 0.70077246000000004"
-		
-		2 "mug:polyTweakUV2" "uvTweak[623]" " -type \"float2\" 0.33852001999999998 0.70882951999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[624]" " -type \"float2\" 0.28576847999999999 0.71365087999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[625]" " -type \"float2\" 0.22159265 0.71410947999999996"
-		
-		2 "mug:polyTweakUV2" "uvTweak[626]" " -type \"float2\" 0.31763437 -0.01089707"
-		
-		2 "mug:polyTweakUV2" "uvTweak[627]" " -type \"float2\" 0.38587067000000003 0.0034016669000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[628]" " -type \"float2\" 0.43932380999999998 0.024262875"
-		
-		2 "mug:polyTweakUV2" "uvTweak[629]" " -type \"float2\" 0.48077056000000001 0.050800480000000002"
-		
-		2 "mug:polyTweakUV2" "uvTweak[630]" " -type \"float2\" 0.51276469000000002 0.082195133000000004"
-		
-		2 "mug:polyTweakUV2" "uvTweak[631]" " -type \"float2\" 0.53704076999999995 0.11757463"
-		
-		2 "mug:polyTweakUV2" "uvTweak[632]" " -type \"float2\" 0.55498457000000001 0.15606539"
-		
-		2 "mug:polyTweakUV2" "uvTweak[633]" " -type \"float2\" 0.56769853999999997 0.19683218"
-		
-		2 "mug:polyTweakUV2" "uvTweak[634]" " -type \"float2\" 0.57566958999999995 0.24014859"
-		
-		2 "mug:polyTweakUV2" "uvTweak[635]" " -type \"float2\" 0.57937967999999995 0.28711951000000002"
-		
-		2 "mug:polyTweakUV2" "uvTweak[636]" " -type \"float2\" 0.57932413000000005 0.33884101999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[637]" " -type \"float2\" 0.57575494000000005 0.39456815000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[638]" " -type \"float2\" 0.56854921999999997 0.45062386999999998"
-		
-		2 "mug:polyTweakUV2" "uvTweak[639]" " -type \"float2\" 0.55760980000000004 0.50331473000000004"
-		
-		2 "mug:polyTweakUV2" "uvTweak[640]" " -type \"float2\" 0.54291296 0.54930716999999996"
-		
-		2 "mug:polyTweakUV2" "uvTweak[641]" " -type \"float2\" 0.52448218999999996 0.58761054000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[642]" " -type \"float2\" 0.50237023999999997 0.61857134000000003"
-		
-		2 "mug:polyTweakUV2" "uvTweak[643]" " -type \"float2\" 0.47665491999999998 0.64261270000000004"
-		
-		2 "mug:polyTweakUV2" "uvTweak[644]" " -type \"float2\" 0.44721731999999997 0.66063344000000002"
-		
-		2 "mug:polyTweakUV2" "uvTweak[645]" " -type \"float2\" 0.41345659000000001 0.67420310000000006"
-		
-		2 "mug:polyTweakUV2" "uvTweak[646]" " -type \"float2\" 0.37483850000000002 0.68445301000000003"
-		
-		2 "mug:polyTweakUV2" "uvTweak[647]" " -type \"float2\" 0.33111751 0.69214922000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[648]" " -type \"float2\" 0.2804316 0.69681442000000005"
-		
-		2 "mug:polyTweakUV2" "uvTweak[649]" " -type \"float2\" 0.21835843999999999 0.69727176000000002"
-		
-		2 "mug:polyTweakUV2" "uvTweak[650]" " -type \"float2\" 0.31215742000000002 0.010701357999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[651]" " -type \"float2\" 0.37762466 0.024654418000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[652]" " -type \"float2\" 0.42744156999999999 0.044489212"
-		
-		2 "mug:polyTweakUV2" "uvTweak[653]" " -type \"float2\" 0.46507016000000001 0.069125383999999998"
-		
-		2 "mug:polyTweakUV2" "uvTweak[654]" " -type \"float2\" 0.49377999 0.097928583999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[655]" " -type \"float2\" 0.51568484000000003 0.13047639"
-		
-		2 "mug:polyTweakUV2" "uvTweak[656]" " -type \"float2\" 0.53216231000000003 0.16633878999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[657]" " -type \"float2\" 0.54407232999999999 0.20488991000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[658]" " -type \"float2\" 0.55161870000000002 0.24620787999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[659]" " -type \"float2\" 0.55518937000000002 0.29146039000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[660]" " -type \"float2\" 0.555188 0.34185606000000002"
-		
-		2 "mug:polyTweakUV2" "uvTweak[661]" " -type \"float2\" 0.55177432000000004 0.39655936000000003"
-		
-		2 "mug:polyTweakUV2" "uvTweak[662]" " -type \"float2\" 0.54479480000000002 0.45161467999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[663]" " -type \"float2\" 0.53417581000000003 0.50314999000000005"
-		
-		2 "mug:polyTweakUV2" "uvTweak[664]" " -type \"float2\" 0.51998668999999997 0.54763430000000002"
-		
-		2 "mug:polyTweakUV2" "uvTweak[665]" " -type \"float2\" 0.50241393000000001 0.58401214999999995"
-		
-		2 "mug:polyTweakUV2" "uvTweak[666]" " -type \"float2\" 0.48171416 0.61270714000000004"
-		
-		2 "mug:polyTweakUV2" "uvTweak[667]" " -type \"float2\" 0.45820256999999998 0.63429254000000002"
-		
-		2 "mug:polyTweakUV2" "uvTweak[668]" " -type \"float2\" 0.4317551 0.65006399000000004"
-		
-		2 "mug:polyTweakUV2" "uvTweak[669]" " -type \"float2\" 0.40113380999999998 0.66208416000000003"
-		
-		2 "mug:polyTweakUV2" "uvTweak[670]" " -type \"float2\" 0.36517397000000001 0.67150354000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[671]" " -type \"float2\" 0.32338092000000002 0.67885267999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[672]" " -type \"float2\" 0.27454086999999999 0.68335478999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[673]" " -type \"float2\" 0.2143148 0.68377953999999996"
-		
-		2 "mug:polyTweakUV2" "uvTweak[674]" " -type \"float2\" 0.30629990000000001 0.030447721000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[675]" " -type \"float2\" 0.36951603999999999 0.044117010999999998"
-		
-		2 "mug:polyTweakUV2" "uvTweak[676]" " -type \"float2\" 0.41630014999999998 0.063113063999999997"
-		
-		2 "mug:polyTweakUV2" "uvTweak[677]" " -type \"float2\" 0.45072052000000001 0.086176783000000007"
-		
-		2 "mug:polyTweakUV2" "uvTweak[678]" " -type \"float2\" 0.47666671999999999 0.11282974"
-		
-		2 "mug:polyTweakUV2" "uvTweak[679]" " -type \"float2\" 0.49658008999999997 0.14302968999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[680]" " -type \"float2\" 0.51183140000000005 0.17672405999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[681]" " -type \"float2\" 0.52307504000000005 0.21346344"
-		
-		2 "mug:polyTweakUV2" "uvTweak[682]" " -type \"float2\" 0.53027325999999997 0.25315695999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[683]" " -type \"float2\" 0.53373420000000005 0.2970295"
-		
-		2 "mug:polyTweakUV2" "uvTweak[684]" " -type \"float2\" 0.53378325999999998 0.34638744999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[685]" " -type \"float2\" 0.53050302999999999 0.40031825999999998"
-		
-		2 "mug:polyTweakUV2" "uvTweak[686]" " -type \"float2\" 0.52371215999999998 0.45461952999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[687]" " -type \"float2\" 0.51335691999999999 0.50526022999999998"
-		
-		2 "mug:polyTweakUV2" "uvTweak[688]" " -type \"float2\" 0.49958669999999999 0.54853355999999998"
-		
-		2 "mug:polyTweakUV2" "uvTweak[689]" " -type \"float2\" 0.48272732000000002 0.58332550999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[690]" " -type \"float2\" 0.46321097 0.61012423000000005"
-		
-		2 "mug:polyTweakUV2" "uvTweak[691]" " -type \"float2\" 0.44156077999999999 0.62962931"
-		
-		2 "mug:polyTweakUV2" "uvTweak[692]" " -type \"float2\" 0.41765150000000001 0.64347708000000003"
-		
-		2 "mug:polyTweakUV2" "uvTweak[693]" " -type \"float2\" 0.38969645000000003 0.65416395999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[694]" " -type \"float2\" 0.35598171000000001 0.66286469000000003"
-		
-		2 "mug:polyTweakUV2" "uvTweak[695]" " -type \"float2\" 0.31579151999999999 0.66990947999999995"
-		
-		2 "mug:polyTweakUV2" "uvTweak[696]" " -type \"float2\" 0.26846357999999998 0.67425769999999996"
-		
-		2 "mug:polyTweakUV2" "uvTweak[697]" " -type \"float2\" 0.20971136000000001 0.67462635000000004"
-		
-		2 "mug:polyTweakUV2" "uvTweak[698]" " -type \"float2\" 0.11639922 0.75069445000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[699]" " -type \"float2\" 0.11997008000000001 0.76136148000000003"
-		
-		2 "mug:polyTweakUV2" "uvTweak[700]" " -type \"float2\" 0.20029843999999999 0.74825220999999997"
-		
-		2 "mug:polyTweakUV2" "uvTweak[701]" " -type \"float2\" 0.20161278999999999 0.76140165000000004"
-		
-		2 "mug:polyTweakUV2" "uvTweak[702]" " -type \"float2\" 0.20277642000000001 0.77704417999999997"
-		
-		2 "mug:polyTweakUV2" "uvTweak[703]" " -type \"float2\" 0.28065373999999998 0.78557986000000002"
-		
-		2 "mug:polyTweakUV2" "uvTweak[704]" " -type \"float2\" 0.34654995999999999 0.78802209999999995"
-		
-		2 "mug:polyTweakUV2" "uvTweak[705]" " -type \"float2\" 0.40220061000000001 0.78485417000000002"
-		
-		2 "mug:polyTweakUV2" "uvTweak[706]" " -type \"float2\" 0.45194318999999999 0.77730202999999998"
-		
-		2 "mug:polyTweakUV2" "uvTweak[707]" " -type \"float2\" 0.50049973000000003 0.76460373000000004"
-		
-		2 "mug:polyTweakUV2" "uvTweak[708]" " -type \"float2\" 0.54691666000000005 0.74466591999999998"
-		
-		2 "mug:polyTweakUV2" "uvTweak[709]" " -type \"float2\" 0.58864497999999998 0.71625137000000005"
-		
-		2 "mug:polyTweakUV2" "uvTweak[710]" " -type \"float2\" 0.62308048999999999 0.68017083"
-		
-		2 "mug:polyTweakUV2" "uvTweak[711]" " -type \"float2\" 0.65017086000000002 0.63760954000000003"
-		
-		2 "mug:polyTweakUV2" "uvTweak[712]" " -type \"float2\" 0.67088382999999996 0.58900416"
-		
-		2 "mug:polyTweakUV2" "uvTweak[713]" " -type \"float2\" 0.68610227000000001 0.53445536000000005"
-		
-		2 "mug:polyTweakUV2" "uvTweak[714]" " -type \"float2\" 0.69659972000000003 0.47468901000000002"
-		
-		2 "mug:polyTweakUV2" "uvTweak[715]" " -type \"float2\" 0.70293640999999996 0.41213262000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[716]" " -type \"float2\" 0.70541465000000003 0.34967524"
-		
-		2 "mug:polyTweakUV2" "uvTweak[717]" " -type \"float2\" 0.70407467999999995 0.28965813000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[718]" " -type \"float2\" 0.69821405000000003 0.23238115000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[719]" " -type \"float2\" 0.68684864000000001 0.17729922000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[720]" " -type \"float2\" 0.66899609999999998 0.12362136999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[721]" " -type \"float2\" 0.64271617000000003 0.070048659999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[722]" " -type \"float2\" 0.60577559000000003 0.018577099"
-		
-		2 "mug:polyTweakUV2" "uvTweak[723]" " -type \"float2\" 0.55692768000000004 -0.027479350999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[724]" " -type \"float2\" 0.49661514000000001 -0.064785242000000007"
-		
-		2 "mug:polyTweakUV2" "uvTweak[725]" " -type \"float2\" 0.42620024000000001 -0.091484814999999997"
-		
-		2 "mug:polyTweakUV2" "uvTweak[726]" " -type \"float2\" 0.34679082 -0.10769196"
-		
-		2 "mug:polyTweakUV2" "uvTweak[727]" " -type \"float2\" 0.26413958999999998 -0.11519475"
-		
-		2 "mug:polyTweakUV2" "uvTweak[728]" " -type \"float2\" 0.12011867 0.71226805000000004"
-		
-		2 "mug:polyTweakUV2" "uvTweak[729]" " -type \"float2\" 0.19930144 0.70821869000000004"
-		
-		2 "mug:polyTweakUV2" "uvTweak[730]" " -type \"float2\" 0.12488323 0.66638582999999996"
-		
-		2 "mug:polyTweakUV2" "uvTweak[731]" " -type \"float2\" 0.12224728 0.69074869000000005"
-		
-		2 "mug:polyTweakUV2" "uvTweak[732]" " -type \"float2\" 0.20004340000000001 0.67205179000000004"
-		
-		2 "mug:polyTweakUV2" "uvTweak[733]" " -type \"float2\" 0.25732549999999998 0.67181986999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[734]" " -type \"float2\" 0.30298164 0.66768992000000005"
-		
-		2 "mug:polyTweakUV2" "uvTweak[735]" " -type \"float2\" 0.34131434999999999 0.66102439000000002"
-		
-		2 "mug:polyTweakUV2" "uvTweak[736]" " -type \"float2\" 0.37230893999999998 0.65320617000000003"
-		
-		2 "mug:polyTweakUV2" "uvTweak[737]" " -type \"float2\" 0.39697518999999998 0.64415233999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[738]" " -type \"float2\" 0.41773560999999998 0.63264555"
-		
-		2 "mug:polyTweakUV2" "uvTweak[739]" " -type \"float2\" 0.43707821000000002 0.61561650000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[740]" " -type \"float2\" 0.45513358999999998 0.59099698000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[741]" " -type \"float2\" 0.47112252999999998 0.55793804000000002"
-		
-		2 "mug:polyTweakUV2" "uvTweak[742]" " -type \"float2\" 0.48438945 0.51587718999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[743]" " -type \"float2\" 0.49442842999999997 0.46601157999999998"
-		
-		2 "mug:polyTweakUV2" "uvTweak[744]" " -type \"float2\" 0.50098454999999997 0.41228788999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[745]" " -type \"float2\" 0.50408322000000005 0.35895652"
-		
-		2 "mug:polyTweakUV2" "uvTweak[746]" " -type \"float2\" 0.50393975000000002 0.31055002999999998"
-		
-		2 "mug:polyTweakUV2" "uvTweak[747]" " -type \"float2\" 0.50056827000000004 0.26808047000000002"
-		
-		2 "mug:polyTweakUV2" "uvTweak[748]" " -type \"float2\" 0.49373892000000003 0.23010905000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[749]" " -type \"float2\" 0.48324260000000002 0.19533169"
-		
-		2 "mug:polyTweakUV2" "uvTweak[750]" " -type \"float2\" 0.46942266999999999 0.16405295"
-		
-		2 "mug:polyTweakUV2" "uvTweak[751]" " -type \"float2\" 0.45188281000000002 0.13650461999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[752]" " -type \"float2\" 0.42925540000000001 0.11226754999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[753]" " -type \"float2\" 0.39867880999999999 0.090911955000000003"
-		
-		2 "mug:polyTweakUV2" "uvTweak[754]" " -type \"float2\" 0.35545504 0.072739481999999994"
-		
-		2 "mug:polyTweakUV2" "uvTweak[755]" " -type \"float2\" 0.29468813999999999 0.059298812999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[756]" " -type \"float2\" 0.21822855999999999 0.052767522999999997"
-		
-		2 "mug:polyTweakUV2" "uvTweak[757]" " -type \"float2\" 0.25635092999999998 -0.025618166000000001"
-		
-		2 "mug:polyTweakUV2" "uvTweak[758]" " -type \"float2\" 0.22263559999999999 -0.037571818"
-		
-		2 "mug:polyTweakUV2" "uvTweak[759]" " -type \"float2\" 0.22755924 -0.058484702999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[760]" " -type \"float2\" 0.23297161 -0.082511991000000007"
-		
-		2 "mug:polyTweakUV2" "uvTweak[761]" " -type \"float2\" 0.26029839999999999 0.0063174366999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[762]" " -type \"float2\" 0.21785895999999999 -0.00083100795999999999"
-		
-		2 "mug:polyTweakUV2" "uvTweak[763]" " -type \"float2\" 0.21792336000000001 0.032637";
+		2 "mug:polyTweakUV2" "uvtk[0:249]" (" -type \"float2\" 0.20151587000000001 0.68910872999999995 0.12530959 0.70384579999999997 0.12740904 0.68457329 0.20324136000000001 0.66790152000000003 0.12965941 0.66511266999999996 0.20444454000000001 0.64429426000000001 0.19900037000000001 0.64960921000000005 0.19786097 0.67349981999999997 0.19622376999999999 0.69750661000000003 0.19391319000000001 0.66021269999999999 0.19212243000000001 0.68397169999999996 0.18942276 0.67536627999999999 0.18580076000000001 0.69398135000000005 0.18323448000000001 0.71472013000000001 0.18971476000000001 0.70595859999999999 0.18185428000000001 0.73603289999999999 0.18830802999999999 0.72616177999999998 0.18170694000000001 0.75631236999999996 0.18675014000000001 0.74663234000000001 0.19174740000000001 0.73705315999999998 0.19406369000000001 0.71708070999999995 0.19672466999999999 0.72755681999999999 0.11816942 0.73142344000000004 0.12161589 0.74216627999999996 0.12337905 0.7230162 0.19414476 0.74767828000000003 0.18883612999999999 0.75983005999999997 0.18276920999999999 0.774004"
+		+ "40000000004 0.18488702000000001 0.78780698999999998 0.190635 0.77302492 0.19614908 0.75829411000000002 0.18785819000000001 0.79672050000000005 0.19319865 0.78394812000000003 0.19142202 0.80011904 0.19530960999999999 0.79777586 0.19919513 0.78988992999999996 0.19776560000000001 0.77393818000000003 0.13272047000000001 0.7995584 0.12784934000000001 0.78466314000000004 0.13656067999999999 0.78499686999999996 0.13263797999999999 0.77414656000000004 0.12882811 0.76345134000000003 0.12369752000000001 0.77187324000000002 0.12515335999999999 0.75281894000000005 0.19865699000000001 0.73778140999999997 0.13023317000000001 0.74446303000000003 0.13450377999999999 0.75541592000000002 0.13949703999999999 0.76738059999999997 0.14139992000000001 0.74797939999999996 0.13654326999999999 0.73665433999999996 0.13180178000000001 0.72542881999999997 0.14216632000000001 0.72811431000000004 0.13795233000000001 0.71532731999999999 0.14175767 0.70910918999999994 0.14017546 0.69223595000000004 0.13752424999999999 0.67865944 0.13457811 0"
+		+ ".70209849000000002 0.13394987999999999 0.66936737000000002 0.13092571 0.693322 0.12849045000000001 0.71463507000000004 0.12674742999999999 0.73374437999999997 0.21793731 0.014687777000000001 0.26159044999999997 0.024445294999999999 0.22310126 0.025126219000000002 0.2227084 0.0097975135000000005 0.26234858999999999 0.044695265999999997 0.22377683000000001 0.040327257999999998 0.25624022000000002 0.031507163999999997 0.25692578999999999 0.052373207999999997 0.25511595999999997 0.010250598 0.25065503 0.034750909000000003 0.25196110999999999 0.054254777999999997 0.24449198999999999 0.040200211 0.24773723 0.050129659 0.24872440000000001 0.017667263999999998 0.24238005000000001 0.025055289000000001 0.24779364000000001 -0.00072830914999999995 0.24150109 0.0057201385000000002 0.24674462999999999 -0.019562215000000001 0.24187326000000001 -0.016423762000000001 0.25339540999999999 -0.0059248208999999998 0.25156060000000002 -0.022631437000000001 0.25849694000000001 -0.0094628035999999999 0.21785603000000001 -0.0167066160"
+		+ "00000001 0.22254341999999999 -0.0057325363000000004 0.2225461 -0.021519034999999999 0.25428708999999999 -0.042676419 0.24923345 -0.041056782 0.24344170000000001 -0.039709300000000003 0.25146729000000001 -0.062681705000000004 0.24601745999999999 -0.062388867000000001 0.25664586 -0.062815696000000004 0.25445764999999998 -0.085062533999999995 0.24936104000000001 -0.082733720999999996 0.25714245000000002 -0.1105627 0.25317201 -0.099203601000000002 0.25882541999999997 -0.089166312999999997 0.26091236000000001 -0.11602683 0.26233929 -0.088358432000000001 0.23893780000000001 -0.11002739 0.23679253 -0.084133773999999995 0.24142015 -0.10538442000000001 0.26055136000000001 -0.065122277000000006 0.23205358000000001 -0.063102751999999998 0.25857010000000002 -0.045199901000000001 0.22728407 -0.042249292000000001 0.23178649000000001 -0.046887785000000001 0.23708093 -0.069628267999999993 0.24293345 -0.095068842000000001 0.23757052000000001 -0.055363982999999999 0.24333641 -0.079972356999999994 0.23170540000000001 -0.0309126"
+		+ "08000000001 0.23723224000000001 -0.036573261000000003 0.242569 -0.061206548999999999 0.23763951999999999 -0.017929344999999999 0.24064815000000001 -0.040065795000000001 0.23255780000000001 -0.013454944 0.23369575000000001 0.0037607551000000002 0.22783234999999999 0.0058948398000000001 0.22900033 0.023613334 0.22720304 -0.010491043 0.22716027 -0.026252656999999999 0.33512091999999999 0.051074840000000003 0.30036715000000003 0.047035106 0.39248374000000003 0.064441174000000004 0.36198679 0.060519813999999998 0.43356821000000001 0.082656234999999995 0.40652618000000001 0.078939825000000005 0.46290495999999998 0.10409337 0.43854478000000002 0.10087734 0.48484680000000002 0.12840566 0.46241887999999998 0.12596831 0.50209022000000003 0.15600024000000001 0.48084471000000001 0.15446065 0.51594609000000002 0.18728194000000001 0.49518951999999999 0.18659043 0.52679478999999996 0.22201035999999999 0.50595045000000005 0.22204167999999999 0.53429722999999996 0.25987363000000002 0.51290261999999998 0.26059288000000003 0.53"
+		+ "869473999999995 0.30216222999999998 0.51629424000000002 0.30351507999999999 0.54026269999999998 0.35030252000000001 0.51639175000000004 0.35219389000000001 0.53897094999999995 0.40328425000000001 0.51321781 0.40565580000000001 0.53448647000000005 0.45659929999999999 0.50657004000000005 0.45950173999999999 0.52666676000000001 0.50602365000000005 0.49641106000000002 0.50957154999999998 0.51563466000000002 0.54763894999999996 0.48295251 0.55201613999999999 0.50182455999999998 0.58025515000000005 0.46662893999999999 0.58567327000000002 0.48586288 0.60442227000000004 0.44800833000000001 0.61107831999999995 0.46849790000000002 0.62097042999999996 0.42777279000000001 0.6290251 0.44970157999999999 0.63192862000000005 0.40579757 0.64141309000000002 0.42733976000000001 0.64027374999999997 0.37987008999999999 0.65108383000000003 0.39929447000000001 0.64712948000000003 0.34784743000000001 0.65923524 0.36471048 0.65251647999999995 0.30883619000000001 0.66604560999999995 0.32363324999999998 0.65498566999999996 0.2625919600"
+		+ "0000001 0.67026514000000004 0.27223547999999997 0.65292262999999995 0.20484379999999999 0.67056488999999997 0.32993549 0.059104263999999997 0.38728335000000003 0.072571396999999996 0.42810312 0.090706199000000001 0.45707442999999998 0.11192089 0.47868273 0.13592407000000001 0.49569401000000002 0.16320054000000001 0.50942593999999997 0.1942248 0.52022796999999998 0.22878472999999999 0.52771847999999999 0.26653636000000003 0.53212791999999998 0.30878747000000001 0.53371942000000006 0.35698902999999998 0.53244990000000003 0.41010422000000002 0.52797930999999998 0.46354603999999999 0.52016938000000001 0.51302892 0.50915736 0.55457687 0.49540468999999998 0.58698868999999998 0.47956935000000001 0.61084234999999998 0.46243276999999999 0.62701278999999999 0.44396438999999999 0.63760715999999995 0.42193255000000002 0.64568585000000001 0.39411721 0.65238023000000001 0.35961667000000003 0.65768068999999996 0.31855652000000001 0.66010272999999997 0.26708346999999999 0.65806191999999997 0.32562327000000002 0.0613038539999"
+		+ "99998 0.38374928000000003 0.075024486000000001 0.42534520999999997 0.093454896999999995 0.45504144000000002 0.11507468999999999 0.47726139000000001 0.13958585000000001 0.49473503000000002 0.16742165000000001 0.50878506999999995 0.19900109999999999 0.51979160000000002 0.23408361 0.52741336999999999 0.27235144 0.53189324999999998 0.31511271000000002 0.53350776 0.36381029999999998 0.53222477000000001 0.417409 0.52770901000000003 0.47132254000000001 0.51981818999999996 0.52125352999999996 0.50868022000000002 0.56322408000000002 0.49473915000000002 0.59603918 0.47863105 0.62028110000000003 0.46111611000000002 0.63682448999999997 0.44216390999999999 0.64774019000000005 0.41960218999999999 0.65602744000000002 0.39127227999999997 0.66281902999999998 0.35629207000000002 0.66814523999999997 0.31470111000000001 0.67057239999999996 0.26260188000000001 0.66854638 0.32240637999999999 0.057473995 0.38208017 0.071576117999999994 0.42546614999999999 0.090650736999999995 0.45695015999999999 0.11327379999999999 0.48070201000000"
+		+ "001 0.13907969000000001 0.49931318000000002 0.16832337999999999 0.51410913000000003 0.20124497999999999 0.52556378000000004 0.23751731000000001 0.53345220999999998 0.27690463999999998 0.53805756999999999 0.32069713 0.53969073000000001 0.37030070999999998 0.53835659999999996 0.42470776999999998 0.53373479999999995 0.47941225999999998 0.52567470000000005 0.53015714999999997 0.51426892999999996 0.57301908999999995 0.49990296000000001 0.60682440000000004 0.4831396 0.63213348000000003 0.46466007999999998 0.64977127000000001 0.44443454999999998 0.66166066999999995 0.42050681000000001 0.67060673000000004 0.39094296000000001 0.67774206000000004 0.35494745 0.68320256000000001 0.31231174 0.68568211999999995 0.2590827 0.68365878000000002 0.32046195999999999 0.047797120999999998 0.38236125999999998 0.062375097999999997 0.42844905999999999 0.082391739000000005 0.46268388999999999 0.10654956 0.4888033 0.13435834999999999 0.50916249000000002 0.16577636000000001 0.52508909000000004 0.20074901000000001 0.53720688999999999 0.2"
+		+ "3880825999999999")
+		2 "mug:polyTweakUV2" "uvtk[250:499]" (" 0.54548061000000003 0.27985132000000001 0.55025572 0.32513492999999999 0.55189984999999997 0.37599903000000001 0.55047727000000002 0.43148839 0.5456934 0.48725288999999999 0.53738260000000004 0.53912568000000005 0.52558254999999998 0.58328921 0.51058042000000003 0.61860590999999998 0.49281844000000002 0.64558773999999997 0.47284337999999998 0.66496515 0.45062426 0.67840761000000005 0.42457250000000002 0.68840855000000001 0.3931289 0.69610059000000002 0.35564702999999998 0.70178646 0.31152155999999998 0.704355 0.25672983999999999 0.70231741999999997 0.31988105 0.032872826000000001 0.38453797000000001 0.047980674000000001 0.43406799000000001 0.069162846 0.47184595000000001 0.095279157000000003 0.50102155999999998 0.12566801999999999 0.52362989999999998 0.15988784 0.54099894000000004 0.1974892 0.55395156000000001 0.23781757000000001 0.56270158000000003 0.28094542 0.56767630999999996 0.32808226000000001 0.56932008000000001 0.38047773000000001 0.56777489000000003 0.43725085000000002 0.56278002000000005 0.49427235"
+		+ "000000003 0.55415230999999998 0.54750865999999998 0.54185461999999995 0.59329312999999995 0.52604490999999998 0.63053501000000001 0.50700414000000005 0.65967726999999998 0.48509343999999999 0.68131584000000001 0.46028361000000001 0.69677818000000002 0.43148395 0.70814675000000005 0.39763906999999998 0.71655816000000006 0.35830221000000001 0.72253573000000004 0.31234387000000002 0.72521572999999995 0.25566122000000002 0.72314537000000001 0.32065305 0.013715625 0.38840929000000002 0.029360890000000001 0.44188907999999999 0.051838136999999999 0.48376754 0.080193818 0.51648592999999998 0.11356086 0.54169469999999997 0.15101866 0.56071859999999996 0.19164732000000001 0.57461828000000004 0.23457069999999999 0.58390008999999998 0.28006887000000003 0.58908826000000003 0.32929265000000002 0.59071642000000002 0.38338304000000001 0.58902096999999998 0.44155024999999998 0.58377962999999999 0.49993580999999998 0.57478737999999996 0.55467272000000001 0.56192147999999997 0.60227913 0.54518515000000001 0.64172065 0.524666850"
+		+ "00000002 0.67335469000000003 0.50050711999999997 0.697613 0.47268090000000001 0.71541332999999996 0.44069638999999999 0.72835623999999999 0.40409489999999998 0.73758858000000005 0.36266663999999998 0.74389439999999996 0.3146641 0.74669450999999998 0.25589684000000001 0.74457406999999998 0.32266513000000002 -0.0082966089000000003 0.39363714999999999 0.0078466236999999994 0.45129266000000001 0.031644255000000003 0.49753985000000001 0.062351315999999997 0.53403931999999998 0.098875999000000006 0.56201535000000002 0.13977459 0.58278883000000004 0.18361104 0.59767908000000003 0.22926832999999999 0.60750853999999999 0.27725142000000003 0.61290573999999998 0.32864457000000002 0.61450309000000003 0.38446998999999998 0.61263829000000003 0.44403874999999998 0.60713046999999998 0.50379430999999997 0.59775215000000004 0.56005722000000002 0.58428513999999998 0.60955179000000004 0.56656616999999998 0.65130429999999995 0.54447305000000001 0.68557745000000003 0.51790570999999996 0.71262031999999997 0.48685029000000002 0.7329"
+		+ "0336 0.45147046000000002 0.74750744999999996 0.41195770999999998 0.75759578000000005 0.36835369000000001 0.76423722999999999 0.31824657000000001 0.76715374000000003 0.25735581000000002 0.76496874999999998 0.32570600999999999 -0.031520544999999997 0.39976725000000002 -0.014962672999999999 0.46151492 0.010074437 0.51207833999999997 0.043062485999999997 0.55232077999999996 0.082685201999999999 0.58302951000000003 0.12696790999999999 0.60551929000000004 0.17395289 0.62136983999999995 0.22227789000000001 0.63172161999999998 0.27267468 0.63730752000000002 0.32615750999999998 0.63886045999999996 0.38362741 0.63682079000000003 0.44449960999999999 0.63104671000000001 0.50552761999999996 0.62128854 0.56322664 0.60723174000000002 0.61453283000000003 0.58854388999999996 0.65853518 0.5648917 0.69539803 0.53593433000000001 0.72518389999999999 0.50167273999999995 0.74791032000000002 0.46293834 0.76413827999999995 0.42057433999999999 0.77505296000000001 0.37487397 0.78201127000000004 0.32275863999999999 0.78503144000000002 0"
+		+ ".25986673999999998 0.78277503999999998 0.3294822 -0.054189651999999998 0.40626737000000002 -0.037332087999999999 0.47171344999999998 -0.01123473 0.52621525999999996 0.023785471999999998 0.56988072000000001 0.066206843000000001 0.60308242000000001 0.11355730999999999 0.62712646000000005 0.16338901 0.64383650000000003 0.21411158 0.65464783000000004 0.266666 0.66038989999999997 0.32199960999999999 0.66188955000000005 0.380898 0.65968287000000003 0.44287496999999998 0.65366405000000005 0.50498027000000001 0.64356190000000002 0.56391614999999995 0.62897265000000002 0.61682104999999998 0.60940486000000005 0.66284257000000002 0.584328 0.70205282999999996 0.55317861000000002 0.73433714999999999 0.51597594999999996 0.75928843000000001 0.47417930000000003 0.77698612 0.42923804999999998 0.78863919000000005 0.38167527000000001 0.79587346000000003 0.32779807 0.79897868999999999 0.26317795999999999 0.79665266999999995 0.33364116999999999 -0.074568390999999998 0.41257426000000003 -0.057549149000000001 0.48104270999999998 -0"
+		+ ".030652164999999999 0.53880417000000003 0.0059946178999999997 0.58531266000000004 0.050696946999999999 0.62057965999999998 0.10055964000000001 0.64590095999999997 0.15271584999999999 0.66330725000000001 0.20537989000000001 0.67448366000000004 0.25967013999999999 0.68034088999999998 0.31647335999999998 0.681786 0.37647498000000001 0.67943584999999995 0.43927442999999999 0.67321545000000005 0.50218021999999995 0.66283435000000002 0.56206 0.64781213000000004 0.61623013000000004 0.62752222999999996 0.66389012000000003 0.60126674000000002 0.70503121999999996 0.56829262000000003 0.73938656000000003 0.52863800999999999 0.76618527999999997 0.48430106000000001 0.78509611000000001 0.43724760000000001 0.79735005000000003 0.38819524999999999 0.80480300999999999 0.33293176000000002 0.80797189000000003 0.26698548 0.80558669999999999 0.33780408000000001 -0.091112136999999996 0.41814318 -0.074081063000000003 0.48872986000000002 -0.046704322 0.54882693000000005 -0.0089601278000000003 0.59738427000000005 0.037331073999999999 0"
+		+ ".63413465000000002 0.088957517999999999 0.66036289999999997 0.14273712 0.67825334999999998 0.19673779999999999 0.68967639999999997 0.25220906999999998 0.69560283000000001 0.30998963000000002 0.69699900999999997 0.37068599000000002 0.69454252999999999 0.43396365999999997 0.68818045000000005 0.49733286999999998 0.67760967999999999 0.55779301999999997 0.66229062999999999 0.61280142999999998 0.64149582000000005 0.66159785000000004 0.61440026999999997 0.70411259000000004 0.58011013 0.73996269999999997 0.53867894000000005 0.76810115999999995 0.49251249000000002 0.78788661999999998 0.44396575999999999 0.80056583999999997 0.39390233000000002 0.80816703999999995 0.33772802000000002 0.81137645000000003 0.27095522999999999 0.80894827999999996 0.34159793999999999 -0.10260083 0.422497 -0.085710465999999999 0.49414405 -0.058206200999999999 0.55548209000000004 -0.019973069 0.60514575000000004 0.027097315 0.64269279999999995 0.079607099000000001 0.66939526999999999 0.13418779 0.68752670000000005 0.18882090000000001 0.6990650"
+		+ "8999999994 0.24483265000000001 0.70501387000000004 0.30302720999999999 0.70637393000000004 0.36396044 0.70385872999999999 0.42733788 0.69742811000000005 0.49080104000000002 0.68677186999999995 0.55143702000000006 0.67131733999999998 0.60679680000000003 0.65027499 0.65614682000000002 0.62274556999999997 0.69938058000000003 0.58774841 0.73604493999999998 0.54534656000000004 0.76492517999999998 0.49819231000000003 0.78519004999999997 0.44887527999999999 0.79809260000000004 0.39834931000000001 0.80576323999999999 0.34179989 0.80898820999999999 0.27475873000000001 0.80653870000000005 0.34468516999999999 -0.10823579 0.42526308000000002 -0.091628760000000004 0.49684623 -0.064356505999999994 0.55825174 -0.026274174000000001 0.60800898000000003 0.020713240000000001 0.64561665000000001 0.073166698000000002 0.67233372000000002 0.12767329999999999 0.69045049000000003 0.18219352 0.70196795000000001 0.23806922 0.70789396999999998 0.29608947000000002 0.70923488999999995 0.3567881 0.70671231000000001 0.41988373000000001 0.70"
+		+ "029079999999999 0.48306763000000003 0.68966055000000004 0.54346525999999995 0.67424094999999995 0.59866684999999997 0.65322769000000003 0.64795077000000001 0.62570143 0.69119965999999999 0.59065604000000005 0.72794223000000002 0.54815548999999997 0.75691651999999998 0.50091922 0.77723348000000003 0.45160254999999999 0.79014337000000001 0.40118905999999999 0.79779887000000005 0.34482153999999998 0.80101239999999996 0.27808270000000002 0.79856294000000005 0.33030552000000002 -0.10294648000000001 0.41567478000000002 -0.087009758000000006 0.49018958000000001 -0.060473472 0.55325574 -0.023288785999999999 0.60373186999999995 0.022686958 0.64136671999999995 0.074131190999999999 0.66762792999999998 0.12773532000000001 0.68495035000000004 0.18149987000000001 0.69535743999999999 0.23672535 0.69986433000000003 0.29420751000000001 0.69948619999999995 0.35449225000000001 0.69496446999999995 0.41727912 0.68631852000000004 0.48022686999999997 0.67329967000000002 0.54045016000000001 0.65536468999999997 0.59553367000000001 0."
+		+ "63167477000000005 0.64477867 0.60123360000000003 0.68812293000000002 0.56294279999999997 0.72518009000000005"
+		)
+		2 "mug:polyTweakUV2" "uvtk[500:749]" (" 0.51680809000000005 0.75480263999999997 0.46559253 0.77614903000000002 0.41198828999999998 0.79040246999999997 0.35693792000000002 0.79962814000000004 0.29508325000000002 0.80477308999999997 0.22124614000000001 0.80484544999999996 0.33118373000000001 -0.098190203000000004 0.41462883 -0.082354218000000007 0.48697129 -0.056340486000000002 0.54788320999999995 -0.020156621999999999 0.59654045 0.024436623000000001 0.63286197 0.074337155000000002 0.65829908999999998 0.12645804999999999 0.67515813999999996 0.17891102 0.68532068000000002 0.23290695 0.68974959999999996 0.28926461999999997 0.68940853999999996 0.34857433999999998 0.68499445999999997 0.41050356999999998 0.67651808000000002 0.47261589999999998 0.66374898000000004 0.53197687999999999 0.64619260999999995 0.58610861999999997 0.62308978999999998 0.63429290000000005 0.59353595999999997 0.67650151000000003 0.55653238000000005 0.71241504 0.51206344000000004 0.74105381999999997 0.46258608000000001 0.76176476000000004 0.41050776999999999 0.77571224999999999 0.356"
+		+ "67612999999998 0.78484522999999995 0.29605880000000001 0.79000079999999995 0.22359017 0.79017621000000005 0.33082908 -0.087850839 0.41171917000000002 -0.072209029999999993 0.48103942999999999 -0.046973824999999997 0.53889370000000003 -0.012268424 0.58494919999999995 0.030290365 0.61939073 0.077937125999999995 0.64365344999999996 0.12792015000000001 0.65985835000000004 0.17851270999999999 0.66967635999999997 0.23078800999999999 0.67399430000000005 0.28560417999999999 0.67370319000000001 0.34362292 0.66943275999999996 0.40445465000000003 0.66117751999999996 0.46549684000000002 0.64872885000000002 0.52371900999999998 0.63166641999999995 0.57653206999999995 0.60934675000000005 0.62318205999999998 0.58100498 0.66369599000000001 0.54579520000000004 0.69786292000000005 0.50367624 0.72497224999999998 0.45664999000000001 0.74467808000000002 0.40669546000000001 0.75812524999999997 0.35450928999999998 0.76708388000000005 0.29553750000000001 0.77221178999999995 0.2248513 0.77248991 0.32920843 -0.072765796999999993 0.4070"
+		+ "9700999999998 -0.057397217 0.47276393 -0.033137947000000001 0.52688062000000002 -0.00027310848000000002 0.56974327999999996 0.039760447999999997 0.60187637999999999 0.084621102000000004 0.62470042999999997 0.13197738000000001 0.64010763000000004 0.18030450000000001 0.64950454000000002 0.23049958000000001 0.65368563000000002 0.28347367000000001 0.65345167999999998 0.33998042000000001 0.64934932999999995 0.39955509 0.64134835999999995 0.45937013999999998 0.62926841 0.51626134000000001 0.61277771000000003 0.56748611000000004 0.59138036000000005 0.61224239999999996 0.56448829 0.65062838999999995 0.53145266000000002 0.68257241999999996 0.49220725999999998 0.70771348000000001 0.44817963 0.72611046000000001 0.40080424999999997 0.73889207999999995 0.35058044999999999 0.74760269999999995 0.29355332000000001 0.75266367000000001 0.22493325 0.75302899000000001 0.32637441 -0.054037838999999997 0.40101643999999997 -0.039001136999999998 0.46264717 -0.015847236000000001 0.51260220999999995 0.014947981000000001 0.551900860000"
+		+ "00005 0.052148856 0.58145707999999996 0.093893319000000003 0.60267817999999995 0.13832507999999999 0.61719871000000004 0.18414511 0.62612688999999999 0.23204992999999999 0.63015418999999995 0.28301166999999999 0.62998109999999996 0.33789228999999998 0.62605893999999995 0.39613783000000002 0.61832893 0.45465493000000001 0.60663926999999995 0.51011609999999996 0.59075856000000004 0.55959541000000002 0.57035875000000003 0.60223274999999998 0.54505587 0.63820684000000005 0.51442993000000004 0.66760659 0.47839179999999998 0.69047426999999995 0.43771579999999999 0.70734417000000005 0.39320967000000001 0.71933579000000003 0.34514073000000001 0.72773944999999995 0.29023107999999997 0.73269611999999995 0.22382699 0.73312378 0.32245310999999999 -0.032952040000000002 0.39381065999999998 -0.018281192000000002 0.45128365999999998 0.0037136375999999999 0.49692497000000002 0.032351344999999997 0.53252268000000003 0.066607386000000005 0.55940323999999997 0.10512041 0.57896185 0.14653061000000001 0.59256518000000002 0.1897737"
+		+ "1000000001 0.60100746000000005 0.23533425999999999 0.60487400999999996 0.28424996000000002 0.60476105999999996 0.33749985999999998 0.60101937999999999 0.39443391999999999 0.59355937999999997 0.45166951 0.58225691000000002 0.50569856000000002 0.56698596000000001 0.55339413999999998 0.54759568000000003 0.59383147999999997 0.52391958000000005 0.62727409999999995 0.49578473000000001 0.65397959999999999 0.46308449000000002 0.67441994000000005 0.42590233999999999 0.68964409999999998 0.38437666999999998 0.70077246000000004 0.33852001999999998 0.70882951999999999 0.28576847999999999 0.71365087999999999 0.22159265 0.71410947999999996 0.31763437 -0.01089707 0.38587067000000003 0.0034016669000000001 0.43932380999999998 0.024262875 0.48077056000000001 0.050800480000000002 0.51276469000000002 0.082195133000000004 0.53704076999999995 0.11757463 0.55498457000000001 0.15606539 0.56769853999999997 0.19683218 0.57566958999999995 0.24014859 0.57937967999999995 0.28711951000000002 0.57932413000000005 0.33884101999999999 0.575754"
+		+ "94000000005 0.39456815000000001 0.56854921999999997 0.45062386999999998 0.55760980000000004 0.50331473000000004 0.54291296 0.54930716999999996 0.52448218999999996 0.58761054000000001 0.50237023999999997 0.61857134000000003 0.47665491999999998 0.64261270000000004 0.44721731999999997 0.66063344000000002 0.41345659000000001 0.67420310000000006 0.37483850000000002 0.68445301000000003 0.33111751 0.69214922000000001 0.2804316 0.69681442000000005 0.21835843999999999 0.69727176000000002 0.31215742000000002 0.010701357999999999 0.37762466 0.024654418000000001 0.42744156999999999 0.044489212 0.46507016000000001 0.069125383999999998 0.49377999 0.097928583999999999 0.51568484000000003 0.13047639 0.53216231000000003 0.16633878999999999 0.54407232999999999 0.20488991000000001 0.55161870000000002 0.24620787999999999 0.55518937000000002 0.29146039000000001 0.555188 0.34185606000000002 0.55177432000000004 0.39655936000000003 0.54479480000000002 0.45161467999999999 0.53417581000000003 0.50314999000000005 0.51998668999999997 0."
+		+ "54763430000000002 0.50241393000000001 0.58401214999999995 0.48171416 0.61270714000000004 0.45820256999999998 0.63429254000000002 0.4317551 0.65006399000000004 0.40113380999999998 0.66208416000000003 0.36517397000000001 0.67150354000000001 0.32338092000000002 0.67885267999999999 0.27454086999999999 0.68335478999999999 0.2143148 0.68377953999999996 0.30629990000000001 0.030447721000000001 0.36951603999999999 0.044117010999999998 0.41630014999999998 0.063113063999999997 0.45072052000000001 0.086176783000000007 0.47666671999999999 0.11282974 0.49658008999999997 0.14302968999999999 0.51183140000000005 0.17672405999999999 0.52307504000000005 0.21346344 0.53027325999999997 0.25315695999999999 0.53373420000000005 0.2970295 0.53378325999999998 0.34638744999999999 0.53050302999999999 0.40031825999999998 0.52371215999999998 0.45461952999999999 0.51335691999999999 0.50526022999999998 0.49958669999999999 0.54853355999999998 0.48272732000000002 0.58332550999999999 0.46321097 0.61012423000000005 0.44156077999999999 0.629629"
+		+ "31 0.41765150000000001 0.64347708000000003 0.38969645000000003 0.65416395999999999 0.35598171000000001 0.66286469000000003 0.31579151999999999 0.66990947999999995 0.26846357999999998 0.67425769999999996 0.20971136000000001 0.67462635000000004 0.11639922 0.75069445000000001 0.11997008000000001 0.76136148000000003 0.20029843999999999 0.74825220999999997 0.20161278999999999 0.76140165000000004 0.20277642000000001 0.77704417999999997 0.28065373999999998 0.78557986000000002 0.34654995999999999 0.78802209999999995 0.40220061000000001 0.78485417000000002 0.45194318999999999 0.77730202999999998 0.50049973000000003 0.76460373000000004 0.54691666000000005 0.74466591999999998 0.58864497999999998 0.71625137000000005 0.62308048999999999 0.68017083 0.65017086000000002 0.63760954000000003 0.67088382999999996 0.58900416 0.68610227000000001 0.53445536000000005 0.69659972000000003 0.47468901000000002 0.70293640999999996 0.41213262000000001 0.70541465000000003 0.34967524 0.70407467999999995 0.28965813000000001 0.698214050000000"
+		+ "03 0.23238115000000001 0.68684864000000001 0.17729922000000001 0.66899609999999998 0.12362136999999999 0.64271617000000003 0.070048659999999999 0.60577559000000003 0.018577099 0.55692768000000004 -0.027479350999999999 0.49661514000000001 -0.064785242000000007 0.42620024000000001 -0.091484814999999997 0.34679082 -0.10769196 0.26413958999999998 -0.11519475 0.12011867 0.71226805000000004 0.19930144 0.70821869000000004 0.12488323 0.66638582999999996 0.12224728 0.69074869000000005 0.20004340000000001 0.67205179000000004 0.25732549999999998 0.67181986999999999 0.30298164 0.66768992000000005 0.34131434999999999 0.66102439000000002 0.37230893999999998 0.65320617000000003 0.39697518999999998 0.64415233999999999 0.41773560999999998 0.63264555 0.43707821000000002 0.61561650000000001 0.45513358999999998 0.59099698000000001 0.47112252999999998 0.55793804000000002 0.48438945 0.51587718999999999 0.49442842999999997 0.46601157999999998 0.50098454999999997 0.41228788999999999 0.50408322000000005 0.35895652 0.50393975000000002"
+		+ " 0.31055002999999998 0.50056827000000004 0.26808047000000002 0.49373892000000003 0.23010905000000001 0.48324260000000002 0.19533169"
+		)
+		2 "mug:polyTweakUV2" "uvtk[750:763]" " 0.46942266999999999 0.16405295 0.45188281000000002 0.13650461999999999 0.42925540000000001 0.11226754999999999 0.39867880999999999 0.090911955000000003 0.35545504 0.072739481999999994 0.29468813999999999 0.059298812999999999 0.21822855999999999 0.052767522999999997 0.25635092999999998 -0.025618166000000001 0.22263559999999999 -0.037571818 0.22755924 -0.058484702999999999 0.23297161 -0.082511991000000007 0.26029839999999999 0.0063174366999999999 0.21785895999999999 -0.00083100795999999999 0.21792336000000001 0.032637";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
@@ -2378,6 +643,5255 @@ createNode polyTweakUV -n "polyTweakUV1";
 		 0.25975683 -0.37683231 0.45389014 -0.57096565 0.25975683 -0.57096565 0.45389014 -0.76509899
 		 0.25975683 -0.76509899 0.065623492 0.011434384 0.065623492 -0.18269897 0.64802349
 		 0.011434384 0.64802349 -0.18269897;
+createNode reference -n "sketchpadRN";
+	rename -uid "EAF42225-4DAC-C10D-E6C2-1E9FFF3D0736";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"sketchpadRN"
+		"sketchpadRN" 0
+		"sketchpadRN" 2622
+		2 "|sketchpad:sketchpad" "translate" " -type \"double3\" 0.5837640597892324 1.68663751075290169 -2.23371927988273455"
+		
+		2 "|sketchpad:sketchpad" "scale" " -type \"double3\" 0.6639368932748253 0.6639368932748253 0.6639368932748253"
+		
+		2 "|sketchpad:sketchpad" "rotatePivot" " -type \"double3\" -0.94557956836604007 0.25854767372585807 0"
+		
+		2 "|sketchpad:sketchpad" "scalePivot" " -type \"double3\" -1.4242009714237005 0.38941603689258564 0"
+		
+		2 "|sketchpad:sketchpad" "scalePivotTranslate" " -type \"double3\" 0.47862140305766043 -0.13086836316672759 0"
+		
+		2 "|sketchpad:sketchpad|sketchpad:pCube1|sketchpad:pCubeShape1" "uvPivot" 
+		" -type \"double2\" 0.62091183662414551 0.38082899153232574"
+		2 "|sketchpad:sketchpad|sketchpad:pCube2|sketchpad:pCubeShape2" "uvSet[0].uvSetPoints" 
+		" -s 44"
+		2 "|sketchpad:sketchpad|sketchpad:pCube2|sketchpad:pCubeShape2" "uvSet[0].uvSetPoints[0]" 
+		" -type \"float2\" 0.65445863999999998 0.41590694"
+		2 "|sketchpad:sketchpad|sketchpad:pCube2|sketchpad:pCubeShape2" "uvSet[0].uvSetPoints[1]" 
+		" -type \"float2\" 0.62255477999999997 0.36519653000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pCube2|sketchpad:pCubeShape2" "uvSet[0].uvSetPoints[2]" 
+		" -type \"float2\" 0.62290168000000001 0.36382239999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pCube2|sketchpad:pCubeShape2" "uvSet[0].uvSetPoints[3]" 
+		" -type \"float2\" 0.65583950000000002 0.41618618000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pCube2|sketchpad:pCubeShape2" "uvSet[0].uvSetPoints[4]" 
+		" -type \"float2\" 0.65195376000000005 0.27935934000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pCube2|sketchpad:pCubeShape2" "uvSet[0].uvSetPoints[5]" 
+		" -type \"float2\" 0.70608711000000002 0.30948058000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pCube2|sketchpad:pCubeShape2" "uvSet[0].uvSetPoints[6]" 
+		" -type \"float2\" 0.66983366 0.37678676999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pCube2|sketchpad:pCubeShape2" "uvSet[0].uvSetPoints[7]" 
+		" -type \"float2\" 0.61536986000000005 0.34672371000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pCube2|sketchpad:pCubeShape2" "uvSet[0].uvSetPoints[8]" 
+		" -type \"float2\" 0.58886439000000002 0.45877354999999997"
+		2 "|sketchpad:sketchpad|sketchpad:pCube2|sketchpad:pCubeShape2" "uvSet[0].uvSetPoints[9]" 
+		" -type \"float2\" 0.55564069999999999 0.40644458"
+		2 "|sketchpad:sketchpad|sketchpad:pCube2|sketchpad:pCubeShape2" "uvSet[0].uvSetPoints[10]" 
+		" -type \"float2\" 0.55703866000000002 0.40665974999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pCube2|sketchpad:pCubeShape2" "uvSet[0].uvSetPoints[11]" 
+		" -type \"float2\" 0.58913428000000001 0.45738815999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pCube2|sketchpad:pCubeShape2" "uvSet[0].uvSetPoints[12]" 
+		" -type \"float2\" 0.61019241999999996 0.34836072000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pCube2|sketchpad:pCubeShape2" "uvSet[0].uvSetPoints[13]" 
+		" -type \"float2\" 0.65080141999999996 0.27399772"
+		2 "|sketchpad:sketchpad|sketchpad:pCube2|sketchpad:pCubeShape2" "uvSet[0].uvSetPoints[14]" 
+		" -type \"float2\" 0.65127999000000003 0.27496408999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pCube2|sketchpad:pCubeShape2" "uvSet[0].uvSetPoints[15]" 
+		" -type \"float2\" 0.61129515999999995 0.34837817999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pCube2|sketchpad:pCubeShape2" "uvSet[0].uvSetPoints[16]" 
+		" -type \"float2\" 0.67055869000000001 0.38117140999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pCube2|sketchpad:pCubeShape2" "uvSet[0].uvSetPoints[17]" 
+		" -type \"float2\" 0.67105877000000003 0.38213219999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pCube2|sketchpad:pCubeShape2" "uvSet[0].uvSetPoints[18]" 
+		" -type \"float2\" 0.71122408000000004 0.30781906999999997"
+		2 "|sketchpad:sketchpad|sketchpad:pCube2|sketchpad:pCubeShape2" "uvSet[0].uvSetPoints[19]" 
+		" -type \"float2\" 0.71013039 0.30781745999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pCube2|sketchpad:pCubeShape2" "uvSet[0].uvSetPoints[20]" 
+		" -type \"float2\" 0.60266280000000005 0.35100179999999997"
+		2 "|sketchpad:sketchpad|sketchpad:pCube2|sketchpad:pCubeShape2" "uvSet[0].uvSetPoints[21]" 
+		" -type \"float2\" 0.64910190999999995 0.26618931000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pCube2|sketchpad:pCubeShape2" "uvSet[0].uvSetPoints[22]" 
+		" -type \"float2\" 0.64974999 0.26980822999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pCube2|sketchpad:pCubeShape2" "uvSet[0].uvSetPoints[23]" 
+		" -type \"float2\" 0.60606026999999996 0.34959500999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pCube2|sketchpad:pCubeShape2" "uvSet[0].uvSetPoints[24]" 
+		" -type \"float2\" 0.67219066999999999 0.38630277000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pCube2|sketchpad:pCubeShape2" "uvSet[0].uvSetPoints[25]" 
+		" -type \"float2\" 0.67288594999999995 0.38991392000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pCube2|sketchpad:pCubeShape2" "uvSet[0].uvSetPoints[26]" 
+		" -type \"float2\" 0.71867292999999999 0.30522664999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pCube2|sketchpad:pCubeShape2" "uvSet[0].uvSetPoints[27]" 
+		" -type \"float2\" 0.71530282000000001 0.30662534000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pCube2|sketchpad:pCubeShape2" "uvSet[0].uvSetPoints[28]" 
+		" -type \"float2\" 0.60088712 0.35018538999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pCube2|sketchpad:pCubeShape2" "uvSet[0].uvSetPoints[29]" 
+		" -type \"float2\" 0.65666431000000003 0.41736635999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pCube2|sketchpad:pCubeShape2" "uvSet[0].uvSetPoints[30]" 
+		" -type \"float2\" 0.67346930999999999 0.39056823000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pCube2|sketchpad:pCubeShape2" "uvSet[0].uvSetPoints[31]" 
+		" -type \"float2\" 0.62254929999999997 0.36262453"
+		2 "|sketchpad:sketchpad|sketchpad:pCube2|sketchpad:pCubeShape2" "uvSet[0].uvSetPoints[32]" 
+		" -type \"float2\" 0.60706568000000005 0.34980842000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pCube2|sketchpad:pCubeShape2" "uvSet[0].uvSetPoints[33]" 
+		" -type \"float2\" 0.65034628000000005 0.2705825"
+		2 "|sketchpad:sketchpad|sketchpad:pCube2|sketchpad:pCubeShape2" "uvSet[0].uvSetPoints[34]" 
+		" -type \"float2\" 0.67155140999999996 0.38554084"
+		2 "|sketchpad:sketchpad|sketchpad:pCube2|sketchpad:pCubeShape2" "uvSet[0].uvSetPoints[35]" 
+		" -type \"float2\" 0.71429551000000002 0.30639863000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pCube2|sketchpad:pCubeShape2" "uvSet[0].uvSetPoints[36]" 
+		" -type \"float2\" 0.61417966999999996 0.34696769999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pCube2|sketchpad:pCubeShape2" "uvSet[0].uvSetPoints[37]" 
+		" -type \"float2\" 0.65162176000000005 0.27817771000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pCube2|sketchpad:pCubeShape2" "uvSet[0].uvSetPoints[38]" 
+		" -type \"float2\" 0.67018610000000001 0.37796468"
+		2 "|sketchpad:sketchpad|sketchpad:pCube2|sketchpad:pCubeShape2" "uvSet[0].uvSetPoints[39]" 
+		" -type \"float2\" 0.70726955000000002 0.30922854"
+		2 "|sketchpad:sketchpad|sketchpad:pCube2|sketchpad:pCubeShape2" "uvSet[0].uvSetPoints[40]" 
+		" -type \"float2\" 0.72043084999999996 0.30606842000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pCube2|sketchpad:pCubeShape2" "uvSet[0].uvSetPoints[41]" 
+		" -type \"float2\" 0.64854902000000003 0.26552677000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pCube2|sketchpad:pCubeShape2" "uvSet[0].uvSetPoints[42]" 
+		" -type \"float2\" 0.55479091000000003 0.40533817"
+		2 "|sketchpad:sketchpad|sketchpad:pCube2|sketchpad:pCubeShape2" "uvSet[0].uvSetPoints[43]" 
+		" -type \"float2\" 0.58923382000000002 0.45997658000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints" 
+		" -s 420"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[0]" 
+		" -type \"float2\" 0.52291673000000005 0.29589062999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[1]" 
+		" -type \"float2\" 0.52755867999999995 0.29462000999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[2]" 
+		" -type \"float2\" 0.52770304999999995 0.29493910000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[3]" 
+		" -type \"float2\" 0.52295541999999995 0.29623875"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[4]" 
+		" -type \"float2\" 0.51810902000000003 0.29566397999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[5]" 
+		" -type \"float2\" 0.51803821000000005 0.29600701000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[6]" 
+		" -type \"float2\" 0.51360702999999996 0.29396218000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[7]" 
+		" -type \"float2\" 0.51343357999999995 0.29426646000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[8]" 
+		" -type \"float2\" 0.50985192999999995 0.29095238000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[9]" 
+		" -type \"float2\" 0.50959295000000004 0.29118818000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[10]" 
+		" -type \"float2\" 0.50721115000000006 0.28692999000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[11]" 
+		" -type \"float2\" 0.50689196999999997 0.28707421"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[12]" 
+		" -type \"float2\" 0.50594240000000001 0.282289"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[13]" 
+		" -type \"float2\" 0.50559425000000002 0.28232755999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[14]" 
+		" -type \"float2\" 0.50616932000000003 0.27748334000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[15]" 
+		" -type \"float2\" 0.50582634999999998 0.27741250000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[16]" 
+		" -type \"float2\" 0.50786960000000003 0.27298268999999997"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[17]" 
+		" -type \"float2\" 0.50756526000000002 0.27280942000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[18]" 
+		" -type \"float2\" 0.51087731000000003 0.26922715000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[19]" 
+		" -type \"float2\" 0.51064134000000005 0.26896830999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[20]" 
+		" -type \"float2\" 0.51489872000000003 0.2665844"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[21]" 
+		" -type \"float2\" 0.5147543 0.26626533000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[22]" 
+		" -type \"float2\" 0.51954060999999996 0.26531377"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[23]" 
+		" -type \"float2\" 0.51950185999999998 0.26496567999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[24]" 
+		" -type \"float2\" 0.52434820000000004 0.26554039000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[25]" 
+		" -type \"float2\" 0.52441906999999999 0.26519736999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[26]" 
+		" -type \"float2\" 0.52885026000000002 0.26724213000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[27]" 
+		" -type \"float2\" 0.52902364999999996 0.26693781999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[28]" 
+		" -type \"float2\" 0.53260534999999998 0.27025189999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[29]" 
+		" -type \"float2\" 0.53286433 0.27001609999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[30]" 
+		" -type \"float2\" 0.53524612999999999 0.27427428999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[31]" 
+		" -type \"float2\" 0.53556532000000001 0.27413008"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[32]" 
+		" -type \"float2\" 0.53651494 0.27891528999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[33]" 
+		" -type \"float2\" 0.53686303000000002 0.27887668999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[34]" 
+		" -type \"float2\" 0.53628801999999998 0.28372093999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[35]" 
+		" -type \"float2\" 0.53663105 0.28379175000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[36]" 
+		" -type \"float2\" 0.53458779999999995 0.28822160000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[37]" 
+		" -type \"float2\" 0.53489213999999996 0.28839490000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[38]" 
+		" -type \"float2\" 0.53158008999999995 0.29197719999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[39]" 
+		" -type \"float2\" 0.53181606999999997 0.29223602999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[40]" 
+		" -type \"float2\" 0.52516788000000003 0.28931886000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[41]" 
+		" -type \"float2\" 0.52228205999999999 0.29011002000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[42]" 
+		" -type \"float2\" 0.51929307000000002 0.28997045999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[43]" 
+		" -type \"float2\" 0.51649350000000005 0.28891379"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[44]" 
+		" -type \"float2\" 0.51415765000000002 0.28704353999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[45]" 
+		" -type \"float2\" 0.512514 0.28454277"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[46]" 
+		" -type \"float2\" 0.51172333999999997 0.28165635"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[47]" 
+		" -type \"float2\" 0.51186310999999995 0.27866676000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[48]" 
+		" -type \"float2\" 0.51291955 0.27586663"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[49]" 
+		" -type \"float2\" 0.51478933999999998 0.27352995000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[50]" 
+		" -type \"float2\" 0.51728951999999995 0.27188553999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[51]" 
+		" -type \"float2\" 0.52017528000000002 0.27109438000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[52]" 
+		" -type \"float2\" 0.52316432999999996 0.27123395"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[53]" 
+		" -type \"float2\" 0.52596383999999996 0.27229059"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[54]" 
+		" -type \"float2\" 0.52829968999999999 0.27416083000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[55]" 
+		" -type \"float2\" 0.52994341 0.27666160000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[56]" 
+		" -type \"float2\" 0.53073406000000001 0.27954802000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[57]" 
+		" -type \"float2\" 0.53059422999999994 0.28253763999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[58]" 
+		" -type \"float2\" 0.52953779999999995 0.28533777999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[59]" 
+		" -type \"float2\" 0.527668 0.28767446000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[60]" 
+		" -type \"float2\" 0.52530277000000003 0.28961601999999997"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[61]" 
+		" -type \"float2\" 0.52231848000000003 0.29043433000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[62]" 
+		" -type \"float2\" 0.51922732999999999 0.29029011999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[63]" 
+		" -type \"float2\" 0.51633209000000002 0.28919741999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[64]" 
+		" -type \"float2\" 0.51391648999999995 0.28726332999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[65]" 
+		" -type \"float2\" 0.51221669000000003 0.28467733000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[66]" 
+		" -type \"float2\" 0.51139902999999998 0.28169253"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[67]" 
+		" -type \"float2\" 0.51154350999999998 0.27860108"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[68]" 
+		" -type \"float2\" 0.51263583000000001 0.27570546000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[69]" 
+		" -type \"float2\" 0.51456928000000002 0.27328904999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[70]" 
+		" -type \"float2\" 0.51715462999999995 0.27158841"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[71]" 
+		" -type \"float2\" 0.52013891999999995 0.27077003999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[72]" 
+		" -type \"float2\" 0.52323008000000004 0.27091429"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[73]" 
+		" -type \"float2\" 0.52612524999999999 0.27200692999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[74]" 
+		" -type \"float2\" 0.52854091000000003 0.27394104000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[75]" 
+		" -type \"float2\" 0.53024064999999998 0.27652702000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[76]" 
+		" -type \"float2\" 0.53105831000000003 0.27951184000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[77]" 
+		" -type \"float2\" 0.53091389 0.28260329000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[78]" 
+		" -type \"float2\" 0.52982152000000005 0.28549891999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[79]" 
+		" -type \"float2\" 0.52788811999999996 0.28791535000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[80]" 
+		" -type \"float2\" 0.52543724000000003 0.28991278999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[81]" 
+		" -type \"float2\" 0.52235454000000003 0.29075819000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[82]" 
+		" -type \"float2\" 0.51916145999999996 0.29060921000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[83]" 
+		" -type \"float2\" 0.51617080000000004 0.28948051000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[84]" 
+		" -type \"float2\" 0.51367556999999997 0.28748267999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[85]" 
+		" -type \"float2\" 0.51191980000000004 0.28481147000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[86]" 
+		" -type \"float2\" 0.51107526000000003 0.28172845000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[87]" 
+		" -type \"float2\" 0.51122445000000005 0.27853530999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[88]" 
+		" -type \"float2\" 0.51235271000000004 0.27554440000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[89]" 
+		" -type \"float2\" 0.51434970000000002 0.27304836999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[90]" 
+		" -type \"float2\" 0.51702017 0.27129161000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[91]" 
+		" -type \"float2\" 0.52010285999999994 0.27044624"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[92]" 
+		" -type \"float2\" 0.52329588000000005 0.27059516"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[93]" 
+		" -type \"float2\" 0.52628653999999997 0.27172386999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[94]" 
+		" -type \"float2\" 0.52878177000000004 0.27372169000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[95]" 
+		" -type \"float2\" 0.53053748999999994 0.27639288000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[96]" 
+		" -type \"float2\" 0.53138207999999998 0.2794759"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[97]" 
+		" -type \"float2\" 0.53123288999999996 0.28266910000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[98]" 
+		" -type \"float2\" 0.53010469999999998 0.28566"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[99]" 
+		" -type \"float2\" 0.52810763999999999 0.28815603000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[100]" 
+		" -type \"float2\" 0.52557147000000004 0.29020934999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[101]" 
+		" -type \"float2\" 0.52239047999999999 0.29108172999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[102]" 
+		" -type \"float2\" 0.51909554000000002 0.29092804"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[103]" 
+		" -type \"float2\" 0.51600950999999995 0.28976327000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[104]" 
+		" -type \"float2\" 0.51343477000000004 0.28770175999999997"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[105]" 
+		" -type \"float2\" 0.51162313999999998 0.28494545999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[106]" 
+		" -type \"float2\" 0.51075172000000002 0.28176424"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[107]" 
+		" -type \"float2\" 0.51090568000000003 0.27846947"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[108]" 
+		" -type \"float2\" 0.51206982000000001 0.27538335000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[109]" 
+		" -type \"float2\" 0.51413041000000004 0.27280780999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[110]" 
+		" -type \"float2\" 0.51688593999999999 0.27099505000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[111]" 
+		" -type \"float2\" 0.52006686000000002 0.27012268"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[112]" 
+		" -type \"float2\" 0.52336179999999999 0.27027636999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[113]" 
+		" -type \"float2\" 0.52644776999999998 0.27144107000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[114]" 
+		" -type \"float2\" 0.52902256999999997 0.27350261999999997"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[115]" 
+		" -type \"float2\" 0.53083420000000003 0.27625892000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[116]" 
+		" -type \"float2\" 0.53170561999999999 0.27944010000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[117]" 
+		" -type \"float2\" 0.53155171999999995 0.28273490000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[118]" 
+		" -type \"float2\" 0.53038757999999997 0.28582101999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[119]" 
+		" -type \"float2\" 0.52832699000000005 0.28839657000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[120]" 
+		" -type \"float2\" 0.52570574999999997 0.29050604000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[121]" 
+		" -type \"float2\" 0.52242648999999997 0.29140540999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[122]" 
+		" -type \"float2\" 0.51902968000000005 0.29124695"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[123]" 
+		" -type \"float2\" 0.51584828000000005 0.29004622000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[124]" 
+		" -type \"float2\" 0.51319395999999995 0.28792092000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[125]" 
+		" -type \"float2\" 0.51132643 0.28507948"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[126]" 
+		" -type \"float2\" 0.51042807000000001 0.28180009"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[127]" 
+		" -type \"float2\" 0.51058680000000001 0.27840357999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[128]" 
+		" -type \"float2\" 0.51178681999999998 0.27522224000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[129]" 
+		" -type \"float2\" 0.51391100999999995 0.27256718000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[130]" 
+		" -type \"float2\" 0.51675165000000001 0.27069840000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[131]" 
+		" -type \"float2\" 0.52003091999999995 0.26979899000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[132]" 
+		" -type \"float2\" 0.52342767000000001 0.26995744999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[133]" 
+		" -type \"float2\" 0.52660905999999996 0.27115815999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[134]" 
+		" -type \"float2\" 0.52926337999999995 0.27328342"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[135]" 
+		" -type \"float2\" 0.53113096999999998 0.27612489000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[136]" 
+		" -type \"float2\" 0.53202921000000003 0.27940428"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[137]" 
+		" -type \"float2\" 0.53187059999999997 0.28280075999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[138]" 
+		" -type \"float2\" 0.53067052000000003 0.28598213"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[139]" 
+		" -type \"float2\" 0.52854639000000003 0.28863722000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[140]" 
+		" -type \"float2\" 0.52584028000000005 0.29080305000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[141]" 
+		" -type \"float2\" 0.52246254999999997 0.29172947999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[142]" 
+		" -type \"float2\" 0.51896374999999995 0.29156633999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[143]" 
+		" -type \"float2\" 0.51568687000000002 0.29032954999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[144]" 
+		" -type \"float2\" 0.51295285999999995 0.28814047999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[145]" 
+		" -type \"float2\" 0.51102924000000005 0.28521380000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[146]" 
+		" -type \"float2\" 0.510104 0.28183606"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[147]" 
+		" -type \"float2\" 0.51026738000000005 0.27833777999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[148]" 
+		" -type \"float2\" 0.51150340000000005 0.27506098000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[149]" 
+		" -type \"float2\" 0.51369125000000004 0.27232629000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[150]" 
+		" -type \"float2\" 0.51661705999999996 0.27040135999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[151]" 
+		" -type \"float2\" 0.51999479999999998 0.26947492000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[152]" 
+		" -type \"float2\" 0.52349358999999995 0.26963806000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[153]" 
+		" -type \"float2\" 0.52677046999999999 0.27087480000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[154]" 
+		" -type \"float2\" 0.52950448000000006 0.27306386999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[155]" 
+		" -type \"float2\" 0.53142803999999999 0.27599055"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[156]" 
+		" -type \"float2\" 0.53235328000000004 0.27936824999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[157]" 
+		" -type \"float2\" 0.53218997000000001 0.28286660000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[158]" 
+		" -type \"float2\" 0.53095393999999996 0.28614339"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[159]" 
+		" -type \"float2\" 0.52876615999999999 0.28887811000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[160]" 
+		" -type \"float2\" 0.52597510999999997 0.29110037999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[161]" 
+		" -type \"float2\" 0.52249884999999996 0.29205394000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[162]" 
+		" -type \"float2\" 0.51889795000000005 0.29188608999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[163]" 
+		" -type \"float2\" 0.51552540000000002 0.29061329000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[164]" 
+		" -type \"float2\" 0.51271157999999994 0.28836039000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[165]" 
+		" -type \"float2\" 0.51073181999999995 0.28534841999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[166]" 
+		" -type \"float2\" 0.50977956999999996 0.28187226999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[167]" 
+		" -type \"float2\" 0.50994766000000002 0.27827196999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[168]" 
+		" -type \"float2\" 0.51121956000000002 0.27489968999999997"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[169]" 
+		" -type \"float2\" 0.51347113 0.27208518999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[170]" 
+		" -type \"float2\" 0.51648223000000004 0.27010402"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[171]" 
+		" -type \"float2\" 0.51995849999999999 0.26915046999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[172]" 
+		" -type \"float2\" 0.52355938999999996 0.26931828000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[173]" 
+		" -type \"float2\" 0.52693193999999999 0.27059105"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[174]" 
+		" -type \"float2\" 0.52974575999999995 0.27284393000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[175]" 
+		" -type \"float2\" 0.53172553 0.27585593000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[176]" 
+		" -type \"float2\" 0.53267783000000002 0.27933206999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[177]" 
+		" -type \"float2\" 0.53250967999999999 0.28293234"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[178]" 
+		" -type \"float2\" 0.53123777999999999 0.28630467999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[179]" 
+		" -type \"float2\" 0.52898621999999995 0.28911921000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[180]" 
+		" -type \"float2\" 0.52610999000000003 0.29139751000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[181]" 
+		" -type \"float2\" 0.52253525999999995 0.29237822000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[182]" 
+		" -type \"float2\" 0.51883232999999995 0.29220574999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[183]" 
+		" -type \"float2\" 0.51536411000000004 0.29089694999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[184]" 
+		" -type \"float2\" 0.51247047999999995 0.28858033"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[185]" 
+		" -type \"float2\" 0.51043463 0.28548306000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[186]" 
+		" -type \"float2\" 0.50945525999999997 0.28190851"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[187]" 
+		" -type \"float2\" 0.509628 0.27820634999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[188]" 
+		" -type \"float2\" 0.51093577999999995 0.27473855000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[189]" 
+		" -type \"float2\" 0.51325100999999995 0.27184427"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[190]" 
+		" -type \"float2\" 0.51634740999999995 0.26980689000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[191]" 
+		" -type \"float2\" 0.51992214000000003 0.26882619000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[192]" 
+		" -type \"float2\" 0.52362502 0.26899862000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[193]" 
+		" -type \"float2\" 0.52709322999999997 0.27030738999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[194]" 
+		" -type \"float2\" 0.52998685999999995 0.27262402000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[195]" 
+		" -type \"float2\" 0.53202271000000001 0.27572124999999997"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[196]" 
+		" -type \"float2\" 0.53300208000000004 0.27929579999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[197]" 
+		" -type \"float2\" 0.53282940000000001 0.282998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[198]" 
+		" -type \"float2\" 0.53152155999999995 0.28646581999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[199]" 
+		" -type \"float2\" 0.52920634 0.28936011"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[200]" 
+		" -type \"float2\" 0.52624433999999998 0.2916936"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[201]" 
+		" -type \"float2\" 0.52257149999999997 0.29270132999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[202]" 
+		" -type \"float2\" 0.51876681999999996 0.29252422"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[203]" 
+		" -type \"float2\" 0.51520336 0.29117959999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[204]" 
+		" -type \"float2\" 0.51223028000000004 0.28879943000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[205]" 
+		" -type \"float2\" 0.51013839000000005 0.28561723"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[206]" 
+		" -type \"float2\" 0.50913209000000004 0.28194466000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[207]" 
+		" -type \"float2\" 0.50930947000000004 0.27814093000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[208]" 
+		" -type \"float2\" 0.51065307999999998 0.27457798"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[209]" 
+		" -type \"float2\" 0.51303171999999997 0.27160421000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[210]" 
+		" -type \"float2\" 0.51621306 0.26951080999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[211]" 
+		" -type \"float2\" 0.51988584000000004 0.26850309999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[212]" 
+		" -type \"float2\" 0.52369052000000005 0.26868016"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[213]" 
+		" -type \"float2\" 0.52725398999999995 0.27002474999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[214]" 
+		" -type \"float2\" 0.53022707000000002 0.27240488000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[215]" 
+		" -type \"float2\" 0.53231888999999999 0.27558707999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[216]" 
+		" -type \"float2\" 0.53332520000000005 0.27925968000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[217]" 
+		" -type \"float2\" 0.53314786999999997 0.28306344"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[218]" 
+		" -type \"float2\" 0.53180426000000003 0.2866264"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[219]" 
+		" -type \"float2\" 0.52942562000000004 0.28960018999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[220]" 
+		" -type \"float2\" 0.52637750000000005 0.29198769000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[221]" 
+		" -type \"float2\" 0.52260720999999999 0.29302219000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[222]" 
+		" -type \"float2\" 0.51870161000000004 0.29284041999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[223]" 
+		" -type \"float2\" 0.51504355999999996 0.29146012999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[224]" 
+		" -type \"float2\" 0.51199156000000001 0.28901684"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[225]" 
+		" -type \"float2\" 0.50984423999999995 0.28575023999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[226]" 
+		" -type \"float2\" 0.50881124 0.28198028000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[227]" 
+		" -type \"float2\" 0.50899327000000005 0.27807569999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[228]" 
+		" -type \"float2\" 0.51037252 0.27441829000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[229]" 
+		" -type \"float2\" 0.51281416000000002 0.27136567"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[230]" 
+		" -type \"float2\" 0.51607983999999996 0.26921672000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[231]" 
+		" -type \"float2\" 0.51985013000000002 0.26818222000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[232]" 
+		" -type \"float2\" 0.52375572999999997 0.26836398"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[233]" 
+		" -type \"float2\" 0.52741373000000003 0.26974421999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[234]" 
+		" -type \"float2\" 0.53046572000000003 0.27218750000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[235]" 
+		" -type \"float2\" 0.53261309999999995 0.27545409999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[236]" 
+		" -type \"float2\" 0.53364610999999995 0.27922404000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[237]" 
+		" -type \"float2\" 0.53346406999999996 0.28312862"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[238]" 
+		" -type \"float2\" 0.53208493999999995 0.28678608"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[239]" 
+		" -type \"float2\" 0.52964317999999999 0.28983872999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[240]" 
+		" -type \"float2\" 0.52650898999999995 0.29227901000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[241]" 
+		" -type \"float2\" 0.52264219999999995 0.29333985000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[242]" 
+		" -type \"float2\" 0.51863663999999998 0.29315332"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[243]" 
+		" -type \"float2\" 0.51488506999999994 0.29173761999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[244]" 
+		" -type \"float2\" 0.51175504999999999 0.28923175000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[245]" 
+		" -type \"float2\" 0.50955284000000001 0.28588154999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[246]" 
+		" -type \"float2\" 0.50849354000000002 0.28201516999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[247]" 
+		" -type \"float2\" 0.50868033999999995 0.27801079000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[248]" 
+		" -type \"float2\" 0.51009488000000003 0.2742599"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[249]" 
+		" -type \"float2\" 0.51259911000000002 0.27112924999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[250]" 
+		" -type \"float2\" 0.51594835999999999 0.26892543000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[251]" 
+		" -type \"float2\" 0.51981515 0.26786455999999997"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[252]" 
+		" -type \"float2\" 0.52382070000000003 0.26805103000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[253]" 
+		" -type \"float2\" 0.52757226999999995 0.26946672999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[254]" 
+		" -type \"float2\" 0.53070229000000002 0.27197257000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[255]" 
+		" -type \"float2\" 0.53290451000000005 0.27532276999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[256]" 
+		" -type \"float2\" 0.53396379999999999 0.27918914"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[257]" 
+		" -type \"float2\" 0.533777 0.28319353000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[258]" 
+		" -type \"float2\" 0.53236251999999995 0.28694445000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[259]" 
+		" -type \"float2\" 0.52985822999999999 0.29007512000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[260]" 
+		" -type \"float2\" 0.52663863 0.29256727999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[261]" 
+		" -type \"float2\" 0.52267635000000001 0.29365407999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[262]" 
+		" -type \"float2\" 0.51857196999999999 0.29346269000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[263]" 
+		" -type \"float2\" 0.51472783 0.29201182999999997"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[264]" 
+		" -type \"float2\" 0.5115208 0.28944396999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[265]" 
+		" -type \"float2\" 0.50926446999999997 0.28601101000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[266]" 
+		" -type \"float2\" 0.50817931000000005 0.28204920999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[267]" 
+		" -type \"float2\" 0.50837094000000005 0.27794611000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[268]" 
+		" -type \"float2\" 0.50982057999999997 0.27410284000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[269]" 
+		" -type \"float2\" 0.51238680000000003 0.27089514999999997"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[270]" 
+		" -type \"float2\" 0.51581876999999998 0.26863714999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[271]" 
+		" -type \"float2\" 0.51978099 0.26755034999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[272]" 
+		" -type \"float2\" 0.52388537000000002 0.26774167999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[273]" 
+		" -type \"float2\" 0.52772945000000004 0.26919251999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[274]" 
+		" -type \"float2\" 0.53093654000000001 0.27176036999999997"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[275]" 
+		" -type \"float2\" 0.53319280999999996 0.27519333000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[276]" 
+		" -type \"float2\" 0.53427804000000001 0.27915510999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[277]" 
+		" -type \"float2\" 0.53408641000000001 0.28325823"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[278]" 
+		" -type \"float2\" 0.53263676000000004 0.28710153999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[279]" 
+		" -type \"float2\" 0.53007066000000003 0.29030925000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[280]" 
+		" -type \"float2\" 0.52676659999999997 0.29285308999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[281]" 
+		" -type \"float2\" 0.52270967000000002 0.29396543000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[282]" 
+		" -type \"float2\" 0.51850742000000005 0.29376911999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[283]" 
+		" -type \"float2\" 0.51457173 0.29228330000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[284]" 
+		" -type \"float2\" 0.51128839999999998 0.28965384"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[285]" 
+		" -type \"float2\" 0.50897855000000003 0.28613883000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[286]" 
+		" -type \"float2\" 0.50786787 0.28208246999999997"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[287]" 
+		" -type \"float2\" 0.50806450999999997 0.27788156000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[288]" 
+		" -type \"float2\" 0.50954907999999999 0.27394676000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[289]" 
+		" -type \"float2\" 0.51217668999999999 0.27066287"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[290]" 
+		" -type \"float2\" 0.5156908 0.26835132"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[291]" 
+		" -type \"float2\" 0.51974766999999999 0.26723893999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[292]" 
+		" -type \"float2\" 0.52394991999999996 0.26743525000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[293]" 
+		" -type \"float2\" 0.52788555999999998 0.26892104999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[294]" 
+		" -type \"float2\" 0.53116894000000003 0.27155045"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[295]" 
+		" -type \"float2\" 0.53347873999999995 0.27506547999999997"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[296]" 
+		" -type \"float2\" 0.53458947000000001 0.27912185"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[297]" 
+		" -type \"float2\" 0.53439289000000001 0.28332275000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[298]" 
+		" -type \"float2\" 0.53290831999999999 0.28725758000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[299]" 
+		" -type \"float2\" 0.53028065000000002 0.29054152999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[300]" 
+		" -type \"float2\" 0.52689368000000003 0.29313784999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[301]" 
+		" -type \"float2\" 0.52274257000000002 0.29427555"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[302]" 
+		" -type \"float2\" 0.51844281000000003 0.29407418000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[303]" 
+		" -type \"float2\" 0.51441597999999999 0.29255342000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[304]" 
+		" -type \"float2\" 0.51105672000000002 0.28986263000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[305]" 
+		" -type \"float2\" 0.50869374999999994 0.28626582"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[306]" 
+		" -type \"float2\" 0.50755775000000003 0.28211528000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[307]" 
+		" -type \"float2\" 0.50775932999999995 0.27781700999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[308]" 
+		" -type \"float2\" 0.50927882999999996 0.27379112999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[309]" 
+		" -type \"float2\" 0.51196777999999998 0.27043134000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[310]" 
+		" -type \"float2\" 0.51556367000000003 0.26806658999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[311]" 
+		" -type \"float2\" 0.51971476999999999 0.26692887999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[312]" 
+		" -type \"float2\" 0.52401452999999998 0.26713019999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[313]" 
+		" -type \"float2\" 0.52804130000000005 0.26865088999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[314]" 
+		" -type \"float2\" 0.53140056000000002 0.27134167999999997"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[315]" 
+		" -type \"float2\" 0.53376358999999995 0.27493848999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[316]" 
+		" -type \"float2\" 0.53489964999999995 0.279089"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[317]" 
+		" -type \"float2\" 0.53469800999999995 0.28338732999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[318]" 
+		" -type \"float2\" 0.53317857000000002 0.28741320999999997"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[319]" 
+		" -type \"float2\" 0.53048962 0.29077306000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[320]" 
+		" -type \"float2\" 0.52702117000000004 0.29342359000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[321]" 
+		" -type \"float2\" 0.52277547000000002 0.29458668999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[322]" 
+		" -type \"float2\" 0.51837789999999995 0.29438025000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[323]" 
+		" -type \"float2\" 0.51425964000000002 0.29282445000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[324]" 
+		" -type \"float2\" 0.51082426000000003 0.29007205000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[325]" 
+		" -type \"float2\" 0.50840795000000005 0.28639320000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[326]" 
+		" -type \"float2\" 0.50724654999999996 0.28214809000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[327]" 
+		" -type \"float2\" 0.50745320000000005 0.2777521"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[328]" 
+		" -type \"float2\" 0.50900769000000001 0.27363488000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[329]" 
+		" -type \"float2\" 0.51175820999999999 0.27019896999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[330]" 
+		" -type \"float2\" 0.51543616999999997 0.26778084000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[331]" 
+		" -type \"float2\" 0.51968186999999999 0.26661772"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[332]" 
+		" -type \"float2\" 0.52407943999999995 0.26682412999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[333]" 
+		" -type \"float2\" 0.52819764999999996 0.2683799"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[334]" 
+		" -type \"float2\" 0.53163302000000001 0.27113222999999997"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[335]" 
+		" -type \"float2\" 0.53404938999999996 0.27481115"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[336]" 
+		" -type \"float2\" 0.53521079000000005 0.27905618999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[337]" 
+		" -type \"float2\" 0.53500413999999996 0.28345220999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[338]" 
+		" -type \"float2\" 0.53344965 0.28756948999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[339]" 
+		" -type \"float2\" 0.53069913000000002 0.29100540000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[340]" 
+		" -type \"float2\" 0.52715033 0.29371268"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[341]" 
+		" -type \"float2\" 0.52280897000000004 0.29490151999999997"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[342]" 
+		" -type \"float2\" 0.51831238999999996 0.29469001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[343]" 
+		" -type \"float2\" 0.51410155999999996 0.29309878"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[344]" 
+		" -type \"float2\" 0.51058912000000001 0.29028412999999997"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[345]" 
+		" -type \"float2\" 0.50811874999999995 0.28652221"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[346]" 
+		" -type \"float2\" 0.50693166000000001 0.28218149999999997"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[347]" 
+		" -type \"float2\" 0.50714338000000003 0.27768660000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[348]" 
+		" -type \"float2\" 0.50873327000000002 0.27347684"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[349]" 
+		" -type \"float2\" 0.51154602000000005 0.26996395000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[350]" 
+		" -type \"float2\" 0.51530701000000001 0.26749176000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[351]" 
+		" -type \"float2\" 0.51964836999999997 0.26630291"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[352]" 
+		" -type \"float2\" 0.52414495000000005 0.26651436000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[353]" 
+		" -type \"float2\" 0.52835571999999997 0.26810553999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[354]" 
+		" -type \"float2\" 0.53186816000000003 0.27092021999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[355]" 
+		" -type \"float2\" 0.53433852999999998 0.27468209999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[356]" 
+		" -type \"float2\" 0.53552568 0.27902278000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[357]" 
+		" -type \"float2\" 0.53531395999999998 0.28351771999999997"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[358]" 
+		" -type \"float2\" 0.53372406999999999 0.28772745"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[359]" 
+		" -type \"float2\" 0.53091133000000001 0.29124042"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[360]" 
+		" -type \"float2\" 0.52728248 0.29400738999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[361]" 
+		" -type \"float2\" 0.52284348000000003 0.29522263999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[362]" 
+		" -type \"float2\" 0.51824588000000005 0.29500607000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[363]" 
+		" -type \"float2\" 0.51394063000000001 0.2933788"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[364]" 
+		" -type \"float2\" 0.51034950999999995 0.29050067000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[365]" 
+		" -type \"float2\" 0.50782393999999997 0.28665414"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[366]" 
+		" -type \"float2\" 0.50661045000000005 0.28221592000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[367]" 
+		" -type \"float2\" 0.50682735000000001 0.27762017"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[368]" 
+		" -type \"float2\" 0.50845319 0.27331602999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[369]" 
+		" -type \"float2\" 0.51132929000000005 0.26972446"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[370]" 
+		" -type \"float2\" 0.51517486999999995 0.26719704"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[371]" 
+		" -type \"float2\" 0.51961385999999998 0.26598176000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[372]" 
+		" -type \"float2\" 0.52421141000000004 0.26619830999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[373]" 
+		" -type \"float2\" 0.52851665000000003 0.26782550999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[374]" 
+		" -type \"float2\" 0.53210776999999998 0.27070360999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[375]" 
+		" -type \"float2\" 0.53463333999999996 0.27455016999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[376]" 
+		" -type \"float2\" 0.53584683 0.27898835999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[377]" 
+		" -type \"float2\" 0.53562999 0.28358414999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[378]" 
+		" -type \"float2\" 0.53400420999999998 0.28788826000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[379]" 
+		" -type \"float2\" 0.53112804999999996 0.29147992"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[380]" 
+		" -type \"float2\" 0.52741842999999999 0.2943095"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[381]" 
+		" -type \"float2\" 0.52287936000000002 0.29555196"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[382]" 
+		" -type \"float2\" 0.51817822000000002 0.29533035000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[383]" 
+		" -type \"float2\" 0.513776 0.29366629999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[384]" 
+		" -type \"float2\" 0.51010405999999997 0.29072320000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[385]" 
+		" -type \"float2\" 0.50752174999999999 0.28678991999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[386]" 
+		" -type \"float2\" 0.50628114000000002 0.28225175000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[387]" 
+		" -type \"float2\" 0.50650298999999999 0.27755248999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[388]" 
+		" -type \"float2\" 0.5081656 0.27315151999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[389]" 
+		" -type \"float2\" 0.51110661000000002 0.26947916"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[390]" 
+		" -type \"float2\" 0.51503896999999998 0.26689494000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[391]" 
+		" -type \"float2\" 0.51957797999999999 0.26565244999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[392]" 
+		" -type \"float2\" 0.52427906000000002 0.265874"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[393]" 
+		" -type \"float2\" 0.52868128000000003 0.26753800999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[394]" 
+		" -type \"float2\" 0.53235321999999996 0.27048107999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[395]" 
+		" -type \"float2\" 0.53493553000000005 0.27441436000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[396]" 
+		" -type \"float2\" 0.53617619999999999 0.27895254000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[397]" 
+		" -type \"float2\" 0.53595435999999996 0.28365180000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[398]" 
+		" -type \"float2\" 0.53429179999999998 0.2880528"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[399]" 
+		" -type \"float2\" 0.53135078999999996 0.29172522000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[400]" 
+		" -type \"float2\" 0.532058 0.29250130000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[401]" 
+		" -type \"float2\" 0.52785121999999995 0.29526617999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[402]" 
+		" -type \"float2\" 0.53520422999999995 0.28857245999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[403]" 
+		" -type \"float2\" 0.53698272000000002 0.28386429000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[404]" 
+		" -type \"float2\" 0.53721987999999998 0.27883708000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[405]" 
+		" -type \"float2\" 0.53589255000000002 0.27398217000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[406]" 
+		" -type \"float2\" 0.53312981000000004 0.26977437999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[407]" 
+		" -type \"float2\" 0.52920138999999999 0.26662587999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[408]" 
+		" -type \"float2\" 0.52449166999999997 0.26484573"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[409]" 
+		" -type \"float2\" 0.51946216999999995 0.26460883000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[410]" 
+		" -type \"float2\" 0.51460618000000002 0.26593824999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[411]" 
+		" -type \"float2\" 0.51039939999999995 0.26870304"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[412]" 
+		" -type \"float2\" 0.50725323 0.27263185000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[413]" 
+		" -type \"float2\" 0.50547469 0.27733998999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[414]" 
+		" -type \"float2\" 0.50523746000000003 0.28236717"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[415]" 
+		" -type \"float2\" 0.50656480000000004 0.28722208999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[416]" 
+		" -type \"float2\" 0.50932747 0.29142991000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[417]" 
+		" -type \"float2\" 0.51325589000000005 0.29457843"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[418]" 
+		" -type \"float2\" 0.51796560999999997 0.29635862000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus2|sketchpad:pTorusShape2" "uvSet[0].uvSetPoints[419]" 
+		" -type \"float2\" 0.52299510999999999 0.29659556999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints" 
+		" -s 420"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[0]" 
+		" -type \"float2\" 0.52291673000000005 0.39244097"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[1]" 
+		" -type \"float2\" 0.52755867999999995 0.39117037999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[2]" 
+		" -type \"float2\" 0.52770304999999995 0.39148945000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[3]" 
+		" -type \"float2\" 0.52295541999999995 0.39278912999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[4]" 
+		" -type \"float2\" 0.51810902000000003 0.39221435999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[5]" 
+		" -type \"float2\" 0.51803814999999998 0.39255735000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[6]" 
+		" -type \"float2\" 0.51360702999999996 0.39051256000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[7]" 
+		" -type \"float2\" 0.51343357999999995 0.39081681000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[8]" 
+		" -type \"float2\" 0.50985192999999995 0.38750273000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[9]" 
+		" -type \"float2\" 0.50959295000000004 0.38773853000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[10]" 
+		" -type \"float2\" 0.50721115000000006 0.38348033999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[11]" 
+		" -type \"float2\" 0.50689191 0.38362455000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[12]" 
+		" -type \"float2\" 0.50594240000000001 0.37883937000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[13]" 
+		" -type \"float2\" 0.50559425000000002 0.37887794000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[14]" 
+		" -type \"float2\" 0.50616932000000003 0.37403368999999997"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[15]" 
+		" -type \"float2\" 0.50582634999999998 0.37396288"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[16]" 
+		" -type \"float2\" 0.50786960000000003 0.36953306000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[17]" 
+		" -type \"float2\" 0.50756526000000002 0.36935973"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[18]" 
+		" -type \"float2\" 0.51087731000000003 0.36577752000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[19]" 
+		" -type \"float2\" 0.51064134000000005 0.36551866"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[20]" 
+		" -type \"float2\" 0.51489872000000003 0.36313474000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[21]" 
+		" -type \"float2\" 0.5147543 0.36281567999999997"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[22]" 
+		" -type \"float2\" 0.51954060999999996 0.36186415"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[23]" 
+		" -type \"float2\" 0.51950185999999998 0.36151605999999997"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[24]" 
+		" -type \"float2\" 0.52434820000000004 0.36209070999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[25]" 
+		" -type \"float2\" 0.52441906999999999 0.36174771"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[26]" 
+		" -type \"float2\" 0.52885026000000002 0.36379247999999997"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[27]" 
+		" -type \"float2\" 0.52902364999999996 0.36348819999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[28]" 
+		" -type \"float2\" 0.53260529000000001 0.36680225"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[29]" 
+		" -type \"float2\" 0.53286433 0.36656647999999997"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[30]" 
+		" -type \"float2\" 0.53524612999999999 0.37082463999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[31]" 
+		" -type \"float2\" 0.53556532000000001 0.37068039000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[32]" 
+		" -type \"float2\" 0.53651494 0.37546562999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[33]" 
+		" -type \"float2\" 0.53686303000000002 0.37542703999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[34]" 
+		" -type \"float2\" 0.53628801999999998 0.38027132000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[35]" 
+		" -type \"float2\" 0.53663105 0.38034213"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[36]" 
+		" -type \"float2\" 0.53458779999999995 0.38477197000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[37]" 
+		" -type \"float2\" 0.53489213999999996 0.38494527000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[38]" 
+		" -type \"float2\" 0.53158008999999995 0.38852756999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[39]" 
+		" -type \"float2\" 0.53181606999999997 0.38878637999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[40]" 
+		" -type \"float2\" 0.52516788000000003 0.38586920000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[41]" 
+		" -type \"float2\" 0.52228205999999999 0.38666036999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[42]" 
+		" -type \"float2\" 0.51929301000000005 0.3865208"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[43]" 
+		" -type \"float2\" 0.51649343999999997 0.38546413000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[44]" 
+		" -type \"float2\" 0.51415759000000005 0.38359388999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[45]" 
+		" -type \"float2\" 0.512514 0.38109311000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[46]" 
+		" -type \"float2\" 0.51172333999999997 0.37820670000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[47]" 
+		" -type \"float2\" 0.51186310999999995 0.37521711000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[48]" 
+		" -type \"float2\" 0.51291955 0.37241697000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[49]" 
+		" -type \"float2\" 0.51478933999999998 0.37008032000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[50]" 
+		" -type \"float2\" 0.51728951999999995 0.36843591999999997"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[51]" 
+		" -type \"float2\" 0.52017528000000002 0.36764472999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[52]" 
+		" -type \"float2\" 0.52316426999999999 0.36778432"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[53]" 
+		" -type \"float2\" 0.52596383999999996 0.36884096"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[54]" 
+		" -type \"float2\" 0.52829968999999999 0.37071121000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[55]" 
+		" -type \"float2\" 0.52994341 0.37321198"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[56]" 
+		" -type \"float2\" 0.53073406000000001 0.37609836000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[57]" 
+		" -type \"float2\" 0.53059422999999994 0.37908797999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[58]" 
+		" -type \"float2\" 0.52953779999999995 0.38188812"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[59]" 
+		" -type \"float2\" 0.527668 0.38422479999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[60]" 
+		" -type \"float2\" 0.52530277000000003 0.38616639000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[61]" 
+		" -type \"float2\" 0.52231848000000003 0.38698468000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[62]" 
+		" -type \"float2\" 0.51922732999999999 0.38684046"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[63]" 
+		" -type \"float2\" 0.51633209000000002 0.38574778999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[64]" 
+		" -type \"float2\" 0.51391648999999995 0.38381370999999997"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[65]" 
+		" -type \"float2\" 0.51221669000000003 0.38122767000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[66]" 
+		" -type \"float2\" 0.51139902999999998 0.37824288"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[67]" 
+		" -type \"float2\" 0.51154345000000001 0.37515143000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[68]" 
+		" -type \"float2\" 0.51263583000000001 0.37225580000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[69]" 
+		" -type \"float2\" 0.51456928000000002 0.36983943000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[70]" 
+		" -type \"float2\" 0.51715462999999995 0.36813873000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[71]" 
+		" -type \"float2\" 0.52013891999999995 0.36732039"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[72]" 
+		" -type \"float2\" 0.52323008000000004 0.36746459999999997"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[73]" 
+		" -type \"float2\" 0.52612524999999999 0.36855729999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[74]" 
+		" -type \"float2\" 0.52854084999999995 0.37049138999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[75]" 
+		" -type \"float2\" 0.53024064999999998 0.37307739000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[76]" 
+		" -type \"float2\" 0.53105831000000003 0.37606218000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[77]" 
+		" -type \"float2\" 0.53091389 0.37915364000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[78]" 
+		" -type \"float2\" 0.52982152000000005 0.38204926"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[79]" 
+		" -type \"float2\" 0.52788811999999996 0.38446569000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[80]" 
+		" -type \"float2\" 0.52543724000000003 0.38646317000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[81]" 
+		" -type \"float2\" 0.52235454000000003 0.38730850999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[82]" 
+		" -type \"float2\" 0.51916145999999996 0.38715959"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[83]" 
+		" -type \"float2\" 0.51617080000000004 0.38603084999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[84]" 
+		" -type \"float2\" 0.51367556999999997 0.38403302"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[85]" 
+		" -type \"float2\" 0.51191980000000004 0.38136181000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[86]" 
+		" -type \"float2\" 0.51107526000000003 0.37827878999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[87]" 
+		" -type \"float2\" 0.51122445000000005 0.37508564999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[88]" 
+		" -type \"float2\" 0.51235271000000004 0.37209474999999997"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[89]" 
+		" -type \"float2\" 0.51434970000000002 0.36959874999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[90]" 
+		" -type \"float2\" 0.51702017 0.36784196000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[91]" 
+		" -type \"float2\" 0.52010279999999998 0.36699659000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[92]" 
+		" -type \"float2\" 0.52329588000000005 0.36714553999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[93]" 
+		" -type \"float2\" 0.52628653999999997 0.36827420999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[94]" 
+		" -type \"float2\" 0.52878177000000004 0.37027204000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[95]" 
+		" -type \"float2\" 0.53053748999999994 0.37294322000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[96]" 
+		" -type \"float2\" 0.53138207999999998 0.37602627"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[97]" 
+		" -type \"float2\" 0.53123288999999996 0.37921944000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[98]" 
+		" -type \"float2\" 0.53010469999999998 0.38221031"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[99]" 
+		" -type \"float2\" 0.52810763999999999 0.38470638000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[100]" 
+		" -type \"float2\" 0.52557147000000004 0.38675973000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[101]" 
+		" -type \"float2\" 0.52239047999999999 0.38763207"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[102]" 
+		" -type \"float2\" 0.51909554000000002 0.38747835000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[103]" 
+		" -type \"float2\" 0.51600950999999995 0.38631365000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[104]" 
+		" -type \"float2\" 0.51343477000000004 0.38425209999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[105]" 
+		" -type \"float2\" 0.51162313999999998 0.3814958"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[106]" 
+		" -type \"float2\" 0.51075172000000002 0.37831461"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[107]" 
+		" -type \"float2\" 0.51090568000000003 0.37501979000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[108]" 
+		" -type \"float2\" 0.51206982000000001 0.37193369999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[109]" 
+		" -type \"float2\" 0.51413041000000004 0.36935817999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[110]" 
+		" -type \"float2\" 0.51688593999999999 0.36754540000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[111]" 
+		" -type \"float2\" 0.52006686000000002 0.36667305"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[112]" 
+		" -type \"float2\" 0.52336179999999999 0.36682671"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[113]" 
+		" -type \"float2\" 0.52644776999999998 0.36799145"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[114]" 
+		" -type \"float2\" 0.52902256999999997 0.37005293"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[115]" 
+		" -type \"float2\" 0.53083420000000003 0.37280929000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[116]" 
+		" -type \"float2\" 0.53170561999999999 0.37599044999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[117]" 
+		" -type \"float2\" 0.53155171999999995 0.37928528"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[118]" 
+		" -type \"float2\" 0.53038757999999997 0.38237139999999997"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[119]" 
+		" -type \"float2\" 0.52832699000000005 0.38494690999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[120]" 
+		" -type \"float2\" 0.52570570000000005 0.38705634999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[121]" 
+		" -type \"float2\" 0.52242643 0.38795574999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[122]" 
+		" -type \"float2\" 0.51902968000000005 0.38779730000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[123]" 
+		" -type \"float2\" 0.51584828000000005 0.38659655999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[124]" 
+		" -type \"float2\" 0.51319395999999995 0.38447130000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[125]" 
+		" -type \"float2\" 0.51132637000000003 0.38162984999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[126]" 
+		" -type \"float2\" 0.51042807000000001 0.37835044000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[127]" 
+		" -type \"float2\" 0.51058680000000001 0.37495395999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[128]" 
+		" -type \"float2\" 0.51178681999999998 0.37177259000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[129]" 
+		" -type \"float2\" 0.51391100999999995 0.36911756000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[130]" 
+		" -type \"float2\" 0.51675165000000001 0.36724870999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[131]" 
+		" -type \"float2\" 0.52003091999999995 0.36634937000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[132]" 
+		" -type \"float2\" 0.52342767000000001 0.36650777000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[133]" 
+		" -type \"float2\" 0.52660905999999996 0.36770849999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[134]" 
+		" -type \"float2\" 0.52926337999999995 0.36983377000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[135]" 
+		" -type \"float2\" 0.53113096999999998 0.37267524000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[136]" 
+		" -type \"float2\" 0.53202921000000003 0.37595463000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[137]" 
+		" -type \"float2\" 0.53187059999999997 0.37935108000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[138]" 
+		" -type \"float2\" 0.53067052000000003 0.38253248000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[139]" 
+		" -type \"float2\" 0.52854639000000003 0.38518756999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[140]" 
+		" -type \"float2\" 0.52584028000000005 0.38735342"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[141]" 
+		" -type \"float2\" 0.52246254999999997 0.38827982999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[142]" 
+		" -type \"float2\" 0.51896374999999995 0.38811666"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[143]" 
+		" -type \"float2\" 0.51568681000000005 0.38687989"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[144]" 
+		" -type \"float2\" 0.51295285999999995 0.38469084999999997"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[145]" 
+		" -type \"float2\" 0.51102924000000005 0.38176417000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[146]" 
+		" -type \"float2\" 0.510104 0.37838643999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[147]" 
+		" -type \"float2\" 0.51026738000000005 0.37488811999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[148]" 
+		" -type \"float2\" 0.51150340000000005 0.37161136"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[149]" 
+		" -type \"float2\" 0.51369125000000004 0.36887663999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[150]" 
+		" -type \"float2\" 0.51661705999999996 0.36695169999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[151]" 
+		" -type \"float2\" 0.51999479999999998 0.36602527000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[152]" 
+		" -type \"float2\" 0.52349358999999995 0.36618841000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[153]" 
+		" -type \"float2\" 0.52677046999999999 0.36742513999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[154]" 
+		" -type \"float2\" 0.52950448000000006 0.36961423999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[155]" 
+		" -type \"float2\" 0.53142803999999999 0.37254089000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[156]" 
+		" -type \"float2\" 0.53235328000000004 0.37591862999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[157]" 
+		" -type \"float2\" 0.53218997000000001 0.37941693999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[158]" 
+		" -type \"float2\" 0.53095393999999996 0.38269376999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[159]" 
+		" -type \"float2\" 0.52876615999999999 0.38542849000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[160]" 
+		" -type \"float2\" 0.52597510999999997 0.38765073"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[161]" 
+		" -type \"float2\" 0.52249884999999996 0.38860428000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[162]" 
+		" -type \"float2\" 0.51889795000000005 0.38843643999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[163]" 
+		" -type \"float2\" 0.51552534000000005 0.38716363999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[164]" 
+		" -type \"float2\" 0.51271157999999994 0.38491076000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[165]" 
+		" -type \"float2\" 0.51073181999999995 0.38189878999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[166]" 
+		" -type \"float2\" 0.50977956999999996 0.37842261999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[167]" 
+		" -type \"float2\" 0.50994766000000002 0.37482235000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[168]" 
+		" -type \"float2\" 0.51121956000000002 0.37145007000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[169]" 
+		" -type \"float2\" 0.51347113 0.36863553999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[170]" 
+		" -type \"float2\" 0.51648223000000004 0.36665439999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[171]" 
+		" -type \"float2\" 0.51995849999999999 0.36570084000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[172]" 
+		" -type \"float2\" 0.52355932999999999 0.36586862999999997"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[173]" 
+		" -type \"float2\" 0.52693193999999999 0.36714142999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[174]" 
+		" -type \"float2\" 0.52974575999999995 0.36939430000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[175]" 
+		" -type \"float2\" 0.53172553 0.37240624"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[176]" 
+		" -type \"float2\" 0.53267777000000005 0.37588244999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[177]" 
+		" -type \"float2\" 0.53250967999999999 0.37948269000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[178]" 
+		" -type \"float2\" 0.53123777999999999 0.38285506000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[179]" 
+		" -type \"float2\" 0.52898621999999995 0.38566959000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[180]" 
+		" -type \"float2\" 0.52610999000000003 0.38794789000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[181]" 
+		" -type \"float2\" 0.52253525999999995 0.38892855999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[182]" 
+		" -type \"float2\" 0.51883232999999995 0.38875609999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[183]" 
+		" -type \"float2\" 0.51536411000000004 0.38744729999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[184]" 
+		" -type \"float2\" 0.51247047999999995 0.38513067000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[185]" 
+		" -type \"float2\" 0.51043457000000003 0.38203341000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[186]" 
+		" -type \"float2\" 0.50945525999999997 0.37845888999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[187]" 
+		" -type \"float2\" 0.509628 0.37475671999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[188]" 
+		" -type \"float2\" 0.51093577999999995 0.37128889999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[189]" 
+		" -type \"float2\" 0.51325100999999995 0.36839461000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[190]" 
+		" -type \"float2\" 0.51634734999999998 0.36635723999999997"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[191]" 
+		" -type \"float2\" 0.51992207999999995 0.36537652999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[192]" 
+		" -type \"float2\" 0.52362502 0.365549"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[193]" 
+		" -type \"float2\" 0.52709317 0.36685777000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[194]" 
+		" -type \"float2\" 0.52998685999999995 0.36917435999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[195]" 
+		" -type \"float2\" 0.53202271000000001 0.37227159999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[196]" 
+		" -type \"float2\" 0.53300208000000004 0.37584617999999997"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[197]" 
+		" -type \"float2\" 0.53282940000000001 0.37954831"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[198]" 
+		" -type \"float2\" 0.53152155999999995 0.38301616999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[199]" 
+		" -type \"float2\" 0.52920634 0.38591045000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[200]" 
+		" -type \"float2\" 0.52624433999999998 0.38824396999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[201]" 
+		" -type \"float2\" 0.52257144 0.38925170999999997"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[202]" 
+		" -type \"float2\" 0.51876681999999996 0.38907459"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[203]" 
+		" -type \"float2\" 0.51520336 0.38773"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[204]" 
+		" -type \"float2\" 0.51223021999999996 0.38534981000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[205]" 
+		" -type \"float2\" 0.51013839000000005 0.38216758000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[206]" 
+		" -type \"float2\" 0.50913209000000004 0.37849501000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[207]" 
+		" -type \"float2\" 0.50930947000000004 0.37469124999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[208]" 
+		" -type \"float2\" 0.51065307999999998 0.37112832000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[209]" 
+		" -type \"float2\" 0.51303171999999997 0.36815452999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[210]" 
+		" -type \"float2\" 0.51621306 0.36606115"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[211]" 
+		" -type \"float2\" 0.51988584000000004 0.36505342000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[212]" 
+		" -type \"float2\" 0.52369052000000005 0.36523050000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[213]" 
+		" -type \"float2\" 0.52725398999999995 0.36657511999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[214]" 
+		" -type \"float2\" 0.53022707000000002 0.36895525000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[215]" 
+		" -type \"float2\" 0.53231888999999999 0.37213745999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[216]" 
+		" -type \"float2\" 0.53332520000000005 0.37581003000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[217]" 
+		" -type \"float2\" 0.53314786999999997 0.37961376000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[218]" 
+		" -type \"float2\" 0.53180426000000003 0.38317677"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[219]" 
+		" -type \"float2\" 0.52942562000000004 0.38615053999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[220]" 
+		" -type \"float2\" 0.52637750000000005 0.38853806000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[221]" 
+		" -type \"float2\" 0.52260720999999999 0.38957252999999997"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[222]" 
+		" -type \"float2\" 0.51870161000000004 0.38939077"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[223]" 
+		" -type \"float2\" 0.51504355999999996 0.38801044000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[224]" 
+		" -type \"float2\" 0.51199156000000001 0.38556719"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[225]" 
+		" -type \"float2\" 0.50984423999999995 0.38230061999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[226]" 
+		" -type \"float2\" 0.50881124 0.37853061999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[227]" 
+		" -type \"float2\" 0.50899327000000005 0.37462606999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[228]" 
+		" -type \"float2\" 0.51037252 0.37096864000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[229]" 
+		" -type \"float2\" 0.51281416000000002 0.36791602000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[230]" 
+		" -type \"float2\" 0.51607983999999996 0.36576705999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[231]" 
+		" -type \"float2\" 0.51985013000000002 0.36473259000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[232]" 
+		" -type \"float2\" 0.52375572999999997 0.36491430000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[233]" 
+		" -type \"float2\" 0.52741373000000003 0.36629458999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[234]" 
+		" -type \"float2\" 0.53046572000000003 0.36873788000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[235]" 
+		" -type \"float2\" 0.53261309999999995 0.37200444999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[236]" 
+		" -type \"float2\" 0.53364610999999995 0.37577438000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[237]" 
+		" -type \"float2\" 0.53346406999999996 0.37967896000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[238]" 
+		" -type \"float2\" 0.53208487999999998 0.38333642000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[239]" 
+		" -type \"float2\" 0.52964317999999999 0.38638908"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[240]" 
+		" -type \"float2\" 0.52650898999999995 0.38882935000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[241]" 
+		" -type \"float2\" 0.52264219999999995 0.38989019000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[242]" 
+		" -type \"float2\" 0.51863663999999998 0.38970368999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[243]" 
+		" -type \"float2\" 0.51488506999999994 0.38828795999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[244]" 
+		" -type \"float2\" 0.51175504999999999 0.38578209000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[245]" 
+		" -type \"float2\" 0.50955284000000001 0.38243191999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[246]" 
+		" -type \"float2\" 0.50849354000000002 0.37856554999999997"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[247]" 
+		" -type \"float2\" 0.50868033999999995 0.37456113000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[248]" 
+		" -type \"float2\" 0.51009488000000003 0.37081027"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[249]" 
+		" -type \"float2\" 0.51259911000000002 0.3676796"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[250]" 
+		" -type \"float2\" 0.51594835999999999 0.36547576999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[251]" 
+		" -type \"float2\" 0.51981515 0.36441489999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[252]" 
+		" -type \"float2\" 0.52382063999999995 0.36460140000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[253]" 
+		" -type \"float2\" 0.52757226999999995 0.36601707"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[254]" 
+		" -type \"float2\" 0.53070223000000005 0.36852294000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[255]" 
+		" -type \"float2\" 0.53290451000000005 0.37187308000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[256]" 
+		" -type \"float2\" 0.53396379999999999 0.37573951"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[257]" 
+		" -type \"float2\" 0.533777 0.37974386999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[258]" 
+		" -type \"float2\" 0.53236251999999995 0.38349482000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[259]" 
+		" -type \"float2\" 0.52985822999999999 0.38662547000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[260]" 
+		" -type \"float2\" 0.52663863 0.38911765999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[261]" 
+		" -type \"float2\" 0.52267635000000001 0.39020442999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[262]" 
+		" -type \"float2\" 0.51857196999999999 0.39001303999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[263]" 
+		" -type \"float2\" 0.51472783 0.38856216999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[264]" 
+		" -type \"float2\" 0.5115208 0.38599432"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[265]" 
+		" -type \"float2\" 0.50926446999999997 0.38256136000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[266]" 
+		" -type \"float2\" 0.50817931000000005 0.37859955000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[267]" 
+		" -type \"float2\" 0.50837094000000005 0.37449645999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[268]" 
+		" -type \"float2\" 0.50982057999999997 0.37065314999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[269]" 
+		" -type \"float2\" 0.51238673999999995 0.36744549999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[270]" 
+		" -type \"float2\" 0.51581876999999998 0.3651875"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[271]" 
+		" -type \"float2\" 0.51978099 0.36410069"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[272]" 
+		" -type \"float2\" 0.52388537000000002 0.36429202999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[273]" 
+		" -type \"float2\" 0.52772945000000004 0.36574286"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[274]" 
+		" -type \"float2\" 0.53093648000000004 0.36831075000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[275]" 
+		" -type \"float2\" 0.53319280999999996 0.37174368000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[276]" 
+		" -type \"float2\" 0.53427804000000001 0.37570547999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[277]" 
+		" -type \"float2\" 0.53408641000000001 0.37980855000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[278]" 
+		" -type \"float2\" 0.53263676000000004 0.38365190999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[279]" 
+		" -type \"float2\" 0.53007066000000003 0.38685960000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[280]" 
+		" -type \"float2\" 0.52676659999999997 0.38940345999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[281]" 
+		" -type \"float2\" 0.52270967000000002 0.39051576999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[282]" 
+		" -type \"float2\" 0.51850742000000005 0.39031947"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[283]" 
+		" -type \"float2\" 0.51457173 0.38883363999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[284]" 
+		" -type \"float2\" 0.51128839999999998 0.38620418000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[285]" 
+		" -type \"float2\" 0.50897855000000003 0.38268918000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[286]" 
+		" -type \"float2\" 0.50786787 0.37863284000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[287]" 
+		" -type \"float2\" 0.50806445 0.37443190999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[288]" 
+		" -type \"float2\" 0.50954907999999999 0.37049711000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[289]" 
+		" -type \"float2\" 0.51217668999999999 0.36721319000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[290]" 
+		" -type \"float2\" 0.5156908 0.36490169"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[291]" 
+		" -type \"float2\" 0.51974766999999999 0.36378932000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[292]" 
+		" -type \"float2\" 0.52394991999999996 0.36398563"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[293]" 
+		" -type \"float2\" 0.52788555999999998 0.36547141999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[294]" 
+		" -type \"float2\" 0.53116894000000003 0.36810079000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[295]" 
+		" -type \"float2\" 0.53347873999999995 0.37161582999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[296]" 
+		" -type \"float2\" 0.53458947000000001 0.37567215999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[297]" 
+		" -type \"float2\" 0.53439289000000001 0.37987310000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[298]" 
+		" -type \"float2\" 0.53290831999999999 0.38380793000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[299]" 
+		" -type \"float2\" 0.53028065000000002 0.38709188"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[300]" 
+		" -type \"float2\" 0.52689368000000003 0.38968818999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[301]" 
+		" -type \"float2\" 0.52274257000000002 0.39082592999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[302]" 
+		" -type \"float2\" 0.51844281000000003 0.39062451999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[303]" 
+		" -type \"float2\" 0.51441597999999999 0.3891038"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[304]" 
+		" -type \"float2\" 0.51105672000000002 0.38641301"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[305]" 
+		" -type \"float2\" 0.50869374999999994 0.3828162"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[306]" 
+		" -type \"float2\" 0.50755768999999995 0.37866562999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[307]" 
+		" -type \"float2\" 0.50775932999999995 0.37436735999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[308]" 
+		" -type \"float2\" 0.50927882999999996 0.37034148"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[309]" 
+		" -type \"float2\" 0.51196777999999998 0.36698169000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[310]" 
+		" -type \"float2\" 0.51556367000000003 0.36461693000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[311]" 
+		" -type \"float2\" 0.51971476999999999 0.36347926000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[312]" 
+		" -type \"float2\" 0.52401452999999998 0.36368054"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[313]" 
+		" -type \"float2\" 0.52804130000000005 0.36520122999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[314]" 
+		" -type \"float2\" 0.53140056000000002 0.36789202999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[315]" 
+		" -type \"float2\" 0.53376358999999995 0.37148881"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[316]" 
+		" -type \"float2\" 0.53489964999999995 0.37563938000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[317]" 
+		" -type \"float2\" 0.53469800999999995 0.37993765000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[318]" 
+		" -type \"float2\" 0.53317857000000002 0.38396355999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[319]" 
+		" -type \"float2\" 0.53048962 0.38732344000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[320]" 
+		" -type \"float2\" 0.52702117000000004 0.38997394000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[321]" 
+		" -type \"float2\" 0.52277547000000002 0.391137"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[322]" 
+		" -type \"float2\" 0.51837789999999995 0.39093059000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[323]" 
+		" -type \"float2\" 0.51425964000000002 0.38937479000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[324]" 
+		" -type \"float2\" 0.51082426000000003 0.38662239999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[325]" 
+		" -type \"float2\" 0.50840795000000005 0.38294350999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[326]" 
+		" -type \"float2\" 0.50724654999999996 0.37869847000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[327]" 
+		" -type \"float2\" 0.50745320000000005 0.37430245000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[328]" 
+		" -type \"float2\" 0.50900769000000001 0.37018519999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[329]" 
+		" -type \"float2\" 0.51175820999999999 0.36674934999999997"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[330]" 
+		" -type \"float2\" 0.51543616999999997 0.36433119000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[331]" 
+		" -type \"float2\" 0.51968186999999999 0.36316809"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[332]" 
+		" -type \"float2\" 0.52407943999999995 0.36337447"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[333]" 
+		" -type \"float2\" 0.52819764999999996 0.36493024000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[334]" 
+		" -type \"float2\" 0.53163302000000001 0.36768261000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[335]" 
+		" -type \"float2\" 0.53404938999999996 0.37136149000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[336]" 
+		" -type \"float2\" 0.53521079000000005 0.37560653999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[337]" 
+		" -type \"float2\" 0.53500413999999996 0.38000255999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[338]" 
+		" -type \"float2\" 0.53344965 0.38411981000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[339]" 
+		" -type \"float2\" 0.53069913000000002 0.38755578000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[340]" 
+		" -type \"float2\" 0.52715033 0.39026305"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[341]" 
+		" -type \"float2\" 0.52280897000000004 0.39145190000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[342]" 
+		" -type \"float2\" 0.51831234000000004 0.39124038999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[343]" 
+		" -type \"float2\" 0.51410155999999996 0.38964915"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[344]" 
+		" -type \"float2\" 0.51058912000000001 0.38683444"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[345]" 
+		" -type \"float2\" 0.50811874999999995 0.38307256000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[346]" 
+		" -type \"float2\" 0.50693166000000001 0.37873184999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[347]" 
+		" -type \"float2\" 0.50714338000000003 0.37423694000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[348]" 
+		" -type \"float2\" 0.50873327000000002 0.37002721"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[349]" 
+		" -type \"float2\" 0.51154602000000005 0.36651426999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[350]" 
+		" -type \"float2\" 0.51530701000000001 0.36404209999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[351]" 
+		" -type \"float2\" 0.51964836999999997 0.36285323000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[352]" 
+		" -type \"float2\" 0.52414495000000005 0.36306471000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[353]" 
+		" -type \"float2\" 0.52835571999999997 0.36465591000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[354]" 
+		" -type \"float2\" 0.53186816000000003 0.36747056"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[355]" 
+		" -type \"float2\" 0.53433852999999998 0.37123244999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[356]" 
+		" -type \"float2\" 0.53552568 0.37557316000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[357]" 
+		" -type \"float2\" 0.53531390000000001 0.38006805999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[358]" 
+		" -type \"float2\" 0.53372406999999999 0.38427779000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[359]" 
+		" -type \"float2\" 0.53091133000000001 0.38779079999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[360]" 
+		" -type \"float2\" 0.52728242000000003 0.39055777000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[361]" 
+		" -type \"float2\" 0.52284348000000003 0.39177298999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[362]" 
+		" -type \"float2\" 0.51824588000000005 0.39155644000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[363]" 
+		" -type \"float2\" 0.51394063000000001 0.38992917999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[364]" 
+		" -type \"float2\" 0.51034950999999995 0.38705102000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[365]" 
+		" -type \"float2\" 0.50782393999999997 0.38320451999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[366]" 
+		" -type \"float2\" 0.50661045000000005 0.3787663"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[367]" 
+		" -type \"float2\" 0.50682735000000001 0.37417051000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[368]" 
+		" -type \"float2\" 0.50845319 0.36986639999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[369]" 
+		" -type \"float2\" 0.51132929000000005 0.36627483"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[370]" 
+		" -type \"float2\" 0.51517486999999995 0.36374739"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[371]" 
+		" -type \"float2\" 0.51961385999999998 0.36253214"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[372]" 
+		" -type \"float2\" 0.52421141000000004 0.36274867999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[373]" 
+		" -type \"float2\" 0.52851665000000003 0.36437588999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[374]" 
+		" -type \"float2\" 0.53210776999999998 0.36725395999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[375]" 
+		" -type \"float2\" 0.53463333999999996 0.37110051999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[376]" 
+		" -type \"float2\" 0.53584683 0.37553871"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[377]" 
+		" -type \"float2\" 0.53562999 0.38013448999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[378]" 
+		" -type \"float2\" 0.53400420999999998 0.38443860000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[379]" 
+		" -type \"float2\" 0.53112804999999996 0.38803029"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[380]" 
+		" -type \"float2\" 0.52741842999999999 0.39085984000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[381]" 
+		" -type \"float2\" 0.52287936000000002 0.39210230000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[382]" 
+		" -type \"float2\" 0.51817822000000002 0.39188068999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[383]" 
+		" -type \"float2\" 0.513776 0.39021665"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[384]" 
+		" -type \"float2\" 0.51010405999999997 0.38727358000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[385]" 
+		" -type \"float2\" 0.50752174999999999 0.38334026999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[386]" 
+		" -type \"float2\" 0.50628114000000002 0.37880206"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[387]" 
+		" -type \"float2\" 0.50650298999999999 0.37410283"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[388]" 
+		" -type \"float2\" 0.5081656 0.36970185999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[389]" 
+		" -type \"float2\" 0.51110661000000002 0.36602950000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[390]" 
+		" -type \"float2\" 0.51503896999999998 0.36344527999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[391]" 
+		" -type \"float2\" 0.51957792000000003 0.36220281999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[392]" 
+		" -type \"float2\" 0.52427906000000002 0.36242437"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[393]" 
+		" -type \"float2\" 0.52868128000000003 0.36408838999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[394]" 
+		" -type \"float2\" 0.53235321999999996 0.36703142999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[395]" 
+		" -type \"float2\" 0.53493553000000005 0.37096470999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[396]" 
+		" -type \"float2\" 0.53617619999999999 0.37550287999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[397]" 
+		" -type \"float2\" 0.53595435999999996 0.38020214000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[398]" 
+		" -type \"float2\" 0.53429179999999998 0.38460314000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[399]" 
+		" -type \"float2\" 0.53135078999999996 0.38827556000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[400]" 
+		" -type \"float2\" 0.532058 0.38905168000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[401]" 
+		" -type \"float2\" 0.52785115999999999 0.39181655999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[402]" 
+		" -type \"float2\" 0.53520422999999995 0.38512284000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[403]" 
+		" -type \"float2\" 0.53698272000000002 0.38041466000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[404]" 
+		" -type \"float2\" 0.53721987999999998 0.37538743000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[405]" 
+		" -type \"float2\" 0.53589255000000002 0.37053250999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[406]" 
+		" -type \"float2\" 0.53312974999999996 0.36632471999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[407]" 
+		" -type \"float2\" 0.52920138999999999 0.36317622999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[408]" 
+		" -type \"float2\" 0.52449161 0.3613961"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[409]" 
+		" -type \"float2\" 0.51946216999999995 0.36115921000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[410]" 
+		" -type \"float2\" 0.51460618000000002 0.36248857000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[411]" 
+		" -type \"float2\" 0.51039939999999995 0.36525339000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[412]" 
+		" -type \"float2\" 0.50725317000000003 0.36918216999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[413]" 
+		" -type \"float2\" 0.50547469 0.37389033999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[414]" 
+		" -type \"float2\" 0.50523746000000003 0.37891754999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[415]" 
+		" -type \"float2\" 0.50656480000000004 0.38377245999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[416]" 
+		" -type \"float2\" 0.50932747 0.38798028000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[417]" 
+		" -type \"float2\" 0.51325582999999997 0.39112878000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[418]" 
+		" -type \"float2\" 0.51796560999999997 0.39290899000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus3|sketchpad:pTorusShape3" "uvSet[0].uvSetPoints[419]" 
+		" -type \"float2\" 0.52299510999999999 0.39314591999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints" 
+		" -s 420"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[0]" 
+		" -type \"float2\" 0.71191132000000001 0.29589062999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[1]" 
+		" -type \"float2\" 0.71655332999999999 0.29462000999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[2]" 
+		" -type \"float2\" 0.71669769000000005 0.29493912999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[3]" 
+		" -type \"float2\" 0.71195 0.29623875"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[4]" 
+		" -type \"float2\" 0.70710366999999996 0.29566397999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[5]" 
+		" -type \"float2\" 0.70703280000000002 0.29600701000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[6]" 
+		" -type \"float2\" 0.70260166999999996 0.29396218000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[7]" 
+		" -type \"float2\" 0.70242822000000005 0.29426646000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[8]" 
+		" -type \"float2\" 0.69884658 0.29095238000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[9]" 
+		" -type \"float2\" 0.69858754000000001 0.29118818000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[10]" 
+		" -type \"float2\" 0.69620574000000002 0.28692999000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[11]" 
+		" -type \"float2\" 0.69588660999999996 0.28707421"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[12]" 
+		" -type \"float2\" 0.69493704999999995 0.282289"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[13]" 
+		" -type \"float2\" 0.69458896000000003 0.28232755999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[14]" 
+		" -type \"float2\" 0.69516396999999996 0.27748334000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[15]" 
+		" -type \"float2\" 0.69482094000000005 0.27741250000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[16]" 
+		" -type \"float2\" 0.69686424999999996 0.27298268999999997"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[17]" 
+		" -type \"float2\" 0.69655990999999995 0.27280942000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[18]" 
+		" -type \"float2\" 0.69987189999999999 0.26922715000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[19]" 
+		" -type \"float2\" 0.69963598000000005 0.26896830999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[20]" 
+		" -type \"float2\" 0.70389330000000006 0.2665844"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[21]" 
+		" -type \"float2\" 0.70374893999999999 0.26626533000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[22]" 
+		" -type \"float2\" 0.70853518999999998 0.26531377"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[23]" 
+		" -type \"float2\" 0.70849651000000002 0.26496567999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[24]" 
+		" -type \"float2\" 0.71334291000000005 0.26554039000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[25]" 
+		" -type \"float2\" 0.71341372000000003 0.26519736999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[26]" 
+		" -type \"float2\" 0.71784484000000004 0.26724213000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[27]" 
+		" -type \"float2\" 0.71801828999999995 0.26693781999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[28]" 
+		" -type \"float2\" 0.7216 0.27025189999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[29]" 
+		" -type \"float2\" 0.72185898000000004 0.27001609999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[30]" 
+		" -type \"float2\" 0.72424078000000003 0.27427428999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[31]" 
+		" -type \"float2\" 0.72455996 0.27413008"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[32]" 
+		" -type \"float2\" 0.72550957999999999 0.27891528999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[33]" 
+		" -type \"float2\" 0.72585772999999998 0.27887668999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[34]" 
+		" -type \"float2\" 0.72528267000000002 0.28372093999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[35]" 
+		" -type \"float2\" 0.72562563000000002 0.28379175000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[36]" 
+		" -type \"float2\" 0.72358244999999999 0.28822160000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[37]" 
+		" -type \"float2\" 0.72388679 0.28839490000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[38]" 
+		" -type \"float2\" 0.72057473999999999 0.29197722999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[39]" 
+		" -type \"float2\" 0.72081070999999997 0.29223602999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[40]" 
+		" -type \"float2\" 0.71416246999999999 0.28931886000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[41]" 
+		" -type \"float2\" 0.71127677 0.29011002000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[42]" 
+		" -type \"float2\" 0.70828765999999999 0.28997045999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[43]" 
+		" -type \"float2\" 0.70548809000000001 0.28891379"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[44]" 
+		" -type \"float2\" 0.70315223999999998 0.28704353999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[45]" 
+		" -type \"float2\" 0.70150858000000005 0.28454277"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[46]" 
+		" -type \"float2\" 0.70071793000000004 0.28165635"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[47]" 
+		" -type \"float2\" 0.70085770000000003 0.27866676000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[48]" 
+		" -type \"float2\" 0.70191418999999999 0.27586663"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[49]" 
+		" -type \"float2\" 0.70378399000000003 0.27352995000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[50]" 
+		" -type \"float2\" 0.70628411000000002 0.27188553999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[51]" 
+		" -type \"float2\" 0.70916992000000001 0.27109438000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[52]" 
+		" -type \"float2\" 0.71215892000000003 0.27123395"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[53]" 
+		" -type \"float2\" 0.71495849 0.27229059"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[54]" 
+		" -type \"float2\" 0.71729434000000003 0.27416083000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[55]" 
+		" -type \"float2\" 0.71893799000000003 0.27666160000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[56]" 
+		" -type \"float2\" 0.71972864999999997 0.27954802000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[57]" 
+		" -type \"float2\" 0.71958887999999999 0.28253763999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[58]" 
+		" -type \"float2\" 0.71853244000000005 0.28533777999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[59]" 
+		" -type \"float2\" 0.71666264999999996 0.28767446000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[60]" 
+		" -type \"float2\" 0.71429735000000005 0.28961601999999997"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[61]" 
+		" -type \"float2\" 0.71131306999999999 0.29043436"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[62]" 
+		" -type \"float2\" 0.70822191000000001 0.29029011999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[63]" 
+		" -type \"float2\" 0.70532673999999995 0.28919741999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[64]" 
+		" -type \"float2\" 0.70291108000000002 0.28726332999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[65]" 
+		" -type \"float2\" 0.70121133000000002 0.28467733000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[66]" 
+		" -type \"float2\" 0.70039368000000002 0.28169253"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[67]" 
+		" -type \"float2\" 0.70053816000000002 0.27860108"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[68]" 
+		" -type \"float2\" 0.70163047000000001 0.27570546000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[69]" 
+		" -type \"float2\" 0.70356392999999995 0.27328904999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[70]" 
+		" -type \"float2\" 0.70614922000000002 0.27158841"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[71]" 
+		" -type \"float2\" 0.70913356999999999 0.27077003999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[72]" 
+		" -type \"float2\" 0.71222465999999995 0.27091429"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[73]" 
+		" -type \"float2\" 0.71511990000000003 0.27200692999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[74]" 
+		" -type \"float2\" 0.71753549999999999 0.27394104000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[75]" 
+		" -type \"float2\" 0.71923530000000002 0.27652702000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[76]" 
+		" -type \"float2\" 0.72005295999999996 0.27951184000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[77]" 
+		" -type \"float2\" 0.71990854000000004 0.28260329000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[78]" 
+		" -type \"float2\" 0.71881616000000004 0.28549891999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[79]" 
+		" -type \"float2\" 0.71688277 0.28791535000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[80]" 
+		" -type \"float2\" 0.71443182000000005 0.28991278999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[81]" 
+		" -type \"float2\" 0.71134913 0.29075819000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[82]" 
+		" -type \"float2\" 0.70815605000000004 0.29060921000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[83]" 
+		" -type \"float2\" 0.70516539 0.28948051000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[84]" 
+		" -type \"float2\" 0.70267016000000004 0.28748267999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[85]" 
+		" -type \"float2\" 0.70091444000000003 0.28481147000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[86]" 
+		" -type \"float2\" 0.70006990000000002 0.28172845000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[87]" 
+		" -type \"float2\" 0.70021904000000001 0.27853530999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[88]" 
+		" -type \"float2\" 0.70134735000000004 0.27554440000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[89]" 
+		" -type \"float2\" 0.70334434999999995 0.27304836999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[90]" 
+		" -type \"float2\" 0.70601475000000002 0.27129161000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[91]" 
+		" -type \"float2\" 0.70909745000000002 0.27044624"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[92]" 
+		" -type \"float2\" 0.71229052999999998 0.27059516"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[93]" 
+		" -type \"float2\" 0.71528119000000001 0.27172386999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[94]" 
+		" -type \"float2\" 0.71777641999999997 0.27372169000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[95]" 
+		" -type \"float2\" 0.71953213000000005 0.27639288000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[96]" 
+		" -type \"float2\" 0.72037673000000002 0.2794759"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[97]" 
+		" -type \"float2\" 0.72022754 0.28266910000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[98]" 
+		" -type \"float2\" 0.71909933999999998 0.28566"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[99]" 
+		" -type \"float2\" 0.71710229000000003 0.28815603000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[100]" 
+		" -type \"float2\" 0.71456604999999995 0.29020934999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[101]" 
+		" -type \"float2\" 0.71138513000000003 0.29108172999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[102]" 
+		" -type \"float2\" 0.70809018999999995 0.29092804"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[103]" 
+		" -type \"float2\" 0.70500415999999999 0.28976327000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[104]" 
+		" -type \"float2\" 0.70242941000000003 0.28770175999999997"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[105]" 
+		" -type \"float2\" 0.70061779000000002 0.28494545999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[106]" 
+		" -type \"float2\" 0.69974636999999995 0.28176424"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[107]" 
+		" -type \"float2\" 0.69990026999999999 0.27846947"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[108]" 
+		" -type \"float2\" 0.70106447000000005 0.27538335000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[109]" 
+		" -type \"float2\" 0.703125 0.27280784000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[110]" 
+		" -type \"float2\" 0.70588052000000001 0.27099505000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[111]" 
+		" -type \"float2\" 0.70906150000000001 0.27012268"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[112]" 
+		" -type \"float2\" 0.71235638999999995 0.27027636999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[113]" 
+		" -type \"float2\" 0.71544242000000002 0.27144107000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[114]" 
+		" -type \"float2\" 0.71801716000000004 0.27350261999999997"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[115]" 
+		" -type \"float2\" 0.71982884000000003 0.27625892000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[116]" 
+		" -type \"float2\" 0.72070025999999998 0.27944010000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[117]" 
+		" -type \"float2\" 0.72054631000000002 0.28273490000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[118]" 
+		" -type \"float2\" 0.71938217000000004 0.28582101999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[119]" 
+		" -type \"float2\" 0.71732163000000004 0.28839657000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[120]" 
+		" -type \"float2\" 0.71470034000000005 0.29050604000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[121]" 
+		" -type \"float2\" 0.71142106999999999 0.29140540999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[122]" 
+		" -type \"float2\" 0.70802425999999996 0.29124695"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[123]" 
+		" -type \"float2\" 0.70484287000000001 0.29004622000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[124]" 
+		" -type \"float2\" 0.70218855000000002 0.28792092000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[125]" 
+		" -type \"float2\" 0.70032101999999996 0.28507948"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[126]" 
+		" -type \"float2\" 0.69942272000000005 0.28180009"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[127]" 
+		" -type \"float2\" 0.69958138000000003 0.27840357999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[128]" 
+		" -type \"float2\" 0.70078145999999997 0.27522224000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[129]" 
+		" -type \"float2\" 0.70290565000000005 0.27256718000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[130]" 
+		" -type \"float2\" 0.70574629 0.27069840000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[131]" 
+		" -type \"float2\" 0.70902549999999998 0.26979899000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[132]" 
+		" -type \"float2\" 0.71242231 0.26995744999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[133]" 
+		" -type \"float2\" 0.71560371 0.27115815999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[134]" 
+		" -type \"float2\" 0.71825802000000005 0.27328342"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[135]" 
+		" -type \"float2\" 0.72012556000000005 0.27612489000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[136]" 
+		" -type \"float2\" 0.72102385999999996 0.27940428"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[137]" 
+		" -type \"float2\" 0.72086519000000004 0.28280075999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[138]" 
+		" -type \"float2\" 0.71966516999999997 0.28598213"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[139]" 
+		" -type \"float2\" 0.71754097999999999 0.28863722000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[140]" 
+		" -type \"float2\" 0.71483492999999998 0.29080305000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[141]" 
+		" -type \"float2\" 0.71145718999999996 0.29172947999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[142]" 
+		" -type \"float2\" 0.70795839999999999 0.29156633999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[143]" 
+		" -type \"float2\" 0.70468145999999998 0.29032954999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[144]" 
+		" -type \"float2\" 0.70194745000000003 0.28814047999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[145]" 
+		" -type \"float2\" 0.70002388999999998 0.28521380000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[146]" 
+		" -type \"float2\" 0.69909858999999996 0.28183606"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[147]" 
+		" -type \"float2\" 0.69926202000000004 0.27833777999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[148]" 
+		" -type \"float2\" 0.70049797999999996 0.27506098000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[149]" 
+		" -type \"float2\" 0.70268589000000004 0.27232629000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[150]" 
+		" -type \"float2\" 0.70561176999999997 0.27040135999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[151]" 
+		" -type \"float2\" 0.70898943999999997 0.26947492000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[152]" 
+		" -type \"float2\" 0.71248816999999998 0.26963806000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[153]" 
+		" -type \"float2\" 0.71576512000000003 0.27087480000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[154]" 
+		" -type \"float2\" 0.71849912000000005 0.27306386999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[155]" 
+		" -type \"float2\" 0.72042269000000003 0.27599055"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[156]" 
+		" -type \"float2\" 0.72134799000000005 0.27936824999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[157]" 
+		" -type \"float2\" 0.72118461 0.28286660000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[158]" 
+		" -type \"float2\" 0.71994864999999997 0.28614336000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[159]" 
+		" -type \"float2\" 0.71776079999999998 0.28887811000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[160]" 
+		" -type \"float2\" 0.71496974999999996 0.29110037999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[161]" 
+		" -type \"float2\" 0.71149348999999995 0.29205394000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[162]" 
+		" -type \"float2\" 0.70789259999999998 0.29188612000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[163]" 
+		" -type \"float2\" 0.70451998999999998 0.29061329000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[164]" 
+		" -type \"float2\" 0.70170617000000002 0.28836042000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[165]" 
+		" -type \"float2\" 0.69972646000000005 0.28534841999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[166]" 
+		" -type \"float2\" 0.69877422 0.28187226999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[167]" 
+		" -type \"float2\" 0.69894224000000005 0.27827196999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[168]" 
+		" -type \"float2\" 0.70021420999999995 0.27489968999999997"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[169]" 
+		" -type \"float2\" 0.70246571000000002 0.27208518999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[170]" 
+		" -type \"float2\" 0.70547687999999997 0.27010402"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[171]" 
+		" -type \"float2\" 0.70895313999999998 0.26915046999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[172]" 
+		" -type \"float2\" 0.71255398000000003 0.26931828000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[173]" 
+		" -type \"float2\" 0.71592659000000003 0.27059105"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[174]" 
+		" -type \"float2\" 0.71874039999999995 0.27284393000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[175]" 
+		" -type \"float2\" 0.72072016999999999 0.27585593000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[176]" 
+		" -type \"float2\" 0.72167241999999998 0.27933206999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[177]" 
+		" -type \"float2\" 0.72150439 0.28293234"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[178]" 
+		" -type \"float2\" 0.72023243000000003 0.28630467999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[179]" 
+		" -type \"float2\" 0.71798086000000005 0.28911921000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[180]" 
+		" -type \"float2\" 0.71510463999999996 0.29139751000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[181]" 
+		" -type \"float2\" 0.71152985000000002 0.29237822000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[182]" 
+		" -type \"float2\" 0.70782690999999998 0.29220574999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[183]" 
+		" -type \"float2\" 0.7043587 0.29089694999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[184]" 
+		" -type \"float2\" 0.70146512999999999 0.28858033"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[185]" 
+		" -type \"float2\" 0.69942921000000002 0.28548308999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[186]" 
+		" -type \"float2\" 0.69844991000000001 0.28190851"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[187]" 
+		" -type \"float2\" 0.69862263999999996 0.27820634999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[188]" 
+		" -type \"float2\" 0.69993042999999999 0.27473855000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[189]" 
+		" -type \"float2\" 0.70224565000000005 0.27184427"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[190]" 
+		" -type \"float2\" 0.70534205000000005 0.26980689000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[191]" 
+		" -type \"float2\" 0.70891671999999994 0.26882619000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[192]" 
+		" -type \"float2\" 0.71261965999999999 0.26899862000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[193]" 
+		" -type \"float2\" 0.71608788000000001 0.27030738999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[194]" 
+		" -type \"float2\" 0.71898143999999997 0.27262402000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[195]" 
+		" -type \"float2\" 0.72101736000000005 0.27572124999999997"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[196]" 
+		" -type \"float2\" 0.72199672000000004 0.27929579999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[197]" 
+		" -type \"float2\" 0.72182398999999997 0.282998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[198]" 
+		" -type \"float2\" 0.72051620000000005 0.28646581999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[199]" 
+		" -type \"float2\" 0.71820097999999999 0.28936011"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[200]" 
+		" -type \"float2\" 0.71523893000000005 0.2916936"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[201]" 
+		" -type \"float2\" 0.71156615000000001 0.29270132999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[202]" 
+		" -type \"float2\" 0.70776147 0.29252422"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[203]" 
+		" -type \"float2\" 0.704198 0.29117959999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[204]" 
+		" -type \"float2\" 0.70122485999999995 0.28879943000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[205]" 
+		" -type \"float2\" 0.69913303999999998 0.28561723"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[206]" 
+		" -type \"float2\" 0.69812673000000003 0.28194466000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[207]" 
+		" -type \"float2\" 0.69830411999999997 0.27814093000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[208]" 
+		" -type \"float2\" 0.69964771999999997 0.27457798"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[209]" 
+		" -type \"float2\" 0.70202637000000001 0.27160421000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[210]" 
+		" -type \"float2\" 0.70520771000000004 0.26951080999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[211]" 
+		" -type \"float2\" 0.70888054 0.26850309999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[212]" 
+		" -type \"float2\" 0.71268516999999998 0.26868016"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[213]" 
+		" -type \"float2\" 0.71624856999999997 0.27002474999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[214]" 
+		" -type \"float2\" 0.71922165000000005 0.27240488000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[215]" 
+		" -type \"float2\" 0.72131354000000003 0.27558707999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[216]" 
+		" -type \"float2\" 0.72231984000000005 0.27925968000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[217]" 
+		" -type \"float2\" 0.72214252000000001 0.28306344"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[218]" 
+		" -type \"float2\" 0.72079890999999996 0.2866264"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[219]" 
+		" -type \"float2\" 0.71842026999999997 0.28960022000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[220]" 
+		" -type \"float2\" 0.71537214999999998 0.29198772000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[221]" 
+		" -type \"float2\" 0.71160184999999998 0.29302219000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[222]" 
+		" -type \"float2\" 0.7076962 0.29284041999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[223]" 
+		" -type \"float2\" 0.70403819999999995 0.29146012999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[224]" 
+		" -type \"float2\" 0.70098621000000005 0.28901684"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[225]" 
+		" -type \"float2\" 0.69883883000000002 0.28575023999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[226]" 
+		" -type \"float2\" 0.69780587999999999 0.28198028000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[227]" 
+		" -type \"float2\" 0.69798791000000004 0.27807569999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[228]" 
+		" -type \"float2\" 0.69936710999999996 0.27441829000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[229]" 
+		" -type \"float2\" 0.70180874999999998 0.27136567"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[230]" 
+		" -type \"float2\" 0.70507449 0.26921672000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[231]" 
+		" -type \"float2\" 0.70884477999999995 0.26818222000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[232]" 
+		" -type \"float2\" 0.71275038000000002 0.26836398"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[233]" 
+		" -type \"float2\" 0.71640837000000002 0.26974421999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[234]" 
+		" -type \"float2\" 0.71946036999999996 0.27218750000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[235]" 
+		" -type \"float2\" 0.72160774000000005 0.27545409999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[236]" 
+		" -type \"float2\" 0.72264075000000005 0.27922404000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[237]" 
+		" -type \"float2\" 0.72245872 0.28312862"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[238]" 
+		" -type \"float2\" 0.72107953000000002 0.28678608"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[239]" 
+		" -type \"float2\" 0.71863781999999998 0.28983872999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[240]" 
+		" -type \"float2\" 0.71550362999999995 0.29227901000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[241]" 
+		" -type \"float2\" 0.71163684000000005 0.29333985000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[242]" 
+		" -type \"float2\" 0.70763123000000006 0.29315334999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[243]" 
+		" -type \"float2\" 0.70387971000000005 0.29173765000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[244]" 
+		" -type \"float2\" 0.70074970000000003 0.28923175000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[245]" 
+		" -type \"float2\" 0.69854748 0.28588154999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[246]" 
+		" -type \"float2\" 0.69748812999999998 0.28201516999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[247]" 
+		" -type \"float2\" 0.69767493000000003 0.27801079000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[248]" 
+		" -type \"float2\" 0.69908952999999996 0.2742599"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[249]" 
+		" -type \"float2\" 0.70159369999999999 0.27112924999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[250]" 
+		" -type \"float2\" 0.704943 0.26892543000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[251]" 
+		" -type \"float2\" 0.70880979 0.26786455999999997"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[252]" 
+		" -type \"float2\" 0.71281528000000005 0.26805103000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[253]" 
+		" -type \"float2\" 0.71656692 0.26946672999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[254]" 
+		" -type \"float2\" 0.71969693999999995 0.27197257000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[255]" 
+		" -type \"float2\" 0.72189908999999997 0.27532276999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[256]" 
+		" -type \"float2\" 0.72295845000000003 0.27918914"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[257]" 
+		" -type \"float2\" 0.72277164000000005 0.28319353000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[258]" 
+		" -type \"float2\" 0.72135711000000002 0.28694445000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[259]" 
+		" -type \"float2\" 0.71885294 0.29007512000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[260]" 
+		" -type \"float2\" 0.71563321000000002 0.29256727999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[261]" 
+		" -type \"float2\" 0.71167099 0.29365407999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[262]" 
+		" -type \"float2\" 0.70756655999999996 0.29346269000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[263]" 
+		" -type \"float2\" 0.70372254000000001 0.29201182999999997"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[264]" 
+		" -type \"float2\" 0.70051545000000004 0.28944396999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[265]" 
+		" -type \"float2\" 0.69825912000000001 0.28601101000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[266]" 
+		" -type \"float2\" 0.69717388999999996 0.28204920999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[267]" 
+		" -type \"float2\" 0.69736551999999996 0.27794611000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[268]" 
+		" -type \"float2\" 0.69881523000000001 0.27410284000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[269]" 
+		" -type \"float2\" 0.70138138999999999 0.27089514999999997"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[270]" 
+		" -type \"float2\" 0.70481342000000002 0.26863714999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[271]" 
+		" -type \"float2\" 0.70877564000000004 0.26755034999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[272]" 
+		" -type \"float2\" 0.71287995999999998 0.26774167999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[273]" 
+		" -type \"float2\" 0.71672409999999998 0.26919251999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[274]" 
+		" -type \"float2\" 0.71993119000000005 0.27176036999999997"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[275]" 
+		" -type \"float2\" 0.72218746 0.27519333000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[276]" 
+		" -type \"float2\" 0.72327268 0.27915510999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[277]" 
+		" -type \"float2\" 0.72308105 0.28325823"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[278]" 
+		" -type \"float2\" 0.72163140999999997 0.28710153999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[279]" 
+		" -type \"float2\" 0.71906524999999999 0.29030925000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[280]" 
+		" -type \"float2\" 0.71576123999999997 0.29285308999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[281]" 
+		" -type \"float2\" 0.71170431000000001 0.29396543000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[282]" 
+		" -type \"float2\" 0.70750201000000001 0.29376911999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[283]" 
+		" -type \"float2\" 0.70356637 0.29228330000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[284]" 
+		" -type \"float2\" 0.70028299000000005 0.28965384"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[285]" 
+		" -type \"float2\" 0.69797324999999999 0.28613883000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[286]" 
+		" -type \"float2\" 0.69686252000000004 0.28208246999999997"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[287]" 
+		" -type \"float2\" 0.69705908999999999 0.27788156000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[288]" 
+		" -type \"float2\" 0.69854366999999995 0.27394676000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[289]" 
+		" -type \"float2\" 0.70117134000000003 0.27066287"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[290]" 
+		" -type \"float2\" 0.70468545000000005 0.26835132"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[291]" 
+		" -type \"float2\" 0.70874225999999996 0.26723893999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[292]" 
+		" -type \"float2\" 0.71294457 0.26743525000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[293]" 
+		" -type \"float2\" 0.71688019999999997 0.26892104999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[294]" 
+		" -type \"float2\" 0.72016351999999995 0.27155045"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[295]" 
+		" -type \"float2\" 0.72247338000000005 0.27506547999999997"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[296]" 
+		" -type \"float2\" 0.72358412000000005 0.27912185"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[297]" 
+		" -type \"float2\" 0.72338754000000005 0.28332275000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[298]" 
+		" -type \"float2\" 0.72190297000000003 0.28725758000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[299]" 
+		" -type \"float2\" 0.71927529999999995 0.29054152999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[300]" 
+		" -type \"float2\" 0.71588837999999999 0.29313784999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[301]" 
+		" -type \"float2\" 0.71173721999999995 0.29427555"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[302]" 
+		" -type \"float2\" 0.70743739999999999 0.29407418000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[303]" 
+		" -type \"float2\" 0.70341063000000004 0.29255342000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[304]" 
+		" -type \"float2\" 0.70005136999999995 0.28986263000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[305]" 
+		" -type \"float2\" 0.69768839999999999 0.28626584999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[306]" 
+		" -type \"float2\" 0.69655233999999999 0.28211528000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[307]" 
+		" -type \"float2\" 0.69675397999999999 0.27781700999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[308]" 
+		" -type \"float2\" 0.69827342000000003 0.27379112999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[309]" 
+		" -type \"float2\" 0.70096241999999997 0.27043134000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[310]" 
+		" -type \"float2\" 0.70455825000000005 0.26806658999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[311]" 
+		" -type \"float2\" 0.70870935999999995 0.26692887999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[312]" 
+		" -type \"float2\" 0.71300912000000005 0.26713019999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[313]" 
+		" -type \"float2\" 0.71703594999999998 0.26865088999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[314]" 
+		" -type \"float2\" 0.72039520999999995 0.27134167999999997"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[315]" 
+		" -type \"float2\" 0.72275822999999995 0.27493848999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[316]" 
+		" -type \"float2\" 0.72389424000000002 0.279089"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[317]" 
+		" -type \"float2\" 0.72369265999999999 0.28338732999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[318]" 
+		" -type \"float2\" 0.72217321000000001 0.28741320999999997"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[319]" 
+		" -type \"float2\" 0.71948427000000004 0.29077306000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[320]" 
+		" -type \"float2\" 0.71601588000000005 0.29342359000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[321]" 
+		" -type \"float2\" 0.71177005999999998 0.29458668999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[322]" 
+		" -type \"float2\" 0.70737249000000002 0.29438025000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[323]" 
+		" -type \"float2\" 0.70325428000000001 0.29282445000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[324]" 
+		" -type \"float2\" 0.69981890999999996 0.29007205000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[325]" 
+		" -type \"float2\" 0.69740259999999998 0.28639320000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[326]" 
+		" -type \"float2\" 0.6962412 0.28214812"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[327]" 
+		" -type \"float2\" 0.69644784999999998 0.2777521"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[328]" 
+		" -type \"float2\" 0.69800234000000005 0.27363488000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[329]" 
+		" -type \"float2\" 0.70075284999999998 0.27019896999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[330]" 
+		" -type \"float2\" 0.70443076000000004 0.26778084000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[331]" 
+		" -type \"float2\" 0.70867645999999995 0.26661772"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[332]" 
+		" -type \"float2\" 0.71307403000000003 0.26682412999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[333]" 
+		" -type \"float2\" 0.71719228999999995 0.2683799"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[334]" 
+		" -type \"float2\" 0.72062767000000005 0.27113222999999997"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[335]" 
+		" -type \"float2\" 0.72304404 0.27481115"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[336]" 
+		" -type \"float2\" 0.72420549000000001 0.27905618999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[337]" 
+		" -type \"float2\" 0.72399879 0.28345220999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[338]" 
+		" -type \"float2\" 0.72244430000000004 0.28756948999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[339]" 
+		" -type \"float2\" 0.71969377999999995 0.29100540000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[340]" 
+		" -type \"float2\" 0.71614504000000001 0.29371268"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[341]" 
+		" -type \"float2\" 0.71180356 0.29490151999999997"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[342]" 
+		" -type \"float2\" 0.70730698000000003 0.29469001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[343]" 
+		" -type \"float2\" 0.70309615000000003 0.29309878"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[344]" 
+		" -type \"float2\" 0.69958377000000005 0.29028412999999997"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[345]" 
+		" -type \"float2\" 0.69711339000000005 0.28652221"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[346]" 
+		" -type \"float2\" 0.69592624999999997 0.28218149999999997"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[347]" 
+		" -type \"float2\" 0.69613802000000002 0.27768660000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[348]" 
+		" -type \"float2\" 0.69772791999999995 0.27347684"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[349]" 
+		" -type \"float2\" 0.70054066000000004 0.26996395000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[350]" 
+		" -type \"float2\" 0.70430159999999997 0.26749176000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[351]" 
+		" -type \"float2\" 0.70864302000000001 0.26630291"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[352]" 
+		" -type \"float2\" 0.71313952999999997 0.26651436000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[353]" 
+		" -type \"float2\" 0.71735042000000004 0.26810553999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[354]" 
+		" -type \"float2\" 0.72086280999999996 0.27092021999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[355]" 
+		" -type \"float2\" 0.72333318000000002 0.27468209999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[356]" 
+		" -type \"float2\" 0.72452033000000005 0.27902278000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[357]" 
+		" -type \"float2\" 0.72430861000000002 0.28351771999999997"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[358]" 
+		" -type \"float2\" 0.72271872000000004 0.28772747999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[359]" 
+		" -type \"float2\" 0.71990602999999997 0.29124042"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[360]" 
+		" -type \"float2\" 0.71627711999999999 0.29400738999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[361]" 
+		" -type \"float2\" 0.71183806999999999 0.29522263999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[362]" 
+		" -type \"float2\" 0.70724058000000001 0.29500607000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[363]" 
+		" -type \"float2\" 0.70293521999999997 0.2933788"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[364]" 
+		" -type \"float2\" 0.69934415999999999 0.2905007"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[365]" 
+		" -type \"float2\" 0.69681859000000002 0.28665414"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[366]" 
+		" -type \"float2\" 0.69560515999999994 0.28221592000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[367]" 
+		" -type \"float2\" 0.69582193999999997 0.27762017"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[368]" 
+		" -type \"float2\" 0.69744777999999996 0.27331602999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[369]" 
+		" -type \"float2\" 0.70032393999999998 0.26972446"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[370]" 
+		" -type \"float2\" 0.70416951000000005 0.26719704"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[371]" 
+		" -type \"float2\" 0.70860851000000002 0.26598176000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[372]" 
+		" -type \"float2\" 0.71320598999999996 0.26619830999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[373]" 
+		" -type \"float2\" 0.71751129999999996 0.26782550999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[374]" 
+		" -type \"float2\" 0.72110242000000002 0.27070360999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[375]" 
+		" -type \"float2\" 0.72362797999999995 0.27455016999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[376]" 
+		" -type \"float2\" 0.72484148000000004 0.27898835999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[377]" 
+		" -type \"float2\" 0.72462468999999996 0.28358414999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[378]" 
+		" -type \"float2\" 0.72299886000000002 0.28788826000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[379]" 
+		" -type \"float2\" 0.72012268999999995 0.29147992"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[380]" 
+		" -type \"float2\" 0.71641308000000004 0.2943095"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[381]" 
+		" -type \"float2\" 0.71187400999999995 0.29555196"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[382]" 
+		" -type \"float2\" 0.70717286999999995 0.29533035000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[383]" 
+		" -type \"float2\" 0.70277058999999997 0.29366629999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[384]" 
+		" -type \"float2\" 0.69909871000000001 0.29072320000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[385]" 
+		" -type \"float2\" 0.69651638999999999 0.28678991999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[386]" 
+		" -type \"float2\" 0.69527572000000004 0.28225175000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[387]" 
+		" -type \"float2\" 0.69549762999999998 0.27755248999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[388]" 
+		" -type \"float2\" 0.69716023999999999 0.27315151999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[389]" 
+		" -type \"float2\" 0.70010125999999995 0.26947916"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[390]" 
+		" -type \"float2\" 0.70403355000000001 0.26689494000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[391]" 
+		" -type \"float2\" 0.70857263000000004 0.26565244999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[392]" 
+		" -type \"float2\" 0.71327370000000001 0.265874"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[393]" 
+		" -type \"float2\" 0.71767592000000002 0.26753800999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[394]" 
+		" -type \"float2\" 0.72134781000000003 0.27048107999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[395]" 
+		" -type \"float2\" 0.72393017999999998 0.27441436000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[396]" 
+		" -type \"float2\" 0.72517085000000003 0.27895254000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[397]" 
+		" -type \"float2\" 0.724949 0.28365180000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[398]" 
+		" -type \"float2\" 0.72328645000000003 0.28805277000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[399]" 
+		" -type \"float2\" 0.72034538000000004 0.29172522000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[400]" 
+		" -type \"float2\" 0.72105264999999996 0.29250130000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[401]" 
+		" -type \"float2\" 0.71684581000000003 0.29526617999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[402]" 
+		" -type \"float2\" 0.72419887999999999 0.28857245999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[403]" 
+		" -type \"float2\" 0.72597730000000005 0.28386429000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[404]" 
+		" -type \"float2\" 0.72621453000000002 0.27883708000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[405]" 
+		" -type \"float2\" 0.72488713000000005 0.27398217000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[406]" 
+		" -type \"float2\" 0.72212445999999997 0.26977437999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[407]" 
+		" -type \"float2\" 0.71819602999999999 0.26662587999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[408]" 
+		" -type \"float2\" 0.71348619000000002 0.26484573"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[409]" 
+		" -type \"float2\" 0.70845681000000005 0.26460883000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[410]" 
+		" -type \"float2\" 0.70360076000000005 0.26593824999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[411]" 
+		" -type \"float2\" 0.69939404999999999 0.26870304"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[412]" 
+		" -type \"float2\" 0.69624781999999996 0.27263185000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[413]" 
+		" -type \"float2\" 0.69446933 0.27733998999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[414]" 
+		" -type \"float2\" 0.69423210999999996 0.28236717"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[415]" 
+		" -type \"float2\" 0.69555937999999995 0.28722208999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[416]" 
+		" -type \"float2\" 0.69832212000000005 0.29142991000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[417]" 
+		" -type \"float2\" 0.70225048000000001 0.29457843"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[418]" 
+		" -type \"float2\" 0.70696020000000004 0.29635862000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus4|sketchpad:pTorusShape4" "uvSet[0].uvSetPoints[419]" 
+		" -type \"float2\" 0.71198976000000003 0.29659556999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints" 
+		" -s 420"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[0]" 
+		" -type \"float2\" 0.61741405999999999 0.2958906"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[1]" 
+		" -type \"float2\" 0.62205600999999999 0.29462000999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[2]" 
+		" -type \"float2\" 0.62220043000000003 0.29493910000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[3]" 
+		" -type \"float2\" 0.61745274000000006 0.29623875"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[4]" 
+		" -type \"float2\" 0.61260634999999997 0.29566397999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[5]" 
+		" -type \"float2\" 0.61253548000000002 0.29600701000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[6]" 
+		" -type \"float2\" 0.60810434999999996 0.29396218000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[7]" 
+		" -type \"float2\" 0.60793090000000005 0.29426643000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[8]" 
+		" -type \"float2\" 0.60434926 0.29095238000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[9]" 
+		" -type \"float2\" 0.60409027000000004 0.29118818000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[10]" 
+		" -type \"float2\" 0.60170840999999997 0.28692999000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[11]" 
+		" -type \"float2\" 0.60138923 0.28707421"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[12]" 
+		" -type \"float2\" 0.60043972999999995 0.282289"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[13]" 
+		" -type \"float2\" 0.60009157999999996 0.28232759000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[14]" 
+		" -type \"float2\" 0.60066664000000003 0.27748334000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[15]" 
+		" -type \"float2\" 0.60032361999999995 0.27741250000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[16]" 
+		" -type \"float2\" 0.60236692000000003 0.27298268999999997"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[17]" 
+		" -type \"float2\" 0.60206252000000005 0.27280942000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[18]" 
+		" -type \"float2\" 0.60537456999999995 0.26922715000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[19]" 
+		" -type \"float2\" 0.60513866000000005 0.26896830999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[20]" 
+		" -type \"float2\" 0.60939604000000003 0.2665844"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[21]" 
+		" -type \"float2\" 0.60925161999999999 0.26626533000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[22]" 
+		" -type \"float2\" 0.61403786999999999 0.26531377"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[23]" 
+		" -type \"float2\" 0.61399925 0.26496567999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[24]" 
+		" -type \"float2\" 0.61884552000000004 0.26554039000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[25]" 
+		" -type \"float2\" 0.61891638999999998 0.26519736999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[26]" 
+		" -type \"float2\" 0.62334752000000004 0.26724213000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[27]" 
+		" -type \"float2\" 0.62352096999999995 0.26693781999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[28]" 
+		" -type \"float2\" 0.62710266999999997 0.27025189999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[29]" 
+		" -type \"float2\" 0.62736166000000004 0.27001609999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[30]" 
+		" -type \"float2\" 0.62974352 0.27427428999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[31]" 
+		" -type \"float2\" 0.63006269999999998 0.27413008"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[32]" 
+		" -type \"float2\" 0.63101220000000002 0.27891528999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[33]" 
+		" -type \"float2\" 0.63136035000000001 0.27887668999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[34]" 
+		" -type \"float2\" 0.63078535000000002 0.28372093999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[35]" 
+		" -type \"float2\" 0.63112836999999999 0.28379175000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[36]" 
+		" -type \"float2\" 0.62908505999999997 0.28822160000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[37]" 
+		" -type \"float2\" 0.62938945999999996 0.28839490000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[38]" 
+		" -type \"float2\" 0.62607740999999995 0.29197719999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[39]" 
+		" -type \"float2\" 0.62631338999999997 0.29223602999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[40]" 
+		" -type \"float2\" 0.61966520999999997 0.28931886000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[41]" 
+		" -type \"float2\" 0.61677939000000004 0.29010998999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[42]" 
+		" -type \"float2\" 0.61379039000000002 0.28997043"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[43]" 
+		" -type \"float2\" 0.61099075999999997 0.28891379"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[44]" 
+		" -type \"float2\" 0.60865491999999999 0.28704351"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[45]" 
+		" -type \"float2\" 0.60701132000000002 0.28454277"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[46]" 
+		" -type \"float2\" 0.60622065999999997 0.28165635"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[47]" 
+		" -type \"float2\" 0.60636044 0.27866676000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[48]" 
+		" -type \"float2\" 0.60741687 0.27586663"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[49]" 
+		" -type \"float2\" 0.60928667000000003 0.27352995000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[50]" 
+		" -type \"float2\" 0.61178677999999997 0.27188553999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[51]" 
+		" -type \"float2\" 0.61467254000000004 0.27109438000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[52]" 
+		" -type \"float2\" 0.61766164999999995 0.27123395"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[53]" 
+		" -type \"float2\" 0.62046117000000001 0.27229059"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[54]" 
+		" -type \"float2\" 0.62279700999999998 0.27416083000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[55]" 
+		" -type \"float2\" 0.62444067000000003 0.27666157000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[56]" 
+		" -type \"float2\" 0.62523132999999997 0.27954802000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[57]" 
+		" -type \"float2\" 0.62509161000000002 0.28253763999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[58]" 
+		" -type \"float2\" 0.62403512000000005 0.28533777999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[59]" 
+		" -type \"float2\" 0.62216532000000002 0.28767446000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[60]" 
+		" -type \"float2\" 0.61980009000000003 0.28961601999999997"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[61]" 
+		" -type \"float2\" 0.61681575 0.29043433000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[62]" 
+		" -type \"float2\" 0.61372464999999998 0.29029011999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[63]" 
+		" -type \"float2\" 0.61082941000000002 0.28919739"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[64]" 
+		" -type \"float2\" 0.60841376000000003 0.28726332999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[65]" 
+		" -type \"float2\" 0.60671401000000003 0.28467733000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[66]" 
+		" -type \"float2\" 0.60589634999999997 0.28169253"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[67]" 
+		" -type \"float2\" 0.60604077999999995 0.27860108"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[68]" 
+		" -type \"float2\" 0.60713315000000001 0.27570546000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[69]" 
+		" -type \"float2\" 0.60906654999999998 0.27328904999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[70]" 
+		" -type \"float2\" 0.61165195999999999 0.27158835999999997"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[71]" 
+		" -type \"float2\" 0.61463617999999998 0.27077003999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[72]" 
+		" -type \"float2\" 0.61772740000000004 0.27091429"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[73]" 
+		" -type \"float2\" 0.62062258000000003 0.27200692999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[74]" 
+		" -type \"float2\" 0.62303816999999995 0.27394104000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[75]" 
+		" -type \"float2\" 0.62473791999999995 0.27652702000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[76]" 
+		" -type \"float2\" 0.62555556999999995 0.27951184000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[77]" 
+		" -type \"float2\" 0.62541115000000003 0.28260329000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[78]" 
+		" -type \"float2\" 0.62431877999999996 0.28549891999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[79]" 
+		" -type \"float2\" 0.62238537999999999 0.28791535000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[80]" 
+		" -type \"float2\" 0.61993450000000005 0.28991278999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[81]" 
+		" -type \"float2\" 0.61685186999999997 0.29075819000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[82]" 
+		" -type \"float2\" 0.61365879000000001 0.29060921000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[83]" 
+		" -type \"float2\" 0.61066805999999996 0.28948051000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[84]" 
+		" -type \"float2\" 0.60817288999999997 0.28748267999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[85]" 
+		" -type \"float2\" 0.60641712000000003 0.2848115"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[86]" 
+		" -type \"float2\" 0.60557258000000003 0.28172845000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[87]" 
+		" -type \"float2\" 0.60572177000000005 0.27853530999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[88]" 
+		" -type \"float2\" 0.60684996999999996 0.27554437999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[89]" 
+		" -type \"float2\" 0.60884702000000002 0.27304836999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[90]" 
+		" -type \"float2\" 0.61151749 0.27129161000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[91]" 
+		" -type \"float2\" 0.61460018000000005 0.27044624"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[92]" 
+		" -type \"float2\" 0.61779320000000004 0.27059516"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[93]" 
+		" -type \"float2\" 0.62078387000000002 0.27172386999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[94]" 
+		" -type \"float2\" 0.62327909000000004 0.27372169000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[95]" 
+		" -type \"float2\" 0.62503487000000002 0.27639288000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[96]" 
+		" -type \"float2\" 0.62587934999999995 0.2794759"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[97]" 
+		" -type \"float2\" 0.62573027999999997 0.28266910000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[98]" 
+		" -type \"float2\" 0.62460196000000001 0.28566"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[99]" 
+		" -type \"float2\" 0.62260497000000004 0.28815605999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[100]" 
+		" -type \"float2\" 0.62006879000000004 0.29020934999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[101]" 
+		" -type \"float2\" 0.61688781000000004 0.29108172999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[102]" 
+		" -type \"float2\" 0.61359286000000002 0.29092804"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[103]" 
+		" -type \"float2\" 0.61050689000000002 0.28976327000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[104]" 
+		" -type \"float2\" 0.60793209000000004 0.28770175999999997"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[105]" 
+		" -type \"float2\" 0.60612047000000002 0.28494545999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[106]" 
+		" -type \"float2\" 0.60524904999999996 0.28176424"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[107]" 
+		" -type \"float2\" 0.60540300999999996 0.27846947"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[108]" 
+		" -type \"float2\" 0.60656708000000004 0.27538335000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[109]" 
+		" -type \"float2\" 0.60862773999999997 0.27280780999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[110]" 
+		" -type \"float2\" 0.61138325999999998 0.27099505000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[111]" 
+		" -type \"float2\" 0.61456418000000002 0.27012268"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[112]" 
+		" -type \"float2\" 0.61785913000000003 0.27027636999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[113]" 
+		" -type \"float2\" 0.62094510000000003 0.27144107000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[114]" 
+		" -type \"float2\" 0.62351984000000005 0.27350258999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[115]" 
+		" -type \"float2\" 0.62533145999999995 0.27625888999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[116]" 
+		" -type \"float2\" 0.62620288000000002 0.27944010000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[117]" 
+		" -type \"float2\" 0.62604897999999998 0.28273490000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[118]" 
+		" -type \"float2\" 0.62488484 0.28582101999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[119]" 
+		" -type \"float2\" 0.62282431000000005 0.28839657000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[120]" 
+		" -type \"float2\" 0.62020302000000005 0.29050604000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[121]" 
+		" -type \"float2\" 0.61692374999999999 0.29140540999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[122]" 
+		" -type \"float2\" 0.61352693999999997 0.29124695"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[123]" 
+		" -type \"float2\" 0.61034560000000004 0.29004622000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[124]" 
+		" -type \"float2\" 0.60769123000000003 0.28792092000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[125]" 
+		" -type \"float2\" 0.60582369999999997 0.28507948"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[126]" 
+		" -type \"float2\" 0.60492539000000001 0.28180009"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[127]" 
+		" -type \"float2\" 0.60508412 0.27840357999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[128]" 
+		" -type \"float2\" 0.60628413999999997 0.27522224000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[129]" 
+		" -type \"float2\" 0.60840826999999997 0.27256718000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[130]" 
+		" -type \"float2\" 0.61124897 0.27069840000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[131]" 
+		" -type \"float2\" 0.61452823999999995 0.26979899000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[132]" 
+		" -type \"float2\" 0.61792499000000001 0.26995744999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[133]" 
+		" -type \"float2\" 0.62110639000000001 0.27115815999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[134]" 
+		" -type \"float2\" 0.62376069999999995 0.27328342"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[135]" 
+		" -type \"float2\" 0.62562823000000001 0.27612489000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[136]" 
+		" -type \"float2\" 0.62652658999999999 0.27940428"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[137]" 
+		" -type \"float2\" 0.62636793000000002 0.28280075999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[138]" 
+		" -type \"float2\" 0.62516784999999997 0.28598213"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[139]" 
+		" -type \"float2\" 0.62304366 0.28863722000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[140]" 
+		" -type \"float2\" 0.62033760999999998 0.29080305000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[141]" 
+		" -type \"float2\" 0.61695986999999997 0.29172947999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[142]" 
+		" -type \"float2\" 0.61346107999999999 0.29156631"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[143]" 
+		" -type \"float2\" 0.61018419000000002 0.29032957999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[144]" 
+		" -type \"float2\" 0.60745019 0.28814047999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[145]" 
+		" -type \"float2\" 0.60552656999999999 0.28521380000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[146]" 
+		" -type \"float2\" 0.60460132 0.28183606"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[147]" 
+		" -type \"float2\" 0.60476470000000004 0.27833777999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[148]" 
+		" -type \"float2\" 0.60600072000000005 0.27506098000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[149]" 
+		" -type \"float2\" 0.60818850999999996 0.27232629000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[150]" 
+		" -type \"float2\" 0.61111437999999996 0.27040135999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[151]" 
+		" -type \"float2\" 0.61449206000000001 0.26947489000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[152]" 
+		" -type \"float2\" 0.61799090999999995 0.26963806000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[153]" 
+		" -type \"float2\" 0.62126780000000004 0.27087480000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[154]" 
+		" -type \"float2\" 0.62400180000000005 0.27306386999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[155]" 
+		" -type \"float2\" 0.62592541999999995 0.27599055"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[156]" 
+		" -type \"float2\" 0.62685066 0.27936824999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[157]" 
+		" -type \"float2\" 0.62668723000000004 0.28286660000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[158]" 
+		" -type \"float2\" 0.62545127 0.28614332999999997"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[159]" 
+		" -type \"float2\" 0.62326347999999998 0.28887811000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[160]" 
+		" -type \"float2\" 0.62047242999999996 0.29110040999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[161]" 
+		" -type \"float2\" 0.61699616999999995 0.29205394000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[162]" 
+		" -type \"float2\" 0.61339527000000005 0.29188608999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[163]" 
+		" -type \"float2\" 0.61002266000000005 0.29061329000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[164]" 
+		" -type \"float2\" 0.60720890999999999 0.28836039000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[165]" 
+		" -type \"float2\" 0.60522914000000005 0.28534841999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[166]" 
+		" -type \"float2\" 0.60427684000000004 0.28187224"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[167]" 
+		" -type \"float2\" 0.60444498000000002 0.27827196999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[168]" 
+		" -type \"float2\" 0.60571688000000001 0.27489968999999997"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[169]" 
+		" -type \"float2\" 0.60796844999999999 0.27208522000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[170]" 
+		" -type \"float2\" 0.61097955999999998 0.27010402"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[171]" 
+		" -type \"float2\" 0.61445576000000002 0.26915046999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[172]" 
+		" -type \"float2\" 0.61805670999999995 0.26931828000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[173]" 
+		" -type \"float2\" 0.62142925999999998 0.27059105"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[174]" 
+		" -type \"float2\" 0.62424307999999995 0.27284393000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[175]" 
+		" -type \"float2\" 0.62622279000000003 0.27585589999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[176]" 
+		" -type \"float2\" 0.62717509000000005 0.27933206999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[177]" 
+		" -type \"float2\" 0.62700707 0.28293234"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[178]" 
+		" -type \"float2\" 0.62573509999999999 0.28630467999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[179]" 
+		" -type \"float2\" 0.62348360000000003 0.28911921000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[180]" 
+		" -type \"float2\" 0.62060725999999999 0.29139751000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[181]" 
+		" -type \"float2\" 0.61703258999999999 0.29237818999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[182]" 
+		" -type \"float2\" 0.61332958999999998 0.29220574999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[183]" 
+		" -type \"float2\" 0.60986143000000004 0.29089694999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[184]" 
+		" -type \"float2\" 0.60696781 0.28858035999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[185]" 
+		" -type \"float2\" 0.60493189000000003 0.28548306000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[186]" 
+		" -type \"float2\" 0.60395259000000001 0.28190851"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[187]" 
+		" -type \"float2\" 0.60412531999999997 0.27820634999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[188]" 
+		" -type \"float2\" 0.60543311 0.27473855000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[189]" 
+		" -type \"float2\" 0.60774832999999995 0.27184427"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[190]" 
+		" -type \"float2\" 0.61084466999999998 0.26980689000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[191]" 
+		" -type \"float2\" 0.61441946000000003 0.26882619000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[192]" 
+		" -type \"float2\" 0.61812233999999999 0.26899862000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[193]" 
+		" -type \"float2\" 0.62159054999999996 0.27030738999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[194]" 
+		" -type \"float2\" 0.62448411999999998 0.27262402000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[195]" 
+		" -type \"float2\" 0.62652010000000002 0.27572124999999997"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[196]" 
+		" -type \"float2\" 0.62749940000000004 0.27929579999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[197]" 
+		" -type \"float2\" 0.62732666999999998 0.282998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[198]" 
+		" -type \"float2\" 0.62601881999999998 0.28646581999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[199]" 
+		" -type \"float2\" 0.62370371999999996 0.28936011"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[200]" 
+		" -type \"float2\" 0.62074167000000002 0.2916936"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[201]" 
+		" -type \"float2\" 0.61706877000000004 0.29270132999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[202]" 
+		" -type \"float2\" 0.61326413999999996 0.29252422"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[203]" 
+		" -type \"float2\" 0.60970067999999999 0.29117959999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[204]" 
+		" -type \"float2\" 0.60672760000000003 0.28879943000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[205]" 
+		" -type \"float2\" 0.60463571999999999 0.28561723"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[206]" 
+		" -type \"float2\" 0.60362941000000003 0.28194466000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[207]" 
+		" -type \"float2\" 0.60380679000000004 0.27814093000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[208]" 
+		" -type \"float2\" 0.60515039999999998 0.27457798"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[209]" 
+		" -type \"float2\" 0.60752903999999996 0.27160421000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[210]" 
+		" -type \"float2\" 0.61071032000000003 0.26951080999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[211]" 
+		" -type \"float2\" 0.61438316000000004 0.26850307000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[212]" 
+		" -type \"float2\" 0.61818779000000001 0.26868016"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[213]" 
+		" -type \"float2\" 0.62175124999999998 0.27002474999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[214]" 
+		" -type \"float2\" 0.62472439000000002 0.27240488000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[215]" 
+		" -type \"float2\" 0.62681620999999998 0.27558707999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[216]" 
+		" -type \"float2\" 0.62782258000000002 0.27925965000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[217]" 
+		" -type \"float2\" 0.62764518999999996 0.28306344"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[218]" 
+		" -type \"float2\" 0.62630158999999996 0.2866264"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[219]" 
+		" -type \"float2\" 0.62392294000000004 0.28960018999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[220]" 
+		" -type \"float2\" 0.62087482000000005 0.29198769000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[221]" 
+		" -type \"float2\" 0.61710452999999998 0.29302219000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[222]" 
+		" -type \"float2\" 0.61319893999999997 0.29284039000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[223]" 
+		" -type \"float2\" 0.60954087999999995 0.29146012999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[224]" 
+		" -type \"float2\" 0.60648888000000001 0.28901684"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[225]" 
+		" -type \"float2\" 0.60434151000000003 0.28575023999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[226]" 
+		" -type \"float2\" 0.60330855999999999 0.28198028000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[227]" 
+		" -type \"float2\" 0.60349059000000005 0.27807569999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[228]" 
+		" -type \"float2\" 0.60486978000000002 0.27441829000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[229]" 
+		" -type \"float2\" 0.60731148999999995 0.27136564000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[230]" 
+		" -type \"float2\" 0.61057717 0.26921672000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[231]" 
+		" -type \"float2\" 0.61434739999999999 0.26818222000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[232]" 
+		" -type \"float2\" 0.61825304999999997 0.26836398"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[233]" 
+		" -type \"float2\" 0.62191105000000002 0.26974421999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[234]" 
+		" -type \"float2\" 0.62496304999999996 0.27218750000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[235]" 
+		" -type \"float2\" 0.62711035999999998 0.27545409999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[236]" 
+		" -type \"float2\" 0.62814342999999995 0.27922404000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[237]" 
+		" -type \"float2\" 0.6279614 0.28312862"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[238]" 
+		" -type \"float2\" 0.62658221000000003 0.28678608"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[239]" 
+		" -type \"float2\" 0.62414049999999999 0.28983872999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[240]" 
+		" -type \"float2\" 0.62100637000000003 0.29227903"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[241]" 
+		" -type \"float2\" 0.61713952000000005 0.29333985000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[242]" 
+		" -type \"float2\" 0.61313397000000003 0.29315332"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[243]" 
+		" -type \"float2\" 0.60938239000000005 0.29173761999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[244]" 
+		" -type \"float2\" 0.60625231000000002 0.28923175000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[245]" 
+		" -type \"float2\" 0.60405016 0.28588154999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[246]" 
+		" -type \"float2\" 0.60299086999999996 0.28201516999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[247]" 
+		" -type \"float2\" 0.60317767 0.27801079000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[248]" 
+		" -type \"float2\" 0.60459220000000002 0.2742599"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[249]" 
+		" -type \"float2\" 0.60709643000000002 0.27112924999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[250]" 
+		" -type \"float2\" 0.61044567999999999 0.26892543000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[251]" 
+		" -type \"float2\" 0.61431241000000003 0.26786455999999997"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[252]" 
+		" -type \"float2\" 0.61831802000000002 0.26805103000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[253]" 
+		" -type \"float2\" 0.62206954000000003 0.26946672999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[254]" 
+		" -type \"float2\" 0.62519955999999999 0.27197257000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[255]" 
+		" -type \"float2\" 0.62740176999999997 0.27532276999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[256]" 
+		" -type \"float2\" 0.62846111999999998 0.27918914"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[257]" 
+		" -type \"float2\" 0.62827432000000005 0.28319349999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[258]" 
+		" -type \"float2\" 0.62685977999999998 0.28694445000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[259]" 
+		" -type \"float2\" 0.62435560999999995 0.29007512000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[260]" 
+		" -type \"float2\" 0.62113594999999999 0.29256727999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[261]" 
+		" -type \"float2\" 0.61717361000000004 0.29365407999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[262]" 
+		" -type \"float2\" 0.61306923999999996 0.29346269000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[263]" 
+		" -type \"float2\" 0.60922514999999999 0.29201182999999997"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[264]" 
+		" -type \"float2\" 0.60601806999999996 0.28944396999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[265]" 
+		" -type \"float2\" 0.60376178999999996 0.28601101000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[266]" 
+		" -type \"float2\" 0.60267656999999997 0.28204920999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[267]" 
+		" -type \"float2\" 0.60286826000000004 0.27794611000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[268]" 
+		" -type \"float2\" 0.60431789999999996 0.27410284000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[269]" 
+		" -type \"float2\" 0.60688405999999995 0.27089514999999997"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[270]" 
+		" -type \"float2\" 0.61031610000000003 0.26863714999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[271]" 
+		" -type \"float2\" 0.61427832000000004 0.26755034999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[272]" 
+		" -type \"float2\" 0.61838269000000001 0.26774167999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[273]" 
+		" -type \"float2\" 0.62222672000000001 0.26919251999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[274]" 
+		" -type \"float2\" 0.62543380000000004 0.27176036999999997"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[275]" 
+		" -type \"float2\" 0.62769014000000001 0.27519333000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[276]" 
+		" -type \"float2\" 0.62877541999999997 0.27915510999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[277]" 
+		" -type \"float2\" 0.62858378999999998 0.28325823"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[278]" 
+		" -type \"float2\" 0.62713408000000004 0.28710153999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[279]" 
+		" -type \"float2\" 0.62456792999999999 0.29030921999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[280]" 
+		" -type \"float2\" 0.62126386 0.29285308999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[281]" 
+		" -type \"float2\" 0.61720699000000001 0.29396543000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[282]" 
+		" -type \"float2\" 0.61300467999999997 0.29376911999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[283]" 
+		" -type \"float2\" 0.60906905 0.29228330000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[284]" 
+		" -type \"float2\" 0.60578573000000002 0.28965384"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[285]" 
+		" -type \"float2\" 0.60347587000000003 0.28613883000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[286]" 
+		" -type \"float2\" 0.60236520000000005 0.28208246999999997"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[287]" 
+		" -type \"float2\" 0.60256177 0.27788156000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[288]" 
+		" -type \"float2\" 0.60404639999999998 0.27394676000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[289]" 
+		" -type \"float2\" 0.60667402000000004 0.27066287"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[290]" 
+		" -type \"float2\" 0.61018813000000005 0.26835132"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[291]" 
+		" -type \"float2\" 0.614245 0.26723893999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[292]" 
+		" -type \"float2\" 0.61844723999999995 0.26743528"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[293]" 
+		" -type \"float2\" 0.62238287999999997 0.26892104999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[294]" 
+		" -type \"float2\" 0.62566619999999995 0.27155045"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[295]" 
+		" -type \"float2\" 0.62797605999999995 0.27506547999999997"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[296]" 
+		" -type \"float2\" 0.62908679000000001 0.27912185"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[297]" 
+		" -type \"float2\" 0.62889022000000006 0.28332275000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[298]" 
+		" -type \"float2\" 0.62740563999999999 0.28725758000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[299]" 
+		" -type \"float2\" 0.62477802999999998 0.29054152999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[300]" 
+		" -type \"float2\" 0.62139106 0.29313781999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[301]" 
+		" -type \"float2\" 0.61723989000000001 0.29427555"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[302]" 
+		" -type \"float2\" 0.61294006999999995 0.29407418000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[303]" 
+		" -type \"float2\" 0.60891329999999999 0.29255342000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[304]" 
+		" -type \"float2\" 0.60555404000000002 0.28986263000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[305]" 
+		" -type \"float2\" 0.60319107999999999 0.28626582"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[306]" 
+		" -type \"float2\" 0.60205507000000003 0.28211528000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[307]" 
+		" -type \"float2\" 0.60225666 0.27781700999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[308]" 
+		" -type \"float2\" 0.60377610000000004 0.27379112999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[309]" 
+		" -type \"float2\" 0.60646509999999998 0.27043134000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[310]" 
+		" -type \"float2\" 0.61006099000000003 0.26806656000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[311]" 
+		" -type \"float2\" 0.61421210000000004 0.26692887999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[312]" 
+		" -type \"float2\" 0.61851186000000002 0.26713019999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[313]" 
+		" -type \"float2\" 0.62253862999999998 0.26865088999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[314]" 
+		" -type \"float2\" 0.62589788000000002 0.27134167999999997"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[315]" 
+		" -type \"float2\" 0.62826084999999998 0.27493848999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[316]" 
+		" -type \"float2\" 0.62939692000000003 0.279089"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[317]" 
+		" -type \"float2\" 0.62919533000000005 0.28338732999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[318]" 
+		" -type \"float2\" 0.62767589000000001 0.28741317999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[319]" 
+		" -type \"float2\" 0.62498688999999996 0.29077306000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[320]" 
+		" -type \"float2\" 0.62151855 0.29342359000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[321]" 
+		" -type \"float2\" 0.61727279000000002 0.29458668999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[322]" 
+		" -type \"float2\" 0.61287522000000005 0.29438025000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[323]" 
+		" -type \"float2\" 0.60875690000000005 0.29282445000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[324]" 
+		" -type \"float2\" 0.60532158999999996 0.29007205000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[325]" 
+		" -type \"float2\" 0.60290520999999997 0.28639316999999997"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[326]" 
+		" -type \"float2\" 0.60174382000000004 0.28214809000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[327]" 
+		" -type \"float2\" 0.60195052999999998 0.27775207000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[328]" 
+		" -type \"float2\" 0.60350501999999995 0.27363488000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[329]" 
+		" -type \"float2\" 0.60625552999999999 0.27019896999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[330]" 
+		" -type \"float2\" 0.60993350000000002 0.26778084000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[331]" 
+		" -type \"float2\" 0.61417918999999999 0.26661772"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[332]" 
+		" -type \"float2\" 0.61857671000000003 0.26682412999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[333]" 
+		" -type \"float2\" 0.62269496999999996 0.2683799"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[334]" 
+		" -type \"float2\" 0.62613034000000001 0.27113222999999997"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[335]" 
+		" -type \"float2\" 0.62854666000000003 0.27481115"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[336]" 
+		" -type \"float2\" 0.62970811000000004 0.27905618999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[337]" 
+		" -type \"float2\" 0.62950139999999999 0.28345220999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[338]" 
+		" -type \"float2\" 0.62794696999999999 0.28756948999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[339]" 
+		" -type \"float2\" 0.62519652000000003 0.29100540000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[340]" 
+		" -type \"float2\" 0.62164766000000005 0.29371268"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[341]" 
+		" -type \"float2\" 0.61730622999999996 0.29490151999999997"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[342]" 
+		" -type \"float2\" 0.61280972 0.29469001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[343]" 
+		" -type \"float2\" 0.60859883000000004 0.29309878"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[344]" 
+		" -type \"float2\" 0.60508645000000005 0.29028412999999997"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[345]" 
+		" -type \"float2\" 0.60261606999999995 0.28652221"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[346]" 
+		" -type \"float2\" 0.60142899000000005 0.28218149999999997"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[347]" 
+		" -type \"float2\" 0.60164070000000003 0.27768660000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[348]" 
+		" -type \"float2\" 0.60323059999999995 0.27347684"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[349]" 
+		" -type \"float2\" 0.60604334000000004 0.26996395000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[350]" 
+		" -type \"float2\" 0.60980433000000001 0.26749176000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[351]" 
+		" -type \"float2\" 0.61414570000000002 0.26630288000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[352]" 
+		" -type \"float2\" 0.61864227000000005 0.26651436000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[353]" 
+		" -type \"float2\" 0.62285303999999997 0.26810553999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[354]" 
+		" -type \"float2\" 0.62636548000000003 0.27092021999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[355]" 
+		" -type \"float2\" 0.62883586000000002 0.27468209999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[356]" 
+		" -type \"float2\" 0.630023 0.27902278000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[357]" 
+		" -type \"float2\" 0.62981123000000006 0.28351771999999997"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[358]" 
+		" -type \"float2\" 0.62822144999999996 0.28772745"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[359]" 
+		" -type \"float2\" 0.62540865000000001 0.29124042"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[360]" 
+		" -type \"float2\" 0.62177979999999999 0.29400738999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[361]" 
+		" -type \"float2\" 0.61734074000000005 0.29522263999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[362]" 
+		" -type \"float2\" 0.61274320000000004 0.29500607000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[363]" 
+		" -type \"float2\" 0.60843796000000006 0.2933788"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[364]" 
+		" -type \"float2\" 0.60484684 0.29050067000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[365]" 
+		" -type \"float2\" 0.60232127000000002 0.28665414"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[366]" 
+		" -type \"float2\" 0.60110777999999998 0.28221592000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[367]" 
+		" -type \"float2\" 0.60132467999999994 0.27762017"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[368]" 
+		" -type \"float2\" 0.60295051 0.27331602999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[369]" 
+		" -type \"float2\" 0.60582661999999998 0.26972446"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[370]" 
+		" -type \"float2\" 0.60967225000000003 0.26719704"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[371]" 
+		" -type \"float2\" 0.61411119000000003 0.26598176000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[372]" 
+		" -type \"float2\" 0.61870873000000004 0.26619830999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[373]" 
+		" -type \"float2\" 0.62301397000000003 0.26782550999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[374]" 
+		" -type \"float2\" 0.62660508999999998 0.27070360999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[375]" 
+		" -type \"float2\" 0.62913065999999995 0.27455016999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[376]" 
+		" -type \"float2\" 0.63034414999999999 0.27898833000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[377]" 
+		" -type \"float2\" 0.63012736999999996 0.28358414999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[378]" 
+		" -type \"float2\" 0.62850152999999997 0.28788826000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[379]" 
+		" -type \"float2\" 0.62562543000000004 0.29147992"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[380]" 
+		" -type \"float2\" 0.62191576000000004 0.2943095"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[381]" 
+		" -type \"float2\" 0.61737668999999995 0.29555196"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[382]" 
+		" -type \"float2\" 0.61267554999999996 0.29533035000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[383]" 
+		" -type \"float2\" 0.60827326999999998 0.29366629999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[384]" 
+		" -type \"float2\" 0.60460137999999997 0.29072320000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[385]" 
+		" -type \"float2\" 0.60201906999999999 0.28678988999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[386]" 
+		" -type \"float2\" 0.60077846000000001 0.28225178000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[387]" 
+		" -type \"float2\" 0.60100030999999998 0.27755246"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[388]" 
+		" -type \"float2\" 0.60266291999999999 0.27315151999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[389]" 
+		" -type \"float2\" 0.60560393000000001 0.26947916"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[390]" 
+		" -type \"float2\" 0.60953628999999998 0.26689494000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[391]" 
+		" -type \"float2\" 0.61407524000000002 0.26565244999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[392]" 
+		" -type \"float2\" 0.61877638000000001 0.265874"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[393]" 
+		" -type \"float2\" 0.62317860000000003 0.26753800999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[394]" 
+		" -type \"float2\" 0.62685049000000004 0.27048107999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[395]" 
+		" -type \"float2\" 0.62943285999999998 0.27441436000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[396]" 
+		" -type \"float2\" 0.63067353000000004 0.27895254000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[397]" 
+		" -type \"float2\" 0.63045167999999996 0.28365180000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[398]" 
+		" -type \"float2\" 0.62878906999999995 0.28805277000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[399]" 
+		" -type \"float2\" 0.62584804999999999 0.29172522000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[400]" 
+		" -type \"float2\" 0.62655532000000003 0.29250130000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[401]" 
+		" -type \"float2\" 0.62234849000000003 0.29526620999999997"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[402]" 
+		" -type \"float2\" 0.62970150000000003 0.28857245999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[403]" 
+		" -type \"float2\" 0.63147998000000005 0.28386429000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[404]" 
+		" -type \"float2\" 0.63171721000000003 0.27883704999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[405]" 
+		" -type \"float2\" 0.63038981000000005 0.27398217000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[406]" 
+		" -type \"float2\" 0.62762713000000003 0.26977437999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[407]" 
+		" -type \"float2\" 0.62369870999999999 0.26662587999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[408]" 
+		" -type \"float2\" 0.61898892999999999 0.26484573"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[409]" 
+		" -type \"float2\" 0.61395942999999997 0.26460883000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[410]" 
+		" -type \"float2\" 0.60910350000000002 0.26593824999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[411]" 
+		" -type \"float2\" 0.60489672000000005 0.26870304"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[412]" 
+		" -type \"float2\" 0.60175049000000003 0.27263185000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[413]" 
+		" -type \"float2\" 0.59997201 0.27733998999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[414]" 
+		" -type \"float2\" 0.59973472000000005 0.28236717"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[415]" 
+		" -type \"float2\" 0.60106212000000003 0.28722208999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[416]" 
+		" -type \"float2\" 0.60382479 0.29142991000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[417]" 
+		" -type \"float2\" 0.60775316000000001 0.29457843"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[418]" 
+		" -type \"float2\" 0.61246294000000001 0.29635862000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus5|sketchpad:pTorusShape5" "uvSet[0].uvSetPoints[419]" 
+		" -type \"float2\" 0.61749244000000003 0.29659556999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints" 
+		" -s 420"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[0]" 
+		" -type \"float2\" 0.72228300999999995 0.35608798000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[1]" 
+		" -type \"float2\" 0.72692495999999995 0.35481736000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[2]" 
+		" -type \"float2\" 0.72706937999999999 0.35513644999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[3]" 
+		" -type \"float2\" 0.72232169000000002 0.35643606999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[4]" 
+		" -type \"float2\" 0.71747534999999996 0.35586134000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[5]" 
+		" -type \"float2\" 0.71740448000000001 0.35620433000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[6]" 
+		" -type \"float2\" 0.71297330000000003 0.35415953"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[7]" 
+		" -type \"float2\" 0.71279990999999998 0.35446381999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[8]" 
+		" -type \"float2\" 0.70921825999999999 0.35114973999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[9]" 
+		" -type \"float2\" 0.70895922 0.35138553"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[10]" 
+		" -type \"float2\" 0.70657742000000001 0.34712735"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[11]" 
+		" -type \"float2\" 0.70625824000000004 0.34727155999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[12]" 
+		" -type \"float2\" 0.70530873999999999 0.34248632000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[13]" 
+		" -type \"float2\" 0.70496057999999995 0.34252492000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[14]" 
+		" -type \"float2\" 0.70553564999999996 0.3376807"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[15]" 
+		" -type \"float2\" 0.70519262999999999 0.33760983"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[16]" 
+		" -type \"float2\" 0.70723592999999996 0.33318004000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[17]" 
+		" -type \"float2\" 0.70693152999999997 0.33300674000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[18]" 
+		" -type \"float2\" 0.71024357999999999 0.32942450000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[19]" 
+		" -type \"float2\" 0.71000761000000001 0.32916567000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[20]" 
+		" -type \"float2\" 0.71426498999999999 0.32678174999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[21]" 
+		" -type \"float2\" 0.71412056999999995 0.32646266000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[22]" 
+		" -type \"float2\" 0.71890688000000003 0.32551112999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[23]" 
+		" -type \"float2\" 0.71886819999999996 0.32516304000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[24]" 
+		" -type \"float2\" 0.72371452999999997 0.32573774"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[25]" 
+		" -type \"float2\" 0.72378534000000005 0.32539472000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[26]" 
+		" -type \"float2\" 0.72821652999999997 0.32743949"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[27]" 
+		" -type \"float2\" 0.72838992000000002 0.32713521000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[28]" 
+		" -type \"float2\" 0.73197162000000005 0.33044921999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[29]" 
+		" -type \"float2\" 0.73223059999999995 0.33021349"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[30]" 
+		" -type \"float2\" 0.73461246000000002 0.33447164000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[31]" 
+		" -type \"float2\" 0.73493165000000005 0.3343274"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[32]" 
+		" -type \"float2\" 0.73588120999999995 0.33911264000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[33]" 
+		" -type \"float2\" 0.73622936000000005 0.33907401999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[34]" 
+		" -type \"float2\" 0.73565429000000004 0.34391825999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[35]" 
+		" -type \"float2\" 0.73599731999999995 0.34398909999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[36]" 
+		" -type \"float2\" 0.73395407000000001 0.34841895000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[37]" 
+		" -type \"float2\" 0.73425847 0.34859222000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[38]" 
+		" -type \"float2\" 0.73094641999999999 0.35217451999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[39]" 
+		" -type \"float2\" 0.73118234000000004 0.35243338000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[40]" 
+		" -type \"float2\" 0.72453414999999999 0.34951620999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[41]" 
+		" -type \"float2\" 0.72164839999999997 0.35030738"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[42]" 
+		" -type \"float2\" 0.71865933999999998 0.35016781000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[43]" 
+		" -type \"float2\" 0.71585977000000001 0.34911113999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[44]" 
+		" -type \"float2\" 0.71352386000000001 0.34724086999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[45]" 
+		" -type \"float2\" 0.71188026999999998 0.34474011999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[46]" 
+		" -type \"float2\" 0.71108961000000004 0.34185367999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[47]" 
+		" -type \"float2\" 0.71122938000000002 0.33886409000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[48]" 
+		" -type \"float2\" 0.71228581999999996 0.33606397999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[49]" 
+		" -type \"float2\" 0.71415567000000002 0.3337273"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[50]" 
+		" -type \"float2\" 0.71665579000000001 0.33208286999999997"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[51]" 
+		" -type \"float2\" 0.71954154999999997 0.33129174"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[52]" 
+		" -type \"float2\" 0.72253060000000002 0.33143129999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[53]" 
+		" -type \"float2\" 0.72533017 0.33248793999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[54]" 
+		" -type \"float2\" 0.72766602000000002 0.33435821999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[55]" 
+		" -type \"float2\" 0.72930967999999996 0.33685893"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[56]" 
+		" -type \"float2\" 0.73010032999999996 0.33974539999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[57]" 
+		" -type \"float2\" 0.72996055999999998 0.34273499000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[58]" 
+		" -type \"float2\" 0.72890407000000002 0.34553513000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[59]" 
+		" -type \"float2\" 0.72703432999999995 0.34787178000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[60]" 
+		" -type \"float2\" 0.72466903999999999 0.34981337000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[61]" 
+		" -type \"float2\" 0.72168474999999999 0.35063168"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[62]" 
+		" -type \"float2\" 0.71859360000000005 0.35048747000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[63]" 
+		" -type \"float2\" 0.71569835999999998 0.34939473999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[64]" 
+		" -type \"float2\" 0.71328276000000002 0.34746069000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[65]" 
+		" -type \"float2\" 0.71158301999999996 0.34487467999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[66]" 
+		" -type \"float2\" 0.71076536000000001 0.34188985999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[67]" 
+		" -type \"float2\" 0.71090978000000005 0.3387984"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[68]" 
+		" -type \"float2\" 0.71200216000000005 0.33590281"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[69]" 
+		" -type \"float2\" 0.71393554999999997 0.33348641000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[70]" 
+		" -type \"float2\" 0.71652090999999996 0.33178574"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[71]" 
+		" -type \"float2\" 0.71950519000000002 0.33096743000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[72]" 
+		" -type \"float2\" 0.72259629000000003 0.33111161"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[73]" 
+		" -type \"float2\" 0.72549158000000002 0.33220431"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[74]" 
+		" -type \"float2\" 0.72790717999999999 0.33413836000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[75]" 
+		" -type \"float2\" 0.72960698999999996 0.33672439999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[76]" 
+		" -type \"float2\" 0.73042463999999996 0.33970916000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[77]" 
+		" -type \"float2\" 0.73028015999999996 0.34280064999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[78]" 
+		" -type \"float2\" 0.72918784999999997 0.34569627000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[79]" 
+		" -type \"float2\" 0.72725439000000003 0.3481127"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[80]" 
+		" -type \"float2\" 0.72480350999999998 0.35011014000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[81]" 
+		" -type \"float2\" 0.72172080999999999 0.35095552000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[82]" 
+		" -type \"float2\" 0.71852773000000003 0.35080655999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[83]" 
+		" -type \"float2\" 0.71553707 0.34967786000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[84]" 
+		" -type \"float2\" 0.71304184000000004 0.34768002999999997"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[85]" 
+		" -type \"float2\" 0.71128606999999999 0.34500881999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[86]" 
+		" -type \"float2\" 0.71044158999999996 0.3419258"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[87]" 
+		" -type \"float2\" 0.71059072000000001 0.33873266000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[88]" 
+		" -type \"float2\" 0.71171898 0.33574173000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[89]" 
+		" -type \"float2\" 0.71371596999999998 0.33324572000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[90]" 
+		" -type \"float2\" 0.71638643999999996 0.33148896999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[91]" 
+		" -type \"float2\" 0.71946907000000004 0.33064358999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[92]" 
+		" -type \"float2\" 0.72266215 0.33079248999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[93]" 
+		" -type \"float2\" 0.72565281000000004 0.33192122000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[94]" 
+		" -type \"float2\" 0.72814809999999996 0.33391905"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[95]" 
+		" -type \"float2\" 0.72990381999999998 0.33659022999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[96]" 
+		" -type \"float2\" 0.73074841000000001 0.33967328000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[97]" 
+		" -type \"float2\" 0.73059921999999999 0.34286642000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[98]" 
+		" -type \"float2\" 0.72947097000000005 0.34585732000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[99]" 
+		" -type \"float2\" 0.72747397000000003 0.34835338999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[100]" 
+		" -type \"float2\" 0.72493774 0.35040671000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[101]" 
+		" -type \"float2\" 0.72175676 0.35127908000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[102]" 
+		" -type \"float2\" 0.71846186999999995 0.35112536"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[103]" 
+		" -type \"float2\" 0.71537583999999999 0.34996064999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[104]" 
+		" -type \"float2\" 0.71280104 0.34789908000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[105]" 
+		" -type \"float2\" 0.71098947999999995 0.34514277999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[106]" 
+		" -type \"float2\" 0.71011806 0.34196158999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[107]" 
+		" -type \"float2\" 0.71027194999999999 0.33866679999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[108]" 
+		" -type \"float2\" 0.71143608999999997 0.33558071"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[109]" 
+		" -type \"float2\" 0.71349669000000004 0.33300519000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[110]" 
+		" -type \"float2\" 0.71625220999999994 0.3311924"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[111]" 
+		" -type \"float2\" 0.71943318999999994 0.33032002999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[112]" 
+		" -type \"float2\" 0.72272806999999994 0.33047368999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[113]" 
+		" -type \"float2\" 0.72581404000000005 0.3316384"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[114]" 
+		" -type \"float2\" 0.72838884999999998 0.33369993999999997"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[115]" 
+		" -type \"float2\" 0.73020046999999999 0.33645624000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[116]" 
+		" -type \"float2\" 0.73107188999999995 0.33963746"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[117]" 
+		" -type \"float2\" 0.73091793000000005 0.34293224999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[118]" 
+		" -type \"float2\" 0.72975385000000004 0.34601837000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[119]" 
+		" -type \"float2\" 0.72769326000000001 0.34859389000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[120]" 
+		" -type \"float2\" 0.72507202999999998 0.35070336000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[121]" 
+		" -type \"float2\" 0.72179276000000003 0.35160272999999997"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[122]" 
+		" -type \"float2\" 0.71839595000000001 0.35144429999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[123]" 
+		" -type \"float2\" 0.71521455 0.35024357"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[124]" 
+		" -type \"float2\" 0.71256017999999999 0.34811828"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[125]" 
+		" -type \"float2\" 0.71069269999999996 0.34527682999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[126]" 
+		" -type \"float2\" 0.70979433999999997 0.34199743999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[127]" 
+		" -type \"float2\" 0.70995306999999996 0.33860096000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[128]" 
+		" -type \"float2\" 0.71115309000000004 0.33541959999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[129]" 
+		" -type \"float2\" 0.71327728000000001 0.33276454"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[130]" 
+		" -type \"float2\" 0.71611791999999996 0.33089572"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[131]" 
+		" -type \"float2\" 0.71939719000000002 0.32999634999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[132]" 
+		" -type \"float2\" 0.722794 0.33015477999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[133]" 
+		" -type \"float2\" 0.72597539 0.33135551000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[134]" 
+		" -type \"float2\" 0.72862970999999999 0.33348077999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[135]" 
+		" -type \"float2\" 0.73049724000000005 0.33632224999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[136]" 
+		" -type \"float2\" 0.73139553999999996 0.33960163999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[137]" 
+		" -type \"float2\" 0.73123687999999998 0.34299808999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[138]" 
+		" -type \"float2\" 0.73003684999999996 0.34617948999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[139]" 
+		" -type \"float2\" 0.72791265999999999 0.34883457000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[140]" 
+		" -type \"float2\" 0.72520660999999997 0.35100039999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[141]" 
+		" -type \"float2\" 0.72182888000000001 0.35192686000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[142]" 
+		" -type \"float2\" 0.71833002999999995 0.35176366999999997"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[143]" 
+		" -type \"float2\" 0.71505313999999998 0.35052689999999997"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[144]" 
+		" -type \"float2\" 0.71231913999999996 0.34833783000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[145]" 
+		" -type \"float2\" 0.71039551000000001 0.34541112000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[146]" 
+		" -type \"float2\" 0.70947026999999996 0.34203341999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[147]" 
+		" -type \"float2\" 0.70963370999999997 0.33853513000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[148]" 
+		" -type \"float2\" 0.71086967000000001 0.33525835999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[149]" 
+		" -type \"float2\" 0.71305752 0.33252364000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[150]" 
+		" -type \"float2\" 0.71598339 0.33059867999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[151]" 
+		" -type \"float2\" 0.71936107000000005 0.32967227999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[152]" 
+		" -type \"float2\" 0.72285986000000002 0.32983541"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[153]" 
+		" -type \"float2\" 0.72613673999999995 0.33107217999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[154]" 
+		" -type \"float2\" 0.72887075000000001 0.33326118999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[155]" 
+		" -type \"float2\" 0.73079437000000003 0.33618789999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[156]" 
+		" -type \"float2\" 0.73171960999999996 0.33956563000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[157]" 
+		" -type \"float2\" 0.73155623999999997 0.34306395000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[158]" 
+		" -type \"float2\" 0.73032026999999999 0.34634071999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[159]" 
+		" -type \"float2\" 0.72813249000000002 0.34907544000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[160]" 
+		" -type \"float2\" 0.72534144 0.35129774000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[161]" 
+		" -type \"float2\" 0.72186518 0.35225128999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[162]" 
+		" -type \"float2\" 0.71826422000000001 0.35208344000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[163]" 
+		" -type \"float2\" 0.71489166999999998 0.35081065"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[164]" 
+		" -type \"float2\" 0.71207785999999995 0.34855776999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[165]" 
+		" -type \"float2\" 0.71009814999999998 0.34554576999999997"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[166]" 
+		" -type \"float2\" 0.70914584000000003 0.34206956999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[167]" 
+		" -type \"float2\" 0.70931392999999998 0.33846933000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[168]" 
+		" -type \"float2\" 0.71058582999999997 0.33509700999999997"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[169]" 
+		" -type \"float2\" 0.71283739999999995 0.33228254000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[170]" 
+		" -type \"float2\" 0.71584857000000002 0.33030136999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[171]" 
+		" -type \"float2\" 0.71932476999999995 0.32934782000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[172]" 
+		" -type \"float2\" 0.72292566000000003 0.32951564"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[173]" 
+		" -type \"float2\" 0.72629821000000006 0.33078843000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[174]" 
+		" -type \"float2\" 0.72911203000000002 0.33304125000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[175]" 
+		" -type \"float2\" 0.73109179999999996 0.33605325000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[176]" 
+		" -type \"float2\" 0.73204409999999998 0.33952942000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[177]" 
+		" -type \"float2\" 0.73187601999999996 0.34312968999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[178]" 
+		" -type \"float2\" 0.73060411000000003 0.34650204000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[179]" 
+		" -type \"float2\" 0.72835254999999999 0.34931654000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[180]" 
+		" -type \"float2\" 0.72547631999999995 0.35159487"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[181]" 
+		" -type \"float2\" 0.72190153999999995 0.35257557"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[182]" 
+		" -type \"float2\" 0.71819860000000002 0.35240310000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[183]" 
+		" -type \"float2\" 0.71473038 0.35109431000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[184]" 
+		" -type \"float2\" 0.71183675999999996 0.34877767999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[185]" 
+		" -type \"float2\" 0.70980083999999999 0.34568041999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[186]" 
+		" -type \"float2\" 0.70882153999999997 0.34210586999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[187]" 
+		" -type \"float2\" 0.70899427000000004 0.33840369999999997"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[188]" 
+		" -type \"float2\" 0.71030210999999999 0.33493590000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[189]" 
+		" -type \"float2\" 0.71261728000000002 0.33204161999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[190]" 
+		" -type \"float2\" 0.71571368000000002 0.33000425"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[191]" 
+		" -type \"float2\" 0.71928835000000002 0.32902356999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[192]" 
+		" -type \"float2\" 0.72299135000000003 0.32919600999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[193]" 
+		" -type \"float2\" 0.72645950000000004 0.33050478"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[194]" 
+		" -type \"float2\" 0.72935307000000005 0.33282137000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[195]" 
+		" -type \"float2\" 0.73138899000000002 0.33591861000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[196]" 
+		" -type \"float2\" 0.73236835 0.33949316000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[197]" 
+		" -type \"float2\" 0.73219562000000005 0.34319535000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[198]" 
+		" -type \"float2\" 0.73088788999999998 0.34666318000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[199]" 
+		" -type \"float2\" 0.72857267000000003 0.34955745999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[200]" 
+		" -type \"float2\" 0.72561061000000004 0.35189094999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[201]" 
+		" -type \"float2\" 0.72193777999999997 0.35289869000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[202]" 
+		" -type \"float2\" 0.71813315 0.35272156999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[203]" 
+		" -type \"float2\" 0.71456962999999996 0.35137695000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[204]" 
+		" -type \"float2\" 0.71159654999999999 0.34899679"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[205]" 
+		" -type \"float2\" 0.70950466000000001 0.34581458999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[206]" 
+		" -type \"float2\" 0.70849835999999999 0.34214199000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[207]" 
+		" -type \"float2\" 0.70867579999999997 0.33833826"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[208]" 
+		" -type \"float2\" 0.71001935000000005 0.3347753"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[209]" 
+		" -type \"float2\" 0.71239805 0.33180153000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[210]" 
+		" -type \"float2\" 0.71557932999999996 0.32970812999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[211]" 
+		" -type \"float2\" 0.71925216999999997 0.32870041999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[212]" 
+		" -type \"float2\" 0.72305679 0.32887750999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[213]" 
+		" -type \"float2\" 0.72662020000000005 0.33022210000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[214]" 
+		" -type \"float2\" 0.72959333999999998 0.33260223"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[215]" 
+		" -type \"float2\" 0.73168522000000003 0.33578444000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[216]" 
+		" -type \"float2\" 0.73269152999999998 0.33945703999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[217]" 
+		" -type \"float2\" 0.7325142 0.34326076999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[218]" 
+		" -type \"float2\" 0.73117058999999995 0.34682374999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[219]" 
+		" -type \"float2\" 0.72879194999999997 0.34979755000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[220]" 
+		" -type \"float2\" 0.72574382999999998 0.35218506999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[221]" 
+		" -type \"float2\" 0.72197354000000002 0.35321951000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[222]" 
+		" -type \"float2\" 0.71806787999999999 0.35303773999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[223]" 
+		" -type \"float2\" 0.71440983000000002 0.35165744999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[224]" 
+		" -type \"float2\" 0.71135782999999997 0.34921419999999997"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[225]" 
+		" -type \"float2\" 0.70921051999999996 0.34594755999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[226]" 
+		" -type \"float2\" 0.70817757000000003 0.34217763000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[227]" 
+		" -type \"float2\" 0.70835954000000001 0.33827308"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[228]" 
+		" -type \"float2\" 0.70973878999999995 0.33461564999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[229]" 
+		" -type \"float2\" 0.71218044000000003 0.33156302999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[230]" 
+		" -type \"float2\" 0.71544616999999999 0.32941407"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[231]" 
+		" -type \"float2\" 0.71921647 0.32837957000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[232]" 
+		" -type \"float2\" 0.723122 0.32856133999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[233]" 
+		" -type \"float2\" 0.72678 0.32994157000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[234]" 
+		" -type \"float2\" 0.72983198999999999 0.33238482000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[235]" 
+		" -type \"float2\" 0.73197942999999999 0.33565139999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[236]" 
+		" -type \"float2\" 0.73301238000000002 0.33942138999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[237]" 
+		" -type \"float2\" 0.73283041000000004 0.34332596999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[238]" 
+		" -type \"float2\" 0.73145115000000005 0.34698342999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[239]" 
+		" -type \"float2\" 0.72900951000000003 0.35003608000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[240]" 
+		" -type \"float2\" 0.72587531999999999 0.35247635999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[241]" 
+		" -type \"float2\" 0.72200852999999998 0.3535372"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[242]" 
+		" -type \"float2\" 0.71800291999999999 0.35335066999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[243]" 
+		" -type \"float2\" 0.71425134000000001 0.35193497000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[244]" 
+		" -type \"float2\" 0.71112131999999995 0.34942909999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[245]" 
+		" -type \"float2\" 0.70891910999999996 0.34607893000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[246]" 
+		" -type \"float2\" 0.70785980999999998 0.34221256"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[247]" 
+		" -type \"float2\" 0.70804661999999996 0.33820813999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[248]" 
+		" -type \"float2\" 0.70946120999999995 0.33445722"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[249]" 
+		" -type \"float2\" 0.71196537999999998 0.33132660000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[250]" 
+		" -type \"float2\" 0.71531462999999995 0.32912278"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[251]" 
+		" -type \"float2\" 0.71918141999999996 0.32806191000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[252]" 
+		" -type \"float2\" 0.72318696999999998 0.32824840999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[253]" 
+		" -type \"float2\" 0.72693854999999996 0.32966408000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[254]" 
+		" -type \"float2\" 0.73006855999999998 0.33216992000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[255]" 
+		" -type \"float2\" 0.73227078000000001 0.33552008999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[256]" 
+		" -type \"float2\" 0.73333006999999995 0.33938646"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[257]" 
+		" -type \"float2\" 0.73314332999999998 0.34339088000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[258]" 
+		" -type \"float2\" 0.73172879000000002 0.3471418"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[259]" 
+		" -type \"float2\" 0.72922456000000002 0.35027248"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[260]" 
+		" -type \"float2\" 0.72600483999999998 0.35276464000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[261]" 
+		" -type \"float2\" 0.72204268000000005 0.35385144000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[262]" 
+		" -type \"float2\" 0.71793823999999995 0.35366005"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[263]" 
+		" -type \"float2\" 0.71409416000000003 0.35220918000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[264]" 
+		" -type \"float2\" 0.71088706999999995 0.34964131999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[265]" 
+		" -type \"float2\" 0.70863074000000004 0.34620833000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[266]" 
+		" -type \"float2\" 0.70754552000000004 0.34224652999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[267]" 
+		" -type \"float2\" 0.70773721000000001 0.33814347"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[268]" 
+		" -type \"float2\" 0.70918691 0.33430016000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[269]" 
+		" -type \"float2\" 0.71175306999999999 0.33109248000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[270]" 
+		" -type \"float2\" 0.71518504999999999 0.32883449999999997"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[271]" 
+		" -type \"float2\" 0.71914732000000003 0.32774769999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[272]" 
+		" -type \"float2\" 0.72325163999999997 0.32793903000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[273]" 
+		" -type \"float2\" 0.72709572 0.32938986999999997"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[274]" 
+		" -type \"float2\" 0.73030280999999997 0.33195770000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[275]" 
+		" -type \"float2\" 0.73255914 0.33539066000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[276]" 
+		" -type \"float2\" 0.73364437000000005 0.33935242999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[277]" 
+		" -type \"float2\" 0.73345274000000005 0.34345555"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[278]" 
+		" -type \"float2\" 0.73200308999999997 0.34729885999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[279]" 
+		" -type \"float2\" 0.72943687000000001 0.3505066"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[280]" 
+		" -type \"float2\" 0.72613287000000004 0.35305044000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[281]" 
+		" -type \"float2\" 0.72207593999999997 0.35416280999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[282]" 
+		" -type \"float2\" 0.71787369000000001 0.35396646999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[283]" 
+		" -type \"float2\" 0.713938 0.35248065000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[284]" 
+		" -type \"float2\" 0.71065467999999998 0.34985122000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[285]" 
+		" -type \"float2\" 0.70834487999999995 0.34633616"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[286]" 
+		" -type \"float2\" 0.70723413999999996 0.34227978999999997"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[287]" 
+		" -type \"float2\" 0.70743071999999996 0.33807892"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[288]" 
+		" -type \"float2\" 0.70891528999999998 0.33414411999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[289]" 
+		" -type \"float2\" 0.71154295999999995 0.33086019999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[290]" 
+		" -type \"float2\" 0.71505708000000001 0.32854866999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[291]" 
+		" -type \"float2\" 0.71911395 0.32743633"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[292]" 
+		" -type \"float2\" 0.72331624999999999 0.32763260999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[293]" 
+		" -type \"float2\" 0.72725183000000004 0.32911843000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[294]" 
+		" -type \"float2\" 0.73053520999999999 0.33174783000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[295]" 
+		" -type \"float2\" 0.73284506999999999 0.33526284000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[296]" 
+		" -type \"float2\" 0.73395573999999997 0.33931917"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[297]" 
+		" -type \"float2\" 0.73375915999999997 0.34352009999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[298]" 
+		" -type \"float2\" 0.73227458999999995 0.34745491000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[299]" 
+		" -type \"float2\" 0.72964697999999995 0.35073887999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[300]" 
+		" -type \"float2\" 0.72626000999999996 0.35333520000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[301]" 
+		" -type \"float2\" 0.72210883999999997 0.35447287999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[302]" 
+		" -type \"float2\" 0.71780907999999999 0.35427153"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[303]" 
+		" -type \"float2\" 0.71378224999999995 0.35275077999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[304]" 
+		" -type \"float2\" 0.71042304999999994 0.35005998999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[305]" 
+		" -type \"float2\" 0.70806002999999995 0.34646314"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[306]" 
+		" -type \"float2\" 0.70692401999999999 0.34231263000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[307]" 
+		" -type \"float2\" 0.70712565999999999 0.33801436000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[308]" 
+		" -type \"float2\" 0.70864510999999997 0.33398849000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[309]" 
+		" -type \"float2\" 0.71133411000000002 0.33062869"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[310]" 
+		" -type \"float2\" 0.71492993999999999 0.32826390999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[311]" 
+		" -type \"float2\" 0.71908103999999995 0.32712623000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[312]" 
+		" -type \"float2\" 0.72338080000000005 0.32732755000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[313]" 
+		" -type \"float2\" 0.72740757 0.32884824000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[314]" 
+		" -type \"float2\" 0.73076682999999998 0.33153901000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[315]" 
+		" -type \"float2\" 0.73312986000000002 0.33513581999999997"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[316]" 
+		" -type \"float2\" 0.73426592000000002 0.33928638999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[317]" 
+		" -type \"float2\" 0.73406433999999998 0.34358465999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[318]" 
+		" -type \"float2\" 0.73254483999999997 0.34761056000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[319]" 
+		" -type \"float2\" 0.72985595000000003 0.35097042000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[320]" 
+		" -type \"float2\" 0.72638749999999996 0.35362094999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[321]" 
+		" -type \"float2\" 0.72214173999999998 0.35478400999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[322]" 
+		" -type \"float2\" 0.71774417000000001 0.35457759999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[323]" 
+		" -type \"float2\" 0.71362590999999997 0.3530218"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[324]" 
+		" -type \"float2\" 0.71019052999999999 0.35026941"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[325]" 
+		" -type \"float2\" 0.70777422000000001 0.34659052000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[326]" 
+		" -type \"float2\" 0.70661282999999997 0.34234547999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[327]" 
+		" -type \"float2\" 0.70681952999999997 0.33794944999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[328]" 
+		" -type \"float2\" 0.70837402000000005 0.33383220000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[329]" 
+		" -type \"float2\" 0.71112447999999995 0.33039632000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[330]" 
+		" -type \"float2\" 0.71480244000000004 0.32797819"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[331]" 
+		" -type \"float2\" 0.71904813999999995 0.32681510000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[332]" 
+		" -type \"float2\" 0.72344565000000005 0.32702144999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[333]" 
+		" -type \"float2\" 0.72756398 0.32857722"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[334]" 
+		" -type \"float2\" 0.73099935000000005 0.33132958000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[335]" 
+		" -type \"float2\" 0.73341566000000002 0.33500849999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[336]" 
+		" -type \"float2\" 0.73457711999999997 0.33925354000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[337]" 
+		" -type \"float2\" 0.73437047 0.34364957000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[338]" 
+		" -type \"float2\" 0.73281598000000003 0.34776681999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[339]" 
+		" -type \"float2\" 0.73006546000000005 0.35120276"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[340]" 
+		" -type \"float2\" 0.72651666000000004 0.35391"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[341]" 
+		" -type \"float2\" 0.72217524 0.35509887000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[342]" 
+		" -type \"float2\" 0.71767860999999999 0.35488736999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[343]" 
+		" -type \"float2\" 0.71346783999999996 0.35329612999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[344]" 
+		" -type \"float2\" 0.70995538999999996 0.35048145000000003"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[345]" 
+		" -type \"float2\" 0.70748502000000002 0.34671950000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[346]" 
+		" -type \"float2\" 0.70629792999999996 0.34237885000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[347]" 
+		" -type \"float2\" 0.70650970999999996 0.33788394999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[348]" 
+		" -type \"float2\" 0.70809953999999997 0.33367422000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[349]" 
+		" -type \"float2\" 0.71091229 0.33016129999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[350]" 
+		" -type \"float2\" 0.71467327999999997 0.32768911000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[351]" 
+		" -type \"float2\" 0.71901470000000001 0.32650024"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[352]" 
+		" -type \"float2\" 0.72351122000000001 0.32671170999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[353]" 
+		" -type \"float2\" 0.72772205000000001 0.32830289000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[354]" 
+		" -type \"float2\" 0.73123442999999999 0.33111751"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[355]" 
+		" -type \"float2\" 0.73370486000000001 0.33487946000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[356]" 
+		" -type \"float2\" 0.73489201000000004 0.33922014"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[357]" 
+		" -type \"float2\" 0.73468023999999998 0.34371507000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[358]" 
+		" -type \"float2\" 0.73309040000000003 0.34792479999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[359]" 
+		" -type \"float2\" 0.73027766000000005 0.35143777999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[360]" 
+		" -type \"float2\" 0.72664874999999995 0.35420470999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[361]" 
+		" -type \"float2\" 0.72220974999999998 0.35541999000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[362]" 
+		" -type \"float2\" 0.71761220999999997 0.35520341999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[363]" 
+		" -type \"float2\" 0.71330689999999997 0.35357614999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[364]" 
+		" -type \"float2\" 0.70971578000000002 0.35069802"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[365]" 
+		" -type \"float2\" 0.70719027999999995 0.34685149999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[366]" 
+		" -type \"float2\" 0.70597677999999997 0.34241327999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[367]" 
+		" -type \"float2\" 0.70619357000000005 0.33781749"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[368]" 
+		" -type \"float2\" 0.70781945999999996 0.33351341000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[369]" 
+		" -type \"float2\" 0.71069561999999997 0.32992180999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[370]" 
+		" -type \"float2\" 0.71454119999999999 0.32739439999999997"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[371]" 
+		" -type \"float2\" 0.71898013000000005 0.32617914999999997"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[372]" 
+		" -type \"float2\" 0.72357768 0.32639565999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[373]" 
+		" -type \"float2\" 0.72788291999999999 0.32802287000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[374]" 
+		" -type \"float2\" 0.73147404000000005 0.33090097000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[375]" 
+		" -type \"float2\" 0.73399966999999999 0.33474748999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[376]" 
+		" -type \"float2\" 0.73521316000000003 0.33918570999999997"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[377]" 
+		" -type \"float2\" 0.73499632000000004 0.34378150000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[378]" 
+		" -type \"float2\" 0.73337048000000005 0.34808560999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[379]" 
+		" -type \"float2\" 0.73049438 0.35167724"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[380]" 
+		" -type \"float2\" 0.72678471 0.35450684999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[381]" 
+		" -type \"float2\" 0.72224562999999997 0.35574930999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[382]" 
+		" -type \"float2\" 0.71754456 0.3555277"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[383]" 
+		" -type \"float2\" 0.71314228000000002 0.35386362999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[384]" 
+		" -type \"float2\" 0.70947039000000001 0.35092055999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[385]" 
+		" -type \"float2\" 0.70688801999999995 0.34698728000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[386]" 
+		" -type \"float2\" 0.70564740999999997 0.34244907000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[387]" 
+		" -type \"float2\" 0.70586926000000005 0.33774984000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[388]" 
+		" -type \"float2\" 0.70753193000000003 0.33334887000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[389]" 
+		" -type \"float2\" 0.71047294000000005 0.32967650999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[390]" 
+		" -type \"float2\" 0.71440524000000005 0.32709229000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[391]" 
+		" -type \"float2\" 0.71894424999999995 0.32584980000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[392]" 
+		" -type \"float2\" 0.72364532999999998 0.32607134999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[393]" 
+		" -type \"float2\" 0.72804754999999999 0.32773535999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[394]" 
+		" -type \"float2\" 0.73171949000000003 0.33067843000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[395]" 
+		" -type \"float2\" 0.73430187000000002 0.33461168000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[396]" 
+		" -type \"float2\" 0.73554253999999997 0.33914989000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[397]" 
+		" -type \"float2\" 0.73532069 0.34384912000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[398]" 
+		" -type \"float2\" 0.73365807999999999 0.34825014999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[399]" 
+		" -type \"float2\" 0.73071706000000003 0.35192256999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[400]" 
+		" -type \"float2\" 0.73142432999999996 0.35269865"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[401]" 
+		" -type \"float2\" 0.72721749999999996 0.35546349999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[402]" 
+		" -type \"float2\" 0.73457050000000002 0.34876981000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[403]" 
+		" -type \"float2\" 0.73634898999999998 0.34406161000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[404]" 
+		" -type \"float2\" 0.73658621000000002 0.33903443999999999"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[405]" 
+		" -type \"float2\" 0.73525881999999998 0.33417952000000001"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[406]" 
+		" -type \"float2\" 0.73249607999999999 0.32997173000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[407]" 
+		" -type \"float2\" 0.72856765999999995 0.32682323000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[408]" 
+		" -type \"float2\" 0.72385787999999995 0.32504307999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[409]" 
+		" -type \"float2\" 0.71882844000000001 0.32480620999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[410]" 
+		" -type \"float2\" 0.71397244999999998 0.32613561000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[411]" 
+		" -type \"float2\" 0.70976567000000002 0.32890037"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[412]" 
+		" -type \"float2\" 0.70661949999999996 0.33282918"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[413]" 
+		" -type \"float2\" 0.70484095999999996 0.33753731999999997"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[414]" 
+		" -type \"float2\" 0.70460372999999998 0.34256451999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[415]" 
+		" -type \"float2\" 0.70593106999999999 0.34741944000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[416]" 
+		" -type \"float2\" 0.70869380000000004 0.35162726"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[417]" 
+		" -type \"float2\" 0.71262217000000005 0.35477578999999998"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[418]" 
+		" -type \"float2\" 0.71733188999999997 0.35655594000000002"
+		2 "|sketchpad:sketchpad|sketchpad:pTorus6|sketchpad:pTorusShape6" "uvSet[0].uvSetPoints[419]" 
+		" -type \"float2\" 0.72236144999999996 0.35679293000000001"
+		2 "sketchpad:polyTweakUV1" "uvTweak" " -s 44"
+		2 "sketchpad:polyTweakUV1" "uvTweak[0]" " -type \"float2\" 0.71701419 0.35824888999999999"
+		
+		2 "sketchpad:polyTweakUV1" "uvTweak[1]" " -type \"float2\" -0.236431 0.40227418999999998"
+		
+		2 "sketchpad:polyTweakUV1" "uvTweak[2]" " -type \"float2\" -0.24410229999999999 0.38388717"
+		
+		2 "sketchpad:polyTweakUV1" "uvTweak[3]" " -type \"float2\" 0.71848111999999997 0.34267512"
+		
+		2 "sketchpad:polyTweakUV1" "uvTweak[4]" " -type \"float2\" 0.55630404 0.031500988000000001"
+		
+		2 "sketchpad:polyTweakUV1" "uvTweak[5]" " -type \"float2\" -0.38956260999999998 0.14383972"
+		
+		2 "sketchpad:polyTweakUV1" "uvTweak[6]" " -type \"float2\" 0.051392558999999997 -0.17645714000000001"
+		
+		2 "sketchpad:polyTweakUV1" "uvTweak[7]" " -type \"float2\" 0.43976593000000003 -0.22343284999999999"
+		
+		2 "sketchpad:polyTweakUV1" "uvTweak[8]" " -type \"float2\" 0.57436264000000004 0.0026315599999999998"
+		
+		2 "sketchpad:polyTweakUV1" "uvTweak[9]" " -type \"float2\" 0.11265116999999999 -0.028966799000000001"
+		
+		2 "sketchpad:polyTweakUV1" "uvTweak[10]" " -type \"float2\" 0.11602779000000001 -0.019131883999999998"
+		
+		2 "sketchpad:polyTweakUV1" "uvTweak[11]" " -type \"float2\" 0.57488251000000001 0.010424361"
+		
+		2 "sketchpad:polyTweakUV1" "uvTweak[12]" " -type \"float2\" 0.42567515 -0.18752952000000001"
+		
+		2 "sketchpad:polyTweakUV1" "uvTweak[13]" " -type \"float2\" 0.52937365000000003 0.064016134000000002"
+		
+		2 "sketchpad:polyTweakUV1" "uvTweak[14]" " -type \"float2\" 0.55543595999999995 0.062871493000000001"
+		
+		2 "sketchpad:polyTweakUV1" "uvTweak[15]" " -type \"float2\" 0.43622084999999999 -0.20233135999999999"
+		
+		2 "sketchpad:polyTweakUV1" "uvTweak[16]" " -type \"float2\" 0.056323890000000001 -0.15162131000000001"
+		
+		2 "sketchpad:polyTweakUV1" "uvTweak[17]" " -type \"float2\" 0.065718769999999996 -0.13577726000000001"
+		
+		2 "sketchpad:polyTweakUV1" "uvTweak[18]" " -type \"float2\" -0.30435824 0.17566404999999999"
+		
+		2 "sketchpad:polyTweakUV1" "uvTweak[19]" " -type \"float2\" -0.36714469999999999 0.18116330999999999"
+		
+		2 "sketchpad:polyTweakUV1" "uvTweak[20]" " -type \"float2\" 0.42862338 -0.16170794999999999"
+		
+		2 "sketchpad:polyTweakUV1" "uvTweak[21]" " -type \"float2\" 0.55288786000000001 0.12221596999999999"
+		
+		2 "sketchpad:polyTweakUV1" "uvTweak[22]" " -type \"float2\" 0.52852911000000002 0.091603725999999996"
+		
+		2 "sketchpad:polyTweakUV1" "uvTweak[23]" " -type \"float2\" 0.42211324 -0.16803140999999999"
+		
+		2 "sketchpad:polyTweakUV1" "uvTweak[24]" " -type \"float2\" 0.070742279000000005 -0.11246376"
+		
+		2 "sketchpad:polyTweakUV1" "uvTweak[25]" " -type \"float2\" 0.066859215 -0.10297127"
+		
+		2 "sketchpad:polyTweakUV1" "uvTweak[26]" " -type \"float2\" -0.32383043 0.25235038999999998"
+		
+		2 "sketchpad:polyTweakUV1" "uvTweak[27]" " -type \"float2\" -0.28520328 0.20872329000000001"
+		
+		2 "sketchpad:polyTweakUV1" "uvTweak[28]" " -type \"float2\" 0.41750205000000001 -0.14944563999999999"
+		
+		2 "sketchpad:polyTweakUV1" "uvTweak[29]" " -type \"float2\" 0.69467639999999997 0.30801036999999998"
+		
+		2 "sketchpad:polyTweakUV1" "uvTweak[30]" " -type \"float2\" 0.075852244999999999 -0.089352294999999998"
+		
+		2 "sketchpad:polyTweakUV1" "uvTweak[31]" " -type \"float2\" -0.20434089999999999 0.33585745"
+		
+		2 "sketchpad:polyTweakUV1" "uvTweak[32]" " -type \"float2\" 0.43251282000000002 -0.18175466000000001"
+		
+		2 "sketchpad:polyTweakUV1" "uvTweak[33]" " -type \"float2\" 0.55431425999999995 0.093099504999999999"
+		
+		2 "sketchpad:polyTweakUV1" "uvTweak[34]" " -type \"float2\" 0.061454180999999997 -0.12713522999999999"
+		
+		2 "sketchpad:polyTweakUV1" "uvTweak[35]" " -type \"float2\" -0.34527653000000003 0.21730675999999999"
+		
+		2 "sketchpad:polyTweakUV1" "uvTweak[36]" " -type \"float2\" 0.42908341 -0.20746073000000001"
+		
+		2 "sketchpad:polyTweakUV1" "uvTweak[37]" " -type \"float2\" 0.52998078000000004 0.035447172999999998"
+		
+		2 "sketchpad:polyTweakUV1" "uvTweak[38]" " -type \"float2\" 0.060892764000000002 -0.15939154"
+		
+		2 "sketchpad:polyTweakUV1" "uvTweak[39]" " -type \"float2\" -0.32390654000000002 0.14164457"
+		
+		2 "sketchpad:polyTweakUV1" "uvTweak[40]" " -type \"float2\" -0.26549155000000002 0.24130061"
+		
+		2 "sketchpad:polyTweakUV1" "uvTweak[41]" " -type \"float2\" 0.52752911999999996 0.11817002"
+		
+		2 "sketchpad:polyTweakUV1" "uvTweak[42]" " -type \"float2\" 0.11620595 -0.036581679999999998"
+		
+		2 "sketchpad:polyTweakUV1" "uvTweak[43]" " -type \"float2\" 0.56488066999999997 -0.001653716"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak" " -s 420"
+		2 "sketchpad:polyTweakUV2" "uvTweak[0]" " -type \"float2\" -0.13489544000000001 -0.23564222000000001"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[1]" " -type \"float2\" -0.18329292999999999 -0.13135073"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[2]" " -type \"float2\" -0.1851874 -0.12457289000000001"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[3]" " -type \"float2\" -0.13651674999999999 -0.22956658999999999"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[4]" " -type \"float2\" -0.050828765999999997 -0.32323017999999998"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[5]" " -type \"float2\" -0.051898251999999999 -0.31778076"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[6]" " -type \"float2\" 0.060559216999999999 -0.3843396"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[7]" " -type \"float2\" 0.060263518000000002 -0.379361"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[8]" " -type \"float2\" 0.18742758000000001 -0.41205766999999999"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[9]" " -type \"float2\" 0.18803865 -0.40733482999999998"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[10]" " -type \"float2\" 0.31597984000000001 -0.40340390999999998"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[11]" " -type \"float2\" 0.31752061999999998 -0.39869323000000001"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[12]" " -type \"float2\" 0.43238121000000002 -0.35973211999999999"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[13]" " -type \"float2\" 0.43476468000000001 -0.35479537"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[14]" " -type \"float2\" 0.52462339000000002 -0.28637853000000002"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[15]" " -type \"float2\" 0.52767140000000001 -0.28101501000000001"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[16]" " -type \"float2\" 0.58392602000000005 -0.19169654"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[17]" " -type \"float2\" 0.58739984000000001 -0.18576509999999999"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[18]" " -type \"float2\" 0.60546409999999995 -0.085775985999999999"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[19]" " -type \"float2\" 0.60909778000000003 -0.079201176999999998"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[20]" " -type \"float2\" 0.58842932999999997 0.020843074"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[21]" " -type \"float2\" 0.59196168000000005 0.028071276999999999"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[22]" " -type \"float2\" 0.53560989999999997 0.11823349"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[23]" " -type \"float2\" 0.53880417000000003 0.12606823"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[24]" " -type \"float2\" 0.45271665 0.19783366999999999"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[25]" " -type \"float2\" 0.45537776000000002 0.20618244999999999"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[26]" " -type \"float2\" 0.34765576999999998 0.25292099000000001"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[27]" " -type \"float2\" 0.34963638000000002 0.26165538999999999"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[28]" " -type \"float2\" 0.22984948999999999 0.27888828999999998"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[29]" " -type \"float2\" 0.23105684000000001 0.28785291000000002"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[30]" " -type \"float2\" 0.1096279 0.27342492000000002"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[31]" " -type \"float2\" 0.11002785 0.28244507000000002"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[32]" " -type \"float2\" -0.0023592677999999998 0.23666164000000001"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[33]" " -type \"float2\" -0.0027381149000000001 0.24555176000000001"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[34]" " -type \"float2\" -0.095785788999999996 0.17129180999999999"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[35]" " -type \"float2\" -0.096847585999999999 0.17986727"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[36]" " -type \"float2\" -0.16141385 0.082621738"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[37]" " -type \"float2\" -0.16299485999999999 0.090713732000000005"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[38]" " -type \"float2\" -0.19200244999999999 -0.021550164"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[39]" " -type \"float2\" -0.19387641999999999 -0.014075801000000001"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[40]" " -type \"float2\" -0.19399461000000001 -0.12535900999999999"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[41]" " -type \"float2\" -0.14256746000000001 -0.23271516"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[42]" " -type \"float2\" -0.054446708000000003 -0.32240078"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[43]" " -type \"float2\" 0.061616782000000002 -0.38437357999999999"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[44]" " -type \"float2\" 0.19327664 -0.41158989000000001"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[45]" " -type \"float2\" 0.32619463999999998 -0.40110459999999998"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[46]" " -type \"float2\" 0.44604534000000001 -0.35447708"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[47]" " -type \"float2\" 0.5404523 -0.27738652000000003"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[48]" " -type \"float2\" 0.60043913000000004 -0.17861020999999999"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[49]" " -type \"float2\" 0.62116437999999996 -0.068677693999999997"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[50]" " -type \"float2\" 0.60196446999999997 0.041471622999999999"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[51]" " -type \"float2\" 0.54589367 0.14159012000000001"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[52]" " -type \"float2\" 0.45900690999999999 0.22289608"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[53]" " -type \"float2\" 0.34958993999999999 0.27855008999999997"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[54]" " -type \"float2\" 0.22744927000000001 0.30392727000000003"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[55]" " -type \"float2\" 0.10328078 0.29678686999999998"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[56]" " -type \"float2\" -0.01193469 0.25740540000000001"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[57]" " -type \"float2\" -0.10758764 0.18869005"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[58]" " -type \"float2\" -0.17421919 0.096221529"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[59]" " -type \"float2\" -0.20445082000000001 -0.011874422000000001"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[60]" " -type \"float2\" -0.20377186 -0.12233777"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[61]" " -type \"float2\" -0.15112196999999999 -0.23246774000000001"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[62]" " -type \"float2\" -0.060766055999999999 -0.32451764"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[63]" " -type \"float2\" 0.058320824 -0.38814715"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[64]" " -type \"float2\" 0.19344467000000001 -0.41609754999999998"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[65]" " -type \"float2\" 0.32985067000000001 -0.40533789999999997"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[66]" " -type \"float2\" 0.45280153000000001 -0.35748216999999999"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[67]" " -type \"float2\" 0.54958552000000005 -0.27838900999999999"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[68]" " -type \"float2\" 0.61100893999999994 -0.17709680999999999"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[69]" " -type \"float2\" 0.63214539999999997 -0.064423382000000001"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[70]" " -type \"float2\" 0.61236237999999998 0.048415892000000002"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[71]" " -type \"float2\" 0.55482978000000005 0.15093931999999999"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[72]" " -type \"float2\" 0.46577179000000002 0.23418111"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[73]" " -type \"float2\" 0.35367417000000001 0.29116803000000002"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[74]" " -type \"float2\" 0.22856107000000001 0.31718489999999999"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[75]" " -type \"float2\" 0.10135614 0.30993991999999998"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[76]" " -type \"float2\" -0.016721423999999999 0.26970010999999999"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[77]" " -type \"float2\" -0.11481643 0.19941022999999999"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[78]" " -type \"float2\" -0.18322742 0.10474820999999999"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[79]" " -type \"float2\" -0.21436073999999999 -0.0059939175999999999"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[80]" " -type \"float2\" -0.21622701999999999 -0.12170768999999999"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[81]" " -type \"float2\" -0.16205960999999999 -0.23528847"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[82]" " -type \"float2\" -0.068933979000000006 -0.33027269999999997"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[83]" " -type \"float2\" 0.053896789000000001 -0.39594724999999997"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[84]" " -type \"float2\" 0.19330697999999999 -0.42478790999999999"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[85]" " -type \"float2\" 0.33402354000000001 -0.41365674000000002"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[86]" " -type \"float2\" 0.46079892 -0.36424103000000002"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[87]" " -type \"float2\" 0.56050580999999999 -0.28262736999999999"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[88]" " -type \"float2\" 0.62368488 -0.17818263000000001"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[89]" " -type \"float2\" 0.64530854999999998 -0.062087207999999998"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[90]" " -type \"float2\" 0.62478560000000005 0.054099849999999998"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[91]" " -type \"float2\" 0.56543242999999999 0.15960526"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[92]" " -type \"float2\" 0.47368537999999999 0.24523768000000001"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[93]" " -type \"float2\" 0.35827737999999998 0.3038595"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[94]" " -type \"float2\" 0.22949903999999999 0.33064645999999998"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[95]" " -type \"float2\" 0.098553531 0.3232466"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[96]" " -type \"float2\" -0.023047324000000001 0.28191667999999998"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[97]" " -type \"float2\" -0.12414693 0.20964928999999999"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[98]" " -type \"float2\" -0.19474675999999999 0.11224358"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[99]" " -type \"float2\" -0.22698629000000001 -0.0018010884999999999"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[100]" " -type \"float2\" -0.23011971000000001 -0.12351139"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[101]" " -type \"float2\" -0.17430198 -0.24088016000000001"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[102]" " -type \"float2\" -0.078157187000000003 -0.33908263"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[103]" " -type \"float2\" 0.048760774999999999 -0.40699688000000001"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[104]" " -type \"float2\" 0.19285083 -0.43680254000000002"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[105]" " -type \"float2\" 0.33827233000000001 -0.42524579000000001"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[106]" " -type \"float2\" 0.46921723999999998 -0.37409767999999999"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[107]" " -type \"float2\" 0.57210331999999997 -0.28970042000000001"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[108]" " -type \"float2\" 0.63718408000000004 -0.18178351000000001"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[109]" " -type \"float2\" 0.65932493999999997 -0.061929613000000001"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[110]" " -type \"float2\" 0.63798410000000005 0.057925425000000003"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[111]" " -type \"float2\" 0.57664108000000003 0.16669105000000001"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[112]" " -type \"float2\" 0.48196441000000001 0.25493038000000001"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[113]" " -type \"float2\" 0.36295580999999999 0.31532918999999998"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[114]" " -type \"float2\" 0.2301937 0.34294628999999999"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[115]" " -type \"float2\" 0.095183781999999995 0.33536574000000002"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[116]" " -type \"float2\" -0.030247937999999999 0.29283272999999999"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[117]" " -type \"float2\" -0.134619 0.21839254"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[118]" " -type \"float2\" -0.20760676 0.11797504"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[119]" " -type \"float2\" -0.24105781000000001 0.00030617416"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[120]" " -type \"float2\" -0.24405509 -0.12754561"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[121]" " -type \"float2\" -0.18663061 -0.24866237999999999"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[122]" " -type \"float2\" -0.087526739000000006 -0.35005143"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[123]" " -type \"float2\" 0.043404702000000003 -0.42018011"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[124]" " -type \"float2\" 0.19209665000000001 -0.45093575000000002"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[125]" " -type \"float2\" 0.34214389000000001 -0.43894972999999998"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[126]" " -type \"float2\" 0.47718596000000002 -0.38607720000000001"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[127]" " -type \"float2\" 0.58319186999999995 -0.29891643000000001"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[128]" " -type \"float2\" 0.65013432999999998 -0.18756080999999999"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[129]" " -type \"float2\" 0.67277664000000004 -0.063991398000000005"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[130]" " -type \"float2\" 0.65062964000000001 0.059483550000000003"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[131]" " -type \"float2\" 0.58733535000000003 0.17146125000000001"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[132]" " -type \"float2\" 0.48979029000000002 0.26226503000000001"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[133]" " -type \"float2\" 0.36725938000000002 0.32440996"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[134]" " -type \"float2\" 0.23060106999999999 0.35284102000000001"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[135]" " -type \"float2\" 0.091612398999999997 0.34507966000000001"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[136]" " -type \"float2\" -0.037573467999999999 0.30136006999999998"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[137]" " -type \"float2\" -0.14515661999999999 0.22477702999999999"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[138]" " -type \"float2\" -0.22049761000000001 0.12138759"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[139]" " -type \"float2\" -0.25515263999999999 0.0001386255"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[140]" " -type \"float2\" -0.25663005999999999 -0.13337984999999999"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[141]" " -type \"float2\" -0.19781019999999999 -0.25782976000000002"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[142]" " -type \"float2\" -0.096113800999999999 -0.36205484999999998"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[143]" " -type \"float2\" 0.038348081999999999 -0.43415669000000001"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[144]" " -type \"float2\" 0.19109392 -0.46575942999999997"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[145]" " -type \"float2\" 0.34522079999999999 -0.45339109999999999"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[146]" " -type \"float2\" 0.48387605 -0.39898380999999999"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[147]" " -type \"float2\" 0.59263325 -0.30936493999999998"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[148]" " -type \"float2\" 0.66121721 -0.19495465000000001"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[149]" " -type \"float2\" 0.68430418000000004 -0.068088024999999996"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[150]" " -type \"float2\" 0.66145343000000001 0.058595143000000002"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[151]" " -type \"float2\" 0.59645121999999995 0.17341751"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[152]" " -type \"float2\" 0.49639526 0.26649207000000003"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[153]" " -type \"float2\" 0.37077969 0.33018342000000001"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[154]" " -type \"float2\" 0.23070556 0.35933805000000002"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[155]" " -type \"float2\" 0.088225067000000004 0.35142120999999998"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[156]" " -type \"float2\" -0.044263313999999998 0.30665678000000002"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[157]" " -type \"float2\" -0.15468127000000001 0.22818109"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[158]" " -type \"float2\" -0.23210865 0.12216131"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[159]" " -type \"float2\" -0.26784532999999999 -0.0022616833000000001"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[160]" " -type \"float2\" -0.26658028 -0.14040126"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[161]" " -type \"float2\" -0.20672169000000001 -0.26743414999999998"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[162]" " -type \"float2\" -0.10306585 -0.37386206"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[163]" " -type \"float2\" 0.034080329999999999 -0.44750097"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[164]" " -type \"float2\" 0.18991959 -0.47976843000000002"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[165]" " -type \"float2\" 0.34716529000000002 -0.46711287000000001"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[166]" " -type \"float2\" 0.48858768000000002 -0.41152467999999998"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[167]" " -type \"float2\" 0.59945636999999996 -0.32001075000000001"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[168]" " -type \"float2\" 0.66930687 -0.20324278000000001"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[169]" " -type \"float2\" 0.69274866999999996 -0.073831409000000001"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[170]" " -type \"float2\" 0.66937864000000002 0.055328480999999999"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[171]" " -type \"float2\" 0.60309261000000003 0.17234799000000001"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[172]" " -type \"float2\" 0.50114064999999997 0.26717891999999999"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[173]" " -type \"float2\" 0.37318944999999998 0.33207107000000002"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[174]" " -type \"float2\" 0.23052278000000001 0.36179384999999997"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[175]" " -type \"float2\" 0.085383832000000007 0.35376953999999999"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[176]" " -type \"float2\" -0.049628209 0.30821103"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[177]" " -type \"float2\" -0.16222262000000001 0.22828567"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[178]" " -type \"float2\" -0.24126536000000001 0.12024303"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[179]" " -type \"float2\" -0.27785534000000001 -0.0066282898000000002"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[180]" " -type \"float2\" -0.27291077000000002 -0.14788045"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[181]" " -type \"float2\" -0.21247885 -0.27648666999999999"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[182]" " -type \"float2\" -0.10769856999999999 -0.38426384000000002"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[183]" " -type \"float2\" 0.031011048999999999 -0.45885256000000002"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[184]" " -type \"float2\" 0.18866675999999999 -0.49154337999999997"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[185]" " -type \"float2\" 0.34775584999999998 -0.47873333000000001"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[186]" " -type \"float2\" 0.49082413000000003 -0.42244819"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[187]" " -type \"float2\" 0.60295969000000005 -0.32980116999999998"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[188]" " -type \"float2\" 0.67358488000000005 -0.21161641"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[189]" " -type \"float2\" 0.69726776999999995 -0.080670714000000004"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[190]" " -type \"float2\" 0.67362588999999995 0.049988291999999997"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[191]" " -type \"float2\" 0.60661732999999995 0.16834323000000001"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[192]" " -type \"float2\" 0.50357859999999999 0.26424879000000001"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[193]" " -type \"float2\" 0.37427533000000002 0.32988432000000001"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[194]" " -type \"float2\" 0.2300953 0.35997172999999999"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[195]" " -type \"float2\" 0.083392500999999994 0.35190469000000002"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[196]" " -type \"float2\" -0.053116868999999997 0.30588776000000001"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[197]" " -type \"float2\" -0.16701740000000001 0.22510369"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[198]" " -type \"float2\" -0.24704534 0.11584954"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[199]" " -type \"float2\" -0.28417914999999999 -0.012497738"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[200]" " -type \"float2\" -0.27499801000000001 -0.15504661"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[201]" " -type \"float2\" -0.21451864000000001 -0.28405991000000003"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[202]" " -type \"float2\" -0.10956533 -0.39219971999999997"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[203]" " -type \"float2\" 0.029426339999999999 -0.46706059999999999"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[204]" " -type \"float2\" 0.18743758999999999 -0.49989781"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[205]" " -type \"float2\" 0.34691 -0.48709193000000001"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[206]" " -type \"float2\" 0.49034145000000001 -0.43067350999999998"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[207]" " -type \"float2\" 0.60277981000000003 -0.33777842000000002"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[208]" " -type \"float2\" 0.67361974999999996 -0.21926567"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[209]" " -type \"float2\" 0.69741671999999999 -0.087951272999999996"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[210]" " -type \"float2\" 0.67378718000000004 0.043080382"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[211]" " -type \"float2\" 0.60669607000000003 0.16178069"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[212]" " -type \"float2\" 0.50349206000000002 0.25797909000000002"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[213]" " -type \"float2\" 0.37395465 0.32383507"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[214]" " -type \"float2\" 0.22948936 0.35405529000000002"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[215]" " -type \"float2\" 0.082467973 0.34602212999999998"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[216]" " -type \"float2\" -0.054369519999999998 0.29993343"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[217]" " -type \"float2\" -0.16858082999999999 0.21897095"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[218]" " -type \"float2\" -0.24887164000000001 0.10944062"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[219]" " -type \"float2\" -0.28618926 -0.019261733"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[220]" " -type \"float2\" -0.27264666999999998 -0.16116841000000001"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[221]" " -type \"float2\" -0.21265659000000001 -0.28938255000000002"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[222]" " -type \"float2\" -0.10850257000000001 -0.39686653"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[223]" " -type \"float2\" 0.029459658999999999 -0.47130063"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[224]" " -type \"float2\" 0.18633037999999999 -0.50400054000000005"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[225]" " -type \"float2\" 0.34469026000000003 -0.49136528000000002"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[226]" " -type \"float2\" 0.48717070000000001 -0.43539843"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[227]" " -type \"float2\" 0.59892339000000006 -0.34317258"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[228]" " -type \"float2\" 0.66940432999999999 -0.22545931"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[229]" " -type \"float2\" 0.69318455000000001 -0.094982057999999994"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[230]" " -type \"float2\" 0.66985684999999995 0.035258614000000001"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[231]" " -type \"float2\" 0.60333740999999996 0.15328207999999999"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[232]" " -type \"float2\" 0.50090981000000001 0.24896671000000001"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[233]" " -type \"float2\" 0.37228232999999999 0.31450474"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[234]" " -type \"float2\" 0.22878683 0.34462038"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[235]" " -type \"float2\" 0.082722008 0.33670241000000001"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[236]" " -type \"float2\" -0.053246092000000002 0.29094334999999999"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[237]" " -type \"float2\" -0.16674852000000001 0.21050785"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[238]" " -type \"float2\" -0.24656086999999999 0.10166877000000001"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[239]" " -type \"float2\" -0.28369176000000002 -0.026229336999999998"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[240]" " -type \"float2\" -0.26609927 -0.16562434000000001"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[241]" " -type \"float2\" -0.20709482000000001 -0.29191586000000003"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[242]" " -type \"float2\" -0.1046387 -0.39779534999999999"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[243]" " -type \"float2\" 0.031082335999999999 -0.471154"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[244]" " -type \"float2\" 0.18543059000000001 -0.50345397000000003"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[245]" " -type \"float2\" 0.34129554000000001 -0.49114575999999999"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[246]" " -type \"float2\" 0.48160850999999999 -0.43617776000000003"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[247]" " -type \"float2\" 0.59175937999999995 -0.34547737000000001"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[248]" " -type \"float2\" 0.66134709000000003 -0.22961672"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[249]" " -type \"float2\" 0.68498504000000004 -0.1011036"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[250]" " -type \"float2\" 0.66222422999999997 0.027257703000000001"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[251]" " -type \"float2\" 0.59687948000000002 0.14364778"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[252]" " -type \"float2\" 0.49609920000000002 0.23806458999999999"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[253]" " -type \"float2\" 0.36944055999999997 0.30278152000000003"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[254]" " -type \"float2\" 0.22807857000000001 0.33257239999999999"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[255]" " -type \"float2\" 0.084151745 0.32484823000000002"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[256]" " -type \"float2\" -0.049837302 0.27979769999999998"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[257]" " -type \"float2\" -0.16168594 0.20055191"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[258]" " -type \"float2\" -0.24033338000000001 0.093311869000000006"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[259]" " -type \"float2\" -0.27693391000000001 -0.032696678999999999"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[260]" " -type \"float2\" -0.25600505000000001 -0.16796238999999999"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[261]" " -type \"float2\" -0.19839570000000001 -0.29139926999999999"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[262]" " -type \"float2\" -0.098376632000000006 -0.39489010000000002"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[263]" " -type \"float2\" 0.034109894000000002 -0.46663727999999999"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[264]" " -type \"float2\" 0.18480163999999999 -0.49832191999999997"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[265]" " -type \"float2\" 0.33703661000000001 -0.4864715"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[266]" " -type \"float2\" 0.47418170999999998 -0.43295655"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[267]" " -type \"float2\" 0.58197367 -0.34449281999999998"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[268]" " -type \"float2\" 0.65022278 -0.23135961999999999"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[269]" " -type \"float2\" 0.67360925999999999 -0.10575052"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[270]" " -type \"float2\" 0.65162814000000002 0.019822553"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[271]" " -type \"float2\" 0.58795171999999996 0.13377902"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[272]" " -type \"float2\" 0.48953595999999999 0.22629668"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[273]" " -type \"float2\" 0.36572123000000001 0.28977217999999999"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[274]" " -type \"float2\" 0.22745504999999999 0.31905591"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[275]" " -type \"float2\" 0.086643576999999999 0.31159451999999999"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[276]" " -type \"float2\" -0.044449281 0.26757409999999998"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[277]" " -type \"float2\" -0.15386456000000001 0.19007599"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[278]" " -type \"float2\" -0.23078262999999999 0.085195795000000005"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[279]" " -type \"float2\" -0.26657307000000002 -0.038016960000000002"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[280]" " -type \"float2\" -0.24334555999999999 -0.16793920000000001"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[281]" " -type \"float2\" -0.18741769 -0.28786924000000003"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[282]" " -type \"float2\" -0.090345375000000006 -0.38842674999999999"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[283]" " -type \"float2\" 0.038222912999999997 -0.45819177999999999"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[284]" " -type \"float2\" 0.18448001 -0.48911275999999998"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[285]" " -type \"float2\" 0.3323043 -0.47781249999999997"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[286]" " -type \"float2\" 0.46559018000000002 -0.42606702000000002"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[287]" " -type \"float2\" 0.57049643999999999 -0.34033712999999999"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[288]" " -type \"float2\" 0.63709234999999997 -0.23054667000000001"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[289]" " -type \"float2\" 0.66014426999999998 -0.10850297"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[290]" " -type \"float2\" 0.63908350000000003 0.013638631"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[291]" " -type \"float2\" 0.57741379999999998 0.12459410999999999"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[292]" " -type \"float2\" 0.48185927000000001 0.21476385000000001"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[293]" " -type \"float2\" 0.36149722000000001 0.27669971999999998"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[294]" " -type \"float2\" 0.22699892999999999 0.30534848999999997"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[295]" " -type \"float2\" 0.089985490000000001 0.29820341"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[296]" " -type \"float2\" -0.037571918000000003 0.25544559999999999"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[297]" " -type \"float2\" -0.14401346000000001 0.18009650999999999"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[298]" " -type \"float2\" -0.21881350999999999 0.078118160000000006"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[299]" " -type \"float2\" -0.25360501000000002 -0.041657284000000003"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[300]" " -type \"float2\" -0.22933859000000001 -0.16553701000000001"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[301]" " -type \"float2\" -0.17522721999999999 -0.28165022000000001"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[302]" " -type \"float2\" -0.081336796000000003 -0.37901702999999998"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[303]" " -type \"float2\" 0.043002073000000002 -0.44662824000000001"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[304]" " -type \"float2\" 0.18447106999999999 -0.47671839999999999"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[305]" " -type \"float2\" 0.32752901000000001 -0.46601345999999999"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[306]" " -type \"float2\" 0.45663667000000002 -0.41618898999999998"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[307]" " -type \"float2\" 0.55840920999999999 -0.33343043999999999"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[308]" " -type \"float2\" 0.62319857000000001 -0.22727884000000001"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[309]" " -type \"float2\" 0.64586794000000003 -0.10912326999999999"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[310]" " -type \"float2\" 0.62578504999999995 0.0092705935000000003"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[311]" " -type \"float2\" 0.56627457999999997 0.11694328"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[312]" " -type \"float2\" 0.47381198000000002 0.20454222"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[313]" " -type \"float2\" 0.3571896 0.26479124999999998"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[314]" " -type \"float2\" 0.22677739999999999 0.29274482000000002"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[315]" " -type \"float2\" 0.093885355000000004 0.28594684999999997"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[316]" " -type \"float2\" -0.029835474000000001 0.24457382999999999"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[317]" " -type \"float2\" -0.13305139999999999 0.1715778"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[318]" " -type \"float2\" -0.20555511000000001 0.072773172999999997"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[319]" " -type \"float2\" -0.23926412999999999 -0.043249413"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[320]" " -type \"float2\" -0.21532139 -0.16096379"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[321]" " -type \"float2\" -0.16299689000000001 -0.27331676999999999"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[322]" " -type \"float2\" -0.072227359000000005 -0.36754717999999997"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[323]" " -type \"float2\" 0.047969344999999997 -0.43304451999999999"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[324]" " -type \"float2\" 0.18475074 -0.46232267999999999"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[325]" " -type \"float2\" 0.32313997 -0.45220842999999999"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[326]" " -type \"float2\" 0.44815147 -0.40427801000000002"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[327]" " -type \"float2\" 0.54684484 -0.32445022000000001"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[328]" " -type \"float2\" 0.609851 -0.22188957000000001"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[329]" " -type \"float2\" 0.63213229000000004 -0.10757609"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[330]" " -type \"float2\" 0.61299837000000001 0.0071106702000000004"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[331]" " -type \"float2\" 0.55560142000000001 0.11153346"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[332]" " -type \"float2\" 0.46617424000000002 0.19658676999999999"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[333]" " -type \"float2\" 0.35322862999999999 0.25516762999999998"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[334]" " -type \"float2\" 0.22683632000000001 0.28243857999999999"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[335]" " -type \"float2\" 0.097998731000000006 0.27599391000000001"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[336]" " -type \"float2\" -0.021950480000000001 0.23600376000000001"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[337]" " -type \"float2\" -0.12199974 0.16534767"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[338]" " -type \"float2\" -0.19225492999999999 0.069690548000000005"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[339]" " -type \"float2\" -0.22491050000000001 -0.042618736999999997"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[340]" " -type \"float2\" -0.20262607999999999 -0.15463062999999999"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[341]" " -type \"float2\" -0.15189665999999999 -0.26363972000000002"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[342]" " -type \"float2\" -0.063897088000000005 -0.35508946000000002"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[343]" " -type \"float2\" 0.052631619999999997 -0.41871979999999998"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[344]" " -type \"float2\" 0.18526697 -0.44728943999999998"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[345]" " -type \"float2\" 0.31952809999999998 -0.43771233999999998"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[346]" " -type \"float2\" 0.44091522999999999 -0.39147767"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[347]" " -type \"float2\" 0.53688091000000004 -0.31426725"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[348]" " -type \"float2\" 0.59830505 -0.21491357999999999"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[349]" " -type \"float2\" 0.62023866000000005 -0.10403191000000001"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[350]" " -type \"float2\" 0.60194415000000001 0.0073422640999999999"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[351]" " -type \"float2\" 0.54642278 0.10886150999999999"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[352]" " -type \"float2\" 0.45969211999999998 0.19164294000000001"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[353]" " -type \"float2\" 0.35001486999999998 0.24874008"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[354]" " -type \"float2\" 0.22719571 0.27541357"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[355]" " -type \"float2\" 0.10195893 0.26930183000000002"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[356]" " -type \"float2\" -0.014645033 0.23056614"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[357]" " -type \"float2\" -0.11189223 0.16201916"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[358]" " -type \"float2\" -0.18016589 0.069186709999999998"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[359]" " -type \"float2\" -0.21190205000000001 -0.039801225000000003"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[360]" " -type \"float2\" -0.19246176000000001 -0.14711452999999999"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[361]" " -type \"float2\" -0.1429888 -0.25351520999999999"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[362]" " -type \"float2\" -0.057150852000000002 -0.34280565000000002"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[363]" " -type \"float2\" 0.056526963 -0.40499701999999999"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[364]" " -type \"float2\" 0.18594574999999999 -0.43303582000000002"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[365]" " -type \"float2\" 0.31700890999999998 -0.42390093000000001"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[366]" " -type \"float2\" 0.43558991000000002 -0.37901220000000002"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[367]" " -type \"float2\" 0.52944553000000005 -0.30386617999999999"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[368]" " -type \"float2\" 0.58964782999999998 -0.20703629000000001"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[369]" " -type \"float2\" 0.61131948000000003 -0.098851517"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[370]" " -type \"float2\" 0.59368569000000004 0.0099223404999999997"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[371]" " -type \"float2\" 0.53963178000000001 0.10916629"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[372]" " -type \"float2\" 0.45500773 0.19017386"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[373]" " -type \"float2\" 0.34788101999999999 0.24612223"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[374]" " -type \"float2\" 0.22784652999999999 0.27234807999999999"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[375]" " -type \"float2\" 0.10541135 0.26652339000000003"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[376]" " -type \"float2\" -0.0085976644999999994 0.22879991999999999"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[377]" " -type \"float2\" -0.10367858000000001 0.16193229000000001"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[378]" " -type \"float2\" -0.17042989 0.071334675"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[379]" " -type \"float2\" -0.20147374000000001 -0.035039558999999998"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[380]" " -type \"float2\" -0.18580204 -0.13910684000000001"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[381]" " -type \"float2\" -0.13713062000000001 -0.24388309999999999"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[382]" " -type \"float2\" -0.052644860000000002 -0.33184317000000002"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[383]" " -type \"float2\" 0.059264068000000003 -0.39316501999999998"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[384]" " -type \"float2\" 0.18669820000000001 -0.42090793999999998"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[385]" " -type \"float2\" 0.31579553999999999 -0.41208765000000003"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[386]" " -type \"float2\" 0.43265879000000002 -0.36807802000000001"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[387]" " -type \"float2\" 0.52522986999999999 -0.29425672000000003"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[388]" " -type \"float2\" 0.58469850000000001 -0.19903256999999999"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[389]" " -type \"float2\" 0.60622995999999996 -0.092555091000000006"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[390]" " -type \"float2\" 0.58902668999999996 0.014580861000000001"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[391]" " -type \"float2\" 0.53590053000000004 0.11240137"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[392]" " -type \"float2\" 0.45259665999999998 0.19231098999999999"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[393]" " -type \"float2\" 0.34705943 0.24756426000000001"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[394]" " -type \"float2\" 0.22875226000000001 0.27354413"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[395]" " -type \"float2\" 0.1080454 0.26794019000000002"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[396]" " -type \"float2\" -0.0043717553000000003 0.23089362999999999"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[397]" " -type \"float2\" -0.098134868 0.16511880000000001"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[398]" " -type \"float2\" -0.16397327 0.075953199999999998"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[399]" " -type \"float2\" -0.19462022000000001 -0.028763190000000001"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[400]" " -type \"float2\" -0.20006081000000001 -0.0070475787000000003"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[401]" " -type \"float2\" -0.19131127000000001 -0.11941172"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[402]" " -type \"float2\" -0.16855281999999999 0.099456213000000002"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[403]" " -type \"float2\" -0.10119921 0.19001672999999999"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[404]" " -type \"float2\" -0.0054488708 0.25669444000000002"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[405]" " -type \"float2\" 0.10923004 0.29410744"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[406]" " -type \"float2\" 0.23227939 0.29954076000000002"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[407]" " -type \"float2\" 0.35282754999999999 0.27288538000000001"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[408]" " -type \"float2\" 0.46033429999999997 0.2165079"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[409]" " -type \"float2\" 0.54518056000000004 0.13510454"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[410]" " -type \"float2\" 0.59928119000000002 0.035524330999999999"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[411]" " -type \"float2\" 0.6167745 -0.073504611999999997"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[412]" " -type \"float2\" 0.59477276000000001 -0.18184502"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[413]" " -type \"float2\" 0.53406394000000001 -0.27871338000000001"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[414]" " -type \"float2\" 0.43955939999999999 -0.35376623000000001"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[415]" " -type \"float2\" 0.32024550000000002 -0.39842525000000001"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[416]" " -type \"float2\" 0.18844652000000001 -0.40720352999999998"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[417]" " -type \"float2\" 0.058379176999999997 -0.37870899000000002"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[418]" " -type \"float2\" -0.055774044000000002 -0.31601253000000001"
+		
+		2 "sketchpad:polyTweakUV2" "uvTweak[419]" " -type \"float2\" -0.14185434999999999 -0.22622961";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -2397,12 +5911,12 @@ select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderUtilityList1;
 select -ne :defaultRenderingList1;
-	setAttr -s 5 ".r";
+	setAttr -s 6 ".r";
 select -ne :defaultTextureList1;
 select -ne :standardSurface1;
 	setAttr ".sr" 0.5;
 select -ne :initialShadingGroup;
-	setAttr -s 25 ".dsm";
+	setAttr -s 33 ".dsm";
 	setAttr ".ro" yes;
 	setAttr -s 7 ".gn";
 select -ne :initialParticleSE;
