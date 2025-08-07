@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
-//Name: scene2_main.ma
-//Last modified: Wed, Aug 06, 2025 06:03:53 PM
+//Name: scene2_main_light.ma
+//Last modified: Wed, Aug 06, 2025 06:03:42 PM
 //Codeset: 1252
 file -rdi 1 -ns "deskLamp" -rfn "deskLampRN" -op "v=0;" -typ "mayaAscii" "C:/GitHub/Essentials/DAGV1100and1200/Maya//scenes/deskLamp.ma";
 file -rdi 1 -ns "desk" -rfn "deskRN" -op "v=0;" -typ "mayaAscii" "C:/GitHub/Essentials/DAGV1100and1200/Maya//scenes/desk.ma";
@@ -14,15 +14,15 @@ file -r -ns "mug" -dr 1 -rfn "mugRN" -op "v=0;" -typ "mayaAscii" "C:/GitHub/Esse
 file -r -ns "sketchpad" -dr 1 -rfn "sketchpadRN" -op "v=0;" -typ "mayaAscii" "C:/GitHub/Essentials/DAGV1100and1200/Maya//scenes/sketchpad.ma";
 requires maya "2025ff03";
 requires "stereoCamera" "10.0";
-requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiImagerDenoiserOidn"
-		 "mtoa" "5.4.5";
+requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiSkyDomeLight"
+		 -nodeType "aiImagerDenoiserOidn" "mtoa" "5.4.5";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
 fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
 fileInfo "osv" "Windows 11 Pro v2009 (Build: 26100)";
-fileInfo "UUID" "92B83783-4D80-5A61-D8D2-D6BFE40C8433";
+fileInfo "UUID" "D59077E9-4C96-24A8-70C5-BC9439882B5F";
 createNode transform -s -n "persp";
 	rename -uid "07FB18F1-457B-3293-5906-70ADB2D8BDF5";
 	setAttr ".v" no;
@@ -793,6 +793,30 @@ createNode mesh -n "pCubeShape3" -p "pCube3";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".dr" 1;
+createNode transform -n "aiSkyDomeLight1";
+	rename -uid "BB38B308-470E-9ECE-F03B-5E8664BBAB16";
+createNode aiSkyDomeLight -n "aiSkyDomeLightShape1" -p "aiSkyDomeLight1";
+	rename -uid "FA80A8BA-4FE1-4ACA-FAFC-B48D0444F411";
+	setAttr -k off ".v";
+	setAttr ".sc" -type "float3" 0.1934 0.1934 0.1934 ;
+createNode transform -n "spotLight1";
+	rename -uid "B1639CBE-42FF-D964-038F-F1B973AB142B";
+	setAttr ".t" -type "double3" 1.3840257331997754 2.7559358301442027 -2.7572898115950975 ;
+	setAttr ".r" -type "double3" -22.257720573014566 110.0977505634622 0 ;
+createNode spotLight -n "spotLightShape1" -p "spotLight1";
+	rename -uid "C9C4D3E2-4E0C-B5B2-561D-5392B68B0255";
+	setAttr -k off ".v";
+	setAttr ".in" 10;
+	setAttr ".ca" 179.99427042204869;
+	setAttr ".pa" 10;
+createNode transform -n "areaLight1";
+	rename -uid "70376DA9-406E-C4A0-670C-6AAE7ECA365D";
+	setAttr ".t" -type "double3" 0 1.5199315044113995 3.7651145525482987 ;
+	setAttr ".s" -type "double3" 5.092924540641067 5.092924540641067 5.092924540641067 ;
+createNode areaLight -n "areaLightShape1" -p "areaLight1";
+	rename -uid "FFA9AC99-40DA-CDF0-09B3-5D8522F93543";
+	setAttr -k off ".v";
+	setAttr ".in" 100;
 createNode lightLinker -s -n "lightLinker1";
 	rename -uid "AF339CB1-4687-0651-0F6B-F3BC9E5FF976";
 	setAttr -s 2 ".lnk";
@@ -6705,6 +6729,8 @@ select -ne :postProcessList1;
 select -ne :defaultRenderUtilityList1;
 select -ne :defaultRenderingList1;
 	setAttr -s 6 ".r";
+select -ne :lightList1;
+	setAttr -s 3 ".l";
 select -ne :defaultTextureList1;
 select -ne :standardSurface1;
 	setAttr ".sr" 0.5;
@@ -6721,6 +6747,8 @@ select -ne :defaultRenderGlobals;
 	setAttr ".dss" -type "string" "standardSurface1";
 select -ne :defaultResolution;
 	setAttr ".pa" 1;
+select -ne :defaultLightSet;
+	setAttr -s 3 ".dsm";
 select -ne :defaultColorMgtGlobals;
 	setAttr ".cfe" yes;
 	setAttr ".cfp" -type "string" "<MAYA_RESOURCES>/OCIO-configs/Maya2022-default/config.ocio";
@@ -6766,10 +6794,16 @@ connectAttr "polyTweakUV3.out" "polyMapCut5.ip";
 connectAttr "polyMapCut5.out" "polyMapCut6.ip";
 connectAttr "polyMapCut6.out" "polyTweakUV4.ip";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
+connectAttr "aiSkyDomeLightShape1.ltd" ":lightList1.l" -na;
+connectAttr "spotLightShape1.ltd" ":lightList1.l" -na;
+connectAttr "areaLightShape1.ltd" ":lightList1.l" -na;
 connectAttr "pCubeShape1.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "pCubeShape2.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "pen_redShape.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "pen_yellowShape.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "pen_greenShape.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "pCubeShape3.iog" ":initialShadingGroup.dsm" -na;
-// End of scene2_main.ma
+connectAttr "aiSkyDomeLight1.iog" ":defaultLightSet.dsm" -na;
+connectAttr "spotLight1.iog" ":defaultLightSet.dsm" -na;
+connectAttr "areaLight1.iog" ":defaultLightSet.dsm" -na;
+// End of scene2_main_light.ma
