@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: scene2_main.ma
-//Last modified: Wed, Aug 06, 2025 06:05:22 PM
+//Last modified: Wed, Aug 06, 2025 06:43:04 PM
 //Codeset: 1252
 file -rdi 1 -ns "deskLamp" -rfn "deskLampRN" -op "v=0;" -typ "mayaAscii" "C:/GitHub/Essentials/DAGV1100and1200/Maya//scenes/deskLamp.ma";
 file -rdi 1 -ns "desk" -rfn "deskRN" -op "v=0;" -typ "mayaAscii" "C:/GitHub/Essentials/DAGV1100and1200/Maya//scenes/desk.ma";
@@ -22,17 +22,17 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
 fileInfo "osv" "Windows 11 Pro v2009 (Build: 26100)";
-fileInfo "UUID" "770C134E-4726-638C-9499-8F88A46F64BA";
+fileInfo "UUID" "2694BC50-46E4-D3BE-9FD5-DD8159AE09E9";
 createNode transform -s -n "persp";
 	rename -uid "07FB18F1-457B-3293-5906-70ADB2D8BDF5";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 0.48377233293479083 4.0565353465010272 8.0304982751162051 ;
+	setAttr ".t" -type "double3" 0.84144769047721957 5.5233453640908809 15.907121276808086 ;
 	setAttr ".r" -type "double3" -10.538352729670853 2.5999999999992842 2.4873689175987851e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "C1F5758F-42B5-C103-E22D-168E6464915B";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 8.8599991301622474;
+	setAttr ".coi" 16.880014915675176;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
